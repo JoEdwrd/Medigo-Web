@@ -1,70 +1,65 @@
 @font-face {
-    font-family: 'Chopin-Trial';
-    src: url('public\font\Chopin-Trial-Bold.ttf') format('ttf');
-
+    font-family: "Chopin-Trial";
+    src: url("public\font\Chopin-Trial-Bold.ttf") format("ttf");
 }
 
 /* Use the font */
 /* body {/* background-color: var(--main1-color); */
 /* } */
-footer{
+footer {
     background-color: var(--main1-color);
 }
-#NavItems{
-    font-family: 'Chopin-Trial';
+#NavItems {
+    font-family: "Chopin-Trial";
     font-weight: bold;
 }
-#chopin{
-    font-family: 'Chopin-Trial';
+#chopin {
+    font-family: "Chopin-Trial";
     font-size: 23px;
 }
-#loginBTN{
+#loginBTN {
     background-color: var(--main2-color);
     border-radius: 63px;
     width: 100px;
-
 }
 :root {
     --main1-color: rgba(231, 244, 224, 100);
     --main2-color: rgba(81, 159, 145, 100);
-
 }
 .separator {
-  display: inline-block; /* Make the separator behave inline */
-  margin-left: 5px; /* Adjust the spacing between the separator and the text as needed */
-  margin-right: 5px; /* Adjust the spacing between the separator and the text as needed */
-  color: black; /* Color of the separator */
+    display: inline-block; /* Make the separator behave inline */
+    margin-left: 5px; /* Adjust the spacing between the separator and the text as needed */
+    margin-right: 5px; /* Adjust the spacing between the separator and the text as needed */
+    color: black; /* Color of the separator */
 }
 
 .horizontal-line {
-  flex-grow:1;
-  height: 2px;
-  background-color: rgba(0 , 0, 0, 100);
-  /* padding: 10 10; Adjust the left and right margins as needed */
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 100);
+    /* padding: 10 10; Adjust the left and right margins as needed */
 }
-
 
 .mb-4.d-flex {
-  display: flex;
-  flex-direction: row; /* Align items vertically */
-  align-items: center; /* Center items horizontally */
-  justify-content: center; /* Center items vertically */
-  height: 100%; /* Ensure the section takes up the full height */
+    display: flex;
+    flex-direction: row; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100%; /* Ensure the section takes up the full height */
 }
 
-#navbarSupportedContent{
+#navbarSupportedContent {
     width: 100%;
 }
 
-#cateimg{
+#cateimg {
     width: fit-content;
     height: fit-content;
     border-radius: 100%;
-    background-color: var(--main1-color) ;
+    background-color: var(--main1-color);
 }
 
-
-#PromoBanner{
+#PromoBanner {
     border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
     width: 400px;
     height: 500px;
@@ -72,14 +67,14 @@ footer{
 }
 
 /* Tabs */
-.tabs{
+.tabs {
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Chopin-Trial';
+    font-family: "Chopin-Trial";
     font-weight: 600;
     justify-content: center;
 }
-.tabs__label{
+.tabs__label {
     padding: 10px 16px;
     height: fit-content;
     cursor: pointer;
@@ -88,12 +83,12 @@ footer{
     margin-right: 100px;
     margin-bottom: 50px;
 }
-.tabs__radio{
+.tabs__radio {
     display: none;
 }
 
-.tabs__content{
-    order:1;
+.tabs__content {
+    order: 1;
     width: 100%;
     border-bottom: 3px solid white;
     line-height: 1.5px;
@@ -101,16 +96,16 @@ footer{
     display: none;
 }
 
-.tabs__radio:checked+.tabs__label{
+.tabs__radio:checked + .tabs__label {
     font-weight: bold;
     color: var(--main2-color);
     border-bottom: 3px solid var(--main2-color);
 }
-.tabs__radio:checked+.tabs__label+.tabs__content{
+.tabs__radio:checked + .tabs__label + .tabs__content {
     display: initial;
 }
 
-.card{
+.card {
     /* display: none; */
     margin: 20px;
     width: 250px !important;
@@ -119,8 +114,8 @@ footer{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.crd-img{
-    width:200px;
+.crd-img {
+    width: 200px;
     height: 200px;
     border-radius: 10px 10px 10px 10px;
     margin-top: 30px;
@@ -129,75 +124,93 @@ footer{
     max-width: 200px;
     min-height: 200px;
     max-height: 200px;
-
 }
 
-.card{
+.card {
     display: flex;
     justify-content: center;
     height: 420px;
 }
-.card-title{
+.card-title {
     margin-top: 10px;
-   font-family: 'Chopin-Trial';
+    font-family: "Chopin-Trial";
     font-weight: 700;
     align-self: flex-start;
 }
-.card-body{
+.card-body {
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
 }
-.card-text{
+.card-text {
     display: flex;
     align-self: flex-start;
 }
-.card-desc{
+.card-desc {
     display: flex;
     align-self: flex-start;
-    font-family: 'Chopin-Trial';
+    font-family: "Chopin-Trial";
     font-weight: 500;
-    color: #3D3E3F;
+    color: #3d3e3f;
 }
 
-#addbtn{
+#addbtn {
     /* border-color: var(--main2-color); */
     border: solid 2px var(--main2-color);
     border-radius: 10px;
     width: 100%;
     margin-top: 10px;
-    font-family: 'Chopin-Trial';
+    font-family: "Chopin-Trial";
     font-weight: bold;
     color: var(--main2-color);
 }
 
-#addbtn:hover{
+#addbtn:hover {
     /* border-color: var(--main2-color); */
-    background-color:  var(--main2-color);
+    background-color: var(--main2-color);
     border-radius: 10px;
     width: 100%;
     margin-top: 10px;
-    font-family: 'Chopin-Trial';
+    font-family: "Chopin-Trial";
     font-weight: bold;
     color: white;
 }
 
-#trackbutton{
-    border: 2px solid #3D3E3F;
-    border-radius:5px; width:180px;
-    height:40px;display:flex;
-    text-align:center; 
+#trackbutton {
+    border: 2px solid #3d3e3f;
+    border-radius: 5px;
+    width: 180px;
+    height: 40px;
+    display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
-    color:#3D3E3F;
-    font-family: 'Chopin-Trial';
+    color: #3d3e3f;
+    font-family: "Chopin-Trial";
     font-weight: 600;
-    background:#FFFFFF;
+    background: #ffffff;
 }
 /* HISTORY PAGE */
-#trackbutton:hover{
-    background:  var(--main2-color);
-    color: white;background-color: var(--main2-color);
+#trackbutton:hover {
+    background: var(--main2-color);
+    color: white;
+    background-color: var(--main2-color);
     border: none;
+}
+
+/* Product Detail Page */
+.custom-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--main2-color); /* Bootstrap primary color */
+    cursor: pointer;
+    padding: 0;
+}
+.custom-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+.custom-btn:hover {
+    text-decoration: underline;
 }
