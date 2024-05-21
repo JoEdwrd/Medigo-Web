@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\LandingPageController;
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,5 @@ Route::get('/', [LandingPageController::class, 'index']);
 Route::get('/history', [HistoryController::class, 'index']);
 
 Route::get('/product', [ProductController::class, 'show']);
+
+Route::get('/products', [ProductsController::class, 'show']);
