@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TermsPage;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
@@ -32,3 +33,5 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register2', [RegisterController::class, 'store'])->name('register2');
 
 Route::get('/termsandconditions', [TermsPage::class,'show']);
+
+Route::get('/cart', [CartController::class, 'index']);
