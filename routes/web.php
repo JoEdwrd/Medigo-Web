@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TermsPage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
@@ -9,6 +10,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\LogoutProfileController;
+use App\Http\Controllers\NewPasswordConfirmController;
+use App\Http\Controllers\OldPasswordCheckController;
+use App\Http\Controllers\UserProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,3 +40,11 @@ Route::post('/register2', [RegisterController::class, 'store'])->name('register2
 Route::get('/termsandconditions', [TermsPage::class,'show']);
 
 Route::get('/cart', [CartController::class, 'index']);
+
+// profile
+Route::get('/profile', [UserProfileController::class, 'index']);
+Route::get('/changePassOld', [OldPasswordCheckController::class, 'index']);
+Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
+Route::get('/logout', [LogoutProfileController::class, 'index']);
+
+Route::get('/faq', [FaqController::class, 'index']);
