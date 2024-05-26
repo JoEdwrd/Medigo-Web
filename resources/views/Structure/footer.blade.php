@@ -1,4 +1,4 @@
-<footer class="text-center bg-body-tertiary" >
+<footer class="text-center bg-body-tertiary footer" >
     <div style="background-color:var(--main1-color) ;">
         <!-- Grid container -->
   <div class="container pt-4" style=" display:flex;
@@ -21,7 +21,7 @@
       <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="">
         <i class="bi bi-youtube"></i>
       </a>
-      
+
     </section>
     <hr class="horizontal-line">
     <!-- Section: Social media -->
@@ -44,7 +44,7 @@
               <a href="/" class="text-black text-decoration-none">About us</a>
             </h6>
           </div>
-          
+
           <span class="separator col-lg-1">|</span>
 
           <div class="col-md-1 mb-3 mt-0">
@@ -73,7 +73,7 @@
           <!-- Grid column -->
           <div class="col-md-2 mb-3 mt-0">
             <h6 class="font-weight-bold" id="NavItems">
-              <a href="/" class="text-black text-decoration-none">Terms and Conditions</a>
+              <a href="/termsandconditions" class="text-black text-decoration-none">Terms and Conditions</a>
             </h6>
           </div>
           <!-- Grid column -->
@@ -105,5 +105,5 @@
       initMDB({ Ripple });
     </script> --}}
     </div>
-  
+
 </footer>

@@ -212,8 +212,6 @@ footer {
 .custom-btn:hover {
     text-decoration: underline;
 }
-<<<<<<< Updated upstream
-=======
 
 .background-image-login {
     background-image: url("../image/backgroundlogin.png");
@@ -318,4 +316,3 @@ footer {
 .card-header {
     background-color: var(--main1-color);
 }
->>>>>>> Stashed changes
