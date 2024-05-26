@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: var(--main1-color) ">
     {{-- <div class="container" > --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-list" style="color:var(--main2-color)"></i>  
+          <i class="bi bi-list" style="color:var(--main2-color)"></i>
         </button>
 
         <div class="collapse navbar-collapse" style="margin-left: 50px"  id="navbarSupportedContent">
@@ -34,7 +34,9 @@
                     </a>
                 </li>
                 <li class="nav-item col-md-3">
-                    <button class="nav-link text-light rounded-50" id="loginBTN"><strong>LOG IN</strong></button>
+                    <a href="/login">
+                        <button class="nav-link text-light rounded-50" id="loginBTN"><strong>LOG IN</strong></button>
+                    </a>
                 </li>
             </ul>
 
@@ -74,7 +76,7 @@
         <li class="nav-item">
           <a class="nav-link{{ ($active=="categories")? 'active' :"" }}" href="/categories">Categories</a>
         </li>
-      </ul>   
+      </ul>
       <ul class="navbar-nav ms-auto">
       @auth
         <li class="nav-item dropdown">
@@ -94,13 +96,13 @@
             </li>
           </ul>
         </li>
-      @else 
+      @else
         <li class="nav-item">
           <a class="nav-link {{ ($active=="login")? 'active' :"" }}" href="/login" ><i class="bi bi-box-arrow-in-right"></i> Login</a>
         </li>
       @endauth
       </ul>
-      
+
     </div>
   </div>
 </nav> --}}
