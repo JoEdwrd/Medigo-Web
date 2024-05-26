@@ -1,4 +1,4 @@
-<footer class="text-center bg-body-tertiary footer" >
+<footer class="text-center bg-body-tertiary footer mt-5" >
     <div style="background-color:var(--main1-color) ;">
         <!-- Grid container -->
   <div class="container pt-4" style=" display:flex;
