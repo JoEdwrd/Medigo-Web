@@ -7,7 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
-use App\Http\Controllers\ProductsController;
+// use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoutProfileController;
@@ -30,6 +30,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('LandingPage.Land
 Route::get('/history', [HistoryController::class, 'index']);
 
 Route::get('/product', [ProductController::class, 'show']);
+Route::get('/products', [ProductController::class, 'index']);
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/check', [LoginController::class, 'check'])->name('check');
