@@ -34,8 +34,8 @@
                     </a>
                 </li>
                 <li class="nav-item col-md-3">
-                    <a href="/login">
-                        <button class="nav-link text-light rounded-50" id="loginBTN"><strong>LOG IN</strong></button>
+                    <a class="text-decoration-none" href="/login">
+                        <button class="nav-link text-light rounded-50 text-decoration-none" id="loginBTN"><strong>LOG IN</strong></button>
                     </a>
                 </li>
             </ul>
