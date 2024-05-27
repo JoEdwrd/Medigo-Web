@@ -117,13 +117,6 @@ footer {
     max-height: 200px;
 }
 
-/* .card {
-    margin: 20px;
-    width: 250px !important;
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
 
 #card_product {
     margin: 20px;
@@ -152,7 +145,7 @@ footer {
     display: flex;
     align-self: flex-start;
 }
-.card-desc {
+#card-desc {
     display: flex;
     align-self: flex-start;
     font-family: "Chopin-Trial";
@@ -161,7 +154,7 @@ footer {
 } 
 
 #addbtn {
-    /* border-color: var(--main2-color); */
+    border-color: var(--main2-color);
     border: solid 2px var(--main2-color);
     border-radius: 10px;
     width: 100%;
@@ -172,7 +165,7 @@ footer {
 }
 
 #addbtn:hover {
-    /* border-color: var(--main2-color); */
+    border-color: var(--main2-color);
     background-color: var(--main2-color);
     border-radius: 10px;
     width: 100%;
