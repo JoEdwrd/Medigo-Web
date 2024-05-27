@@ -7,13 +7,16 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
-// use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoutProfileController;
 use App\Http\Controllers\NewPasswordConfirmController;
 use App\Http\Controllers\OldPasswordCheckController;
 use App\Http\Controllers\UserProfileController;
+
+use App\Http\Controllers\OrderDetailController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -49,3 +52,4 @@ Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
 Route::get('/logout', [LogoutProfileController::class, 'index']);
 
 Route::get('/faq', [FaqController::class, 'index']);
+Route::get('/orderdetail', [OrderDetailController::class, 'index']);
