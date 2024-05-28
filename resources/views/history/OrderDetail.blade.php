@@ -1,7 +1,7 @@
 @extends('Structure.main')
 @section('container')
 
-<div class="container mt-5 mb-5">
+<div class="container mt-5">
     <h1 class= "mb-3" id="NavItems" style="color: var(--main2-color)">Order Detail</h1>
 
     <div class="row align-items-start">
@@ -101,6 +101,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="row mt-5">
@@ -111,95 +112,106 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
     <div class="row mt-5">
         <h5 class="mb-3">Track Your Order</h5>
-
         <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 21:18 WIB</h6>
+            <div class="col-md-1 d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 21:18 WIB</h6>
             </div>
 
             <div class="col text-start">
                 <h5 class="mb-3">Order Completed</h5>
             </div>
-            <hr>
         </div>
 
-        <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 20:02 WIB</h6>
+        <div class="row align-items-start">
+            <div class="col-md-1 d-flex justify-content-center">
+                 <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:02 WIB</h6>
             </div>
 
             <div class="col text-start">
                 <h5 class="mb-3">On Its Way</h5>
             </div>
-            <hr>
         </div>
 
-        <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 20:02 WIB</h6>
+        <div class="row align-items-start">
+            <div class="col-md-1 d-flex justify-content-center">
+                 <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:02 WIB</h6>
             </div>
 
             <div class="col text-start">
                 <h5 class="mb-3">On Process</h5>
             </div>
-            <hr>
         </div>
 
-        <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 20:01 WIB</h6>
+        <div class="row align-items-start">
+            <div class="col-md-1 d-flex justify-content-center">
+                 <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:01 WIB</h6>
             </div>
 
             <div class="col text-start">
                 <h5 class="mb-3">Already Paid</h5>
             </div>
-            <hr>
         </div>
 
-        <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 20:00 WIB</h6>
+        <div class="row align-items-start">
+            <div class="col-md-1 d-flex justify-content-center">
+                <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:00 WIB</h6>
             </div>
 
             <div class="col text-start">
                 <h5 class="mb-3">Waiting for Payment</h5>
             </div>
-            <hr>
         </div>
 
-        <div class="row align-items-start mt-3">
-            <div class="col-3">
-                <h6 class="mb-3">3 May 2024 - 19:50 WIB</h6>
+        <div class="row align-items-start">
+            <div class="col-md-1 d-flex justify-content-center">
+                 <div class="d-flex flex-column align-items-center">
+                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                </div>
+            </div>
+            <div class="col-2">
+                <h6 class="text-muted" style="margin-top: 3px;">3 May 2024 - 19:50 WIB</h6>
             </div>
 
             <div class="col text-start">
-                <h5 class="mb-3">Waiting for Prescription Confirmation</h5>
+                <h5>Waiting for Prescription Confirmation</h5>
             </div>
-            <hr>
         </div>
-
-
-
-
-
     </div>
-
-
 </div>
 
 
 
 @endsection
-
 
