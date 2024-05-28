@@ -53,3 +53,10 @@ Route::get('/logout', [LogoutProfileController::class, 'index']);
 
 Route::get('/faq', [FaqController::class, 'index']);
 Route::get('/orderdetail', [OrderDetailController::class, 'index']);
+
+
+
+//admin
+Route::get('/dashboard', function () {
+    return view('AdminPage.home');
+});
