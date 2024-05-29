@@ -46,7 +46,9 @@
   font-size: .75rem;
   text-transform: uppercase;
 }
-
+.badge:hover{
+  color: black;
+  }
 /*
  * Sidebar
  */

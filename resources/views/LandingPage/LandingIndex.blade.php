@@ -168,6 +168,18 @@
         <label for="sale" class="tabs__label">Sale</label>
         <div class="tabs__content">
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+                     {{-- @for ($i = 0; $i < 3; $i++)
+                        <div class="card col-md-1" id="card_product" style="width: 420px">
+                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+                        <div class="card-body" id="card-body">
+                            <h5 class="card-title" id="card-title">{{ $products[$i]->name }}</h5>
+                            <label class="card-desc" id="card-desc">Per Strip</label>
+                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
+                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
+                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
+                        </div>
+                    </div>
+                     @endfor --}}
                     <div class="card col-md-1" id="card_product" style="width: 420px">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">

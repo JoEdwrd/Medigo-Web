@@ -4,6 +4,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TermsPage;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\ProductController;
@@ -60,3 +61,4 @@ Route::get('/orderdetail', [OrderDetailController::class, 'index']);
 Route::get('/dashboard', function () {
     return view('AdminPage.home');
 });
+Route::resource('/dashboard/products',DashboardProductController::class);
