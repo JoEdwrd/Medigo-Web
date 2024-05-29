@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+<nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse mt-3">
         <div class="position-sticky pt-3">
             <ul class="nav flex-column">
             <li>
@@ -9,55 +9,55 @@
                         <label id="textfont">CTO,Jakarta</label>
                     </div>
                 </div>
-            <hr style="margin-left:20px;margin-right:20px">
+            <hr style="margin-left:4px;margin-right:4px">
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                <i class="bi bi-house-door-fill"></i>
+                <a class="nav-link {{ Request::is("dashboard") ? "active":"" }}" aria-current="page" href="/dashboard">
+                <i class="bi bi-house-door-fill me-2"></i>
                 Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                <i class="bi bi-box-seam-fill"></i>
+                <a class="nav-link {{ Request::is("dashboard/product*") ? "active":"" }}" href="/dashboard/products">
+                <i class="bi bi-box-seam-fill me-2"></i>
                 Products
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-people-fill"></i>
+                <i class="bi bi-people-fill  me-2"></i>
                 Users
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-wallet2"></i>
+                <i class="bi bi-wallet2 me-2"></i>
                 Transactions
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-cash-coin"></i>
+                <i class="bi bi-cash-coin me-2"></i>
                 Promo
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-person-heart"></i>
+                <i class="bi bi-person-heart me-2"></i>
                 Product Category
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-envelope-paper-fill"></i>
+                <i class="bi bi-envelope-paper-fill  me-2"></i>
                 Prescriptions
                 </a>
             </li>   
             </ul>
-            <hr style="margin-left:20px;margin-right:20px">
+            <hr style="margin-left:4px;margin-right:4px">
             <div class="nav-item">
                 <a class="nav-link" href="#">
-                <i class="bi bi-door-closed-fill"></i>
+                <i class="bi bi-door-closed-fill  me-2"></i>
                 Logout
                 </a>
             </div>  
