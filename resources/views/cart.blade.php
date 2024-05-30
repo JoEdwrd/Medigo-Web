@@ -6,9 +6,9 @@
     <div class="row gx-5">
         <div class="col-md-8">
             <h2 class="mb-3">Your Cart</h2>
-            <div class="overflow-auto" style="max-height: 570px">
+            <div class="overflow-auto" style="max-height: 557px">
                 @for ($i = 1; $i <= 4; $i++)
-                    <div class="card mb-3">
+                    <div class="card {{ $i < 4 ? 'mb-3' : '' }}">
                         <div class="card-header"># {{ $i }}</div>
                         <div class="card-body d-flex align-items-center gap-3">
                             <div class="card-img" style="max-width: 100px;">
@@ -37,15 +37,17 @@
                 <span class="badge rounded-pill" style="background-color: var(--main2-color);">3</span>
             </h4>
             <ul class="list-group mb-3">
-                @for ($i = 0; $i < 4; $i++)
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">Second product</h6>
-                            <small class="text-body-secondary">Brief description</small>
-                        </div>
-                        <span class="text-body-secondary">$8 x 3</span>
-                    </li>
-                @endfor
+                <div class="overflow-auto" style="max-height: 169px;">
+                    @for ($i = 0; $i < 4; $i++)
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Second product</h6>
+                                <small class="text-body-secondary">Brief description</small>
+                            </div>
+                            <span class="text-body-secondary">$8 x 3</span>
+                        </li>
+                    @endfor
+                </div>
                 <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                     <div class="text-success">
                         <h6 class="my-0">Promo code</h6>
