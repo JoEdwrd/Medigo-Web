@@ -12,7 +12,7 @@ class DashboardProductController extends Controller
      */
     public function index()
     {
-        return view("AdminPage.productlist",[
+        return view("AdminPage.product.productlist",[
             "products"=>Product::all()
         ]);
     }
@@ -38,7 +38,12 @@ class DashboardProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view("AdminPage.product.productdetail",[
+            "title"=>"Product Detail",
+            // "active"=>"Products",
+            "product"=>$product
+        ]);
+        // return $product;
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends("AdminPage.main")
+@extends("AdminPage.Structure.main")
 
 @section('container')
     <div class="my-4">

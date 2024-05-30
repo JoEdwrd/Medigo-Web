@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         Product::create([
             "category_id"=>1,
             "name"=>"Obat Batuk",
-            "patent"=>"abcdef",
+            "patent"=>1,
             "slug"=>"obat-batuk",
             "stock"=>100,
             "price"=>10000,
@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
         Product::create([
             "category_id"=>1,
             "name"=>"Obat Pilek",
-            "patent"=>"ajajajajsi",
+            "patent"=>0,
             "slug"=>"obat-pilek",
             "stock"=>100,
             "price"=>10000,
@@ -41,7 +41,7 @@ class DatabaseSeeder extends Seeder
         Product::create([
             "category_id"=>1,
             "name"=>"Obat Flu",
-            "patent"=>"akaysgas",
+            "patent"=>1,
             "slug"=>"obat-flu",
             "stock"=>100,
             "price"=>10000,
