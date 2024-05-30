@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->foreignId("category_id");
-            $table->string("patent");
+            $table->boolean("patent");
             $table->string("slug")->unique();
             $table->integer("stock");
             $table->float("price");

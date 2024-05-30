@@ -47,6 +47,9 @@
 .badge:hover {
     color: white;
 }
+#descbox::-webkit-scrollbar {
+  display: none;
+}
 /*
  * Sidebar
  */
