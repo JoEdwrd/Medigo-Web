@@ -13,6 +13,12 @@
     }
 }
 
+#sidebarMenu {
+    height: 100vh;
+    padding-top: 0;
+    margin-top: 0;
+}
+
 .sidebar-sticky {
     position: relative;
     top: 0;
@@ -48,7 +54,7 @@
     color: white;
 }
 #descbox::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 /*
  * Sidebar

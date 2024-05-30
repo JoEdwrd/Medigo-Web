@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
+use App\Models\Promotion;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -47,6 +48,7 @@ class DatabaseSeeder extends Seeder
             "price"=>10000,
             "description"=>"Obat flu yang sangat ampuh"
         ]);
+
         Category::create([
             "name"=>"Flu",
             "slug"=>"flu",
@@ -57,5 +59,27 @@ class DatabaseSeeder extends Seeder
             "slug"=>"kepala",
             "description"=>"Obat untuk penyakit Kepala"
         ]);
-    }
+
+        Promotion::create([
+            'name' => 'Flash Sale - Up to 50% Off!',
+            'slug' => 'flash-sale-50',
+            'code' => '50FSOF',
+            'discount' => 0.5,
+            'terms' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat minus sint rem obcaecati culpa saepe expedita porro tempore facere, sequi sapiente mollitia incidunt, corrupti vero in inventore adipisci corporis voluptates sed et aliquam quam laboriosam recusandae! Aspernatur laborum, dolorem reprehenderit ipsum voluptatibus dolore, nemo officia minima distinctio sit accusamus quo blanditiis quod inventore exercitationem, sunt dolores sed beatae cumque. Hic architecto officiis provident ipsum sint necessitatibus iure ab nostrum iusto porro eveniet minus error possimus fugiat, laborum dignissimos vero at aliquam. Rem eveniet magnam suscipit sequi earum repellat perspiciatis eius saepe est sint deleniti, facere architecto ex sapiente tenetur quam!',
+        ]);
+        Promotion::create([
+            'name' => 'Welcome Offer - 10% Off First Purchase',
+            'slug' => 'welcome-offer-10',
+            'code' => '10WOFP',
+            'discount' => 0.1,
+            'terms' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat minus sint rem obcaecati culpa saepe expedita porro tempore facere, sequi sapiente mollitia incidunt, corrupti vero in inventore adipisci corporis voluptates sed et aliquam quam laboriosam recusandae! Aspernatur laborum, dolorem reprehenderit ipsum voluptatibus dolore, nemo officia minima distinctio sit accusamus quo blanditiis quod inventore exercitationem, sunt dolores sed beatae cumque. Hic architecto officiis provident ipsum sint necessitatibus iure ab nostrum iusto porro eveniet minus error possimus fugiat, laborum dignissimos vero at aliquam. Rem eveniet magnam suscipit sequi earum repellat perspiciatis eius saepe est sint deleniti, facere architecto ex sapiente tenetur quam!',
+        ]);
+        Promotion::create([
+            'name' => 'Buy One Get One (BOGO) Sale!',
+            'slug' => 'buy-one-get-one',
+            'code' => 'BOGO05',
+            'discount' => 0.5,
+            'terms' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat minus sint rem obcaecati culpa saepe expedita porro tempore facere, sequi sapiente mollitia incidunt, corrupti vero in inventore adipisci corporis voluptates sed et aliquam quam laboriosam recusandae! Aspernatur laborum, dolorem reprehenderit ipsum voluptatibus dolore, nemo officia minima distinctio sit accusamus quo blanditiis quod inventore exercitationem, sunt dolores sed beatae cumque. Hic architecto officiis provident ipsum sint necessitatibus iure ab nostrum iusto porro eveniet minus error possimus fugiat, laborum dignissimos vero at aliquam. Rem eveniet magnam suscipit sequi earum repellat perspiciatis eius saepe est sint deleniti, facere architecto ex sapiente tenetur quam!',
+        ]);
+    } 
 }
