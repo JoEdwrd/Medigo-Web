@@ -47,40 +47,41 @@
     <hr>
     <div class="mt-5">
         <h2>Related Products</h2>
+
         <div class="row text-center d-flex justify-content-between mt-4 mb-5">
-            <div class="card col-md-1">
-                <img src="image/medicine1.jpeg" class="crd-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <label class="card-desc">Per Strip</label>
-                    <h5 class="card-title">Rp 70.000</h5>
+            <div class="card col-md-1" id="card_product"> 
+                <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+                <div class="card-body" id="card-body">
+                    <h5 class="card-title" id="card-title">Card title</h5>
+                    <label class="card-desc" id="card-desc">Per Strip</label>
+                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
                     <a href="#" id="addbtn" class="btn">ADD</a>
                 </div>
             </div>
-            <div class="card col-md-1">
+            <div class="card col-md-1" id="card_product"> 
                 <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <label class="card-desc">Per Strip</label>
-                    <h5 class="card-title">Rp 70.000</h5>
+                <div class="card-body" id="card-body">
+                    <h5 class="card-title" id="card-title">Card title</h5>
+                    <label class="card-desc" id="card-desc">Per Strip</label>
+                    <h5 class="card-title" id="card-title">Rp 70.000</h5>                
                     <a href="#" id="addbtn" class="btn">ADD</a>
                 </div>
             </div>
-            <div class="card col-md-1">
+            <div class="card col-md-1" id="card_product"> 
                 <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <label class="card-desc">Per Strip</label>
-                    <h5 class="card-title">Rp 70.000</h5>                
+                <div class="card-body" id="card-body">
+                    <h5 class="card-title" id="card-title">Card title</h5>
+                    <label class="card-desc" id="card-desc">Per Strip</label>
+                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
                     <a href="#" id="addbtn" class="btn">ADD</a>
                 </div>
             </div>
-            <div class="card col-md-1">
+            <div class="card col-md-1" id="card_product"> 
                 <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <label class="card-desc">Per Strip</label>
-                    <h5 class="card-title">Rp 70.000</h5>
+                <div class="card-body" id="card-body">
+                    <h5 class="card-title" id="card-title">Card title</h5>
+                    <label class="card-desc" id="card-desc">Per Strip</label>
+                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
                     <a href="#" id="addbtn" class="btn">ADD</a>
                 </div>
             </div>
