@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone')->unique(); // Added phone column with unique constraint
             $table->date('dob');
+            $table->string('gender');
+            $table->longText('address');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

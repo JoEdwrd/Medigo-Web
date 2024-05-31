@@ -1,5 +1,5 @@
 <nav id="sidebarMenu" class="col-lg-2 d-md-block bg-light sidebar collapse">
-    <div class="position-sticky pt-3">
+    <div class="position-sticky pt-3 d-flex flex-column">
         <ul class="nav flex-column">
             <li>
                 <div class="d-flex flex-row justify-content-center mt-2">
@@ -64,8 +64,8 @@
             </a>
         </div>
 
-        <div class="nav-item d-flex justify-content-center">
-            <a class="navbar-brand flex-grow-1 text-center me-3" href="/"><img src="\image\MedigoLogo.svg" alt="Medigo Logo"></a>
+        <div class="nav-item d-flex justify-content-center" style="margin-top: 75%">
+            <a class="navbar-brand flex-grow-1 text-center P-0 m-0 me-3" href="/"><img src="\image\MedigoLogo.svg" alt="Medigo Logo"></a>
         </div>
     </div>
 </nav>

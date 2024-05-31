@@ -11,10 +11,11 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\OrderDetailController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\LogoutProfileController;
 use App\Http\Controllers\DashboardProductController;
-use App\Http\Controllers\OldPasswordCheckController;
 
+use App\Http\Controllers\OldPasswordCheckController;
 use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
 
@@ -47,7 +48,7 @@ Route::get('/termsandconditions', [TermsPage::class,'show']);
 
 Route::get('/cart', [CartController::class, 'index']);
 
-// profile
+// profile, kemungkinan besar dimodif 
 Route::get('/profile', [UserProfileController::class, 'index']);
 Route::get('/changePassOld', [OldPasswordCheckController::class, 'index']);
 Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
@@ -65,3 +66,8 @@ Route::get('/dashboard', function () {
 Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
 Route::resource('/dashboard/products',DashboardProductController::class);
 Route::resource('/dashboard/promotions', DashboardPromotionController::class);
+
+// USERS
+Route::resource('/dashboard/users', DashboardUserController::class)->name('index', 'userDashboard');
+Route::get('/dashboard/users/{user:id}', [DashboardUserController::class,"show"]);
+Route::delete('/dashboard/users/{user:id}/delete', [DashboardUserController::class,"destroy"]);
