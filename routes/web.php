@@ -63,7 +63,8 @@ Route::get('/orderdetail', [OrderDetailController::class, 'index']);
 Route::get('/dashboard', function () {
     return view('AdminPage.home');
 });
-Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
+// Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
+
 Route::resource('/dashboard/products',DashboardProductController::class);
 Route::resource('/dashboard/promotions', DashboardPromotionController::class);
 

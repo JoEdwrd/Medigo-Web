@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId("category_id");
             $table->boolean("patent");
             $table->string("slug")->unique();
-            $table->integer("stock");
-            $table->float("price");
+            $table->biginteger("stock");
+            $table->double("price");
             $table->string("name");
             $table->text("description");
             $table->string("image")->nullable();

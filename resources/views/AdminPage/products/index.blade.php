@@ -4,17 +4,13 @@
     <div class="my-4">
         <h1 class="h2">All Products</h1>
     </div>
-    {{-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">All Product</h1>
-    </div> --}}
     @if(session()->has("success"))
       <div class="alert alert-success col-lg-6" role="alert">
         {{ session("success") }}
       </div>
     @endif
     <div class="table-responsive col-lg-10">
-      {{-- <a href="/" class="btn btn-success mb-3">Add New Product</a> --}}
-      <a href="#" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Product</a>  
+      <a href="/dashboard/products/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Product</a>  
       <table class="table table-md">
           <thead>
             <tr>
@@ -36,8 +32,8 @@
                 <td class="">{{ $product->stock }}</td>
                 <td class="">
                     <a href="/dashboard/products/{{ $product->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
-                    <a href="/" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                    <form action="/" method="post" class="d-inline">
+                    <a href="/dashboard/products/{{ $product->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                    <form action="/dashboard/products/{{ $product->slug }}" method="post" class="d-inline">
                       @method("delete")
                       @csrf
                       <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><i class="bi bi-trash-fill"></i></button>
