@@ -174,7 +174,27 @@ footer {
     font-weight: bold;
     color: white;
 }
+#btnselect {
+    background: var(--main2-color);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+}
 
+#btnselect:hover {
+    border: 2px solid var(--main2-color);
+    background: white;
+    color: var(--main2-color);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+}
 #trackbutton {
     border: 2px solid #3d3e3f;
     border-radius: 5px;
