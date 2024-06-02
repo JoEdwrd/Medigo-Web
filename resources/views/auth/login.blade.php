@@ -41,6 +41,10 @@
                             <input id="password" class="input-field" type="password" name="password" required
                                 autocomplete="current-password"/>
                         </label>
+                        <div class="row-2">
+                            <input type="checkbox" onclick="showPass()">
+                            <label class="fs-6 opacity-50">Show Password</label>
+                        </div>
                     </div>
 
                     @if ($errors->any())

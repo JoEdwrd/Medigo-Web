@@ -22,6 +22,7 @@
         <i class="bi bi-youtube"></i>
       </a>
 
+
     </section>
     <hr class="horizontal-line">
     <!-- Section: Social media -->
@@ -44,6 +45,7 @@
               <a href="/" class="text-black text-decoration-none">About us</a>
             </h6>
           </div>
+
 
           <span class="separator col-lg-1">|</span>
 
@@ -105,5 +107,6 @@
       initMDB({ Ripple });
     </script> --}}
     </div>
+
 
 </footer>
