@@ -26,8 +26,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>             
-                @endfor 
+                    </div>
+                @endfor
             </div>
         </div>
 
@@ -82,7 +82,41 @@
             {{-- <button class="w-100 btn btn-primary btn-md" type="submit">
                 Checkout
             </button> --}}
-            <a href="#" id="addbtn" class="btn mb-2">Add to Order</a>
+            {{-- <a href="" id="addbtn" class="btn mb-2">Add to Order</a> --}}
+            <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Add to Order
+            </button>
+
+            <div class="body-modal">
+              <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h3 class="chopin">Upload Prescription</h3>
+                            <p class="chopin">One of your medications is a prescription drug , Please upload a prescription to continue check out!</p>
+                            <div class="container-modal">
+                                <div class="drag-area">
+                                    <div class="icon">
+                                        <i class="fas fa-images"></i>
+                                    </div>
+                                    <span class="header">Drag & Drop or <span class="button">Choose File</span> <span>Here</span></span>
+                                    <input type="file" hidden />
+                                    <span class="support">Supports: JPEG, JPG, PNG</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="/cart">
+                                <button type="button" class="button-modal-cancel">Cancel</button>
+                            </a>
+                            <a href="/cart">
+                                <button type="button" class="button-modal">Save changes</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

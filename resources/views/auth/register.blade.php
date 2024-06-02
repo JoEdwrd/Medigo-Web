@@ -70,6 +70,11 @@
                             <p class="fontlabel" id="chopin1">Password</p>
                             <input id="password" class="input-field" type="password" name="password" required />
                         </label>
+
+                        <div class="row-2">
+                            <input type="checkbox" onclick="showPass()">
+                            <label class="fs-6 opacity-50">Show Password</label>
+                        </div>
                     </div>
 
                     <div class="error-messages" style="color: red">

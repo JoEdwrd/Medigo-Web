@@ -48,7 +48,7 @@ Route::get('/termsandconditions', [TermsPage::class,'show']);
 
 Route::get('/cart', [CartController::class, 'index']);
 
-// profile, kemungkinan besar dimodif 
+// profile, kemungkinan besar dimodif
 Route::get('/profile', [UserProfileController::class, 'index']);
 Route::get('/changePassOld', [OldPasswordCheckController::class, 'index']);
 Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
@@ -56,7 +56,6 @@ Route::get('/logout', [LogoutProfileController::class, 'index']);
 
 Route::get('/faq', [FaqController::class, 'index']);
 Route::get('/orderdetail', [OrderDetailController::class, 'index']);
-
 
 
 //admin
@@ -67,8 +66,3 @@ Route::get('/dashboard', function () {
 
 Route::resource('/dashboard/products',DashboardProductController::class);
 Route::resource('/dashboard/promotions', DashboardPromotionController::class);
-
-// USERS
-Route::resource('/dashboard/users', DashboardUserController::class)->name('index', 'userDashboard');
-Route::get('/dashboard/users/{user:id}', [DashboardUserController::class,"show"]);
-Route::delete('/dashboard/users/{user:id}/delete', [DashboardUserController::class,"destroy"]);

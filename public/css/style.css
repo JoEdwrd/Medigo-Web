@@ -151,7 +151,7 @@ footer {
     font-family: "Chopin-Trial";
     font-weight: 500;
     color: #3d3e3f;
-} 
+}
 
 #addbtn {
     border-color: var(--main2-color);
@@ -231,6 +231,72 @@ footer {
 }
 .custom-btn:hover {
     text-decoration: underline;
+}
+
+#login-btn {
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+}
+
+.login-title {
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: 800;
+    align-self: flex-start;
+    color: rgb(53, 102, 93);
+}
+
+.fontlabel {
+    color: rgb(144, 143, 143);
+    margin: 0;
+    margin-top: 15px;
+}
+
+#registerbtn {
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+    background-color: rgb(81, 159, 145);
+}
+
+.border-login-register {
+    background-color: rgb(255, 255, 255);
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.background-image-login {
+    background-image: url("../image/backgroundlogin.png");
+    height: 100vh;
+}
+
+.background-form {
+    background-size: cover;
+    background-color: rgba(254, 254, 254, 0.91);
+    border-radius: 10px;
+    padding: 100px;
+    /* border: 1px solid rgba(0, 0, 0, 0.1);    */
+    box-shadow: 0 4px 8px 5px rgba(186, 186, 186, 0.2),
+        0 1px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-field {
+    border: 1px solid #e0e0e0; /* Gray 300 color */
+    border-radius: 4px; /* Rounded corners with 4px radius */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
 }
 
 .background-image-login {
@@ -336,3 +402,210 @@ footer {
 .card-header {
     background-color: var(--main1-color);
 }
+
+.background-image-login {
+    background-image: url("../image/backgroundlogin.png");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+}
+
+#login-btn {
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 70%;
+    margin-top: 20px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+}
+
+.login-title {
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: 800;
+    align-self: flex-start;
+    color: rgb(53, 102, 93);
+}
+
+.fontlabel {
+    color: rgb(144, 143, 143);
+    margin: 0;
+    margin-top: 15px;
+}
+
+.border-login {
+    background-color: rgb(255, 255, 255);
+    padding: 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.background-form {
+    background-size: cover;
+    background-color: rgba(254, 254, 254, 0.91);
+    border-radius: 10px;
+    padding: 100px;
+    /* border: 1px solid rgba(0, 0, 0, 0.1);    */
+    box-shadow: 0 4px 8px 5px rgba(186, 186, 186, 0.2),
+        0 1px 10px 0 rgba(0, 0, 0, 0.19);
+    width: 40%;
+    margin: auto;
+}
+
+.border-register {
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    height: 85vh;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.background-form-register {
+    background-color: rgba(254, 254, 254, 0.91);
+    border-radius: 10px;
+    height: 80%;
+    width: 30%;
+    box-shadow: 0 4px 8px 5px rgba(186, 186, 186, 0.2),
+        0 1px 10px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    padding: 20px 50px;
+}
+
+#registerbtn {
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 60%;
+    margin-top: 10px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+    background-color: rgb(81, 159, 145);
+}
+
+.input-field {
+    border: 1px solid #e0e0e0; /* Gray 300 color */
+    border-radius: 4px; /* Rounded corners with 4px radius */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
+}
+
+/* Cart Page */
+.quantity-btn {
+    width: 30px; /* Set a fixed width for the buttons */
+    text-align: center; /* Center align the text */
+    background-color: var(--main2-color);
+}
+
+.card-header {
+    background-color: var(--main1-color);
+}
+
+.body-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #e0eafc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #cfdef3,
+      #e0eafc
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container-modal {
+    width: 100%;
+    padding: 10px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.drag-area {
+    height: 400px;
+    border: 3px dashed #e0eafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.drag-area .icon {
+    font-size: 50px;
+    color: #1683ff;
+}
+
+.drag-area .header {
+    font-size: 20px;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.drag-area .support {
+    font-size: 12px;
+    color: gray;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area .button {
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(81, 159, 145, 1);
+    cursor: pointer;
+}
+
+.drag-area.active {
+    border: 2px solid #1683ff;
+}
+
+.drag-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-footer {
+    width: 100%;
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Align buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    justify-content: center; /* Center buttons horizontally */
+  }
+
+  .button-modal-cancel {
+    border-color: var(--main2-color);
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 25vw;
+    padding: 10px 3px;
+    margin: 3px 1px;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+  }
+
+  .button-modal {
+    background-color: rgba(81, 159, 145, 1);
+    border: none;
+    color: white;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    padding: 10px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* Remove if causing layout issues */
+    margin: 3px 1px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 25vw;
+  }
+
