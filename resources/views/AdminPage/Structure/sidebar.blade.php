@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="col-lg-2 d-md-block bg-light sidebar collapse">
+<nav id="sidebarMenu" class="col-lg-2 d-md-block bg-light sidebar collapse sticky-top">
     <div class="position-sticky pt-3 d-flex flex-column">
         <ul class="nav flex-column">
             <li>
@@ -64,8 +64,10 @@
             </a>
         </div>
 
-        <div class="nav-item d-flex justify-content-center" style="margin-top: 75%">
-            <a class="navbar-brand flex-grow-1 text-center P-0 m-0 me-3" href="/"><img src="\image\MedigoLogo.svg" alt="Medigo Logo"></a>
+        <div class="nav-item d-flex justify-content-center" style="margin-top: 80%">
+            <a class="navbar-brand flex-grow-1 text-center P-0 m-0" href="/dashboard">
+                <img src="\image\MedigoLogo.svg" alt="Medigo Logo">
+            </a>
         </div>
     </div>
 </nav>

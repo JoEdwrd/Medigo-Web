@@ -12,8 +12,8 @@ class DashboardPromotionController extends Controller
      */
     public function index()
     {
-        return view("AdminPage.promotion.index", [
-            "promotions" => Promotion::all()
+        return view('AdminPage.promotions.index', [
+            'promotions' => Promotion::all()
         ]);
     }
 
@@ -22,7 +22,7 @@ class DashboardPromotionController extends Controller
      */
     public function create()
     {
-        //
+        return view('AdminPage.promotions.create');
     }
 
     /**
@@ -30,7 +30,22 @@ class DashboardPromotionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255|unique:promotions',
+            'slug' => 'required|unique:promotions',
+            'code' => 'required|unique:promotions|max:6',
+            'discount' => 'required|numeric',
+            'image' => 'image|file|max:1024',
+            'terms' => 'required',
+        ]);
+
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('promotion-images');
+        }
+
+        Promotion::create($validatedData);
+
+        return redirect('/dashboard/promotions')->with('success', 'New Promotion has been added!');
     }
 
     /**
@@ -38,8 +53,8 @@ class DashboardPromotionController extends Controller
      */
     public function show(Promotion $promotion)
     {
-        return view("AdminPage.promotion.detail", [
-            "promotion" => $promotion
+        return view('AdminPage.promotions.show', [
+            'promotion' => $promotion
         ]);
     }
 
@@ -48,7 +63,9 @@ class DashboardPromotionController extends Controller
      */
     public function edit(Promotion $promotion)
     {
-        //
+        return view('AdminPage.promotions.edit', [
+            'promotion' => $promotion
+        ]);
     }
 
     /**
@@ -56,7 +73,34 @@ class DashboardPromotionController extends Controller
      */
     public function update(Request $request, Promotion $promotion)
     {
-        //
+        $rules = [
+            'discount' => 'required|numeric',
+            'image' => 'image|file|max:1024',
+            'terms' => 'required',
+        ];
+        
+        if ($request->name != $promotion->name) {
+            $rules['name'] = 'required|max:255|unique:promotions';
+        }
+        if ($request->slug != $promotion->slug) {
+            $rules['slug'] = 'required|unique:promotions';
+        }
+        if ($request->code != $promotion->code) {
+            $rules['code'] = 'required|unique:promotions|max:6';
+        }
+
+        $validatedData = $request->validate($rules);
+
+        // if ($request->file('image')) {
+        //     if ($request->oldImage) {
+        //         Storage::delete($request->oldImage);
+        //     }
+        //     $validatedData['image'] = $request->file('image')->store('promotion-images');
+        // }
+
+        Promotion::where('id', $promotion->id)->update($validatedData);
+
+        return redirect('/dashboard/promotions')->with('success', 'Promotion has been updated!');
     }
 
     /**
@@ -64,6 +108,8 @@ class DashboardPromotionController extends Controller
      */
     public function destroy(Promotion $promotion)
     {
-        //
+        Promotion::destroy($promotion->id);
+
+        return redirect('/dashboard/promotions')->with('success', 'Promotion has been deleted!');
     }
 }
