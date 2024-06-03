@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="my-4">
-        <h1 class="h2">All Promotions</h1>
+        <h2>All Promotions</h2>
     </div>
 
     <hr>
@@ -13,7 +13,7 @@
     
     <div class="table-responsive col-lg-10">
         {{-- <a href="/" class="btn btn-success mb-3">Add New Promotion</a> --}}
-        <a href="#" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Promotion</a>
+        <a href="/dashboard/promotions/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Promotion</a>
         <table class="table table-md">
             <thead>
                 <tr>

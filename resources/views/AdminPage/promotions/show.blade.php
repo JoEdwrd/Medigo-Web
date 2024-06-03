@@ -49,10 +49,9 @@
                     <div class="container mt-4 d-flex flex-column">
                         <h3>Terms</h3>
                         <br>
-                        <div id="descbox" class="mb-4 overflow-auto" style="background-color: #d9d9d9; border-radius:10px; max-height: 360px">
+                        <div id="descbox" class="mb-4 overflow-auto" style="background-color: #d9d9d9; border-radius:10px; height: 360px">
                             <div class="m-2 me-3 ps-2">
-                                {{ $promotion->terms }}
-                                {{ $promotion->terms }}
+                                {!! $promotion->terms !!}
                             </div>
                         </div>
                     </div>
