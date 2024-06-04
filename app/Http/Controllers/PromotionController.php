@@ -12,7 +12,7 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        //
+        return view('Promotions.promotions');
     }
 
     /**
@@ -36,7 +36,7 @@ class PromotionController extends Controller
      */
     public function show(Promotion $promotion)
     {
-        //
+        return view('Promotions.promoDetail');
     }
 
     /**

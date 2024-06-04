@@ -14,7 +14,7 @@ use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\LogoutProfileController;
 use App\Http\Controllers\DashboardProductController;
-
+use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\OldPasswordCheckController;
 use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
@@ -56,6 +56,9 @@ Route::get('/logout', [LogoutProfileController::class, 'index']);
 
 Route::get('/faq', [FaqController::class, 'index']);
 Route::get('/orderdetail', [OrderDetailController::class, 'index']);
+
+Route::get('/promotions', [PromotionController::class, 'index']);
+Route::get('/promoDetail', [PromotionController::class, 'show']);
 
 
 //admin
