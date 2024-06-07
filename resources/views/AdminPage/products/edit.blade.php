@@ -22,8 +22,8 @@
                 <h3>General Information</h3>
                 <br>
                 <label for="name">Product Name</label>
-                <input class="mt-2 p-2 form-control @error("title") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name",$product->name) }}">
-                @error("title")
+                <input class="mt-2 p-2 form-control @error("name") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name",$product->name) }}">
+                @error("name")
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -56,7 +56,7 @@
                 <div class="d-flex flex-row justify-content-between" style="width: 100%">
                     <div class="d-flex flex-column" style="width:50%">
                         <label for="price">Product Price</label>
-                        <input class="mt-2 p-2 form-control @error("price") is-invalid @enderror" style="width:90%;border-radius:5px;border:none" type="text" id="price" name="price" required value="{{ old("price") }}">
+                        <input class="mt-2 p-2 form-control @error("price") is-invalid @enderror" style="width:90%;border-radius:5px;border:none" type="text" id="price" name="price" required value="{{ old("price",$product->price) }}">
                         @error("price")
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -65,7 +65,7 @@
                     </div>
                     <div class="d-flex flex-column" style="width:50%">
                         <label for="stock">Product Stock</label>
-                        <input class="mt-2 p-2 form-control @error("stock") is-invalid @enderror" style="width:90%;border-radius:5px;border:none" type="text" id="stock" name="stock" required value="{{ old("stock") }}">
+                        <input class="mt-2 p-2 form-control @error("stock") is-invalid @enderror" style="width:90%;border-radius:5px;border:none" type="text" id="stock" name="stock" required value="{{ old("stock",$product->stock) }}">
                         @error("stock")
                             <div class="invalid-feedback">
                                 {{ $message }}

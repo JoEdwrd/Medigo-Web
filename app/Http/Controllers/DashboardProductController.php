@@ -112,7 +112,7 @@ class DashboardProductController extends Controller
         //         Storage::delete($product->image);
         //     }
         Product::destroy($product->id);
-        return redirect("/dashboard/products")->with("success","Post has been deleted!");
+        return redirect("/dashboard/products")->with("success","Product has been deleted!");
     }
 }
 

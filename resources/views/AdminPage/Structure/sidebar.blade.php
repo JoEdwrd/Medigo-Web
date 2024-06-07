@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ Request::is("dashboard/product*") ? "active":"" }}" href="/dashboard/products">
+                <a class="nav-link {{ Request::is("dashboard/products*") ? "active":"" }}" href="/dashboard/products">
                 <i class="bi bi-box-seam-fill me-2"></i>
                 Products
                 </a>
@@ -42,7 +42,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{ Request::is("dashboard/categories*") ? "active":"" }}" href="/dashboard/categories">
                 <i class="bi bi-person-heart me-2"></i>
                 Product Category
                 </a>

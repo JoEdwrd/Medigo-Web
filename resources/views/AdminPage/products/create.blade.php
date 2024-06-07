@@ -21,8 +21,8 @@
                 <h3>General Information</h3>
                 <br>
                 <label for="name">Product Name</label>
-                <input class="mt-2 p-2 form-control @error("title") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name") }}">
-                @error("title")
+                <input class="mt-2 p-2 form-control @error("name") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name") }}">
+                @error("name")
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
