@@ -23,6 +23,16 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        Category::create([
+            "name"=>"Flu",
+            "slug"=>"flu",
+            "description"=>"Obat untuk penyakit flu"
+        ]);
+        Category::create([
+            "name"=>"Kepala",
+            "slug"=>"kepala",
+            "description"=>"Obat untuk penyakit Kepala"
+        ]);
         Product::create([
             "category_id"=>1,
             "name"=>"Obat Batuk",
@@ -51,16 +61,6 @@ class DatabaseSeeder extends Seeder
             "description"=>"Obat flu yang sangat ampuh"
         ]);
 
-        Category::create([
-            "name"=>"Flu",
-            "slug"=>"flu",
-            "description"=>"Obat untuk penyakit flu"
-        ]);
-        Category::create([
-            "name"=>"Kepala",
-            "slug"=>"kepala",
-            "description"=>"Obat untuk penyakit Kepala"
-        ]);
 
         Promotion::create([
             'name' => 'Flash Sale - Up to 50% Off!',
