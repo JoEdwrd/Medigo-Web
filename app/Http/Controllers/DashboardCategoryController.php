@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+
 
 class DashboardCategoryController extends Controller
 {
@@ -98,7 +100,15 @@ class DashboardCategoryController extends Controller
         // if($category->image){
         //         Storage::delete($category->image);
         //     }
-        Category::destroy($category->id);
-        return redirect("/dashboard/categories")->with("success","Category has been deleted!");
+        try{
+            Category::destroy($category->id);
+            return redirect("/dashboard/categories")->with("success","Category has been deleted!");
+        }catch (QueryException $e) {
+            if ($e->getCode() == 23000) {
+                return redirect("/dashboard/categories")->with('error', 'Cannot delete category as it is associated with one or more products.');
+            }
+            // Tangani kesalahan lain jika perlu
+            return redirect("/dashboard/categories")->with('error', 'An error occurred while trying to delete the category.');
+        }
     }
 }

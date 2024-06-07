@@ -12,6 +12,11 @@
         {{ session("success") }}
       </div>
     @endif
+    @if(session()->has("error"))
+    <div class="alert alert-danger col-lg-6" role="alert">
+        {{ session('error') }}
+    </div>
+  @endif
     <div class="table-responsive col-lg-10">
       <a href="/dashboard/categories/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Categories</a>  
       <table class="table table-md">
