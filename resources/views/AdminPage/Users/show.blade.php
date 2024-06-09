@@ -3,7 +3,7 @@
 @section('container')
     <div class="my-4 d-flex flex-row justify-content-between">
         <h1 class="h2">User Detail</h1>
-        <a href="/dashboard/users" id="addbtn" class="btn mb-4" style="max-width: 250px">Back</a>
+        <a href="/dashboard/users" id="addbtn" class="btn mb-2" style="max-width: 250px">Back</a>
     </div>
     {{-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">All user</h1>
@@ -14,7 +14,7 @@
       </div>
     @endif
     <div class="d-flex flex-row justify-content-between mb-5">
-        <div class="d-flex flex-column  p-5" style="width: 55%;background:#EEEBEB;border-radius:20px">
+        <div class="d-flex flex-column  p-5" style="width: 62%;background:#EEEBEB;border-radius:20px">
             <h3>General Information</h3>
             <br>
             <label">User ID</label>
@@ -58,8 +58,8 @@
             </div>
         </div>
         <br>    
-        <div style="width: 43%">
-            <div class="d-flex justify-content-center align-item-center p-5 mb-3" style="background:#EEEBEB;border-radius:20px">
+        <div style="width: 36%">
+            <div class="d-flex justify-content-center align-item-center mb-3 p-4" style="background:#EEEBEB;border-radius:20px">
                 <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
             </div>
             <div class="d-flex flex-column p-4" style="background:#EEEBEB;border-radius:20px">

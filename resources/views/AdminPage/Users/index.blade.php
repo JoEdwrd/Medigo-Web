@@ -1,17 +1,20 @@
 @extends("AdminPage.Structure.main")
 
 @section('container')
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">All user</h1>
+    <div class="my-4">
+        <h1 class="h2">All Users</h1>
     </div>
-    {{-- @if(session()->has("success"))
+
+    <hr>
+
+    @if(session()->has("success"))
       <div class="alert alert-success col-lg-6" role="alert">
         {{ session("success") }}
       </div>
-    @endif --}}
+    @endif
     <div class="table-responsive col-lg-10">
-      <a href="/" class="btn btn-success mb-3">Add New user</a>
-        <table class="table table-md">
+      {{-- <a href="/" class="btn btn-success mb-3">Add New user</a> --}}
+        <table class="table table-md rounded-5">
           <thead>
             <tr>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">User ID</th>
@@ -33,7 +36,7 @@
                 <td class="">
                   {{-- @dd($users) --}}
                     <a href="/dashboard/users/{{ $user->id }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
-                    <form action="/dashboard/users/{{$user->id}}/delete" method="post" class="d-inline">
+                    <form action="/dashboard/users/{{$user->id}}" method="post" class="d-inline">
                       @method("delete")
                       @csrf
                       <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><i class="bi bi-trash-fill"></i></button>

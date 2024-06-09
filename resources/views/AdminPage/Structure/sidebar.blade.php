@@ -24,13 +24,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{ Request::is("dashboard/users") ? "active":"" }}" href="/dashboard/users">
                 <i class="bi bi-people-fill  me-2"></i>
                 Users
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{ Request::is("dashboard/transactions") ? "active":"" }}" href="/dashboard/transactions">
                 <i class="bi bi-wallet2 me-2"></i>
                 Transactions
                 </a>
