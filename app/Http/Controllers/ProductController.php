@@ -15,18 +15,18 @@ class ProductController extends Controller
     public function index()
     {
         $searchTerm = request('search');
-        $products = Product::latest();
+        $productsQuery = Product::query();
 
         if ($searchTerm) {
-            $products->where('name', 'like', '%' . $searchTerm . '%');
+            // Fetch products that match the search term
+            $productsQuery->where('name', 'like', '%' . $searchTerm . '%');
         }
 
-        $products = $products->get();
-        
-        $productNames = Product::where('name', 'like', '%' . $searchTerm . '%')->pluck('name');
+        // Fetch only existing products from the database
+        $products = $productsQuery->get();
 
         $categories = Category::with('products')->get();
-        return view('Product.Products', compact('categories', 'products', 'searchTerm', 'productNames'));
+        return view('Product.Products', compact('categories', 'products', 'searchTerm'));
 
 
     }
