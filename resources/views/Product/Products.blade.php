@@ -25,10 +25,8 @@
         </div>
     </div>
 
-
-
-
-    @if ($searchTerm && $products->count() > 0)
+    @if ($products->count() > 0)
+    @if ($searchTerm)
     <div class="container">
         <div class="row">
             <div class="col">
@@ -49,15 +47,6 @@
             </div>
         </div>
         @endforeach
-    </div>
-
-    @elseif ($searchTerm && $products->count() == 0)
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h4>No products found for "{{ $searchTerm }}"</h4>
-            </div>
-        </div>
     </div>
     @else
     <!-- Show all products if no search query -->
@@ -85,6 +74,20 @@
         @endforeach
     </div>
     @endforeach
+    @endif
+
+    @else
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                @if ($searchTerm)
+                <h4>No products found for "{{ $searchTerm }}"</h4>
+                @else
+                <h4>No products available</h4>
+                @endif
+            </div>
+        </div>
+    </div>
     @endif
 
 </div>
