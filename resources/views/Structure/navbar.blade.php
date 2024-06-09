@@ -43,7 +43,7 @@
             <!-- Add margin-right to navbar-brand -->
             <a class="navbar-brand flex-grow-1 text-center me-3" href="/"><img src="image\MedigoLogo.svg" alt="Medigo Logo"></a>
 
-            <form class="form-inline my-2 my-lg-0 flex-grow-1" style="margin-right: 50px;" action="/">
+            <form class="form-inline my-2 my-lg-0 flex-grow-1" style="margin-right: 50px;" action="/products">
                 <div class="input-group mb-3 w-100" style="margin-top:20px;">
                     <input type="text" class="form-control" placeholder="Search.." name="search">
                     <button class="btn" style="background-color:var(--main2-color)" type="submit"><i style="color: var(--main1-color)" class="bi bi-search"></i></button>

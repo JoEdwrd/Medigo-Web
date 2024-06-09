@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -13,7 +14,21 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('Product.products');
+        $searchTerm = request('search');
+        $products = Product::latest();
+
+        if ($searchTerm) {
+            $products->where('name', 'like', '%' . $searchTerm . '%');
+        }
+
+        $products = $products->get();
+        
+        $productNames = Product::where('name', 'like', '%' . $searchTerm . '%')->pluck('name');
+
+        $categories = Category::with('products')->get();
+        return view('Product.Products', compact('categories', 'products', 'searchTerm', 'productNames'));
+
+
     }
 
     /**
