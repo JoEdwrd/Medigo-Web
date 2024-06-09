@@ -13,25 +13,9 @@ class DashboardUserController extends Controller
     public function index()
     {
         // dd(User::all());
-        return view("AdminPage.user.index",[    
+        return view("AdminPage.Users.index",[    
             'users' => User::all()
         ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
     }
 
     /**
@@ -39,25 +23,9 @@ class DashboardUserController extends Controller
      */
     public function show(User $user)
     {
-        return view("AdminPage.user.detail", [
+        return view("AdminPage.Users.show", [
             "user" => $user
         ]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
     }
 
     /**
@@ -66,6 +34,6 @@ class DashboardUserController extends Controller
     public function destroy(User $user)
     {
         $user->delete();
-        return redirect()->route('userDashboard');
+        return redirect("/dashboard/users")->with("success", "User has been deleted!");
     }
 }

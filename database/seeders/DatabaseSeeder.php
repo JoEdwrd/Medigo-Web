@@ -5,9 +5,11 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Category;
+use App\Models\OrderDetail;
 use Illuminate\Database\Seeder;
 use App\Models\Product;
 use App\Models\Promotion;
+use App\Models\Transaction;
 use App\Models\User;
 
 class DatabaseSeeder extends Seeder
@@ -100,6 +102,35 @@ class DatabaseSeeder extends Seeder
             "dob"=>"2005-12-23",
             "gender"=>"male",
             "address"=>"jl tuanku imam bonjol blok B5 no.16, bekasi barat, kabupaten pejuang"
+        ]);
+        Transaction::create([
+            "transaction_date" => '2024-04-01',
+            'slug' => 'transaction#1',
+            'user_id' => 2,
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+        Transaction::create([
+            "transaction_date" => '2023-02-09',
+            'slug' => 'transaction#2',
+            'user_id' => 1,
+            'promo_id' => 2,
+            'payment_method' => 'BRI',
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 1,
+            "product_id" => 1,
+            "quantity" => 12
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 1,
+            "product_id" => 3,
+            "quantity" => 2
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 2,
+            "product_id" => 2,
+            "quantity" => 10
         ]);
     } 
 }

@@ -19,6 +19,7 @@ use App\Http\Controllers\OldPasswordCheckController;
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
+use App\Http\Controllers\DashboardTransactionController;
 
 
 
@@ -71,7 +72,10 @@ Route::resource('/dashboard/products',DashboardProductController::class);
 Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
 //Promotion
 Route::resource('/dashboard/promotions', DashboardPromotionController::class);
+//User
+Route::resource("/dashboard/users", DashboardUserController::class);
 //Category
 Route::resource('/dashboard/categories', DashboardCategoryController::class);
 Route::get('/dashboard/categories/{category:slug}',[DashboardCategoryController::class,"show"]);
-
+//Transactions
+Route::resource('/dashboard/transactions', DashboardTransactionController::class);
