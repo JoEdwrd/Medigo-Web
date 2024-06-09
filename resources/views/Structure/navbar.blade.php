@@ -16,7 +16,7 @@
                     </a>
                 </li>
                 <li class="nav-item col-md-3">
-                    <a class="nav-link text-dark" id="NavItems" href="/product">
+                    <a class="nav-link text-dark" id="NavItems" href="/products">
                       @if(Request::is("product"))
                       <u>PRODUCT</u>
                       @else
