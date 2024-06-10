@@ -1,3 +1,5 @@
+console.log('xdfxffdd')
+
 document.getElementById("toggleButton").addEventListener("click", function () {
     var button = this;
     var icon = document.getElementById("toggleIcon");
@@ -16,3 +18,4 @@ function showPass() {
         x.type = "password";
     }
 }
+
