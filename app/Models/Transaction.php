@@ -2,18 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\OrderDetail;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Transaction extends Model
 {
     use HasFactory;
-    protected $guarded=["id"];
-    public function getRouteKeyName()
-    {
+    protected $guarded = ["id"];
+
+    public function getRouteKeyName() {
         return 'slug';
     }
-    public function order_details(){
+
+    public function order_details() {
         return $this->hasMany(OrderDetail::class);
     }
 
@@ -21,11 +23,11 @@ class Transaction extends Model
     //     return $this->hasMany(Prescription::class);
     // }
 
-    public function promotions(){
-        return $this->belongsTo(Promotion::class);
+    public function promotion() {
+        return $this->belongsTo(Promotion::class, 'promo_id');
     }
 
-    public function users(){
+    public function user() {
         return $this->belongsTo(User::class);
     }
 }

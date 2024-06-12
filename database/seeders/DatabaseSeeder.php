@@ -35,6 +35,7 @@ class DatabaseSeeder extends Seeder
             "slug"=>"kepala",
             "description"=>"Obat untuk penyakit Kepala"
         ]);
+
         Product::create([
             "category_id"=>1,
             "name"=>"Obat Batuk",
@@ -85,6 +86,7 @@ class DatabaseSeeder extends Seeder
             'discount' => 0.5,
             'terms' => 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat minus sint rem obcaecati culpa saepe expedita porro tempore facere, sequi sapiente mollitia incidunt, corrupti vero in inventore adipisci corporis voluptates sed et aliquam quam laboriosam recusandae! Aspernatur laborum, dolorem reprehenderit ipsum voluptatibus dolore, nemo officia minima distinctio sit accusamus quo blanditiis quod inventore exercitationem, sunt dolores sed beatae cumque. Hic architecto officiis provident ipsum sint necessitatibus iure ab nostrum iusto porro eveniet minus error possimus fugiat, laborum dignissimos vero at aliquam. Rem eveniet magnam suscipit sequi earum repellat perspiciatis eius saepe est sint deleniti, facere architecto ex sapiente tenetur quam!',
         ]);
+
         User::create([
             "name"=>"Gladys",
             "email"=>"gladys@ruslim.com",
@@ -103,10 +105,12 @@ class DatabaseSeeder extends Seeder
             "gender"=>"male",
             "address"=>"jl tuanku imam bonjol blok B5 no.16, bekasi barat, kabupaten pejuang"
         ]);
+
         Transaction::create([
             "transaction_date" => '2024-04-01',
             'slug' => 'transaction#1',
             'user_id' => 2,
+            'status' => 'In progress',
             'promo_id' => 1,
             'payment_method' => 'BCA',
         ]);
@@ -114,23 +118,111 @@ class DatabaseSeeder extends Seeder
             "transaction_date" => '2023-02-09',
             'slug' => 'transaction#2',
             'user_id' => 1,
+            'status' => 'In progress',
             'promo_id' => 2,
             'payment_method' => 'BRI',
         ]);
+        Transaction::create([
+            "transaction_date" => '2024-05-03',
+            'slug' => 'transaction#3',
+            'user_id' => 2,
+            'status' => 'Waiting for verification',
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+        Transaction::create([
+            "transaction_date" => '2023-04-10',
+            'slug' => 'transaction#4',
+            'user_id' => 1,
+            'status' => 'Waiting for verification',
+            'promo_id' => 2,
+            'payment_method' => 'BRI',
+        ]);
+        Transaction::create([
+            "transaction_date" => '2024-05-08',
+            'slug' => 'transaction#5',
+            'user_id' => 2,
+            'status' => 'Completed',
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+        Transaction::create([
+            "transaction_date" => '2024-10-03',
+            'slug' => 'transaction#6',
+            'user_id' => 1,
+            'status' => 'Completed',
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+        Transaction::create([
+            "transaction_date" => '2024-06-03',
+            'slug' => 'transaction#7',
+            'user_id' => 2,
+            'status' => 'Canceled',
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+
         OrderDetail::create([
             "transaction_id" => 1,
             "product_id" => 1,
             "quantity" => 12
         ]);
         OrderDetail::create([
-            "transaction_id" => 1,
+            "transaction_id" => 2,
             "product_id" => 3,
             "quantity" => 2
         ]);
         OrderDetail::create([
-            "transaction_id" => 2,
+            "transaction_id" => 3,
             "product_id" => 2,
             "quantity" => 10
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 4,
+            "product_id" => 1,
+            "quantity" => 12
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 5,
+            "product_id" => 3,
+            "quantity" => 2
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 6,
+            "product_id" => 2,
+            "quantity" => 10
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 7,
+            "product_id" => 2,
+            "quantity" => 10
+        ]);
+
+        // Payment Dummy
+        Transaction::create([
+            "transaction_date" => '2024-07-03',
+            'id' => 847820,
+            'slug' => 'transaction#847820',
+            'user_id' => 2,
+            'status' => 'Waiting for payment',
+            'promo_id' => 1,
+            'payment_method' => 'BCA',
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 847820,
+            "product_id" => 3,
+            "quantity" => 5
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 847820,
+            "product_id" => 2,
+            "quantity" => 2
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 847820,
+            "product_id" => 1,
+            "quantity" => 2
         ]);
     } 
 }

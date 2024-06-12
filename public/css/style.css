@@ -117,7 +117,6 @@ footer {
     max-height: 200px;
 }
 
-
 #card_product {
     margin: 20px;
     width: 250px !important;
@@ -195,7 +194,7 @@ footer {
     font-family: "Chopin-Trial";
     font-weight: bold;
 }
-#trackbutton {
+.trackbutton {
     border: 2px solid #3d3e3f;
     border-radius: 5px;
     width: 180px;
@@ -210,7 +209,7 @@ footer {
     background: #ffffff;
 }
 /* HISTORY PAGE */
-#trackbutton:hover {
+.trackbutton:hover {
     background: var(--main2-color);
     color: white;
     background-color: var(--main2-color);
@@ -513,11 +512,15 @@ footer {
     justify-content: center;
     flex-direction: column;
     background: #e0eafc; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #cfdef3, #e0eafc); /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(
+        to right,
+        #cfdef3,
+        #e0eafc
+    ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
-      to right,
-      #cfdef3,
-      #e0eafc
+        to right,
+        #cfdef3,
+        #e0eafc
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -579,9 +582,9 @@ footer {
     flex-direction: row; /* Align buttons horizontally */
     align-items: center; /* Center buttons vertically */
     justify-content: center; /* Center buttons horizontally */
-  }
+}
 
-  .button-modal-cancel {
+.button-modal-cancel {
     border-color: var(--main2-color);
     border: solid 2px var(--main2-color);
     border-radius: 10px;
@@ -591,9 +594,9 @@ footer {
     font-family: "Chopin-Trial";
     font-weight: bold;
     color: var(--main2-color);
-  }
+}
 
-  .button-modal {
+.button-modal {
     background-color: rgba(81, 159, 145, 1);
     border: none;
     color: white;
@@ -607,5 +610,4 @@ footer {
     border-radius: 10px;
     cursor: pointer;
     width: 25vw;
-  }
-
+}
