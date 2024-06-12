@@ -62,7 +62,7 @@ Route::get('/faq', [FaqController::class, 'index']);
 Route::get('/orderdetail', [OrderDetailController::class, 'index']);
 
 Route::get('/promotions', [PromotionController::class, 'index']);
-Route::get('/promoDetail', [PromotionController::class, 'show']);
+Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show']);
 
 
 //admin

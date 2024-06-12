@@ -41,7 +41,7 @@
             <img src="{{ asset($product->image) }}" class="crd-img" alt="{{ $product->name }}">
             <div class="card-body" id="card-body">
                 <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
-                <label class="card-desc" id="card-desc">{{ $product->description }}</label>
+                <label class="card-desc" id="card-desc">{{ $product->shortdesc}}</label>
                 <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
                 <a href="#" id="addbtn" class="btn">ADD</a>
             </div>
@@ -66,7 +66,7 @@
             <img src="{{ asset($product->image) }}" class="crd-img" alt="{{ $product->name }}">
             <div class="card-body" id="card-body">
                 <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
-                <label class="card-desc" id="card-desc">{{ $product->description }}</label>
+                <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
                 <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
                 <a href="#" id="addbtn" class="btn">ADD</a>
             </div>

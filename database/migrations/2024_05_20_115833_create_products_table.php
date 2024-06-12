@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string("slug")->unique();
             $table->biginteger("stock");
             $table->double("price");
+            $table->double("discprice")->nullable();
             $table->string("name");
             $table->text("description");
+            $table->string("shortdesc");
             $table->string("image")->nullable();
             $table->timestamps();
         });

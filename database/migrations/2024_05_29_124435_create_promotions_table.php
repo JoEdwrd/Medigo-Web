@@ -19,6 +19,9 @@ return new class extends Migration
             $table->float("discount");
             $table->string("image")->nullable();
             $table->text("terms");
+            $table->string("shortdecs");
+            $table->date("startdate");
+            $table->date("enddate");
             $table->timestamps();
         });
     }
