@@ -1,3 +1,7 @@
+@push('scripts')
+    <script src="/js/product.js"></script>
+@endpush
+
 @extends('Structure.main')
 
 @section('container')

@@ -20,6 +20,8 @@ use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
 use App\Http\Controllers\DashboardTransactionController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\WebhookController;
 
 
 
@@ -79,3 +81,9 @@ Route::resource('/dashboard/categories', DashboardCategoryController::class);
 Route::get('/dashboard/categories/{category:slug}',[DashboardCategoryController::class,"show"]);
 //Transactions
 Route::resource('/dashboard/transactions', DashboardTransactionController::class);
+// Payment
+
+Route::get('/get-snap-token', [PaymentController::class, 'getSnapToken']);
+Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
+
+

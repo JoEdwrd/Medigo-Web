@@ -1,3 +1,6 @@
+@push('scripts')
+    <script src="/js/auth.js"></script>
+@endpush
 @extends('Structure.main')
 @section('container')
 

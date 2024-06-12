@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId("user_id")->constrained("users")->onDelete("restrict");
-            $table->string("status")->default("Wating for payment");
+            $table->string("status")->default("Waiting for payment"); // waiting for payment, waiting for verification, in progress, completed, canceled
             $table->string("slug")->unique();
-            $table->foreignId("promo_id")->nullable()->constrained("users")->onDelete("restrict");
+            $table->foreignId("promo_id")->nullable()->constrained("promotions")->onDelete("restrict");
             $table->date("transaction_date");
             $table->string('payment_method');
         });
