@@ -1,7 +1,7 @@
 @extends("AdminPage.Structure.main")
 @section("container")
     <form method="post" action="/dashboard/products/{{ $product->slug }}" class="mb-5">
-    @csrf   
+    @csrf
     @method("put")
     <div class="my-4 d-flex flex-row justify-content-between">
         <h1 class="h2">Edit Product</h1>
@@ -15,7 +15,7 @@
         {{ session("success") }}
       </div>
     @endif
-    
+
       <div class="d-flex flex-column justify-content-between">
         <div class="d-flex flex-row justify-content-evenly">
             <div class="d-flex flex-column  p-5" style="width: 55%;background:#EEEBEB;border-radius:20px">
@@ -43,12 +43,20 @@
                 @enderror
                 <input id="description" type="hidden" name="description" value="{{ old("description",$product->description) }}">
                 <trix-editor input="description" style="background: white;width:100%;border-radius:5px;height:200px;border:none;overflow:scroll"></trix-editor>
+                <br>
+                <label for="slug">Package Type</label>
+                <input class="mt-2 p-2 form-control @error("shortdesc") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="shortdesc" name="shortdesc"  required value="{{ old("shortdesc",$product->shortdesc) }}">
+                @error("shortdesc")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="d-flex justify-content-center align-item-center p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
                 <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
             </div>
         </div>
-        <br>    
+        <br>
         <div class="d-flex flex-row justify-content-evenly">
             <div class="d-flex flex-column  p-5" style="width: 55%;background:#EEEBEB;border-radius:20px">
                 <h3>Price and Stock</h3>
@@ -73,6 +81,15 @@
                         @enderror
                     </div>
                 </div>
+                <div class="d-flex flex-column" style="width:100%">
+                        <label for="discprice">Discount Price</label>
+                        <input class="mt-2 p-2 form-control @error("discprice") is-invalid @enderror" style="width:90%;border-radius:5px;border:none" type="text" id="discprice" name="discprice" value="{{ old("discprice",$product->discprice) }}">
+                        @error("discprice")
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
             </div>
             <div class="d-flex flex-column  p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
                 <h3>Category and Type</h3>
@@ -84,7 +101,7 @@
                             @foreach($categories as $category)
                                 @if(old("category_id",$product->category_id)==$category->id)
                                     <option value="{{ $category->id }}" selected>{{ $category->name }}</option>
-                                @else 
+                                @else
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endif
                             @endforeach
@@ -96,7 +113,7 @@
                             @for($i=0;$i<2;$i++)
                                 @if(old("type")==$i)
                                     <option value="{{ $i }}" selected>{{ $i }}</option>
-                                @else 
+                                @else
                                     <option value="{{ $i }}">{{ $i }}</option>
                                 @endif
                             @endfor

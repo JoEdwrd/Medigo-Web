@@ -1,23 +1,33 @@
 @extends('Structure.main')
 @section('container')
 
-
+@php
+use Carbon\Carbon;
+@endphp
 <div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/promotions" style="color: #55BC44">Promotions</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44;font-weight:bold;">{{$promotion->name}}</li>
+        </ol>
+    </nav>
+    <br>
     <div class="card">
         <img src="{{ asset("/image/Promo1.png") }}" style="height: 400px"; width="500px" class="card-img-top" alt="Voucher Image">
         <div class="card-body">
-            <div class="d-flex justify-content-between align-items-center">
-                <h4 class="card-title">50% Off - Limited Time Discount on Allergy Relief Medication</h4>
-                <span class="badge bg-warning text-dark">50% off</span>
+            <div class="d-flex justif   y-content-between align-items-center">
+                <h4 class="card-title">{{$promotion->name}}</h4>
+                {{-- <span class="badge bg-warning text-dark">50% off</span> --}}
             </div>
             <hr>
             <ul class="list-unstyled">
-                <li><i class="bi bi-calendar"></i>Promo Period: May 1, 2024 - July 1, 2024</li>
-                <li><i class="bi bi-receipt"></i> Limited to 1 voucher per bill</li>
+                <li><i class="bi bi-calendar"></i>Promo Period:  {{ Carbon::parse($promotion->startdate)->format('F j, Y') }} - {{ Carbon::parse($promotion->enddate)->format('F j, Y') }}</li>
+                <li><i class="bi bi-receipt"></i> {{$promotion->shortdecs}}</li>
             </ul>
             <hr>
+            {!! $promotion->terms !!}
 
-            <p><strong>Offer Description: </strong>Enjoy a 50% discount on all allergy relief medications during our special promotion.</p>
+            {{-- <p><strong>Offer Description: </strong>Enjoy a 50% discount on all allergy relief medications during our special promotion.</p>
 
             <p><strong>How to Redeem:</strong> Enter promo code ALLERGY50 at checkout to apply the discount on eligible allergy relief medications.</p>
 
@@ -38,7 +48,7 @@
             </ul>
 
             <p><strong>Important Note:</strong> Always read the label and use only as directed. Consult your healthcare professional if symptoms persist.</p>
-            <p><strong>Contact Information:</strong> For more details or assistance, please contact our customer service team at <a href="mailto:support@pharmahealth.com">support@medigo.com</a> or call (800) 123-4567.</p>
+            <p><strong>Contact Information:</strong> For more details or assistance, please contact our customer service team at <a href="mailto:support@pharmahealth.com">support@medigo.com</a> or call (800) 123-4567.</p> --}}
 
             <div class="d-flex justify-content-between align-items-center mt-3">
                 <button class="btn" style="background-color: var(--main2-color); color: white;"">Apply offers</button>

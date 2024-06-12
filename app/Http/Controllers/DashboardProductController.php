@@ -39,12 +39,14 @@ class DashboardProductController extends Controller
             "category_id"=>"required",
             "patent"=>"required|boolean",
             "price"=>"required|numeric|min:0",
+            "discprice"=>"numeric|nullable",
             "stock"=>"required|numeric|min:0",
+            "shortdesc"=>"required|max:50",
             "description"=>"required"
         ]);
         // if($request->file("image")){
         //     $validatedData["image"]=$request->file("image")->store("post-images");
-        // }   
+        // }
         Product::create($validatedData);
         return redirect("/dashboard/products")->with("success","New product has been added!");
     }
@@ -82,9 +84,11 @@ class DashboardProductController extends Controller
             "patent"=>"required|boolean",
             "price"=>"required|numeric|min:0",
             "stock"=>"required|numeric|min:0",
+            "discprice" => "numeric",
+            "shortdesc" => "required|max:50",
             "description"=>"required"
         ];
-       
+
         if($request->slug!=$product->slug){
             $rules["slug"]= "required|unique:products";
         }

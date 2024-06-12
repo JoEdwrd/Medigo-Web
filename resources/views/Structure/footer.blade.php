@@ -59,7 +59,7 @@
           <!-- Grid column -->
           <div class="col-md-1 mb-3 mt-0">
             <h6 class="font-weight-bold" id="NavItems">
-              <a href="/" class="text-black text-decoration-none">Promo</a>
+              <a href="/promotions" class="text-black text-decoration-none">Promo</a>
             </h6>
           </div>
           <!-- Grid column -->

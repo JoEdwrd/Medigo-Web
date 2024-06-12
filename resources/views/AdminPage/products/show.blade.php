@@ -29,12 +29,17 @@
                         {!! $product->description !!}
                     </article>
                 </div>
+                <br>
+                <label">Package Type</label>
+                <div class="mt-2" style="background: #D9D9D9;width:100%;border-radius:5px">
+                    <label class="p-2">{{ $product->shortdesc }}</label>
+                </div>
             </div>
             <div class="d-flex justify-content-center align-item-center p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
                 <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
             </div>
         </div>
-        <br>    
+        <br>
         <div class="d-flex flex-row justify-content-evenly">
             <div class="d-flex flex-column  p-5" style="width: 55%;background:#EEEBEB;border-radius:20px">
                 <h3>Price and Stock</h3>
@@ -53,6 +58,14 @@
                         </div>
                     </div>
                 </div>
+                @if(isset($product->discprice))
+                <div class="d-flex flex-column" style="width:100%">
+                        <label>Discount Price</label>
+                        <div class="mt-2" style="background: #D9D9D9;width:90%;border-radius:5px">
+                            <label class="p-2">Rp. {{ $product->discprice }}</label>
+                        </div>
+                    </div>
+                @endif
             </div>
             <div class="d-flex flex-column  p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
                 <h3>Category and Type</h3>

@@ -1,14 +1,35 @@
 @extends('Structure.main')
 
 @section('container')
+
 <div>
     <img src="{{ asset("image\BannerMain.svg") }}" style="width:100%;height:auto;"alt="">
     <div style="margin-top: 150px; width:100%">
         <h1 class="text-center" style="font-size: 40px;font-weight:600;" id="chopin">Categories</h1>
-
         <section class="mt-10" style="margin-top: 100px">
             <div class="col" style=" width:100%" >
-                <div class="row text-center d-flex justify-content-center m-0 " style="width: 100%;margin-bottom:100px">
+                @php
+                    $counter = 0;
+                @endphp
+                @foreach ($categories as $category)
+                    @if ($counter % 5 == 0)
+                        <div class="row text-center d-flex justify-content-center m-0" style="width: 100%; margin-top: 100px">
+                    @endif
+                    <div class="col-md-2 mb-3 mt-0" style="cursor: pointer;" onclick="window.location='/';">
+                        <img id="cateimg" src="image\Headache.png" alt="">
+                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
+                            <a class="text-black text-decoration-none">{{ $category->name }}</a>
+                        </h6>
+                    </div>
+                    @php
+                        $counter++;
+                    @endphp
+
+                    @if ($counter % 5 == 0 || $loop->last)
+                        </div>
+                    @endif
+                @endforeach
+                {{-- <div class="row text-center d-flex justify-content-center m-0 " style="width: 100%;margin-top:100px">
                     <div class="col-md-2 mb-3 mt-0">
                         <img id="cateimg" src="image\Headache.png" alt="">
                         <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
@@ -40,7 +61,7 @@
                         </h6>
                     </div>
                 </div>
-            
+
                 <div class="row text-center d-flex justify-content-center m-0" style="margin-top: 100px;width:100%">
                     <div id="mg" class="col-md-2 mb-3 mt-0">
                         <img id="cateimg" src="image\Liver.png" alt="">
@@ -72,14 +93,30 @@
                         <a href="/" class="text-black text-decoration-none">Eyesight</a>
                         </h6>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </section>
     </div>
 
     <div style="margin-top:150px; width:100%">
+        <h1 class="text-center" style="font-size: 40px;font-weight:600;" id="chopin">Promotions</h1>
+        <br>
+        <br>
+
         <div class="row text-center d-flex justify-content-evenly m-0" style="margin-top: 50px;width:100%">
-            <div id="PromoBanner" class="col-md-2 mb-3 mt-0" style="background-image: url('/image/Promo1.png');">
+            @for ($i=0;$i<3;$i++)
+                        <div id="PromoBanner" style="cursor: pointer;background-image: url('/image/Promo1.png');" onclick="window.location='/promotions/{{$promotions[$i]->slug}}';" class="col-md-2 mb-3 mt-0">
+                            <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
+                                <div style="margin-bottom: 20px">
+                                    <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
+                                    <a  class="text-light text-decoration-none">{{$promotions[$i]->name}}</a>
+                                    </h5>
+                                    <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">{{$promotions[$i]->shortdecs}}</h6>
+                                </div>
+                            </div>
+                        </div>
+            @endfor
+            {{-- <div id="PromoBanner" class="col-md-2 mb-3 mt-0" style="background-image: url('/image/Promo1.png');">
                 <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
                     <div style="margin-bottom: 20px">
                         <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
@@ -108,16 +145,27 @@
                         <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">Only for Jabodetabek user</h6>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
-    </div> 
+    </div>
 
     <div class="tabs" style="width: 100%;margin-top:100px;margin-bottom:100px">
         <input type="radio" class="tabs__radio" name="tabs-div" id="Best_Seller" checked>
         <label for="Best_Seller" class="tabs__label">Best</label>
         <div class="tabs__content" style="width:100%">
               <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+                    @foreach($bestseller as $best)
                     <div class="card col-md-1" id="card_product">
+                        <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
+                        <div class="card-body" id="card-body">
+                            <h5 class="card-title" id="card-title">{{$best->name}}</h5>
+                            <label class="card-desc" id="card-desc">{{$best->shortdesc}}</label>
+                            <h5 class="card-title" id="card-title">Rp {{ number_format($best->price, 0, ',', '.') }}</h5>
+                            <a href="#" id="addbtn" class="btn">ADD</a>
+                        </div>
+                    </div>
+                    @endforeach
+                    {{-- <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
                             <h5 class="card-title" id="card-title">Card title</h5>
@@ -126,7 +174,7 @@
                             <a href="#" id="addbtn" class="btn">ADD</a>
                         </div>
                     </div>
-                    <div class="card col-md-1" id="card_product"> 
+                    <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
                             <h5 class="card-title" id="card-title">Card title</h5>
@@ -135,16 +183,7 @@
                             <a href="#" id="addbtn" class="btn">ADD</a>
                         </div>
                     </div>
-                    <div class="card col-md-1" id="card_product"> 
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>                
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product"> 
+                    <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
                             <h5 class="card-title" id="card-title">Card title</h5>
@@ -153,7 +192,7 @@
                             <a href="#" id="addbtn" class="btn">ADD</a>
                         </div>
                     </div>
-                    <div class="card col-md-1" id="card_product"> 
+                    <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
                             <h5 class="card-title" id="card-title">Card title</h5>
@@ -162,12 +201,33 @@
                             <a href="#" id="addbtn" class="btn">ADD</a>
                         </div>
                     </div>
+                    <div class="card col-md-1" id="card_product">
+                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+                        <div class="card-body" id="card-body">
+                            <h5 class="card-title" id="card-title">Card title</h5>
+                            <label class="card-desc" id="card-desc">Per Strip</label>
+                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
+                            <a href="#" id="addbtn" class="btn">ADD</a>
+                        </div>
+                    </div> --}}
                 </div>
         </div>
         <input type="radio" class="tabs__radio" name="tabs-div" id="sale">
         <label for="sale" class="tabs__label">Sale</label>
         <div class="tabs__content">
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+                @foreach($discounts as $disc)
+                    <div class="card col-md-1" id="card_product" style="width: 420px">
+                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+                        <div class="card-body" id="card-body">
+                            <h5 class="card-title" id="card-title">{{$disc->name}}</h5>
+                            <label class="card-desc" id="card-desc">{{$disc->shortdesc}}</label>
+                            <h5 class="card-title" id="card-title" style="color: red">Rp {{ number_format($disc->discprice, 0, ',', '.') }}</h5>
+                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp {{ number_format($disc->price, 0, ',', '.') }}</label>
+                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
+                        </div>
+                    </div>
+                @endforeach
                      {{-- @for ($i = 0; $i < 3; $i++)
                         <div class="card col-md-1" id="card_product" style="width: 420px">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
@@ -180,7 +240,7 @@
                         </div>
                     </div>
                      @endfor --}}
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
+                    {{-- <div class="card col-md-1" id="card_product" style="width: 420px">
                         <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
                             <h5 class="card-title" id="card-title">Botak</h5>
@@ -229,7 +289,7 @@
                             <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
                             <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
         </div>
