@@ -15,7 +15,7 @@
                     @if ($counter % 5 == 0)
                         <div class="row text-center d-flex justify-content-center m-0" style="width: 100%; margin-top: 100px">
                     @endif
-                    <div class="col-md-2 mb-3 mt-0" style="cursor: pointer;" onclick="window.location='/';">
+                    <div class="col-md-2 mb-3 mt-0" style="cursor: pointer;" onclick="window.location='{{ route('category.show', $category->slug) }}';">
                         <img id="cateimg" src="image\Headache.png" alt="">
                         <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
                             <a class="text-black text-decoration-none">{{ $category->name }}</a>
