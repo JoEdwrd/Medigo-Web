@@ -27,8 +27,6 @@ class ProductController extends Controller
 
         $categories = Category::with('products')->get();
         return view('Product.Products', compact('categories', 'products', 'searchTerm'));
-
-
     }
 
     /**
@@ -52,7 +50,13 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('Product.product');
+        return view('Product.product', ['product' => $product]);
+    }
+
+    public function showByCategory(Category $category)
+    {
+        $products = $category->products; // Assuming a Category has many Products
+        return view('Product.productsbyCategory', ['category' => $category, 'products' => $products]);
     }
 
     /**

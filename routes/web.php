@@ -39,8 +39,10 @@ use App\Http\Controllers\WebhookController;
 Route::get('/', [LandingPageController::class, 'index'])->name('LandingPage.LandingIndex');
 Route::get('/history', [HistoryController::class, 'index']);
 
-Route::get('/product', [ProductController::class, 'show']);
+Route::get('/product/{product:slug}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/category/{category:slug}', [ProductController::class, 'showByCategory'])->name('category.show');
+
 
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/check', [LoginController::class, 'check'])->name('check');

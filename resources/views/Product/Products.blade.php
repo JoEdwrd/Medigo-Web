@@ -11,7 +11,6 @@
         </nav>
     </div>
 
-
     <div class="container mt-5">
         <div class="row mb-4">
             <div class="col">
@@ -37,13 +36,13 @@
 
     <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
         @foreach ($products as $product)
-        <div class="card col-md-1" id="card_product">
+        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
             <img src="{{ asset($product->image) }}" class="crd-img" alt="{{ $product->name }}">
             <div class="card-body" id="card-body">
-                <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
-                <label class="card-desc" id="card-desc">{{ $product->shortdesc}}</label>
-                <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
-                <a href="#" id="addbtn" class="btn">ADD</a>
+                <h5 class="card-title" id="card-title">{{$product->name}}</h5>
+                <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
+                <h5 class="card-title" id="card-title">Rp {{ $product->price}}</h5>
+                <a href="{{ route('product.show', $product->slug) }}" id="addbtn" class="btn">ADD</a>
             </div>
         </div>
         @endforeach
@@ -56,19 +55,19 @@
             <h2>{{ $category->name }}</h2>
         </div>
         <div class="col mt-2">
-            <a href="#" class="text-secondary h3" style="text-decoration: none;">See all</a>
+            <a href="{{ route('category.show', $category->slug) }}" class="text-secondary h3" style="text-decoration: none;">See all</a>
         </div>
     </div>
 
     <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
         @foreach ($category->products as $product)
-        <div class="card col-md-1" id="card_product">
+        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
             <img src="{{ asset($product->image) }}" class="crd-img" alt="{{ $product->name }}">
             <div class="card-body" id="card-body">
                 <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
                 <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
                 <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
-                <a href="#" id="addbtn" class="btn">ADD</a>
+                <a href="{{ route('product.show', $product->slug) }}" id="addbtn" class="btn">ADD</a>
             </div>
         </div>
         @endforeach

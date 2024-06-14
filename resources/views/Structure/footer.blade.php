@@ -31,7 +31,7 @@
 
   <!-- Copyright -->
   <div class="mb-0">
-    <a class="flex-grow-1 text-center me-3 mb-0" href="/"><img src="image\MedigoLogo.svg" alt="Medigo Logo"></a>
+    <a class="flex-grow-1 text-center me-3 mb-0" href="/"><img src="\image\MedigoLogo.svg" alt="Medigo Logo"></a>
     <div id="chopin" class="text-center">
         Copyright © 2024 Medigo
     </div>
