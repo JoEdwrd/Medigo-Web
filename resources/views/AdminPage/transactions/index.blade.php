@@ -1,6 +1,7 @@
 @extends("AdminPage.Structure.main")
 
 @section('container')
+
     <div class="my-4">
         <h1 class="h2">All Transactions</h1>
     </div>
@@ -26,15 +27,18 @@
           </thead>
           <tbody>
             @foreach ($transactions as $transaction)
+                @include('AdminPage.transactions.modal-edit-status', ['transaction' => $transaction])
                 <tr>
-                <td class="">{{ $transaction->id }}</td>
-                <td class="">{{ $transaction->transaction_date }}</td>
-                <td class="">{{ $transaction->user_id }}</td>
-                <td class="">{{ $transaction->status }}</td>
-                <td class="">
-                  {{-- @dd($transactions) --}}
-                    <a href="/dashboard/transactions/{{ $transaction->id }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
-                </td>
+                    <td class="">{{ $transaction->id }}</td>
+                    <td class="">{{ $transaction->transaction_date }}</td>
+                    <td class="">{{ $transaction->user_id }}</td>
+                    <td class="">{{ $transaction->status }}</td>
+                    <td class="">
+                    {{-- @dd($transactions) --}}
+                        
+                        <a href="/dashboard/transactions/{{ $transaction->id }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
+                        <a class="badge bg-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop-{{$transaction->slug}}"><i class="bi bi-pencil-square"></i></a>
+                    </td>
                 </tr>
             @endforeach
           </tbody>

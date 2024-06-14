@@ -66,6 +66,12 @@ Route::get('/orderdetail', [OrderDetailController::class, 'index']);
 Route::get('/promotions', [PromotionController::class, 'index']);
 Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show']);
 
+// Routes for managing the cart
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart/add/{productId}', [CartController::class, 'addProduct'])->name('cart.add');
+Route::delete('/cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+
+Route::post('/cart/addPromo', [CartController::class, 'addPromo'])->name('cart.promo.add');
 
 //admin
 Route::get('/dashboard', function () {
@@ -89,3 +95,4 @@ Route::get('/get-snap-token', [PaymentController::class, 'getSnapToken']);
 Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
 
 
+Route::put('/dashboard/transactions/{transaction:slug}/edit', [DashboardTransactionController::class, "update"]);

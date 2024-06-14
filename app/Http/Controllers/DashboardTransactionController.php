@@ -33,4 +33,43 @@ class DashboardTransactionController extends Controller
             "transaction" => $transaction
         ]);
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(string $id)
+    {
+        $transaction = OrderDetail::join('transactions', 'transactions.id', '=', 'order_details.transaction_id')
+                                    ->join('products', 'products.id', '=', 'order_details.product_id')
+                                    ->where('transactions.id', '=', $id)->get();
+        return view('AdminPage.promotions.edit', [
+            'transaction' => $transaction
+        ]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, string $slug)
+    {
+        // dd($request->all());
+        // $rules = [
+        //     'status' => 'max:100'
+        // ];
+        // $validatedData = $request->validate($rules);
+        // dd($request);
+
+        // dd($validatedData);
+
+        // if ($request->file('image')) {
+        //     if ($request->oldImage) {
+        //         Storage::delete($request->oldImage);
+        //     }
+        //     $validatedData['image'] = $request->file('image')->store('tra$transaction-images');
+        // }
+
+        Transaction::where('slug', $slug)->update(['status' => $request->status]);
+
+        return redirect('/dashboard/transactions')->with('success', 'Transaction has been updated!');
+    }
 }

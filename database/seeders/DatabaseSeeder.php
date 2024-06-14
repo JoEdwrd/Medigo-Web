@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Cart;
+use App\Models\CartDetail;
 use App\Models\Category;
 use App\Models\OrderDetail;
 use Illuminate\Database\Seeder;
@@ -226,7 +228,7 @@ class DatabaseSeeder extends Seeder
 
         Transaction::create([
             "transaction_date" => '2024-04-01',
-            'slug' => 'transaction#1',
+            'slug' => 'transac2023',
             'user_id' => 2,
             'status' => 'In progress',
             'promo_id' => 1,
@@ -234,7 +236,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Transaction::create([
             "transaction_date" => '2023-02-09',
-            'slug' => 'transaction#2',
+            'slug' => 'transac2024',
             'user_id' => 1,
             'status' => 'In progress',
             'promo_id' => 2,
@@ -342,5 +344,31 @@ class DatabaseSeeder extends Seeder
             "product_id" => 1,
             "quantity" => 2
         ]);
+        Cart::create([
+            'id'=>1,
+            'user_id'=>1,
+            'promotion_id'=>2
+        ]);
+        Cart::create([
+            'id'=>2,
+            'user_id'=>2,
+            'promotion_id'=>1
+        ]);
+        CartDetail::create([
+            'cart_id' => 1,
+            'product_id' => 1,
+            'quantity' => 20
+        ]);
+        CartDetail::create([
+            'cart_id' => 1,
+            'product_id' => 2,
+            'quantity' => 34
+        ]);
+        CartDetail::create([
+            'cart_id' => 2,
+            'product_id' => 1,
+            'quantity' => 13
+        ]);
+        
     }
 }

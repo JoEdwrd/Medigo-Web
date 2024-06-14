@@ -19,6 +19,10 @@ class Product extends Model
     public function order_details(){
         return $this->hasMany(OrderDetail::class);
     }
+
+    public function cart_details(){
+        return $this->hasMany(CartDetail::class);
+    }
     
     public function getRouteKeyName()
     {
