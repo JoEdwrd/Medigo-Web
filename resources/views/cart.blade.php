@@ -1,74 +1,106 @@
 @extends('Structure.main')
 
 @section('container')
+{{$check = null}}
+{{-- @dd($cart[0]) --}}
 <div class="container">
     <div class="py-4">
         <div class="row gx-5">
             <div class="col-md-8">
                 <h2 class="mb-3">Your Cart</h2>
                 <div class="overflow-auto" style="max-height: 557px">
-                    @for ($i = 1; $i <= 4; $i++)
-                        <div class="card {{ $i < 4 ? 'mb-3' : '' }}">
-                            <div class="card-header"># {{ $i }}</div>
+                    @for ($i = 0; $i < count($cart[0]->cart_details); $i++)
+                        <div class="card {{ $i < count($cart[0]->cart_details) ? 'mb-3' : '' }}">
+                            <div class="card-header"># {{ $i+1 }}</div>
                             <div class="card-body d-flex align-items-center gap-3">
                                 <div class="card-img" style="max-width: 100px;">
                                     <img src="image/medicine1.jpeg" alt="Medicine Image" class="img-fluid">
                                 </div>
                                 <div class="card-text d-flex flex-grow-1 justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="card-title">Obat Batuk</h5>
-                                        <p class="card-text">Rp. 30.000</p>
+                                        <h5 class="card-title">{{$cart[0]->cart_details[$i]->product->name}}</h5>
+                                        <p class="card-text">{{$cart[0]->cart_details[$i]->product->price}}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
-                                        <a href="#" class="btn btn-primary btn-sm me-2 quantity-btn">-</a>
-                                        <span>1</span>
-                                        <a href="#" class="btn btn-primary btn-sm ms-2 quantity-btn">+</a>
+
+                                        <form action="{{ route('cart.remove', ['productId' => $cart[0]->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
+                                            @method("delete")
+                                            @csrf
+                                            <button type="submit" class="btn btn-primary btn-sm me-2 quantity-btn">-</button>
+                                        </form>
+
+                                        <span>{{$cart[0]->cart_details[$i]->quantity}}</span>
+
+                                        <form action="{{ route('cart.add', ['productId' => $cart[0]->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
+                                        </form>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @if($cart[0]->cart_details[$i]->product->patent == 1)
+                            @php
+                                $check = true
+                            @endphp
+                        @endif
                     @endfor
                 </div>
             </div>
 
+            @php
+                $total = 0;
+            @endphp
+
             <div class="col-md-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text" style="color: var(--main2-color);">Total Items</span>
-                    <span class="badge rounded-pill" style="background-color: var(--main2-color);">3</span>
+                    <span class="badge rounded-pill" style="background-color: var(--main2-color);">{{count($cart[0]->cart_details)}}</span>
                 </h4>
                 <ul class="list-group mb-3">
                     <div class="overflow-auto" style="max-height: 169px;">
-                        @for ($i = 0; $i < 4; $i++)
+                        @for ($i = 0; $i < count($cart[0]->cart_details); $i++)
                             <li class="list-group-item d-flex justify-content-between lh-sm">
                                 <div>
-                                    <h6 class="my-0">Second product</h6>
-                                    <small class="text-body-secondary">Brief description</small>
+                                    <h6 class="my-0">{{$cart[0]->cart_details[$i]->product->name}}</h6>
+                                    {{-- <small class="text-body-secondary">Brief description</small> --}}
                                 </div>
-                                <span class="text-body-secondary">$8 x 3</span>
+                                <span class="text-body-secondary">{{'Rp '.$cart[0]->cart_details[$i]->product->price.' x '.$cart[0]->cart_details[$i]->quantity}}</span>
+
                             </li>
+                            @php
+                                $total += $cart[0]->cart_details[$i]->product->price * $cart[0]->cart_details[$i]->quantity;
+                            @endphp
                         @endfor
+
+                        
                     </div>
-                    <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
-                        <div class="text-success">
-                            <h6 class="my-0">Promo code</h6>
-                            <small>EXAMPLECODE</small>
-                        </div>
-                        <span class="text-success">-$5</span>
-                    </li>
+                    @if(isset($cart[0]->promotion))  
+                        <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                            <div class="text-success">
+                                <h6 class="my-0">Promo code</h6>
+                                <small>{{$cart[0]->promotion->code}}</small>
+                            </div>
+                            <span class="text-success">{{'- Rp '.$cart[0]->promotion->discount * $total}}</span>
+                        </li>
+                    @endif
                     <li class="list-group-item d-flex justify-content-between">
-                        <span>Total (USD)</span>
-                        <strong>$20</strong>
+                        <span>Total (IDR)</span>
+                        <strong>{{'Rp '.$total - $cart[0]->promotion->discount * $total}}</strong>
                     </li>
                 </ul>
 
-                <form class="card p-2">
+                <form class="card p-2" action="{{route('cart.promo.add')}}" method="POST">
+                    @csrf
                     <div class="input-group">
-                    <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Promo code"
-                    />
-                    <button type="submit" class="btn btn-secondary">Redeem</button>
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Promo code"
+                            name="promotionName"
+                        >
+                        <button type="submit" class="btn btn-secondary">Redeem</button>
                     </div>
                 </form>
 
@@ -83,9 +115,18 @@
                     Checkout
                 </button> --}}
                 {{-- <a href="" id="addbtn" class="btn mb-2">Add to Order</a> --}}
-                <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Add to Order
-                </button>
+
+                @if($check)
+                    <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add to Order
+                    </button>
+                @else
+                    <a href="/history">
+                        <button type="submit" id="addbtn" class="btn mb-2">
+                            Add to Order
+                        </button>
+                    </a>
+                @endif
 
                 <div class="body-modal">
                 <!-- Modal -->

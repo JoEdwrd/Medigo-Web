@@ -24,8 +24,11 @@
                     <span class="h4 text-danger mt-3">{{$product->price}}</span>
                     <p class="mt-2">{{$product->shortdesc}} </p>
                 </div>
-
-                <a href="#" id="addbtn" class="btn mb-2">Add to Cart</a>
+                <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
+                    @csrf
+                    <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                </form>
+                {{-- <a href="#" id="addbtn" class="btn mb-2">Add to Cart</a> --}}
                 <hr class="my-4">
 
                 <div class="mt-3">
