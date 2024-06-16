@@ -26,45 +26,78 @@
 
                             <br>
 
-                            <div class="mb-3">
-                                <label for="name">Promotion Name</label>
-                                <input class="mt-2 p-2 form-control @error("name") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name") }}">
-                                @error("name")
+                            <div id="descbox" class="overflow-auto" style="height: 350px">
+                                <div class="mb-3 mx-1">
+                                    <label for="name">Promotion Name</label>
+                                    <input class="mt-2 p-2 form-control @error("name") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name") }}">
+                                    @error("name")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+    
+                                <div class="mb-3 mx-1">
+                                    <label for="slug">Promotion Slug</label>
+                                    <input class="mt-2 p-2 form-control @error("slug") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="slug" name="slug"  autofocus required value="{{ old("slug") }}">
+                                    @error("slug")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+    
+                                <div class="mb-3 mx-1">
+                                    <label for="code">Promotion Code</label>
+                                    <input class="mt-2 p-2 form-control @error("code") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="code" name="code"  autofocus required value="{{ old("code") }}">
+                                    @error("code")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                                
+                                <div class="mb-3 mx-1">
+                                    <label for="discount">Promotion Discount</label>
+                                    <input class="mt-2 p-2 form-control @error("discount") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="number" step="0.1" id="discount" name="discount"  autofocus required value="{{ old("discount") }}">
+                                    @error("discount")
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
-                                @enderror
+                                    @enderror
+                                </div>
+    
+                                <div class="mb-3 mx-1">
+                                    <label for="shortdecs">Promotion Short Description</label>
+                                    <input class="mt-2 p-2 form-control @error("shortdecs") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="shortdecs" name="shortdecs"  autofocus required value="{{ old("shortdecs") }}">
+                                    @error("shortdecs")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+                                
+                                <div class="mb-3 mx-1">
+                                    <label for="startdate">Promotion Start Date</label>
+                                    <input class="mt-2 p-2 form-control @error("startdate") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="startdate" name="startdate"  autofocus required value="{{ old("startdate") }}">
+                                    @error("startdate")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+    
+                                <div class="mb-3 mx-1">
+                                    <label for="enddate">Promotion End Date</label>
+                                    <input class="mt-2 p-2 form-control @error("enddate") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="enddate" name="enddate"  autofocus required value="{{ old("enddate") }}">
+                                    @error("enddate")
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
                             </div>
 
-                            <div class="mb-3">
-                                <label for="name">Promotion Slug</label>
-                                <input class="mt-2 p-2 form-control @error("slug") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="slug" name="slug"  autofocus required value="{{ old("slug") }}">
-                                @error("slug")
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="name">Promotion Code</label>
-                                <input class="mt-2 p-2 form-control @error("code") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="code" name="code"  autofocus required value="{{ old("code") }}">
-                                @error("code")
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="name">Promotion Discount</label>
-                                <input class="mt-2 p-2 form-control @error("discount") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="number" step="0.1" id="discount" name="discount"  autofocus required value="{{ old("discount") }}">
-                                @error("discount")
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
                             <br>
                         </div>
                     </div>
