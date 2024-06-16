@@ -33,10 +33,13 @@ class DashboardPromotionController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:255|unique:promotions',
             'slug' => 'required|unique:promotions',
-            'code' => 'required|unique:promotions|max:6',
+            'code' => 'required|unique:promotions',
             'discount' => 'required|numeric',
             'image' => 'image|file|max:1024',
             'terms' => 'required',
+            'shortdecs' => 'required|max:55',
+            'startdate' => 'required|date_format:Y-m-d',
+            'enddate' => 'required|date_format:Y-m-d',
         ]);
 
         if ($request->file('image')) {
@@ -77,6 +80,9 @@ class DashboardPromotionController extends Controller
             'discount' => 'required|numeric',
             'image' => 'image|file|max:1024',
             'terms' => 'required',
+            'shortdecs' => 'required|max:55',
+            'startdate' => 'required|date_format:Y-m-d',
+            'enddate' => 'required|date_format:Y-m-d',
         ];
         
         if ($request->name != $promotion->name) {
@@ -86,7 +92,7 @@ class DashboardPromotionController extends Controller
             $rules['slug'] = 'required|unique:promotions';
         }
         if ($request->code != $promotion->code) {
-            $rules['code'] = 'required|unique:promotions|max:6';
+            $rules['code'] = 'required|unique:promotions';
         }
 
         $validatedData = $request->validate($rules);
