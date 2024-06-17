@@ -104,25 +104,25 @@
         <br>
 
         <div class="row text-center d-flex justify-content-evenly m-0" style="margin-top: 50px;width:100%">
-            @for ($i=0;$i<3;$i++)
-                        <div id="PromoBanner" style="cursor: pointer;background-image: url('/image/Promo1.png');" onclick="window.location='/promotions/{{$promotions[$i]->slug}}';" class="col-md-2 mb-3 mt-0">
+            @forelse ($promotions as $promo)
+                        <div id="PromoBanner" style="cursor: pointer;background-image: url('/image/Promo1.png');" onclick="window.location='/promotions/{{$promo->slug}}';" class="col-md-2 mb-3 mt-0">
                             <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
                                 <div style="margin-bottom: 20px">
                                     <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
-                                    <a  class="text-light text-decoration-none">{{$promotions[$i]->name}}</a>
+                                    <a  class="text-light text-decoration-none">{{$promo->name}}</a>
                                     </h5>
-                                    <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">{{$promotions[$i]->shortdecs}}</h6>
+                                    <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">{{$promo->shortdecs}}</h6>
                                 </div>
                             </div>
                         </div>
-            @endfor
-            {{-- <div id="PromoBanner" class="col-md-2 mb-3 mt-0" style="background-image: url('/image/Promo1.png');">
+            @empty
+            <div id="PromoBanner" class="col-md-2 mb-3 mt-0" style="background-image: url('/image/Promo1.png');">
                 <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
                     <div style="margin-bottom: 20px">
                         <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
-                        <a href="/" class="text-light text-decoration-none">Discount 50%</a>
+                        <a href="/" class="text-light text-decoration-none">Coming Soon</a>
                         </h5>
-                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">For minimal spend RP 50.000</h6>
+                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">Wait for our newest promo</h6>
                     </div>
                 </div>
             </div>
@@ -130,9 +130,9 @@
                 <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
                     <div style="margin-bottom: 20px">
                         <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
-                        <a href="/" class="text-light text-decoration-none">Buy 1 Get 1</a>
+                        <a href="/" class="text-light text-decoration-none">Coming Soon</a>
                         </h5>
-                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">For new user only</h6>
+                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">Wait for our newest promo</h6>
                     </div>
                 </div>
             </div>
@@ -140,12 +140,13 @@
                 <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
                     <div style="margin-bottom: 20px">
                         <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
-                        <a href="/" class="text-light text-decoration-none">Free Delivery</a>
+                        <a href="/" class="text-light text-decoration-none">Coming Soon</a>
                         </h5>
-                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">Only for Jabodetabek user</h6>
+                        <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">Wait for our newest promo</h6>
                     </div>
                 </div>
-            </div> --}}
+            </div>
+            @endforelse
         </div>
     </div>
 
@@ -154,7 +155,7 @@
         <label for="Best_Seller" class="tabs__label">Best</label>
         <div class="tabs__content" style="width:100%">
               <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-                    @foreach($bestseller as $best)
+                    @forelse($bestseller as $best)
                     <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
@@ -164,7 +165,9 @@
                             <a href="#" id="addbtn" class="btn">ADD</a>
                         </div>
                     </div>
-                    @endforeach
+                    @empty
+                        <h1>There is no transactions yet</h1>
+                    @endforelse
                     {{-- <div class="card col-md-1" id="card_product">
                         <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
