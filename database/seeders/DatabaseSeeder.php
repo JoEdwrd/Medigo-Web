@@ -13,6 +13,7 @@ use App\Models\Product;
 use App\Models\Promotion;
 use App\Models\Transaction;
 use App\Models\User;
+use App\Models\Prescription;
 
 class DatabaseSeeder extends Seeder
 {
@@ -369,6 +370,6 @@ class DatabaseSeeder extends Seeder
             'product_id' => 1,
             'quantity' => 13
         ]);
-        
+
     }
 }

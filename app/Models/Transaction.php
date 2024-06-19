@@ -30,4 +30,8 @@ class Transaction extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    public function prescription() {
+        return $this->hasOne(Prescription::class);
+    }
 }

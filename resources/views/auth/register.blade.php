@@ -51,7 +51,20 @@
 
                     <div class="error-messages" style="color: red">
                         @if ($errors->has('phone'))
-                            <p>{{ __('The phone number has already been taken.') }}</p>
+                            <p>{{ $errors->first('phone') }}</p>
+                        @endif
+                    </div>
+
+                    <div>
+                        <label for="address" value="{{ __('Address') }}">
+                          <p class="fontlabel" id="chopin1">Address</p>
+                          <input id="address" class="input-field" type="text" name="address" required>
+                        </label>
+                     </div>
+
+                    <div class="error-messages" style="color: red">
+                        @if ($errors->has('adsress'))
+                            <p>{{ __(' already been taken.') }}</p>
                         @endif
                     </div>
 

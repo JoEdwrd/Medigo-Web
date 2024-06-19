@@ -35,7 +35,7 @@
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
                                         </form>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -74,9 +74,9 @@
                             @endphp
                         @endfor
 
-                        
+
                     </div>
-                    @if(isset($cart[0]->promotion))  
+                    @if(isset($cart[0]->promotion))
                         <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                             <div class="text-success">
                                 <h6 class="my-0">Promo code</h6>
@@ -128,37 +128,44 @@
                     </a>
                 @endif
 
-                <div class="body-modal">
-                <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <h3 class="chopin">Upload Prescription</h3>
-                                    <p class="chopin">One of your medications is a prescription drug , Please upload a prescription to continue check out!</p>
-                                    <div class="container-modal">
-                                        <div class="drag-area"   id="drag-area">
-                                            <div class="icon">
-                                                <i class="fas fa-images"></i>
+
+                    <div class="body-modal">
+                        <form action="{{route('upload.prescription')}}" method="POST" enctype="multipart/form-data">
+                            {!! csrf_field()    !!}
+                        <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <h3 class="chopin">Upload Prescription</h3>
+                                            <p class="chopin">One of your medications is a prescription drug , Please upload a prescription to continue check out!</p>
+                                            <div class="container-modal">
+                                                <div class="drag-area"  id="drag-area">
+                                                    <div class="icon">
+                                                        <i class="fas fa-images"></i>
+                                                    </div>
+                                                    <span class="header">Drag & Drop or <span class="button">Choose File</span> <span>Here</span></span>
+                                                    {{-- <input type="file" name="prescription_image" class="form-control" id="prescription_image" hidden /> --}}
+                                                    <input type="file" name="prescription_image" class="form-control" id="prescription_image" />
+                                                    <span class="support">Supports: JPEG, JPG, PNG</span>
+                                                </div>
                                             </div>
-                                            <span class="header">Drag & Drop or <span class="button">Choose File</span> <span>Here</span></span>
-                                            <input type="file" hidden />
-                                            <span class="support">Supports: JPEG, JPG, PNG</span>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <a href="/cart">
+                                                <button type="button" class="button-modal-cancel">Cancel</button>
+                                            </a>
+                                                <button type="submit" value="Save" class="button-modal">Save changes</button>
+
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal-footer">
-                                    <a href="/cart">
-                                        <button type="button" class="button-modal-cancel">Cancel</button>
-                                    </a>
-                                    <a href="/history">
-                                        <button type="submit" class="button-modal">Save changes</button>
-                                    </a>
-                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                </div>
+
+
+
             </div>
     </div>
 </div>
@@ -198,38 +205,35 @@
         dragText.textContent = "Drag & Drop";
     });
 
-    // when file is dropped
-    dropArea.addEventListener("drop", (event) => {
-        event.preventDefault();
-        // console.log('File is dropped in drag area');
+    // // when file is dropped
+    // dropArea.addEventListener("drop", (event) => {
+    //     event.preventDefault();
+    //     // console.log('File is dropped in drag area');
 
-        file = event.dataTransfer.files[0]; // grab single file even of user selects multiple files
-        // console.log(file);
-        displayFile();
-    });
+    //     file = event.dataTransfer.files[0]; // grab single file even of user selects multiple files
+    //     // console.log(file);
+    //     displayFile();
+    // });
 
-    function displayFile() {
-        let fileType = file.type;
-        // console.log(fileType);
-
-        let validExtensions = ["image/jpeg", "image/jpg", "image/png"];
-
-        if (validExtensions.includes(fileType)) {
-            // console.log('This is an image file');
-            let fileReader = new FileReader();
-
-            fileReader.onload = () => {
-                let fileURL = fileReader.result;
-                // console.log(fileURL);
-                let imgTag = `<img src="${fileURL}" alt="">`;
-                dropArea.innerHTML = imgTag;
-            };
-            fileReader.readAsDataURL(file);
-        } else {
-            alert("This is not an Image File");
-            dropArea.classList.remove("active");
-        }
-    }
+    // function displayFile() {
+    //     let fileType = file.type;
+    //     // console.log(fileType);
+    //     let validExtensions = ["image/jpeg", "image/jpg", "image/png"];
+    //     if (validExtensions.includes(fileType)) {
+    //         // console.log('This is an image file');
+    //         let fileReader = new FileReader();
+    //         fileReader.onload = () => {
+    //         let fileURL = fileReader.result;
+    //         // console.log(fileURL);
+    //         let imgTag = `<img src="${fileURL}" alt="">`;
+    //         dropArea.innerHTML = imgTag;
+    //         };
+    //         fileReader.readAsDataURL(file);
+    //     } else {
+    //         alert("This is not an Image File");
+    //         dropArea.classList.remove("active");
+    //     }
+    // }
 
 </script>
 

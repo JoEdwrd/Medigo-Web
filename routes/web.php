@@ -22,8 +22,7 @@ use App\Http\Controllers\NewPasswordConfirmController;
 use App\Http\Controllers\DashboardTransactionController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\WebhookController;
-
-
+use App\Http\Controllers\DashboardPrescriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -96,3 +95,10 @@ Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
 
 
 Route::put('/dashboard/transactions/{transaction:slug}/edit', [DashboardTransactionController::class, "update"]);
+
+//prescription
+Route::resource("/dashboard/prescriptions", DashboardPrescriptionController::class);
+Route::get('/dashboard/prescriptions', [DashboardPrescriptionController::class, 'index']);
+Route::put('/dashboard/prescriptions/{prescription::slug}/edit', [DashboardPrescriptionController::class, "update"]);
+// Route::post('/history',[PrescriptionController::class, 'store'])->name('upload.prescription');
+Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
