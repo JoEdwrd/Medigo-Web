@@ -48,15 +48,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link {{ Request::is("dashboard/prescriptions*") ? "active":"" }}" href="/dashboard/prescriptions">
                 <i class="bi bi-envelope-paper-fill  me-2"></i>
                 Prescriptions
                 </a>
-            </li>   
+            </li>
         </ul>
 
         <hr style="margin-left:4px;margin-right:4px">
-        
+
         <div class="nav-item">
             <a class="nav-link" href="#">
             <i class="bi bi-door-closed-fill  me-2"></i>

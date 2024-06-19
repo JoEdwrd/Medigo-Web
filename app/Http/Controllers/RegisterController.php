@@ -24,6 +24,7 @@ class RegisterController extends Controller
             'phone' => 'required|string|unique:users', // Ensure unique phone number
             'dob' => 'required|date|before:17 years ago', // Minimum age of 17 years
             'password' => 'required|string|min:8', // Removed confirmation password validation
+            'address' => 'required|string|max:255',
         ]);
 
         // Handle validation errors (optional, but recommended for user feedback)
@@ -45,6 +46,8 @@ class RegisterController extends Controller
                 $errorMessage = $errors['dob'][0]; // Get first dob error message
             } elseif (isset($errors['password'])) {
                 $errorMessage = $errors['password'][0]; // Get first password error message
+            } elseif (isset($errors['address'])) {
+                $errorMessage = $errors['address'][0]; // Get first street address error message
             }
 
             // Return error message if any
@@ -61,6 +64,7 @@ class RegisterController extends Controller
             'name' => $input['name'],
             'email' => $input['email'],
             'phone' => $input['phone'],
+            'address' => $input['address'],
             'dob' => $input['dob'],
             'password' => Hash::make($input['password']),
         ]);

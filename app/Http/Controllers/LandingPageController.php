@@ -12,6 +12,7 @@ class LandingPageController extends Controller
 {
     public function index()
     {
+
         $promotions = Promotion::orderByDesc('id')->take(3)->get();
         $topProducts = Product::select('products.*', DB::raw('SUM(order_details.quantity) as total_sold'))
         ->join('order_details', 'products.id', '=', 'order_details.product_id')
@@ -31,11 +32,12 @@ class LandingPageController extends Controller
             ->orderBy('total_sold', 'asc')
             ->take(5)
             ->get();
-        
+        $categories=Category::all();
+        // return $categories;
         return view('LandingPage.LandingIndex',[
             "products"=>Product::all(),
             "promotions"=>$promotions,
-            "categories"=>Category::all(),
+            "categories"=>$categories,
             "bestseller"=>$topProducts,
             "discounts"=>$leastSoldProducts
         ]);

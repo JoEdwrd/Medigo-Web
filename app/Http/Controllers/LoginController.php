@@ -15,13 +15,14 @@ class LoginController extends Controller
 
     public function check(Request $request)
     {
+        // @dd($request);
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
         if (Auth::attempt($credentials)) {
-            return view('LandingPage.LandingIndex');
+            return redirect("/");
         } else {
             // Handle failed login attempt
             $errorMessage = 'Invalid email or password. Please try again.';

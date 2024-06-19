@@ -8,6 +8,9 @@ use App\Models\Product;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use App\Models\Prescription;
 
 class CartController extends Controller
 {
@@ -19,7 +22,7 @@ class CartController extends Controller
         $cart = Cart::with(['cart_details.product', 'promotion'])->whereKey(1)->get();
         // $cartDetail = CartDetail::firstOrCreate(['cart_id' => $cart->id]);
         // $promo = Promotion::with(['cart'])->where('cart_id', '=', 1)->get();
-        
+
 
         return view('cart', compact('cart'));
     }
@@ -36,12 +39,12 @@ class CartController extends Controller
 
         $promo = Promotion::where(['code' => $request->promotionName]);
 
-        // dd($promo->exists());    
-        
+        // dd($promo->exists());
+
         if($promo->exists()){
             // $cart->promotion()->associate($promo);
             $promo = $promo->get()->first();
-            
+
             $cart->promotion_id = $promo->id;
 
             $cart->save();
@@ -53,12 +56,12 @@ class CartController extends Controller
     public function addProduct(Request $request, $product_id){
         // Retrieve the authenticated user
         // $user = Auth::user();
-    
+
         // Retrieve the user's cart, or create a new one if it doesn't exist
         // $cart = $user->cart()->firstOrCreate(['user_id' => $user->id]);
 
         $cart = Cart::firstOrCreate(['user_id' => 1]);
-        
+
         // Check if the product is already in the cart
         $cartItem = $cart->cart_details()->where('product_id', $product_id)->first();
         if ($cartItem) {
@@ -82,7 +85,7 @@ class CartController extends Controller
         // Find the cart item by its ID
         $cartItem = CartDetail::where('product_id', $itemId)->get()[0];
 
-        // dd($cartItem); 
+        // dd($cartItem);
 
         if($cartItem->quantity > 1){
             $cartItem->quantity -= 1;
@@ -95,4 +98,34 @@ class CartController extends Controller
         // Redirect to the cart index page with a success message
         return redirect()->back()->with('success', 'Product reduced');
     }
+
+    public function store(Request $request)
+    {
+        // dd($request->all());
+        // if($request->hasFile($request)){
+        //     dd("mantap");
+        // }
+    $this->validate($request, [
+        'prescription_image' => 'required|image|mimes:jpeg,jpg,png' // Adjust validation rules as needed
+    ]);
+
+    $requestData = $request->all();
+    // dd($requestData);
+    // Check for uploaded file and validation
+    // if (!$request->hasFile('prescription_image') || !$request->file('prescription_image')->isValid()) {
+    //     // Handle validation failure (e.g., redirect with error message)
+    //     return back()->withErrors(['prescription_image' => 'Invalid or missing prescription file']);
+    // }
+    // $file = $request->file('prescription_image');
+    $fileName = $request->file('prescription_image')->getClientOriginalName();
+
+    $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
+    $requestData["prescription_image"] = '/storage/'.$path;
+
+    // Ensure image field is fillable
+    Prescription::create($requestData);
+
+    return redirect()->route("history-")->with('flash_message', 'Prescription successfully uploaded!');
+}
+
 }

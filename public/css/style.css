@@ -365,12 +365,12 @@ footer {
 .background-form-register {
     background-color: rgba(254, 254, 254, 0.91);
     border-radius: 10px;
-    height: 80%;
+    height: 90%;
     width: 30%;
     box-shadow: 0 4px 8px 5px rgba(186, 186, 186, 0.2),
         0 1px 10px 0 rgba(0, 0, 0, 0.19);
     margin: auto;
-    padding: 20px 50px;
+    padding: 50px 50px;
 }
 
 #registerbtn {
@@ -422,7 +422,7 @@ footer {
 }
 
 .login-title {
-    margin-top: 10px;
+    margin-top: 2px;
     font-family: "Chopin-Trial";
     font-weight: 800;
     align-self: flex-start;
@@ -469,8 +469,8 @@ footer {
 .background-form-register {
     background-color: rgba(254, 254, 254, 0.91);
     border-radius: 10px;
-    height: 80%;
-    width: 30%;
+    height: 90%;
+    width: 35%;
     box-shadow: 0 4px 8px 5px rgba(186, 186, 186, 0.2),
         0 1px 10px 0 rgba(0, 0, 0, 0.19);
     margin: auto;
