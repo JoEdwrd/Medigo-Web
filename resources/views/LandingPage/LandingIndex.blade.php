@@ -236,7 +236,6 @@
                                 @csrf
                                 <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
                             </form>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
                         </div>
                     </div>
                 @endforeach

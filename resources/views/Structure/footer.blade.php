@@ -1,4 +1,4 @@
-<footer class="text-center bg-body-tertiary footer mt-5" >
+<footer class="text-center bg-body-tertiary footer mt-5" style="flex: 1">
     <div style="background-color:var(--main1-color) ;">
         <!-- Grid container -->
   <div class="container pt-4" style=" display:flex;
@@ -42,7 +42,7 @@
           <!-- Grid column -->
           <div class="col-md-2 mb-3 mt-0">
             <h6 class="font-weight-bold" id="NavItems">
-              <a href="/" class="text-black text-decoration-none">About us</a>
+              <a href="/aboutus" class="text-black text-decoration-none">About us</a>
             </h6>
           </div>
 
@@ -82,30 +82,6 @@
         </div>
         <!-- Grid row-->
       </section>
-  {{-- <div class="container">
-    <ul style="display: inline">
-        <li style="float: left">
-            <a class="text-dark" style="display: block" id="NavItems" href="/">AboutUs</a>
-        </li>
-        <li style="float: left">
-            <a class="text-dark" style="display: block" id="NavItems" href="/">Call Us</a>
-        </li>
-        <li style="float: left">
-            <a class="text-dark" style="display: block" id="NavItems" href="/">Promo</a>
-        </li>
-        <li style="float: left">
-            <a class="text-dark" style="display: block" id="NavItems" href="/">FAQ</a>
-        </li>
-        <li style="float: left">
-            <a class="text-dark" style="display: block" id="NavItems" href="/">Terms and Conditions</a>
-        </li>
-    </ul>
-  </div> --}}
-  <!-- Copyright -->
-  {{-- <script>
-      import { Ripple, initMDB } from "mdb-ui-kit";
-      initMDB({ Ripple });
-    </script> --}}
     </div>
 
 

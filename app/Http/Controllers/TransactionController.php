@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\OrderDetail;
 use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller
@@ -48,13 +49,15 @@ class TransactionController extends Controller
                 'promotion_id' => $cart->promotion_id,
                 'user_id' => $cart->user_id,
                 'slug' => 'uwawKeren',
-                'status' => 'Waiting for verification'
+                'status' => 'Waiting for verification',
+                // 'transaction_date' => Carbon::now()
             ]);
         }else{
             $trans = Transaction::create([
                 'promotion_id' => $cart->promotion_id,
                 'user_id' => $cart->user_id,
                 'slug' => 'uwawKeren',
+                // 'transaction_date' => Carbon::now()
             ]);
         }
         
