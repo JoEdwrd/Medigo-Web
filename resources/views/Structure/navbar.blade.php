@@ -25,11 +25,17 @@
                     </a>
                 </li>
                 <li class="nav-item col-md-3">
-                    <a class="nav-link text-dark" id="NavItems" href="/cart">
+                    <a class="position-relative nav-link text-dark" id="NavItems" href="/cart" style="width: 45%">
                       @if(Request::is("cart"))
                       <u>CART</u>
                       @else
                       CART
+                      @endif
+                      @if(isset($cart->cart_details))
+                      <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
+                        {{count($cart->cart_details)}}
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
                       @endif
                     </a>
                 </li>

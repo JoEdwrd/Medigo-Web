@@ -23,6 +23,8 @@ use App\Http\Controllers\DashboardTransactionController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\WebhookController;
 use App\Http\Controllers\DashboardPrescriptionController;
+use App\Http\Controllers\TransactionController;
+use App\Models\Transaction;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +38,8 @@ use App\Http\Controllers\DashboardPrescriptionController;
 */
 
 Route::get('/', [LandingPageController::class, 'index'])->name('LandingPage.LandingIndex');
-Route::get('/history', [HistoryController::class, 'index']);
+Route::get('/addTransaction/{cartId}', [TransactionController::class, 'addTransaction']);
+Route::get('/history', [HistoryController::class, 'index'])->name('history-index');
 
 Route::get('/product/{product:slug}', [ProductController::class, 'show'])->name('product.show');
 Route::get('/products', [ProductController::class, 'index'])->name('products.index');
