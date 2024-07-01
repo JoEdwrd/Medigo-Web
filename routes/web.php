@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\TermsPage;
+// use App\Http\Controllers\TermsPage;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FaqController;
+// use App\Http\Controllers\FaqController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
@@ -23,8 +23,9 @@ use App\Http\Controllers\DashboardTransactionController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\WebhookController;
 use App\Http\Controllers\DashboardPrescriptionController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\TransactionController;
-use App\Models\Transaction;
+// use App\Models\Transaction;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +53,6 @@ Route::post('/check', [LoginController::class, 'check'])->name('check');
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register2', [RegisterController::class, 'store'])->name('register2');
 
-Route::get('/termsandconditions', [TermsPage::class,'show']);
 
 Route::get('/cart', [CartController::class, 'index']);
 
@@ -62,7 +62,10 @@ Route::get('/changePassOld', [OldPasswordCheckController::class, 'index']);
 Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
 Route::get('/logout', [LogoutProfileController::class, 'index']);
 
-Route::get('/faq', [FaqController::class, 'index']);
+Route::get('/faq', [PageController::class, 'faq']);
+Route::get('/termsandconditions', [PageController::class,'termsandconditions']);
+Route::get('/aboutus', [PageController::class,"aboutus"]);
+
 Route::get('/orderdetail', [OrderDetailController::class, 'index']);
 
 Route::get('/promotions', [PromotionController::class, 'index']);
