@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('promotion_id');
+            $table->unsignedBigInteger('promotion_id')->nullable();
             $table->foreignId("user_id")->constrained("users")->onDelete("restrict");
             $table->foreign('promotion_id')->references('id')->on('promotions')->onDelete('restrict');
         });

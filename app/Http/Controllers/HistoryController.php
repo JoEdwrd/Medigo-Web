@@ -10,7 +10,7 @@ class HistoryController extends Controller
     public function index()
     {
         $transactions = Transaction::with(['order_details.product'])
-            ->orderBy('transaction_date', 'desc')
+            ->orderBy('created_at', 'desc')
             ->get()
             ->groupBy('status');
 

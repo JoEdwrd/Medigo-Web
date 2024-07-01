@@ -162,7 +162,11 @@
                             <h5 class="card-title" id="card-title">{{$best->name}}</h5>
                             <label class="card-desc" id="card-desc">{{$best->shortdesc}}</label>
                             <h5 class="card-title" id="card-title">Rp {{ number_format($best->price, 0, ',', '.') }}</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
+                            <form action="{{ route('cart.add', ['productId' => $best->id]) }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                            </form>
+                            {{-- <a href="#" id="addbtn" class="btn">ADD</a> --}}
                         </div>
                     </div>
                     @empty
@@ -227,6 +231,11 @@
                             <label class="card-desc" id="card-desc">{{$disc->shortdesc}}</label>
                             <h5 class="card-title" id="card-title" style="color: red">Rp {{ number_format($disc->discprice, 0, ',', '.') }}</h5>
                             <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp {{ number_format($disc->price, 0, ',', '.') }}</label>
+                            
+                            <form action="{{ route('cart.add', ['productId' => $disc->id]) }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                            </form>
                             <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
                         </div>
                     </div>

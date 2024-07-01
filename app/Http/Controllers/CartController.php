@@ -19,10 +19,16 @@ class CartController extends Controller
         // $cart = Auth::user()->cart;
 
         // $cart = Cart::firstOrCreate(['user_id' => 1]);
-        $cart = Cart::with(['cart_details.product', 'promotion'])->whereKey(1)->get();
+        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+
+        
+
+        // $cart = Cart::firstOrCreate(['user_id' => 1])->with();
+
         // $cartDetail = CartDetail::firstOrCreate(['cart_id' => $cart->id]);
         // $promo = Promotion::with(['cart'])->where('cart_id', '=', 1)->get();
-
+        // $cart = Cart::firstOrCreate(['user_id' => 1]);
+        // dd($cart[0]->cart_details);
 
         return view('cart', compact('cart'));
     }
@@ -105,27 +111,30 @@ class CartController extends Controller
         // if($request->hasFile($request)){
         //     dd("mantap");
         // }
-    $this->validate($request, [
-        'prescription_image' => 'required|image|mimes:jpeg,jpg,png' // Adjust validation rules as needed
-    ]);
+        $this->validate($request, [
+            'prescription_image' => 'required|image|mimes:jpeg,jpg,png' // Adjust validation rules as needed
+        ]);
 
-    $requestData = $request->all();
-    // dd($requestData);
-    // Check for uploaded file and validation
-    // if (!$request->hasFile('prescription_image') || !$request->file('prescription_image')->isValid()) {
-    //     // Handle validation failure (e.g., redirect with error message)
-    //     return back()->withErrors(['prescription_image' => 'Invalid or missing prescription file']);
-    // }
-    // $file = $request->file('prescription_image');
-    $fileName = $request->file('prescription_image')->getClientOriginalName();
+        $requestData = $request->all();
+        // dd($requestData);
+        // Check for uploaded file and validation
+        // if (!$request->hasFile('prescription_image') || !$request->file('prescription_image')->isValid()) {
+        //     // Handle validation failure (e.g., redirect with error message)
+        //     return back()->withErrors(['prescription_image' => 'Invalid or missing prescription file']);
+        // }
+        // $file = $request->file('prescription_image');
+        $fileName = $request->file('prescription_image')->getClientOriginalName();
 
-    $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
-    $requestData["prescription_image"] = '/storage/'.$path;
+        $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
+        $requestData["prescription_image"] = '/storage/'.$path;
 
-    // Ensure image field is fillable
-    Prescription::create($requestData);
+        // Ensure image field is fillable
+        Prescription::create($requestData);
 
-    return redirect()->route("history-")->with('flash_message', 'Prescription successfully uploaded!');
-}
+        // return redirect()->route("history-index")->with('flash_message', 'Prescription successfully uploaded!');
+        $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', 1)->get()->first();
+
+        return redirect('/addTransaction/'.$cart->user_id);
+    }
 
 }

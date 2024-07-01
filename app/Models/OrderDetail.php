@@ -11,6 +11,8 @@ class OrderDetail extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['product_id', 'quantity'];
+
     public function transaction() {
         return $this->belongsTo(Transaction::class);
     }

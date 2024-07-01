@@ -2,15 +2,16 @@
 
 @section('container')
 {{$check = null}}
-{{-- @dd($cart[0]) --}}
+{{-- @dd($cart) --}}
 <div class="container">
     <div class="py-4">
         <div class="row gx-5">
             <div class="col-md-8">
                 <h2 class="mb-3">Your Cart</h2>
+                @if(isset($cart->cart_details))
                 <div class="overflow-auto" style="max-height: 557px">
-                    @for ($i = 0; $i < count($cart[0]->cart_details); $i++)
-                        <div class="card {{ $i < count($cart[0]->cart_details) ? 'mb-3' : '' }}">
+                    @for ($i = 0; $i < count($cart->cart_details); $i++)
+                        <div class="card {{ $i < count($cart->cart_details) ? 'mb-3' : '' }}">
                             <div class="card-header"># {{ $i+1 }}</div>
                             <div class="card-body d-flex align-items-center gap-3">
                                 <div class="card-img" style="max-width: 100px;">
@@ -18,20 +19,20 @@
                                 </div>
                                 <div class="card-text d-flex flex-grow-1 justify-content-between align-items-center">
                                     <div>
-                                        <h5 class="card-title">{{$cart[0]->cart_details[$i]->product->name}}</h5>
-                                        <p class="card-text">{{$cart[0]->cart_details[$i]->product->price}}</p>
+                                        <h5 class="card-title">{{$cart->cart_details[$i]->product->name}}</h5>
+                                        <p class="card-text">{{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
 
-                                        <form action="{{ route('cart.remove', ['productId' => $cart[0]->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
+                                        <form action="{{ route('cart.remove', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
                                             @method("delete")
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm me-2 quantity-btn">-</button>
                                         </form>
 
-                                        <span>{{$cart[0]->cart_details[$i]->quantity}}</span>
+                                        <span>{{$cart->cart_details[$i]->quantity}}</span>
 
-                                        <form action="{{ route('cart.add', ['productId' => $cart[0]->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
+                                        <form action="{{ route('cart.add', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
                                         </form>
@@ -40,13 +41,14 @@
                                 </div>
                             </div>
                         </div>
-                        @if($cart[0]->cart_details[$i]->product->patent == 1)
+                        @if($cart->cart_details[$i]->product->patent == 1)
                             @php
                                 $check = true
                             @endphp
                         @endif
                     @endfor
                 </div>
+                @endif
             </div>
 
             @php
@@ -56,38 +58,44 @@
             <div class="col-md-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text" style="color: var(--main2-color);">Total Items</span>
-                    <span class="badge rounded-pill" style="background-color: var(--main2-color);">{{count($cart[0]->cart_details)}}</span>
+                    <span class="badge rounded-pill" style="background-color: var(--main2-color);">{{isset($cart->cart_details) ? count($cart->cart_details) : 0 }}</span>
                 </h4>
                 <ul class="list-group mb-3">
-                    <div class="overflow-auto" style="max-height: 169px;">
-                        @for ($i = 0; $i < count($cart[0]->cart_details); $i++)
-                            <li class="list-group-item d-flex justify-content-between lh-sm">
-                                <div>
-                                    <h6 class="my-0">{{$cart[0]->cart_details[$i]->product->name}}</h6>
-                                    {{-- <small class="text-body-secondary">Brief description</small> --}}
-                                </div>
-                                <span class="text-body-secondary">{{'Rp '.$cart[0]->cart_details[$i]->product->price.' x '.$cart[0]->cart_details[$i]->quantity}}</span>
+                    @if(isset($cart->cart_details))
+                        <div class="overflow-auto" style="max-height: 169px;">
+                            @for ($i = 0; $i < count($cart->cart_details); $i++)
+                                <li class="list-group-item d-flex justify-content-between lh-sm">
+                                    <div>
+                                        <h6 class="my-0">{{$cart->cart_details[$i]->product->name}}</h6>
+                                        {{-- <small class="text-body-secondary">Brief description</small> --}}
+                                    </div>
+                                    <span class="text-body-secondary">{{'Rp '.(isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price).' x '.$cart->cart_details[$i]->quantity}}</span>
 
-                            </li>
-                            @php
-                                $total += $cart[0]->cart_details[$i]->product->price * $cart[0]->cart_details[$i]->quantity;
-                            @endphp
-                        @endfor
-
-
-                    </div>
-                    @if(isset($cart[0]->promotion))
+                                </li>
+                                @php
+                                    $total += (isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price) * $cart->cart_details[$i]->quantity;
+                                @endphp
+                            @endfor
+                        </div>
+                    @endif
+                    @if(isset($cart->promotion))
+                        <li class="list-group-item d-flex justify-content-between">
+                            <span>Subtotal (IDR)</span>
+                            {{-- <strong>{{'Rp '.$total}}</strong> --}}
+                            <span class="text-body-secondary">{{'Rp '.$total}}</span>
+                        </li>
+                    
                         <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                             <div class="text-success">
                                 <h6 class="my-0">Promo code</h6>
-                                <small>{{$cart[0]->promotion->code}}</small>
+                                <small>{{$cart->promotion->code}}</small>
                             </div>
-                            <span class="text-success">{{'- Rp '.$cart[0]->promotion->discount * $total}}</span>
+                            <span class="text-success">{{'- Rp '.$cart->promotion->discount * $total}}</span>
                         </li>
                     @endif
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (IDR)</span>
-                        <strong>{{'Rp '.$total - $cart[0]->promotion->discount * $total}}</strong>
+                        <strong>{{ isset($cart->promotion->discount) ? 'Rp '.$total - $cart->promotion->discount * $total : 'Rp '.$total}}</strong>
                     </li>
                 </ul>
 
@@ -121,7 +129,8 @@
                         Add to Order
                     </button>
                 @else
-                    <a href="/history">
+                    {{-- <a href="/addTransaction/{{$cart->id}}"> --}}
+                    <a href="/addTransaction/1">
                         <button type="submit" id="addbtn" class="btn mb-2">
                             Add to Order
                         </button>
