@@ -11,6 +11,13 @@
         <link rel="stylesheet" href="/css/style.css">
         <title>{{ $title ?? 'Medigo' }}</title>
     </head>
+    <style>  
+
+        input[type=number]::-webkit-inner-spin-button {
+            opacity: 1
+        }
+        
+        </style>
     <body>
         @include('Structure.navbar')
         <div>

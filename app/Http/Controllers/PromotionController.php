@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 
@@ -12,7 +13,8 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        return view('Promotions.promotions',["promotions" => Promotion::all()]);
+        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        return view('Promotions.promotions',["promotions" => Promotion::all(), 'cart' => $cart]);
     }
 
     /**

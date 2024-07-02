@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use Illuminate\Http\Request;
+use App\Models\Cart;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Promotion;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class LandingPageController extends Controller
 {
     public function index()
     {
-
+        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
         $promotions = Promotion::orderByDesc('id')->take(3)->get();
         $topProducts = Product::select('products.*', DB::raw('SUM(order_details.quantity) as total_sold'))
         ->join('order_details', 'products.id', '=', 'order_details.product_id')
@@ -39,7 +40,8 @@ class LandingPageController extends Controller
             "promotions"=>$promotions,
             "categories"=>$categories,
             "bestseller"=>$topProducts,
-            "discounts"=>$leastSoldProducts
+            "discounts"=>$leastSoldProducts,
+            'cart'=>$cart
         ]);
     }
 }
