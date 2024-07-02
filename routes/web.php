@@ -1,6 +1,8 @@
 <?php
 
 // use App\Http\Controllers\TermsPage;
+
+use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\FaqController;
 use App\Http\Controllers\CartController;
@@ -79,9 +81,8 @@ Route::delete('/cart/remove/{productId}', [CartController::class, 'removeFromCar
 Route::post('/cart/addPromo', [CartController::class, 'addPromo'])->name('cart.promo.add');
 
 //admin
-Route::get('/dashboard', function () {
-    return view('AdminPage.home');
-});
+Route::get('/dashboard', [AdminDashboardController::class,"index"]);
+
 //Product
 Route::resource('/dashboard/products',DashboardProductController::class);
 Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
