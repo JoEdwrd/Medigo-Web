@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId("user_id")->constrained("users")->onDelete("restrict");
-            $table->unsignedBigInteger('promotion_id');
+            $table->unsignedBigInteger('promotion_id')->nullable();
             $table->string("status")->default("Waiting for payment"); // waiting for payment, waiting for verification, in progress, completed, canceled
             $table->string("slug")->unique();
             // $table->foreignId("promo_id")->nullable()->constrained("promotions")->onDelete("restrict");

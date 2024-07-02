@@ -77,6 +77,8 @@ Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show'])
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart/add/{productId}', [CartController::class, 'addProduct'])->name('cart.add');
 Route::delete('/cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
+Route::delete('/cart/removeAll', [CartController::class, 'removeAllItems'])->name('cart.removeAll');
+Route::post('cart/changeQty/{productId}', [CartController::class, 'changeQty'])->name('cart.changeQty');
 
 Route::post('/cart/addPromo', [CartController::class, 'addPromo'])->name('cart.promo.add');
 

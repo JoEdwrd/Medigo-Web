@@ -7,7 +7,17 @@
     <div class="py-4">
         <div class="row gx-5">
             <div class="col-md-8">
-                <h2 class="mb-3">Your Cart</h2>
+                <div class="d-flex justify-content-between">
+                    <h2 class="mb-3">Your Cart</h2>
+                    @if (isset($cart->cart_details[0]))   
+                        <form action="{{route('cart.removeAll')}}" method="POST">
+                            @csrf
+                            @method('delete')
+                            <button class="btn btn-outline-primary" type="submit"> <i class="bi bi-eraser"></i> Clear all Items</button>
+                        </form>
+                    @endif
+                </div>
+                
                 @if(isset($cart->cart_details))
                 <div class="overflow-auto" style="max-height: 557px">
                     @for ($i = 0; $i < count($cart->cart_details); $i++)
@@ -20,11 +30,11 @@
                                 <div class="card-text d-flex flex-grow-1 justify-content-between align-items-center">
                                     <div>
                                         <h5 class="card-title">{{$cart->cart_details[$i]->product->name}}</h5>
-                                        <p class="card-text">{{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}</p>
+                                        <p class="card-text">Rp {{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
 
-                                        <form action="{{ route('cart.remove', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
+                                        {{-- <form action="{{ route('cart.remove', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
                                             @method("delete")
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm me-2 quantity-btn">-</button>
@@ -35,8 +45,28 @@
                                         <form action="{{ route('cart.add', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
+                                        </form> --}}
+                                        
+                                        {{-- <div class="qty-box">
+                                            <div class="input-group">
+                                                <input type="number" name="quantity" onchange="{{route(cart.changeQty, [])}}" class="form-control input-number" value="{{$cart->cart_details[$i]->quantity}}">
+                                            </div>
+                                        </div> --}}
+
+                                        <form style="display: inline;" method="POST" action="{{ route('cart.changeQty' , ['productId' => $cart->cart_details[$i]->product->id]) }}">
+                                            @csrf
+                                            <input type="number" min="0" name="quantity" class="form-control input-number w-50" value="{{$cart->cart_details[$i]->quantity}}" onchange="this.form.submit()">
                                         </form>
 
+                                        <a href="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" onclick="event.preventDefault();
+                                        document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
+
+                                        <form id="delete-form-{{$cart->cart_details[$i]->product->id}}" action="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" method="POST" class="d-none">
+                                            @csrf
+                                            @method('delete')
+                                        </form>
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -123,19 +153,22 @@
                     Checkout
                 </button> --}}
                 {{-- <a href="" id="addbtn" class="btn mb-2">Add to Order</a> --}}
-
-                @if($check)
-                    <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Add to Order
-                    </button>
-                @else
-                    {{-- <a href="/addTransaction/{{$cart->id}}"> --}}
-                    <a href="/addTransaction/1">
-                        <button type="submit" id="addbtn" class="btn mb-2">
+                
+                @if (isset($cart->cart_details[0])) 
+                    @if($check)
+                        <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Add to Order
                         </button>
-                    </a>
+                    @else
+                        {{-- <a href="/addTransaction/{{$cart->id}}"> --}}
+                        <a href="/addTransaction/1">
+                            <button type="submit" id="addbtn" class="btn mb-2">
+                                Add to Order
+                            </button>
+                        </a>
+                    @endif
                 @endif
+
 
 
                     <div class="body-modal">

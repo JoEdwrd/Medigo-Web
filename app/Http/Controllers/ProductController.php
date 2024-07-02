@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cart;
 use App\Models\Product;
 use App\Models\Category;
 use App\Http\Requests\StoreProductRequest;
@@ -14,6 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
         $searchTerm = request('search');
         $productsQuery = Product::query();
 
@@ -26,7 +28,7 @@ class ProductController extends Controller
         $products = $productsQuery->get();
 
         $categories = Category::with('products')->get();
-        return view('Product.Products', compact('categories', 'products', 'searchTerm'));
+        return view('Product.Products', compact('categories', 'products', 'searchTerm', 'cart'));
     }
 
     /**

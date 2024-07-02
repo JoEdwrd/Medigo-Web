@@ -33,6 +33,27 @@ class CartController extends Controller
         return view('cart', compact('cart'));
     }
 
+    public function changeQty(Request $request, $product_id){
+        $cart = Cart::firstOrCreate(['user_id' => 1]);
+
+        $qty = $request->quantity;
+
+        // dd($qty);
+
+        $cartItem = $cart->cart_details()->where('product_id', $product_id)->first();
+
+        if($qty > 0){
+            $cartItem->quantity = $qty;
+            $cartItem->save();
+        }else {
+            $cartItem->delete();
+        }
+        
+
+        return redirect()->back()->with('success', 'Product quantity changed');
+
+    }
+
     public function addPromo(Request $request){
 
         $data = $request->all();
@@ -86,20 +107,29 @@ class CartController extends Controller
         return redirect()->back()->with('success', 'Product added to cart');
     }
 
+    public function removeAllItems(Request $request){
+        $cart = Cart::where('user_id', 1)->firstOrFail();
+
+        $cart->cart_details()->delete();
+
+        return redirect()->back()->with('success', 'Product reduced');
+
+    }
+
     public function removeFromCart(Request $request, $itemId)
     {
         // Find the cart item by its ID
-        $cartItem = CartDetail::where('product_id', $itemId)->get()[0];
+        $cartItem = CartDetail::where('product_id', $itemId)->get()->first();
 
         // dd($cartItem);
 
-        if($cartItem->quantity > 1){
-            $cartItem->quantity -= 1;
-            $cartItem->save();
-        }else{
+        // if($cartItem->quantity > 1){
+        //     $cartItem->quantity -= 1;
+        //     $cartItem->save();
+        // }else{
             // Delete the cart item
-            $cartItem->delete();
-        }
+        $cartItem->delete();
+        
 
         // Redirect to the cart index page with a success message
         return redirect()->back()->with('success', 'Product reduced');
