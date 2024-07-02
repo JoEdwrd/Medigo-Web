@@ -4,6 +4,42 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-2 mt-3">
         <h1 class="h2">Dashboard</h1>
     </div> 
+    <div class="row d-flex justify-content-around">
+        <div class="col-2 p-4" style="border-radius: 10px;background-color:#F2F2F2">
+            <div class="row">
+                <i class="bi bi-people-fill h4 col-1"></i>
+                <div class="col-8 h4 ms-3 text-center">Total Users</div>
+            </div>
+            <div class="row d-flex justify-content-center"><h1 class="text-center">{{ $user }}</h1></div>
+        </div>
+        <div class="col-2 p-4" style="border-radius: 10px;background-color:#F2F2F2">
+            <div class="row">
+                <i class="bi bi-people-fill h4 col-1"></i>
+                <div class="col-8 h4 ms-3 text-center">Total Products</div>
+            </div>
+            <div class="row d-flex justify-content-center"><h1 class="text-center">{{ $product }}</h1></div>
+        </div>
+        <div class="col-2 p-4" style="border-radius: 10px;background-color:#F2F2F2">
+            <div class="row">
+                <i class="bi bi-people-fill h4 col-1"></i>
+                <div class="col-8 h4 ms-3 text-center">Total Transactions</div>
+            </div>
+            <div class="row d-flex justify-content-center"><h1 class="text-center">{{ $transaction }}</h1></div>
+        </div>
+        <div class="col-3 p-4" style="border-radius: 10px;background-color:#F2F2F2">
+            <div class="row">
+                <i class="bi bi-people-fill h4 col-1"></i>
+                <div class="col-8 h4 ms-3 text-center">Total Income</div>
+            </div>
+            <div class="row d-flex justify-content-center"><h1 class="text-center">Rp {{ number_format($totalEarnings, 0, ',', '.') }}</h1></div>
+        </div>
+    </div>
+    <br>
+    <h2>Montly Earning Chart</h2>
+    <div style="width: 1200px">
+        <canvas id="myChart"></canvas>
+    </div>
+    {{-- <canvas id="earningsChart"></canvas> --}}
     <h2>Tabel</h2>
         <div class="table-responsive">
         <table class="table table-striped table-sm">
@@ -133,17 +169,4 @@
         </table>
     </div>
 
-                                {{-- <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <span data-feather="calendar"></span>
-                            This week
-                        </button>
-                        </div>
-                    </div>
-                    {{-- buat grafik
-                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> --}}
 @endsection
