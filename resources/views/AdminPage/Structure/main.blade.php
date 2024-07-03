@@ -41,36 +41,11 @@
         </main>
       </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
     <script src="public\js\dashboard.js"></script>
-    <script>
-      const labels = [
-        @foreach($monthlyEarnings as $earning)
-          '{{ $earning->month }}',
-        @endforeach
-      ];
-
-      const data = {
-        labels: labels,
-        datasets: [{
-          label: 'Total Earnings',
-          backgroundColor: '#98C7BF',
-          borderColor: '#98C7BF',
-          data: {{ $monthlyEarnings->pluck('total_earnings') }},
-        }]
-      };
-
-      const config = {
-        type: 'line',
-        data: data,
-        options: {}
-      };
-      const myChart = new Chart(
-      document.getElementById('myChart'),
-      config);
-    </script>
+    
     {{-- <script>
       document.addEventListener('DOMContentLoaded', function () {
         var ctx = document.getElementById('earningsChart').getContext('2d');

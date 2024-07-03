@@ -16,7 +16,11 @@ class AdminDashboardController extends Controller
         $user=User::count();
         $product=Product::count();
         $transaction=Transaction::count();
-        $transactions=Transaction::all();
+        if ($transaction < 5) {
+            $transactions = Transaction::orderBy('created_at', 'desc')->get();
+        } else {
+            $transactions = Transaction::orderBy('created_at', 'desc')->take(5)->get();
+        }
         $totalEarnings = Transaction::join('order_details', 'transactions.id', '=', 'order_details.transaction_id')
                                 ->join('products', 'order_details.product_id', '=', 'products.id')
                                 ->leftJoin('promotions', 'transactions.promotion_id', '=', 'promotions.id')
