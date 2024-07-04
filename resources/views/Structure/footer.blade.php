@@ -51,7 +51,7 @@
 
           <div class="col-md-1 mb-3 mt-0">
             <h6 class="font-weight-bold" id="NavItems">
-              <a href="/" class="text-black text-decoration-none">Call Us</a>
+              <a href="https://wa.me/+6281225106377?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services." class="text-black text-decoration-none">Call Us</a>
             </h6>
           </div>
           <!-- Grid column -->

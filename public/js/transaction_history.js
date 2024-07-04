@@ -3,33 +3,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggleButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            var targetId = this.getAttribute("data-bs-target");
-            console.log("Target ID:", targetId);
+            var targetId = this.getAttribute("data-bs-target"); // Get the target div ID
+            var targetDiv = document.querySelector(targetId); // Get the target div
+            var icon = this.querySelector(".toggleIcon"); // Get the icon element within the button
 
-            var targetDiv = document.querySelector(targetId);
-            console.log("Target div:", targetDiv);
-
-            var icon = this.querySelector(".toggleIcon");
-            console.log("Icon:", icon);
-
-            var isCollapsed = targetDiv.style.display === "none";
-            console.log("Is collapsed:", isCollapsed);
+            var isCollapsed = targetDiv.style.display === "none"; // Check if the target div is collapsed (hidden)
 
             if (isCollapsed) {
                 targetDiv.style.display = "block"; // Show the div
-                icon.classList.remove("bi-chevron-down");
+                icon.classList.remove("bi-chevron-down"); // Change icon to up
                 icon.classList.add("bi-chevron-up");
             } else {
                 targetDiv.style.display = "none"; // Hide the div
-                icon.classList.remove("bi-chevron-up");
+                icon.classList.remove("bi-chevron-up"); // Change icon to down
                 icon.classList.add("bi-chevron-down");
             }
         });
 
-        // Initially hide all target divs except the first one
+        // Initially hide 'completed' and 'canceled' sections
         var targetId = button.getAttribute("data-bs-target");
         var targetDiv = document.querySelector(targetId);
-        if (targetDiv && targetId !== "#order-info-waitForPayment") {
+        if (
+            targetDiv &&
+            !["#order-info-completed", "#order-info-canceled"].includes(
+                targetId
+            )
+        ) {
+            targetDiv.style.display = "block";
+        } else if (targetDiv) {
             targetDiv.style.display = "none";
         }
     });

@@ -234,7 +234,7 @@
                             
                             <form action="{{ route('cart.add', ['productId' => $disc->id]) }}" method="POST" style="display:inline;">
                                 @csrf
-                                <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                                <button type="submit" class="btn mb-2 mt-2" id="addbtn">Add to cart</button>
                             </form>
                         </div>
                     </div>

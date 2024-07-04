@@ -15,13 +15,15 @@ class HistoryController extends Controller
             ->get()
             ->groupBy('status');
         $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
-        return view('history.index-history', [
+        $title = 'Transaction History';
+        return view('history.index', [
             'inProgress' => $transactions->get('In progress', collect()),
             'waitForPayment' => $transactions->get('Waiting for payment', collect()),
             'waitForVerification' => $transactions->get('Waiting for verification', collect()),
             'completed' => $transactions->get('Completed', collect()),
             'canceled' => $transactions->get('Canceled', collect()),
-            'cart' => $cart
+            'cart' => $cart,
+            'title' => $title
         ]);
     }
 }
