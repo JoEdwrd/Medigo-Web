@@ -35,10 +35,14 @@
         </div>
     </div>
     <br>
+    <br>
     <h2>Montly Earning Chart</h2>
     <div style="width: 1200px">
         <canvas id="myChart"></canvas>
     </div>
+    <br>
+    <br>
+
     <h2>Recent Transactions</h2>
         <div class="table-responsive">
         <table class="table table-md">
