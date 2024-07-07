@@ -15,6 +15,7 @@ class Prescription extends Model
         'transaction_id',
         'prescription_image',
         'status',
+        'slug',
     ];
 
     public function user()

@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
-use App\Models\CartDetail;
 use App\Models\Product;
 use App\Models\Promotion;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Storage;
+use App\Models\CartDetail;
 use Illuminate\Support\Str;
 use App\Models\Prescription;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -21,7 +20,7 @@ class CartController extends Controller
         // $cart = Cart::firstOrCreate(['user_id' => 1]);
         $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
 
-        
+
 
         // $cart = Cart::firstOrCreate(['user_id' => 1])->with();
 
@@ -48,7 +47,7 @@ class CartController extends Controller
         }else {
             $cartItem->delete();
         }
-        
+
 
         return redirect()->back()->with('success', 'Product quantity changed');
 
@@ -129,7 +128,7 @@ class CartController extends Controller
         // }else{
             // Delete the cart item
         $cartItem->delete();
-        
+
 
         // Redirect to the cart index page with a success message
         return redirect()->back()->with('success', 'Product reduced');
@@ -157,7 +156,9 @@ class CartController extends Controller
 
         $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
         $requestData["prescription_image"] = '/storage/'.$path;
+        $requestData['slug'] = Str::slug($requestData['prescription_image']) . '-' . Str::lower(Str::random(5));
 
+        // dd($requestData);
         // Ensure image field is fillable
         Prescription::create($requestData);
 
