@@ -22,12 +22,24 @@ class LoginController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-            return redirect("/");
+            $request->session()->regenerate();
+
+            return redirect()->intended("/");
         } else {
             // Handle failed login attempt
             $errorMessage = 'Invalid email or password. Please try again.';
             return redirect()->back()->withErrors(['email' => $errorMessage]);
         }
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerate();
+
+        return redirect('/');
 
     }
 }

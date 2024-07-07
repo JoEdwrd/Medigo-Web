@@ -16,7 +16,7 @@
 
 <div class="container d-flex flex-row mt-5 justify-content-between">
 
-    
+
     @include("Structure.side-nav-profile")
     <div class="w-75">
        <h1 class="mb-4">My Profile</h1>
@@ -30,12 +30,12 @@
                         </div>
                         <div>
                             <ul class="list-unstyled">
-                                <li>Joel Kurniawan</li>
-                                <li>0842949242331</li>
+                                <li>{{auth()->user()->name}}</li>
+                                <li>{{auth()->user()->phone}}</li>
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="right-0">
                         {{-- <button type="button" class="btn btn-primary">Edit Profile</button> --}}
                         <!-- Button trigger modal -->
@@ -47,31 +47,31 @@
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Username</div>
-                        <div>Joel</div>
+                        <div>{{auth()->user()->name}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Date of Birth</div>
-                        <div>Joel</div>
+                        <div>{{auth()->user()->dob}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Email</div>
-                        <div>Joel</div>
+                        <div>{{auth()->user()->email}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Address</div>
-                        <div>Joel</div>
+                        <div>{{auth()->user()->address}}</div>
                     </div>
                 </li>
                 <li class="pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Gender</div>
-                        <div>Male</div>
+                        <div>{{auth()->user()->gender}}</div>
                     </div>
                 </li>
             </ul>

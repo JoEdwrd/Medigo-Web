@@ -24,26 +24,59 @@
                       @endif
                     </a>
                 </li>
-                <li class="nav-item col-md-3">
-                    <a class="position-relative nav-link text-dark" id="NavItems" href="/cart" style="width: 45%">
-                      @if(Request::is("cart"))
-                      <u>CART</u>
-                      @else
-                      CART
-                      @endif
-                      @if(isset($cart->cart_details))
-                      <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
-                        {{count($cart->cart_details)}}
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                      @endif
-                    </a>
-                </li>
-                <li class="nav-item col-md-3">
-                    <a class="text-decoration-none" href="/login">
-                        <button class="nav-link text-light rounded-50 text-decoration-none" id="loginBTN"><strong>LOG IN</strong></button>
-                    </a>
-                </li>
+
+                @auth
+                    <li class="nav-item col-md-3">
+                        <a class="position-relative nav-link text-dark" id="NavItems" href="/cart" style="width: 45%">
+                        @if(Request::is("cart"))
+                        <u>CART</u>
+                        @else
+                        CART
+                        @endif
+                        @if(isset($cart->cart_details))
+                        <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{count($cart->cart_details)}}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                        @endif
+                        </a>
+                    </li>
+
+                    @else
+                    <li class="nav-item col-md-3">
+                        <a class="position-relative nav-link text-dark" id="NavItems" href="/login" style="width: 45%">
+                        @if(Request::is("cart"))
+                        <u>CART</u>
+                        @else
+                        CART
+                        @endif
+                        @if(isset($cart->cart_details))
+                        <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
+                            {{count($cart->cart_details)}}
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                        @endif
+                        </a>
+                    </li>
+
+                @endauth
+
+                @auth
+                     <li class="nav-item col-md-3">
+                        <a class="text-decoration-none" href="/profile">
+                            <button class="nav-link text-light rounded-50 text-decoration-none" id="loginBTN"><strong>{{ Str::upper(auth()->user()->name) }}</strong></button>
+                        </a>
+                    </li>
+
+                    @else
+                    <li class="nav-item col-md-3">
+                        <a class="text-decoration-none" href="/login">
+                            <button class="nav-link text-light rounded-50 text-decoration-none" id="loginBTN"><strong>LOG IN</strong></button>
+                        </a>
+                    </li>
+
+                @endauth
+
             </ul>
 
             <!-- Add margin-right to navbar-brand -->

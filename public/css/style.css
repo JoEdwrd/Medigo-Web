@@ -20,7 +20,7 @@ footer {
 #loginBTN {
     background-color: var(--main2-color);
     border-radius: 63px;
-    width: 100px;
+    width: 150px;
 }
 :root {
     --main1-color: rgba(231, 244, 224, 100);
