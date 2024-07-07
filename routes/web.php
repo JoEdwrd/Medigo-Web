@@ -58,6 +58,7 @@ Route::post('/register2', [RegisterController::class, 'store'])->name('register2
 
 
 Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
+Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
 
 // profile, kemungkinan besar dimodif
 Route::get('/profile', [UserProfileController::class, 'index']);
@@ -107,8 +108,9 @@ Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
 Route::put('/dashboard/transactions/{transaction:slug}/edit', [DashboardTransactionController::class, "update"]);
 
 //prescription
-Route::resource("/dashboard/prescriptions", DashboardPrescriptionController::class);
-Route::get('/dashboard/prescriptions', [DashboardPrescriptionController::class, 'index']);
-Route::put('/dashboard/prescriptions/{prescription::slug}/edit', [DashboardPrescriptionController::class, "update"]);
-// Route::post('/history',[PrescriptionController::class, 'store'])->name('upload.prescription');
-Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
+Route::get('/dashboard/prescriptions', [DashboardPrescriptionController::class, 'index'])->name('admin.prescriptions.updateIndex');
+Route::get('dashboard/prescriptions/{slug}/edit', [DashboardPrescriptionController::class, 'edit']);
+Route::put('dashboard/prescriptions/{slug}/update', [DashboardPrescriptionController::class, 'update'])->name('admin.prescriptions.updateStatus');
+Route::get('/dashboard/prescriptions/{slug}', [DashboardPrescriptionController::class, 'show']);
+
+

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('prescription_image')->nullable();
             $table->string('status')->default('Waiting for verification');
 
-
+            $table->string('slug')->unique();
             $table->unsignedBigInteger('transaction_id')->nullable();
             $table->foreign('transaction_id')->references('id')->on('transactions');
         });

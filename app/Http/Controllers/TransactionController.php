@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\OrderDetail;
+use App\Models\Prescription;
 use App\Models\Transaction;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TransactionController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -23,7 +25,7 @@ class TransactionController extends Controller
      */
     public function create()
     {
-        
+
     }
 
     /**
@@ -32,35 +34,38 @@ class TransactionController extends Controller
     public function addTransaction(Request $request, $user_id)
     {
         $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', $user_id)->get()->first();
-
+        // dd($cart);
         // dd($cart->cart_details);
 
         $check = 0;
-        
+
         foreach ($cart->cart_details as $item) {
-            
+
             if($item->product->patent == 1){
                 $check = 1;
             }
         }
         // dd($check);
+
         if($check == 1){
             $trans = Transaction::create([
                 'promotion_id' => $cart->promotion_id,
                 'user_id' => $cart->user_id,
-                'slug' => 'uwawKeren',
-                'status' => 'Waiting for verification',
-                // 'transaction_date' => Carbon::now()
+                'slug' => $cart->id,
+                'status' => 'Waiting for verification'
+            ]);
+
+            Prescription::latest('created_at')->first()->update([
+                'transaction_id' => $trans->id
             ]);
         }else{
             $trans = Transaction::create([
                 'promotion_id' => $cart->promotion_id,
                 'user_id' => $cart->user_id,
-                'slug' => 'uwawKeren',
-                // 'transaction_date' => Carbon::now()
+                'slug' => $cart->id,
             ]);
         }
-        
+
 
         // dd($trans);
 

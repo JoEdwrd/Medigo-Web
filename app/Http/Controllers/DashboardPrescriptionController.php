@@ -4,19 +4,61 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Prescription;
+use App\Models\Transaction;
 
 class DashboardPrescriptionController extends Controller
 {
-    public function index(){
-        $prescriptions = Prescription::all();
-        return view('adminPage.prescriptions.index', compact('prescriptions'));
-    }
-
-    public function update(Request $request, string $slug)
+    public function index()
     {
-       Prescription::where('slug', $slug)->update(['status' => $request->status]);
-
-        return redirect('/dashboard/prescription')->with('success', 'Prescription status has been updated!');
+        $prescriptions = Prescription::all();
+        return view('AdminPage.prescriptions.index', compact('prescriptions'));
     }
 
+
+    public function show($slug)
+    {
+
+        $prescriptions = Prescription::where('slug', $slug)->firstOrFail();
+
+        return view('AdminPage.prescriptions.show', [
+            'prescriptions' => $prescriptions,
+        ]);
+    }
+
+    public function edit($slug)
+    {
+        $prescriptions = Prescription::where('slug', $slug)->firstOrFail();
+        return view('AdminPage.prescriptions.edit', [
+            'prescriptions' => $prescriptions,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        // dd($request->status);
+        $prescriptions = Prescription::all();
+        $request->validate([
+            'status' => 'required|in:Waiting for Verification,Approved,Rejected',
+        ]);
+
+        $prescription = Prescription::findOrFail($id);
+        $prescription->status = $request->status;
+
+        // Cek apakah status prescription menjadi "approved"
+        if ($request->status == 'Approved') {
+            // Temukan transaksi terkait dan perbarui statusnya
+            $transaction = Transaction::findOrFail($prescription->transaction_id);
+            $transaction->status = 'Waiting for payment';
+            $transaction->save();
+        }else if($request->status == 'Rejected') {
+            // Temukan transaksi terkait dan perbarui statusnya
+            $transaction = Transaction::findOrFail($prescription->transaction_id);
+            $transaction->status = 'Canceled';
+            $transaction->save();
+        }
+        $prescription->save();
+
+        return redirect()->route('admin.prescriptions.updateIndex')->with('success', 'Status updated successfully.');
+
+    }
 }
