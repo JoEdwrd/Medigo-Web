@@ -49,14 +49,15 @@ Route::get('/products', [ProductController::class, 'index'])->name('products.ind
 Route::get('/category/{category:slug}', [ProductController::class, 'showByCategory'])->name('category.show');
 
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/check', [LoginController::class, 'check'])->name('check');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
 Route::post('/register2', [RegisterController::class, 'store'])->name('register2');
 
 
-Route::get('/cart', [CartController::class, 'index']);
+Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
 
 // profile, kemungkinan besar dimodif
 Route::get('/profile', [UserProfileController::class, 'index']);

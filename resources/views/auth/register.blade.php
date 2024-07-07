@@ -22,6 +22,10 @@
                     <div>
                         <h1 class="login-title">Sign Up</h1>
                     </div>
+
+                     <div style="font-size: 16px; color:rgb(178,177,177);" id="chopin1">
+                            Already have an account yet?  <a href="{{ route('login') }}" style="font-size: 16px; color:rgb(152,199,191)"id="chopin1"> Log in</a>
+                    </div>
                     <div>
                         <label for="name" value="{{ __('Name') }}" >
                             <p class="fontlabel" id="chopin1">Name</p>
@@ -99,7 +103,9 @@
                         @endif
                     </div>
 
+
                     <button type="submit" id="registerbtn" style="background-color: rgb(81,159,145); color:white">Sign Up</button>
+
 
                 </div>
 
