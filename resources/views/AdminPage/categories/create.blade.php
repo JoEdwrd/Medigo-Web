@@ -1,6 +1,6 @@
 @extends("AdminPage.Structure.main")
 @section("container")
-    <form method="post" action="/dashboard/categories" class="mb-5">
+    <form method="post" action="/dashboard/categories" class="mb-5" enctype="multipart/form-data">
     @csrf   
     <div class="my-4 d-flex flex-row justify-content-between">
         <h1 class="h2">Add New Category</h1>
@@ -36,15 +36,24 @@
                     </div>
                 @enderror
                 <br>
-                <label for="description" class="form-label">Description Product</label>
+                <label for="description" class="form-label">Category Description</label>
                 @error("description")
                 <p class="text-danger">{{ $message }}</p>
                 @enderror
                 <input id="description" type="hidden" name="description" value="{{ old("description") }}">
                 <trix-editor input="description" style="background: white;width:100%;border-radius:5px;height:200px;border:none;overflow:scroll"></trix-editor>
             </div>
-            <div class="d-flex justify-content-center align-item-center p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
-                <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
+            <div class="p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
+                <h3>Category Image</h3>
+                <br>
+                <img class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
+                @error("image")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+                {{-- <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
             </div>
         </div>
         <br>    

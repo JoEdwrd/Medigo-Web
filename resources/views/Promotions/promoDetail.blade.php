@@ -13,7 +13,9 @@ use Carbon\Carbon;
     </nav>
     <br>
     <div class="card">
-        <img src="{{ asset("/image/Promo1.png") }}" style="height: 400px"; width="500px" class="card-img-top" alt="Voucher Image">
+        <img src="{{ asset('storage/'.$promotion->image) }}" style="height: 400px; width: 100%; object-fit: cover;" class="card-img-top" alt="Voucher Image">
+
+
         <div class="card-body">
             <div class="d-flex justif   y-content-between align-items-center">
                 <h4 class="card-title">{{$promotion->name}}</h4>

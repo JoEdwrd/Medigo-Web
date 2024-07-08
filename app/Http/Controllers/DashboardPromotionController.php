@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Promotion;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class DashboardPromotionController extends Controller
 {
     /**
@@ -30,12 +30,13 @@ class DashboardPromotionController extends Controller
      */
     public function store(Request $request)
     {
+        // @ddd($request);
         $validatedData = $request->validate([
             'name' => 'required|max:255|unique:promotions',
             'slug' => 'required|unique:promotions',
             'code' => 'required|unique:promotions',
             'discount' => 'required|numeric',
-            'image' => 'image|file|max:1024',
+            'image' => 'required|image|file|max:1024',
             'terms' => 'required',
             'shortdecs' => 'required|max:55',
             'startdate' => 'required|date_format:Y-m-d',
@@ -97,13 +98,16 @@ class DashboardPromotionController extends Controller
 
         $validatedData = $request->validate($rules);
 
-        // if ($request->file('image')) {
-        //     if ($request->oldImage) {
-        //         Storage::delete($request->oldImage);
-        //     }
-        //     $validatedData['image'] = $request->file('image')->store('promotion-images');
-        // }
-
+        if ($request->file('image')) {
+            if ($request->oldImage) {
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('promotion-images');
+        }
+        else{
+            $validatedData['image'] = $request->oldImage;
+        
+        }
         Promotion::where('id', $promotion->id)->update($validatedData);
 
         return redirect('/dashboard/promotions')->with('success', 'Promotion has been updated!');
@@ -114,6 +118,9 @@ class DashboardPromotionController extends Controller
      */
     public function destroy(Promotion $promotion)
     {
+        if($promotion->image){
+                Storage::delete($promotion->image);
+            }
         Promotion::destroy($promotion->id);
 
         return redirect('/dashboard/promotions')->with('success', 'Promotion has been deleted!');

@@ -8,9 +8,11 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #eeebeb; border-radius:20px;">
-                <img src="/image/BannerMain.png" alt="Promotion Banner" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px;">
-                <p class="pb-2">{{ $promotion->name }}</p>
+            <div class="p-5 col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #eeebeb; border-radius:20px;">
+                <h3>Promo Image</h3>
+                <br>
+                <img src="{{ asset('storage/'.$promotion->image) }}" alt="Promotion Banner" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px;">
+                {{-- <p class="pb-2">{{ $promotion->name }}</p> --}}
             </div>
             
             <div class="col-md-12 d-flex justify-content-between p-0 mb-4">

@@ -1,7 +1,7 @@
 @extends("AdminPage.Structure.main")
 
 @section('container')
-    <form method="post" action="/dashboard/promotions/{{ $promotion->slug }}" class="p-0">
+    <form method="post" action="/dashboard/promotions/{{ $promotion->slug }}" class="p-0" enctype="multipart/form-data">
         @csrf
         @method("put")
         <div class="d-flex my-4 px-3 align-items-center text-center justify-content-between">
@@ -14,10 +14,18 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #eeebeb; border-radius:20px;">
-                    <img src="/image/BannerMain.png" alt="Promotion Banner" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px;">
-                    <p class="pb-2">Yes.jpg</p>
-                </div>
+                <div class="p-5 col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background:#EEEBEB;border-radius:20px">
+                <h3>Promo Image</h3>
+                <br>
+                <input type="hidden" name="oldImage" value="{{ $promotion->image }}">
+                {{-- <img src="{{ asset('storage/'.$product->image) }}" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
+                <img src="{{ asset('storage/'.$promotion->image) }}" class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
+                @error("image")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             
                 <div class="col-md-12 d-flex justify-content-between p-0 mb-4">
                     <div class="col-md-6" style="background-color: #eeebeb; border-radius:20px; width:515px;">
