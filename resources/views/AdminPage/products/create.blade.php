@@ -1,6 +1,6 @@
 @extends("AdminPage.Structure.main")
 @section("container")
-    <form method="post" action="/dashboard/products" class="mb-5">
+    <form method="post" action="/dashboard/products" class="mb-5" enctype="multipart/form-data">
     @csrf
     <div class="my-4 d-flex flex-row justify-content-between">
         <h1 class="h2">Add New Product</h1>
@@ -51,8 +51,17 @@
                     </div>
                 @enderror
             </div>
-            <div class="d-flex justify-content-center align-item-center p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
-                <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
+            <div class="p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
+                <h3>Product Image</h3>
+                <br>
+                <img class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
+                @error("image")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+                {{-- <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
             </div>
         </div>
         <br>
@@ -120,12 +129,35 @@
                     </div>
                 </div>
             </div>
+            
         </div>
-      </div>
+        {{-- <div class="mb-3">
+                <label for="image" class="form-label">Post Image</label>
+                <img class="img-preview img-fluid mb-3 col-sm-5">
+                <input class="form-control @error("image") is-invalid @enderror" style="width: 500px" type="file" id="image" name="image" onchange="previewImage()">
+                @error("image")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+      </div> --}}
       </form>
       <script>
         document.addEventListener("trix-file-accept", function(event) {
             event.preventDefault();
         });
+         function previewImage(){
+            const image=document.querySelector("#image");
+            const imgPreview=document.querySelector(".img-preview");
+            imgPreview.style.display="block";
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent){
+                imgPreview.src=oFREvent.target.result;
+            }
+        }
       </script>
 @endsection

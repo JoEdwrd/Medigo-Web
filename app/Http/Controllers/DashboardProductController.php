@@ -32,7 +32,8 @@ class DashboardProductController extends Controller
      */
     public function store(Request $request)
     {
-        // @dd($request->all());
+        // return $request->file("image")->store("product-images");
+        // ddd($request);
         $validatedData=$request->validate([
             "name"=>"required|max:255|unique:products",
             "slug"=>"required|unique:products",
@@ -42,11 +43,12 @@ class DashboardProductController extends Controller
             "discprice"=>"numeric|nullable",
             "stock"=>"required|numeric|min:0",
             "shortdesc"=>"required|max:50",
-            "description"=>"required"
+            "description"=>"required",
+            "image"=>"required|image|file|max:1024",
         ]);
-        // if($request->file("image")){
-        //     $validatedData["image"]=$request->file("image")->store("post-images");
-        // }
+        if($request->file("image")){
+            $validatedData["image"]=$request->file("image")->store("product-images");
+        }
         Product::create($validatedData);
         return redirect("/dashboard/products")->with("success","New product has been added!");
     }
