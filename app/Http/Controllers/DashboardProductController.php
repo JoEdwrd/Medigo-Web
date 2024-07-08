@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class DashboardProductController extends Controller
 {
     /**
@@ -86,8 +86,9 @@ class DashboardProductController extends Controller
             "patent"=>"required|boolean",
             "price"=>"required|numeric|min:0",
             "stock"=>"required|numeric|min:0",
-            "discprice" => "numeric",
+            "discprice" => "numeric|nullable",
             "shortdesc" => "required|max:50",
+            "image"=>"image|file|max:1024",
             "description"=>"required"
         ];
 
@@ -98,12 +99,15 @@ class DashboardProductController extends Controller
             $rules["name"]= "required|max:255|unique:products";
         }
         $validatedData=$request->validate($rules);
-        //  if($request->file("image")){
-        //     if($request->oldImage){
-        //         Storage::delete($request->oldImage);
-        //     }
-        //     $validatedData["image"]=$request->file("image")->store("post-images");
-        // }
+         if($request->file("image")){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData["image"]=$request->file("image")->store("product-images");
+        }
+        else{
+            $validatedData["image"]=$request->oldImage;
+        }
         Product::where("id",$product->id)
         ->update($validatedData);
         return redirect("/dashboard/products")->with("success","Product has been update!");
@@ -114,9 +118,9 @@ class DashboardProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        // if($product->image){
-        //         Storage::delete($product->image);
-        //     }
+        if($product->image){
+                Storage::delete($product->image);
+        }
         Product::destroy($product->id);
         return redirect("/dashboard/products")->with("success","Product has been deleted!");
     }

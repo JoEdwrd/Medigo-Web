@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Database\QueryException;
-
+use Illuminate\Support\Facades\Storage;
 
 class DashboardCategoryController extends Controller
 {
@@ -32,12 +32,16 @@ class DashboardCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request);
+        // ddd($request);
         $validatedData=$request->validate([
             "name"=>"required|max:255|unique:categories",
             "slug"=>"required|unique:categories",
+            "image"=>"required|image|file|max:1024",
             "description"=>"required"
         ]);
+        if($request->file("image")){
+            $validatedData["image"]=$request->file("image")->store("category-images");
+        }
         Category::create($validatedData);
         return redirect("/dashboard/categories")->with("success","New category has been added!");
     }
@@ -71,7 +75,8 @@ class DashboardCategoryController extends Controller
     public function update(Request $request, Category $category)
     {
         $rules=[
-            "description"=>"required"
+            "description"=>"required",
+            "image"=>"image|file|max:1024",
         ];
        
         if($request->slug!=$category->slug){
@@ -81,12 +86,15 @@ class DashboardCategoryController extends Controller
             $rules["name"]= "required|max:255|unique:categories";
         }
         $validatedData=$request->validate($rules);
-        //  if($request->file("image")){
-        //     if($request->oldImage){
-        //         Storage::delete($request->oldImage);
-        //     }
-        //     $validatedData["image"]=$request->file("image")->store("post-images");
-        // }
+         if($request->file("image")){
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData["image"]=$request->file("image")->store("category-images");
+        }
+        else{
+            $validatedData["image"]=$request->oldImage;
+        }
         Category::where("id",$category->id)
         ->update($validatedData);
         return redirect("/dashboard/categories")->with("success","Category has been update!");
@@ -97,10 +105,11 @@ class DashboardCategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        // if($category->image){
-        //         Storage::delete($category->image);
-        //     }
+        
         try{
+            if($category->image){
+                Storage::delete($category->image);
+            }
             Category::destroy($category->id);
             return redirect("/dashboard/categories")->with("success","Category has been deleted!");
         }catch (QueryException $e) {

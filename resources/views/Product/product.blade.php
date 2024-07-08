@@ -16,12 +16,12 @@
     <div class="container mt-3 mb-5 mx-auto" style="max-width: 1200px;">
         <div class="row g-4">
             <div class="col-md-4 px-4">
-                <img src="{{ asset("image/medicine1.jpeg") }}" alt="Medicine Image" class="img-fluid">
+                <img src="{{ asset("storage/".$product->image) }}" alt="Medicine Image" class="img-fluid">
             </div>
             <div class="col-md-8 px-4 mt-5">
                 <div class="d-block justify-content-between align-items-center mb-3">
                     <h4 class="text-left mt-3">{{$product->name}}</h4>
-                    <span class="h4 text-danger mt-3">{{$product->price}}</span>
+                    <span class="h4 text-danger mt-3">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
                     <p class="mt-2">{{$product->shortdesc}} </p>
                 </div>
                 <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">

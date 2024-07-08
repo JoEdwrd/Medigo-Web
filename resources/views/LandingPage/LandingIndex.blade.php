@@ -16,7 +16,7 @@
                         <div class="row text-center d-flex justify-content-center m-0" style="width: 100%; margin-top: 100px">
                     @endif
                     <div class="col-md-2 mb-3 mt-0" style="cursor: pointer;" onclick="window.location='{{ route('category.show', $category->slug) }}';">
-                        <img id="cateimg" src="image\Headache.png" alt="">
+                        <img id="cateimg" src="{{ asset('storage/'.$category->image) }}" alt="">
                         <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
                             <a class="text-black text-decoration-none">{{ $category->name }}</a>
                         </h6>
@@ -105,16 +105,17 @@
 
         <div class="row text-center d-flex justify-content-evenly m-0" style="margin-top: 50px;width:100%">
             @forelse ($promotions as $promo)
-                        <div id="PromoBanner" style="cursor: pointer;background-image: url('/image/Promo1.png');" onclick="window.location='/promotions/{{$promo->slug}}';" class="col-md-2 mb-3 mt-0">
-                            <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
+                       <div id="PromoBanner" style="cursor: pointer; background-image: url('{{ asset('storage/' . $promo->image) }}'); background-size: cover; background-position: center;" onclick="window.location='/promotions/{{$promo->slug}}';" class="col-md-2 mb-3 mt-0">
+                            <div style="height: 100%; display: flex; align-items: flex-end; justify-content:center;">
                                 <div style="margin-bottom: 20px">
                                     <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">
-                                    <a  class="text-light text-decoration-none">{{$promo->name}}</a>
+                                        <a class="text-light text-decoration-none">{{$promo->name}}</a>
                                     </h5>
-                                    <h6 class="text-light" style="font-weight:400; margin-bottom: 0px">{{$promo->shortdecs}}</h6>
+                                    <h6 class="text-light" style="font-weight: 400; margin-bottom: 0px">{{$promo->shortdecs}}</h6>
                                 </div>
                             </div>
                         </div>
+
             @empty
             <div id="PromoBanner" class="col-md-2 mb-3 mt-0" style="background-image: url('/image/Promo1.png');">
                 <div style="height: 100%;display: flex; align-items: flex-end; justify-content:center;">
@@ -156,10 +157,10 @@
         <div class="tabs__content" style="width:100%">
               <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                     @forelse($bestseller as $best)
-                    <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
+                    <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $best->slug) }}';">
+                        <img src="{{ asset("storage/".$best->image) }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">{{$best->name}}</h5>
+                            <h5 class="card-title text-start" id="card-title">{{$best->name}}</h5>
                             <label class="card-desc" id="card-desc">{{$best->shortdesc}}</label>
                             <h5 class="card-title" id="card-title">Rp {{ number_format($best->price, 0, ',', '.') }}</h5>
                             <form action="{{ route('cart.add', ['productId' => $best->id]) }}" method="POST" style="display:inline;">
@@ -224,13 +225,13 @@
         <div class="tabs__content">
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                 @foreach($discounts as $disc)
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+                    <div class="card col-md-1" id="card_product" style="width: 420px" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $disc->slug) }}';">
+                        <img src="{{ asset("storage/".$disc->image) }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">{{$disc->name}}</h5>
+                            <h5 class="card-title text-start" id="card-title">{{$disc->name}}</h5>
                             <label class="card-desc" id="card-desc">{{$disc->shortdesc}}</label>
                             <h5 class="card-title" id="card-title" style="color: red">Rp {{ number_format($disc->discprice, 0, ',', '.') }}</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp {{ number_format($disc->price, 0, ',', '.') }}</label>
+                            <label class="card-desc mb-3" id="card-desc" style="text-decoration-line:line-through;">Rp {{ number_format($disc->price, 0, ',', '.') }}</label>
                             
                             <form action="{{ route('cart.add', ['productId' => $disc->id]) }}" method="POST" style="display:inline;">
                                 @csrf

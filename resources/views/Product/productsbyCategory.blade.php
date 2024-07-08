@@ -37,11 +37,11 @@
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                 @foreach ($products as $product)
                 <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
-                    <img src="{{ asset($product->image) }}" class="crd-img" alt="{{ $product->name }}">
+                    <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
                     <div class="card-body" id="card-body">
                         <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
                         <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
-                        <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
+                        <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
                         <a href="{{ route('product.show', $product->slug) }}" id="addbtn" class="btn">ADD</a>
                     </div>
                 </div>

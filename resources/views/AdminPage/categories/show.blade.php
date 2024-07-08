@@ -30,8 +30,11 @@
                     </article>
                 </div>
             </div>
-            <div class="d-flex justify-content-center align-item-center p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
-                <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
+            <div class="p-5" style="width: 35%;background:#EEEBEB;border-radius:20px">
+                <h3>Category Image</h3>
+                <br>
+                {{-- <img src="{{ asset('storage/'.$product->image) }}" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
+                <img src="{{ asset('storage/'.$category ->image) }}" class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
             </div>
         </div>
         <br>    
