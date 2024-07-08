@@ -15,7 +15,12 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
         $searchTerm = request('search');
         $productsQuery = Product::query();
 
@@ -52,13 +57,25 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('Product.product', ['product' => $product]);
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
+        return view('Product.product', ['product' => $product, 'cart' => $cart]);
     }
 
     public function showByCategory(Category $category)
     {
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
         $products = $category->products; // Assuming a Category has many Products
-        return view('Product.productsbyCategory', ['category' => $category, 'products' => $products]);
+        return view('Product.productsbyCategory', ['category' => $category, 'products' => $products, 'cart' => $cart]);
     }
 
     /**

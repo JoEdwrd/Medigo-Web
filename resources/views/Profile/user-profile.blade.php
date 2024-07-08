@@ -8,8 +8,8 @@
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Profile</li>
+            <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/" style="color: #55BC44">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44">Profile</li>
         </ol>
     </nav>
 </div>
@@ -30,8 +30,8 @@
                         </div>
                         <div>
                             <ul class="list-unstyled">
-                                <li>{{auth()->user()->name}}</li>
-                                <li>{{auth()->user()->phone}}</li>
+                                <li>{{$user->name}}</li>
+                                <li>{{$user->phone}}</li>
                             </ul>
                         </div>
                     </div>
@@ -47,31 +47,31 @@
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Username</div>
-                        <div>{{auth()->user()->name}}</div>
+                        <div>{{$user->name}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Date of Birth</div>
-                        <div>{{auth()->user()->dob}}</div>
+                        <div>{{$user->dob}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Email</div>
-                        <div>{{auth()->user()->email}}</div>
+                        <div>{{$user->email}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Address</div>
-                        <div>{{auth()->user()->address}}</div>
+                        <div>{{$user->address}}</div>
                     </div>
                 </li>
                 <li class="pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Gender</div>
-                        <div>{{auth()->user()->gender}}</div>
+                        <div>{{$user->gender}}</div>
                     </div>
                 </li>
             </ul>

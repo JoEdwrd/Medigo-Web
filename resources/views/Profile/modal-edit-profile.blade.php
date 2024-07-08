@@ -8,60 +8,55 @@
             </div>
             <div class="modal-body">
                 <div>
-                    <form class="row g-3 needs-validation" novalidate>
+                    <form class="row g-3 needs-validation" novalidate action="/updateProfile" method="POST">
+                        @csrf
+                        @method('put')
                         <div class="mb-3 col-md-6">
                             <label for="nameInput" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="nameInput" placeholder="Input your name here" required>
+                            <input type="text" class="form-control" id="nameInput" name="name" placeholder="Input your name here" value={{ old("name",$user->name) }} required>
                             <div class="invalid-feedback">
                                 Please input your name.
                             </div>
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="phoneNumberInput" class="form-label">Phone Number</label>
-                            <input type="number" class="form-control" id="phoneNumberInput" placeholder="Input your number here" required>
+                            <input type="text" class="form-control" name="phone" id="phoneNumberInput" placeholder="Input your number here" value={{ old("phone",$user->phone) }} required>
                             <div class="invalid-feedback">
                                 Please input your phone number.
                             </div>
                         </div>
                         <div class="mb-3 col-md-6">
-                            <label for="usernameInput" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="usernameInput" placeholder="Input your username here" required>
-                            <div class="invalid-feedback">
-                                Please input your username.
-                            </div>
-                        </div>
-                        <div class="mb-3 col-md-6">
                             <label for="emailInput" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailInput" placeholder="Input your email here" required>
+                            <input type="email" name="email" class="form-control" id="emailInput" placeholder="Input your email here" value={{ old("email",$user->email) }} required>
                             <div class="invalid-feedback">
                                 Please input your email.
                             </div>
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="dateOfBirthInput" class="form-label">Date of Birth</label>
-                            <input type="date" class="form-control" id="dateOfBirthInput" placeholder="Input your email here" required>
+                            <input type="date" class="form-control" name="dob" id="dateOfBirthInput" placeholder="Input your email here" value={{ old("dob",$user->dob) }} required>
                             <div class="invalid-feedback">
                                 Please input your date of birth.
                               </div>
                         </div>
                         <div class="mb-3 col-md-6">
                             <label for="genderInput" class="form-label">Gender</label>
-                            <select class="form-select" aria-label="Default select example" id="genderInput" required>
+                            <select class="form-select" aria-label="Default select example" id="genderInput" name="gender" required>
                                 {{-- <option selected>Select your gender</option> --}}
-                                <option value="1">Male</option>
-                                <option value="2">Female</option>
-                                <option value="3">Other</option>
+                                <option value="Male" {{$user->gender == "Male" ? 'selected' : '' }}>Male</option>
+                                <option value="Female" {{$user->gender == "Female" ? 'selected' : '' }}>Female</option>
+                                <option value="Other" {{$user->gender == "Other" ? 'selected' : '' }}>Other</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a gender.
                               </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 col-md-6">
                             <label for="addressInput" class="form-label">Address</label>
-                            <textarea type="text" class="form-control" id="addressInput" placeholder="Input your address here" required></textarea>
+                            <textarea type="text" name="address" class="form-control" id="addressInput" placeholder="Input your address here" required>{{ old("address",$user->address) }}</textarea>
                             <div class="invalid-feedback">
                                 Please input your address.
-                              </div>
+                            </div>
                         </div>
                         
                         <div class="modal-footer">

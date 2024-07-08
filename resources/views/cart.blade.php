@@ -2,7 +2,7 @@
 
 @section('container')
 {{$check = null}}
-{{-- @dd($cart) --}}
+
 <div class="container">
     <div class="py-4">
         <div class="row gx-5">
@@ -13,12 +13,12 @@
                         <form action="{{route('cart.removeAll')}}" method="POST">
                             @csrf
                             @method('delete')
-                            <button class="btn btn-outline-primary" type="submit"> <i class="bi bi-eraser"></i> Clear all Items</button>
+                            <button class="btn btn-outline-success" type="submit"> <i class="bi bi-eraser"></i> Clear all Items</button>
                         </form>
                     @endif
                 </div>
                 
-                @if(isset($cart->cart_details))
+                @if(isset($cart->cart_details[0]))
                 <div class="overflow-auto" style="max-height: 557px">
                     @for ($i = 0; $i < count($cart->cart_details); $i++)
                         <div class="card {{ $i < count($cart->cart_details) ? 'mb-3' : '' }}">
@@ -59,7 +59,7 @@
                                         </form>
 
                                         <a href="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" onclick="event.preventDefault();
-                                        document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
+                                        document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none text-success"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
 
                                         <form id="delete-form-{{$cart->cart_details[$i]->product->id}}" action="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" method="POST" class="d-none">
                                             @csrf
@@ -78,6 +78,8 @@
                         @endif
                     @endfor
                 </div>
+                @else
+                    <span class="text-center w-100 d-block text-success fs-5 mt-5">No items currently in your cart...</span>
                 @endif
             </div>
 
@@ -161,7 +163,7 @@
                         </button>
                     @else
                         {{-- <a href="/addTransaction/{{$cart->id}}"> --}}
-                        <a href="/addTransaction/1">
+                        <a href="/addTransaction/{{$user->id}}">
                             <button type="submit" id="addbtn" class="btn mb-2">
                                 Add to Order
                             </button>

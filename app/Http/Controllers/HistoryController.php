@@ -10,11 +10,16 @@ class HistoryController extends Controller
 {
     public function index()
     {
+        $user = auth()->user();
         $transactions = Transaction::with(['order_details.product'])
             ->orderBy('created_at', 'desc')
             ->get()
             ->groupBy('status');
-        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
         $title = 'Transaction History';
         return view('history.index', [
             'inProgress' => $transactions->get('In progress', collect()),

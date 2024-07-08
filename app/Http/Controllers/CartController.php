@@ -15,13 +15,17 @@ class CartController extends Controller
 {
     public function index()
     {
-        // $cart = Auth::user()->cart;
+        $user = auth()->user();
 
         // $cart = Cart::firstOrCreate(['user_id' => 1]);
-        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
 
 
-
+        
         // $cart = Cart::firstOrCreate(['user_id' => 1])->with();
 
         // $cartDetail = CartDetail::firstOrCreate(['cart_id' => $cart->id]);
@@ -29,11 +33,12 @@ class CartController extends Controller
         // $cart = Cart::firstOrCreate(['user_id' => 1]);
         // dd($cart[0]->cart_details);
 
-        return view('cart', compact('cart'));
+        return view('cart', compact('cart', 'user'));
     }
 
     public function changeQty(Request $request, $product_id){
-        $cart = Cart::firstOrCreate(['user_id' => 1]);
+        $user = auth()->user();
+        $cart = Cart::firstOrCreate(['user_id' => $user->id]);
 
         $qty = $request->quantity;
 
@@ -54,12 +59,12 @@ class CartController extends Controller
     }
 
     public function addPromo(Request $request){
-
+        $user = auth()->user();
         $data = $request->all();
 
         // dd($request->promotionName);
 
-        $cart = Cart::where('user_id', 1)->firstOrFail();
+        $cart = Cart::where('user_id', $user->id)->firstOrFail();
 
         // dd($cart);
 
@@ -83,10 +88,15 @@ class CartController extends Controller
         // Retrieve the authenticated user
         // $user = Auth::user();
 
+        $user = auth()->user();
+
+        if(!$user){
+            return redirect('/login');
+        }
         // Retrieve the user's cart, or create a new one if it doesn't exist
         // $cart = $user->cart()->firstOrCreate(['user_id' => $user->id]);
 
-        $cart = Cart::firstOrCreate(['user_id' => 1]);
+        $cart = Cart::firstOrCreate(['user_id' => $user->id]);
 
         // Check if the product is already in the cart
         $cartItem = $cart->cart_details()->where('product_id', $product_id)->first();
@@ -107,7 +117,8 @@ class CartController extends Controller
     }
 
     public function removeAllItems(Request $request){
-        $cart = Cart::where('user_id', 1)->firstOrFail();
+        $user = auth()->user();
+        $cart = Cart::where('user_id', $user->id)->firstOrFail();
 
         $cart->cart_details()->delete();
 
@@ -140,6 +151,7 @@ class CartController extends Controller
         // if($request->hasFile($request)){
         //     dd("mantap");
         // }
+        $user = auth()->user();
         $this->validate($request, [
             'prescription_image' => 'required|image|mimes:jpeg,jpg,png' // Adjust validation rules as needed
         ]);
@@ -163,7 +175,7 @@ class CartController extends Controller
         Prescription::create($requestData);
 
         // return redirect()->route("history-index")->with('flash_message', 'Prescription successfully uploaded!');
-        $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', 1)->get()->first();
+        $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', $user->id)->get()->first();
 
         return redirect('/addTransaction/'.$cart->user_id);
     }

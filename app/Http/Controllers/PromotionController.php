@@ -13,7 +13,12 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
         return view('Promotions.promotions',["promotions" => Promotion::all(), 'cart' => $cart]);
     }
 

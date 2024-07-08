@@ -13,7 +13,13 @@ class LandingPageController extends Controller
 {
     public function index()
     {
-        $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> 1]);
+        
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
         $promotions = Promotion::orderByDesc('id')->take(3)->get();
         $topProducts = Product::select('products.*', DB::raw('SUM(order_details.quantity) as total_sold'))
         ->join('order_details', 'products.id', '=', 'order_details.product_id')

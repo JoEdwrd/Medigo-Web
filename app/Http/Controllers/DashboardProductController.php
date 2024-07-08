@@ -79,7 +79,7 @@ class DashboardProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-         $rules=[
+        $rules=[
             "category_id"=>"required",
             "patent"=>"required|boolean",
             "price"=>"required|numeric|min:0",

@@ -69,7 +69,7 @@
                 <h5 class="card-title" id="card-title">Rp {{ $product->price }}</h5>
                 <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
                     @csrf
-                    <button type="submit" class="btn" id="addbtn">ADD</button>
+                    <button type="submit" class="btn" id="addbtn">Add to cart</button>
                 </form>
                 {{-- <a href="{{ route('cart.add', ['productId' => $product->id]) }}" id="addbtn" class="btn">ADD</a> --}}
             </div>
