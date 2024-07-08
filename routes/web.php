@@ -60,11 +60,13 @@ Route::post('/register2', [RegisterController::class, 'store'])->name('register2
 Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
 Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
 
-// profile, kemungkinan besar dimodif
+// profile
 Route::get('/profile', [UserProfileController::class, 'index']);
-Route::get('/changePassOld', [OldPasswordCheckController::class, 'index']);
-Route::get('/newPass', [NewPasswordConfirmController::class, 'index']);
-Route::get('/logout', [LogoutProfileController::class, 'index']);
+Route::get('/changePassOld', [UserProfileController::class, 'checkPassPage'])->name('oldPassPage');
+Route::post('/newPass', [UserProfileController::class, 'newPassPage']);
+Route::post('/changePassword', [UserProfileController::class, 'changePassword']);
+Route::get('/logout', [UserProfileController::class, 'logoutPage']);
+Route::put('/updateProfile', [UserProfileController::class, 'updateProfile']);
 
 Route::get('/faq', [PageController::class, 'faq']);
 Route::get('/termsandconditions', [PageController::class,'termsandconditions']);

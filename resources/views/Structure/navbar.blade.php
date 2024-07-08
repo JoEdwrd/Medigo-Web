@@ -33,7 +33,7 @@
                         @else
                         CART
                         @endif
-                        @if(isset($cart->cart_details))
+                        @if(isset($cart->cart_details) && count($cart->cart_details) > 0)
                         <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
                             {{count($cart->cart_details)}}
                             <span class="visually-hidden">unread messages</span>
@@ -50,7 +50,7 @@
                         @else
                         CART
                         @endif
-                        @if(isset($cart->cart_details))
+                        @if(isset($cart->cart_details) && count($cart->cart_details) > 0)
                         <span class="position-absolute top-15 start-100 translate-middle badge rounded-pill bg-danger">
                             {{count($cart->cart_details)}}
                             <span class="visually-hidden">unread messages</span>
