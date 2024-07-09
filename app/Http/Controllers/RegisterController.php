@@ -21,10 +21,9 @@ class RegisterController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users', // Ensure unique email
-            'phone' => 'required|string|unique:users', // Ensure unique phone number
+            'phone' => 'required|string|min:10|regex:/^\d+$/|unique:users', // Ensure unique phone number
             'dob' => 'required|date|before:17 years ago', // Minimum age of 17 years
-            'password' => 'required|string|min:8', // Removed confirmation password validation
-            'address' => 'required|string|max:255',
+            'password' => 'required|string|min:8',
         ]);
 
         // Handle validation errors (optional, but recommended for user feedback)
@@ -32,8 +31,6 @@ class RegisterController extends Controller
         if ($request->validator && $request->validator->fails()) {
             // Access validation errors here
             $errors = $request->validator->errors()->messages();
-            // ...
-            // Check if any errors exist
 
             if (count($errors) > 0) {
             // Return specific error message for each field
@@ -46,10 +43,7 @@ class RegisterController extends Controller
                 $errorMessage = $errors['dob'][0]; // Get first dob error message
             } elseif (isset($errors['password'])) {
                 $errorMessage = $errors['password'][0]; // Get first password error message
-            } elseif (isset($errors['address'])) {
-                $errorMessage = $errors['address'][0]; // Get first street address error message
             }
-
             // Return error message if any
             if ($errorMessage) {
                 return back()->withErrors([$errorMessage]);
@@ -64,8 +58,8 @@ class RegisterController extends Controller
             'name' => $input['name'],
             'email' => $input['email'],
             'phone' => $input['phone'],
-            'address' => $input['address'],
             'dob' => $input['dob'],
+            'address' => "",
             'password' => Hash::make($input['password']),
         ]);
 

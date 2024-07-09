@@ -47,10 +47,10 @@
                     </div>
 
                     <div>
-                    <label for="phone" value="{{ __('Phone') }}" >
-                        <p class="fontlabel" id="chopin1">Phone Number</p>
-                        <input id="phone" class="input-field" type="number" name="phone" :value="old('phone')" required autocomplete="phone" />
-                    </label>
+                        <label for="phone" value="{{ __('Phone') }}" >
+                            <p class="fontlabel" id="chopin1">Phone Number</p>
+                            <input id="phone" class="input-field" type="string" name="phone" :value="old('phone')" required autocomplete="phone" />
+                        </label>
                     </div>
 
                     <div class="error-messages" style="color: red">
@@ -60,22 +60,9 @@
                     </div>
 
                     <div>
-                        <label for="address" value="{{ __('Address') }}">
-                          <p class="fontlabel" id="chopin1">Address</p>
-                          <input id="address" class="input-field" type="text" name="address" required>
-                        </label>
-                     </div>
-
-                    <div class="error-messages" style="color: red">
-                        @if ($errors->has('adsress'))
-                            <p>{{ __(' already been taken.') }}</p>
-                        @endif
-                    </div>
-
-                    <div>
                         <label for="dob" value="{{ __('Date of Birth') }}" >
                             <p class="fontlabel" id="chopin1">Date Of Birth</p>
-                            <input id="dob" class="input-field" type="date" name="dob" required autocomplete="dob" />
+                            <input id="dob" class="input-field" type="date" name="dob" required autocomplete="dob" style='width: 209px';/>
                         </label>
                     </div>
 
@@ -91,7 +78,7 @@
                             <input id="password" class="input-field" type="password" name="password" required />
                         </label>
 
-                        <div class="row-2">
+                        <div class="row-2 mt-2">
                             <input type="checkbox" onclick="showPass()">
                             <label class="fs-6 opacity-50">Show Password</label>
                         </div>
