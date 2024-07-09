@@ -9,7 +9,7 @@
             <div class="col-md-8">
                 <div class="d-flex justify-content-between">
                     <h2 class="mb-3">Your Cart</h2>
-                    @if (isset($cart->cart_details[0]))   
+                    @if (isset($cart->cart_details[0]))
                         <form action="{{route('cart.removeAll')}}" method="POST">
                             @csrf
                             @method('delete')
@@ -17,7 +17,7 @@
                         </form>
                     @endif
                 </div>
-                
+
                 @if(isset($cart->cart_details[0]))
                 <div class="overflow-auto" style="max-height: 557px">
                     @for ($i = 0; $i < count($cart->cart_details); $i++)
@@ -46,7 +46,7 @@
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
                                         </form> --}}
-                                        
+
                                         {{-- <div class="qty-box">
                                             <div class="input-group">
                                                 <input type="number" name="quantity" onchange="{{route(cart.changeQty, [])}}" class="form-control input-number" value="{{$cart->cart_details[$i]->quantity}}">
@@ -65,8 +65,8 @@
                                             @csrf
                                             @method('delete')
                                         </form>
-                                        
-                                        
+
+
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +116,7 @@
                             {{-- <strong>{{'Rp '.$total}}</strong> --}}
                             <span class="text-body-secondary">{{'Rp '.$total}}</span>
                         </li>
-                    
+
                         <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                             <div class="text-success">
                                 <h6 class="my-0">Promo code</h6>
@@ -155,8 +155,8 @@
                     Checkout
                 </button> --}}
                 {{-- <a href="" id="addbtn" class="btn mb-2">Add to Order</a> --}}
-                
-                @if (isset($cart->cart_details[0])) 
+
+                @if (isset($cart->cart_details[0]))
                     @if($check)
                         <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Add to Order
@@ -183,25 +183,31 @@
                                         <div class="modal-body">
                                             <h3 class="chopin">Upload Prescription</h3>
                                             <p class="chopin">One of your medications is a prescription drug , Please upload a prescription to continue check out!</p>
-                                            <div class="container-modal">
-                                                <div class="drag-area"  id="drag-area">
-                                                    <div class="icon">
+
+                                                {{-- <div class="drag-area"  id="drag-area"> --}}
+                                                    {{-- <div class="icon">
                                                         <i class="fas fa-images"></i>
-                                                    </div>
-                                                    <span class="header">Drag & Drop or <span class="button">Choose File</span> <span>Here</span></span>
+                                                    </div> --}}
+                                                    {{-- <span class="header" style="color:  rgba(81, 159, 145, 1)">Drag & Drop or Choose File Here</span> --}}
                                                     {{-- <input type="file" name="prescription_image" class="form-control" id="prescription_image" hidden /> --}}
-                                                    <input type="file" name="prescription_image" class="form-control" id="prescription_image" />
-                                                    <span class="support">Supports: JPEG, JPG, PNG</span>
-                                                </div>
+
+                                            <img class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                                            <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
+                                                @error("image")
+                                                    <div class="invalid-feedback">
+
+                                                        {{ $message }}
+                                                    </div>
+                                                @enderror
+
+                                            <div class="modal-footer">
+                                                <a href="/cart">
+                                                    <button type="button" class="button-modal-cancel">Cancel</button>
+                                                </a>
+                                                <button type="submit" value="Save" class="button-modal">Save changes</button>
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <a href="/cart">
-                                                <button type="button" class="button-modal-cancel">Cancel</button>
-                                            </a>
-                                                <button type="submit" value="Save" class="button-modal">Save changes</button>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -278,6 +284,19 @@
     //         dropArea.classList.remove("active");
     //     }
     // }
+         function previewImage(){
+            const image=document.querySelector("#image");
+            const imgPreview=document.querySelector(".img-preview");
+            imgPreview.style.display="block";
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0]);
+
+            oFReader.onload = function(oFREvent){
+                imgPreview.src=oFREvent.target.result;
+            }
+        }
+
 
 </script>
 

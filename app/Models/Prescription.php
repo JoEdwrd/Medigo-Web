@@ -13,7 +13,7 @@ class Prescription extends Model
     protected $primaryKey="id";
     protected $fillable = [
         'transaction_id',
-        'prescription_image',
+        'image',
         'status',
         'slug',
     ];

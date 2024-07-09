@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('prescriptions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('prescription_image')->nullable();
+            $table->string('image')->nullable();
             $table->string('status')->default('Waiting for verification');
 
             $table->string('slug')->unique();
