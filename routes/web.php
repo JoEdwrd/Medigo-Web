@@ -72,7 +72,7 @@ Route::get('/faq', [PageController::class, 'faq']);
 Route::get('/termsandconditions', [PageController::class,'termsandconditions']);
 Route::get('/aboutus', [PageController::class,"aboutus"]);
 
-Route::get('/orderdetail', [OrderDetailController::class, 'index']);
+Route::get('/orderdetail/{order}', [OrderDetailController::class, 'index']);
 
 Route::get('/promotions', [PromotionController::class, 'index']);
 Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show']);

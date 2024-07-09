@@ -31,7 +31,8 @@ class DatabaseSeeder extends Seeder
             CartDetailSeeder::class,
             TransactionSeeder::class,
             OrderDetailSeeder::class,
-            PrescriptionSeeder::class
+            PrescriptionSeeder::class,
+            TrackingOrderSeeder::class
         ]);
 
         // \App\Models\User::factory(10)->create();
@@ -40,7 +41,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        
+
 
         // Product::create([
         //     "category_id" => 1,
@@ -74,17 +75,17 @@ class DatabaseSeeder extends Seeder
         // ]);
 
 
-        
 
-        
 
-        
 
-       
+
+
+
+
 
         // Payment Dummy
-       
-        
-        
+
+
+
     }
 }

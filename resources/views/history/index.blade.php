@@ -18,7 +18,7 @@
         </nav>
         <h1 id="NavItems" style="color: var(--main2-color)">Transaction History</h1>
         <br>
-        
+
         <!-- Loop through all statuses -->
         @foreach (['waitForVerification' => 'Waiting for verification', 'waitForPayment' => 'Waiting for payment', 'inProgress' => 'In progress', 'completed' => 'Completed', 'canceled' => 'Canceled'] as $status => $title)
             <div>
@@ -54,7 +54,7 @@
                                 @if ($transaction->status == 'Completed')
                                     <div style="border: 2px solid var(--main2-color);border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:var(--main2-color);font-family: 'Chopin-Trial';font-weight: 600;">
                                         {{ strtoupper($transaction->status) }}
-                                    </div> 
+                                    </div>
                                 @elseif ($transaction->status == 'Canceled')
                                     <div style="border: 2px solid red;border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:red;font-family: 'Chopin-Trial';font-weight: 600;">
                                         {{ strtoupper($transaction->status) }}
@@ -63,7 +63,7 @@
                                     <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
                                         {{ strtoupper($transaction->status) }}
                                     </div>
-                                    <a href="" class="trackbutton">TRACK</a>
+                                    <a href="/orderdetail/{{$transaction->id}}" class="trackbutton">TRACK</a>
                                 @elseif ($transaction->status == 'Waiting for payment')
                                     <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
                                         {{ strtoupper($transaction->status) }}

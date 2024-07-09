@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 
 class OrderDetailController extends Controller
 {
-    public function index()
+    public function index($order)
     {
         $user = auth()->user();
         if($user){
@@ -15,6 +16,8 @@ class OrderDetailController extends Controller
         }else{
             $cart = null;
         }
-        return view('history.OrderDetail', compact('cart'));
+        $orderDetail = Transaction::find($order);
+        // dd($orderDetail);
+        return view('history.OrderDetail', compact('cart', 'orderDetail'));
     }
 }
