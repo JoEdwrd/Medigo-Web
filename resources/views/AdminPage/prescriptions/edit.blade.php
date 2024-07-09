@@ -10,7 +10,7 @@
         <div class="col-md-12 d-flex justify-content-between p-0 mb-4">
             <div class="d-flex flex-wrap justify-content-center align-items-stretch" style="background-color: #eeebeb; border-radius:20px; padding: 20px; width: 100%">
                 <div class="col-md-7 d-flex flex-column justify-content-center align-items-center text-center mb-4" style="background-color: #eeebeb; border-radius:20px;">
-                    <img src="{{ asset($prescriptions->prescription_image) }}" alt="Prescription Image" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px; max-width: 100%; height: auto; max-height: 500px;">
+                    <img src="{{asset('storage/'.$prescriptions->image)}}" alt="Prescription Image" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px; max-width: 100%; height: auto; max-height: 500px;">
                 </div>
 
                 <div class="col-md-4 d-flex flex-column justify-content-center align-items-center text-center mb-8" style="background-color: #eeebeb; border-radius:20px;">

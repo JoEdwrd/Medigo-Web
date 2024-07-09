@@ -25,7 +25,7 @@ class CartController extends Controller
         }
 
 
-        
+
         // $cart = Cart::firstOrCreate(['user_id' => 1])->with();
 
         // $cartDetail = CartDetail::firstOrCreate(['cart_id' => $cart->id]);
@@ -147,32 +147,37 @@ class CartController extends Controller
 
     public function store(Request $request)
     {
+        // ddd($request);
         // dd($request->all());
         // if($request->hasFile($request)){
         //     dd("mantap");
         // }
         $user = auth()->user();
-        $this->validate($request, [
-            'prescription_image' => 'required|image|mimes:jpeg,jpg,png' // Adjust validation rules as needed
+        $validatedData=$request->validate( [
+            'image' => 'required|image|file|max:1024' // Adjust validation rules as needed
         ]);
 
-        $requestData = $request->all();
+        // $requestData = $request->all();
         // dd($requestData);
         // Check for uploaded file and validation
-        // if (!$request->hasFile('prescription_image') || !$request->file('prescription_image')->isValid()) {
+        // if (!$request->hasFile('image') || !$request->file('prescription_image')->isValid()) {
         //     // Handle validation failure (e.g., redirect with error message)
         //     return back()->withErrors(['prescription_image' => 'Invalid or missing prescription file']);
         // }
         // $file = $request->file('prescription_image');
-        $fileName = $request->file('prescription_image')->getClientOriginalName();
+        // $fileName = $request->file('prescription_image')->getClientOriginalName();
 
-        $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
-        $requestData["prescription_image"] = '/storage/'.$path;
-        $requestData['slug'] = Str::slug($requestData['prescription_image']) . '-' . Str::lower(Str::random(5));
+        // $path = $request->file('prescription_image')->storeAs('images', $fileName, 'public');
+        // $requestData["prescription_image"] = '/storage/'.$path;
 
+
+        if($request->file("image")){
+            $validatedData["image"]=$request->file("image")->store("prescription-images");
+        }
+        $validatedData['slug'] = Str::slug($validatedData['image']) . '-' . Str::lower(Str::random(5));
         // dd($requestData);
         // Ensure image field is fillable
-        Prescription::create($requestData);
+        Prescription::create($validatedData);
 
         // return redirect()->route("history-index")->with('flash_message', 'Prescription successfully uploaded!');
         $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', $user->id)->get()->first();
