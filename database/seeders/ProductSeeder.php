@@ -840,5 +840,765 @@ class ProductSeeder extends Seeder
 // <strong>No. Registrasi</strong><br>
 // BPOM: SD151546531"
 // ]);
+
+//Ingestion
+Product::create([
+    "category_id" => 3,
+    "name" => "Promag Tablet",
+    "patent" => 0,
+    "slug" => "promag-tablet",
+    "stock" => 1000,
+    "price" => 9700,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Promag Tablet adalah obat yang digunakan untuk meredakan gejala maag dan sakit perut akibat kelebihan asam lambung.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala maag, sakit perut, dan kelebihan asam lambung.
+<br>
+<strong>Komposisi</strong><br>
+Hydrotalcite 200 mg, Magnesium Hydroxide 150 mg, Simethicone 50 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.
+<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.
+<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan konstipasi atau diare.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Kalbe Farma
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI123456789"
+]);
+
+Product::create([
+    "category_id" => 3,
+    "name" => "Mylanta Liquid 50ml",
+    "patent" => 0,
+    "slug" => "mylanta-liquid-50ml",
+    "stock" => 800,
+    "price" => 19000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Mylanta Liquid adalah obat cair yang membantu mengurangi gejala mulas dan gangguan pencernaan akibat asam lambung berlebih.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala mulas dan gangguan pencernaan akibat asam lambung berlebih.
+<br>
+<strong>Komposisi</strong><br>
+Aluminium Hydroxide, Magnesium Hydroxide, Simethicone.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 sendok makan, 3-4 kali sehari setelah makan dan sebelum tidur.
+<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan dan sebelum tidur.
+<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan konstipasi atau diare.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Botol
+<br>
+<strong>Manufaktur</strong><br>
+Pfizer
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567890"
+]);
+
+Product::create([
+    "category_id" => 3,
+    "name" => "Polysilane Tablet",
+    "patent" => 0,
+    "slug" => "polysilane-tablet",
+    "stock" => 1200,
+    "price" => 12000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Polysilane Tablet adalah obat yang digunakan untuk mengatasi gejala kembung, perut kembung, dan kelebihan gas di saluran pencernaan.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala kembung dan kelebihan gas di saluran pencernaan.
+<br>
+<strong>Komposisi</strong><br>
+Dimethicone 50 mg, Aluminium Hydroxide 200 mg, Magnesium Hydroxide 200 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.
+<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.
+<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan konstipasi atau diare.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Pharos
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI345678901"
+]);
+
+Product::create([
+    "category_id" => 3,
+    "name" => "Enzyplex Tablet",
+    "patent" => 0,
+    "slug" => "enzyplex-tablet",
+    "stock" => 900,
+    "price" => 12000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Enzyplex Tablet adalah suplemen enzim yang membantu proses pencernaan makanan di dalam saluran pencernaan.
+<br>
+<strong>Indikasi Umum</strong><br>
+Membantu proses pencernaan makanan.
+<br>
+<strong>Komposisi</strong><br>
+Amylase, Protease, Lipase, dan enzim-enzim pencernaan lainnya.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 tablet, 3 kali sehari setelah makan.
+<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.
+<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan seperti mual dan diare.
+<br>
+<strong>Golongan Produk</strong><br>
+Suplemen
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Meprofarm
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI456789012"
+]);
+
+Product::create([
+    "category_id" => 3,
+    "name" => "Lansoprazole Capsule",
+    "patent" => 1,
+    "slug" => "lansoprazole-capsule",
+    "stock" => 700,
+    "price" => 15000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Lansoprazole Capsule adalah obat yang digunakan untuk mengurangi produksi asam lambung dan mengobati tukak lambung serta gastroesophageal reflux disease (GERD).
+<br>
+<strong>Indikasi Umum</strong><br>
+Mengobati tukak lambung dan gastroesophageal reflux disease (GERD).
+<br>
+<strong>Komposisi</strong><br>
+Lansoprazole 30 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 kapsul sehari sebelum makan.
+<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum makan.
+<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan sakit kepala, diare, dan gangguan pencernaan.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Hexpharm Jaya Laboratories
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: GKL 0308508603A1"
+]);
+
+//allergy
+Product::create([
+    "category_id" => 4,
+    "name" => "Cetirizine Tablet",
+    "patent" => 0,
+    "slug" => "cetirizine-tablet",
+    "stock" => 2000,
+    "price" => 25000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Cetirizine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti bersin, gatal, mata berair, dan pilek.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala alergi seperti bersin, gatal, mata berair, dan pilek.<br>
+<strong>Komposisi</strong><br>
+Cetirizine HCl 10 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum atau sesudah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Hexpharm Jaya<br>
+<strong>No. Registrasi</strong><br>
+BPOM: GTL 0408511617A1"
+]);
+
+Product::create([
+    "category_id" => 4,
+    "name" => "Loratadine Syrup",
+    "patent" => 0,
+    "slug" => "loratadine-syrup",
+    "stock" => 1500,
+    "price" => 35000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Loratadine Syrup adalah antihistamin yang digunakan untuk meredakan gejala alergi pada anak-anak seperti bersin, gatal, mata berair, dan pilek.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala alergi pada anak-anak seperti bersin, gatal, mata berair, dan pilek.<br>
+<strong>Komposisi</strong><br>
+Loratadine 5 mg/5 mL.<br>
+<strong>Dosis</strong><br>
+Anak-anak: 1-2 sendok teh (5-10 mL) sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum atau sesudah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Sanbe Farma<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI789012345"
+]);
+
+Product::create([
+    "category_id" => 4,
+    "name" => "Chlorpheniramine Maleate Tablet",
+    "patent" => 0,
+    "slug" => "chlorpheniramine-maleate-tablet",
+    "stock" => 3000,
+    "price" => 10000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Chlorpheniramine Maleate Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti bersin, gatal, dan mata berair.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala alergi seperti bersin, gatal, dan mata berair.<br>
+<strong>Komposisi</strong><br>
+Chlorpheniramine Maleate 4 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet, 3-4 kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Kimia Farma<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI890123456"
+]);
+
+Product::create([
+    "category_id" => 4,
+    "name" => "Fexofenadine Tablet",
+    "patent" => 1,
+    "slug" => "fexofenadine-tablet",
+    "stock" => 1200,
+    "price" => 45000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Fexofenadine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti urtikaria (biduran) dan rinitis alergi.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala urtikaria (biduran) dan rinitis alergi.<br>
+<strong>Komposisi</strong><br>
+Fexofenadine HCl 180 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum atau sesudah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan sakit kepala, mual, dan pusing.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Merck Sharp & Dohme<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI901234567"
+]);
+
+Product::create([
+    "category_id" => 4,
+    "name" => "Desloratadine Tablet",
+    "patent" => 1,
+    "slug" => "desloratadine-tablet",
+    "stock" => 1000,
+    "price" => 40000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Desloratadine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti urtikaria (biduran) dan rinitis alergi.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala urtikaria (biduran) dan rinitis alergi.<br>
+<strong>Komposisi</strong><br>
+Desloratadine 5 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum atau sesudah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan sakit kepala, mulut kering, dan kelelahan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Bayer<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI012345678"
+]);
+
+//pain releaver
+Product::create([
+    "category_id" => 5,
+    "name" => "Paracetamol Tablet",
+    "patent" => 0,
+    "slug" => "paracetamol-tablet",
+    "stock" => 5000,
+    "price" => 10000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Paracetamol Tablet adalah obat yang digunakan untuk meredakan nyeri ringan hingga sedang.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan nyeri ringan hingga sedang.<br>
+<strong>Komposisi</strong><br>
+Paracetamol 500 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 tablet, 3-4 kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap paracetamol.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan mual dan ruam kulit.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Kimia Farma<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI123456789"
+]);
+
+Product::create([
+    "category_id" => 5,
+    "name" => "Ibuprofen Tablet",
+    "patent" => 0,
+    "slug" => "ibuprofen-tablet",
+    "stock" => 4000,
+    "price" => 20000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Ibuprofen Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk meredakan nyeri dan peradangan.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan nyeri dan peradangan.<br>
+<strong>Komposisi</strong><br>
+Ibuprofen 400 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet, 3 kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap ibuprofen.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan dan mual.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Phapros<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567890"
+]);
+
+Product::create([
+    "category_id" => 5,
+    "name" => "Naproxen Tablet",
+    "patent" => 1,
+    "slug" => "naproxen-tablet",
+    "stock" => 2500,
+    "price" => 30000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Naproxen Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk mengurangi nyeri dan peradangan.<br>
+<strong>Indikasi Umum</strong><br>
+Mengurangi nyeri dan peradangan.<br>
+<strong>Komposisi</strong><br>
+Naproxen 500 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet, 2 kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap naproxen.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Pfizer<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI345678901"
+]);
+
+Product::create([
+    "category_id" => 5,
+    "name" => "Aspirin Tablet",
+    "patent" => 1,
+    "slug" => "aspirin-tablet",
+    "stock" => 3500,
+    "price" => 15000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Aspirin Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk meredakan nyeri ringan hingga sedang.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan nyeri ringan hingga sedang.<br>
+<strong>Komposisi</strong><br>
+Aspirin 500 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap aspirin.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan dan perdarahan lambung.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Bayer<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI456789012"
+]);
+
+Product::create([
+    "category_id" => 5,
+    "name" => "Diclofenac Sodium Tablet",
+    "patent" => 1,
+    "slug" => "diclofenac-sodium-tablet",
+    "stock" => 1800,
+    "price" => 40000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Diclofenac Sodium Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk mengurangi nyeri dan peradangan.<br>
+<strong>Indikasi Umum</strong><br>
+Mengurangi nyeri dan peradangan.<br>
+<strong>Komposisi</strong><br>
+Diclofenac Sodium 50 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet, 2-3 kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap diclofenac sodium.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Novartis<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI567890123"
+]);
+
+//liver
+Product::create([
+    "category_id" => 6,
+    "name" => "Hepabion Forte",
+    "patent" => 0,
+    "slug" => "hepabion-forte",
+    "stock" => 3000,
+    "price" => 50000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Hepabion Forte adalah suplemen yang mengandung vitamin dan mineral untuk mendukung kesehatan hati.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu menjaga kesehatan hati dan fungsi liver.<br>
+<strong>Komposisi</strong><br>
+Vitamin B12, B6, Nicotinamide, dan lainnya.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Kimia Farma<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI678901234"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Liv 52",
+    "patent" => 0,
+    "slug" => "liv-52",
+    "stock" => 4500,
+    "price" => 30000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Liv 52 adalah suplemen herbal yang digunakan untuk mendukung kesehatan hati dan memperbaiki fungsi liver.<br>
+<strong>Indikasi Umum</strong><br>
+Mendukung kesehatan hati dan memperbaiki fungsi liver.<br>
+<strong>Komposisi</strong><br>
+Ekstrak herbal seperti Capparis spinosa dan Cichorium intybus.<br>
+<strong>Dosis</strong><br>
+Dewasa: 2 tablet dua kali sehari sebelum makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum sebelum makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan reaksi alergi pada beberapa orang.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Himalaya<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI789012345"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Essentiale Forte",
+    "patent" => 0,
+    "slug" => "essentiale-forte",
+    "stock" => 2000,
+    "price" => 860000,
+    "shortdesc" => "Per Kotak",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Essentiale Forte adalah suplemen yang mengandung fosfolipid esensial untuk mendukung kesehatan hati.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu memperbaiki fungsi hati dan melindungi sel-sel hati.<br>
+<strong>Komposisi</strong><br>
+Fosfolipid esensial 300 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1-2 kapsul tiga kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Kotak<br>
+<strong>Manufaktur</strong><br>
+Sanofi<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI890123456"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Silymarin Tablet",
+    "patent" => 0,
+    "slug" => "silymarin-tablet",
+    "stock" => 3500,
+    "price" => 40000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Silymarin Tablet adalah suplemen yang mengandung ekstrak Milk Thistle untuk mendukung kesehatan hati.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu melindungi sel-sel hati dan memperbaiki fungsi hati.<br>
+<strong>Komposisi</strong><br>
+Silymarin 140 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet dua kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Mega We Care<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI901234567"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "LiverCare Capsule",
+    "patent" => 0,
+    "slug" => "livercare-capsule",
+    "stock" => 2800,
+    "price" => 45000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+LiverCare Capsule adalah suplemen yang mengandung herbal alami untuk mendukung fungsi hati dan melindungi sel-sel hati.<br>
+<strong>Indikasi Umum</strong><br>
+Mendukung kesehatan hati dan memperbaiki fungsi hati.<br>
+<strong>Komposisi</strong><br>
+Ekstrak Milk Thistle, Dandelion, dan Artichoke.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 kapsul dua kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Herbalife<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567890"
+]);
+
     }
 }
