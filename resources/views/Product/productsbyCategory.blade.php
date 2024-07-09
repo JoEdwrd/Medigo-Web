@@ -12,7 +12,7 @@
                 </ol>
             </nav>
         </div>
-    
+
        <div class="container mt-5">
             <div class="row mb-4">
                 <div class="col">
@@ -25,7 +25,7 @@
                 </div>
             </div>
         </div>
-    
+
         @if ($products->count() > 0)
         <div class="container">
             <div class="row">
@@ -33,7 +33,7 @@
                     <h2>Products in {{ $category->name }}</h2>
                 </div>
             </div>
-    
+
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                 @foreach ($products as $product)
                 <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
@@ -42,7 +42,10 @@
                         <h5 class="card-title" id="card-title">{{ $product->name }}</h5>
                         <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
                         <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
-                        <a href="{{ route('product.show', $product->slug) }}" id="addbtn" class="btn">ADD</a>
+                        <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                        </form>
                     </div>
                 </div>
                 @endforeach
@@ -56,9 +59,9 @@
                 </div>
             </div>
         </div>
-        
+
         @endif
-    
+
     </div>
 </div>
 
