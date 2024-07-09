@@ -42,9 +42,9 @@ class CategorySeeder extends Seeder
 
         // Neck Pain
         Category::create([
-            "name" => "Neck Pain",
-            "slug" => "neck-pain",
-            "description" => "Medicine for Neck Pain"
+            "name" => "Pain Releiver",
+            "slug" => "pain-releiver",
+            "description" => "Medicine for Pain Releiver"
         ]);
 
         // Liver
