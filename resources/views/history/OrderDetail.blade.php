@@ -8,65 +8,48 @@
         <div class="col-7" id="left-content">
              <div class="row align-items-start">
                 <div class="col">
-                    <h5 >Order ID: PSN123</h5>
+                    <h5 >Order ID: {{$orderDetail->id}}</h5>
                 </div>
 
                 <div class="col text-end">
-                    <h5>3 May 2024 - 21:18 WIB</h5>
+                    <h5>{{$orderDetail->created_at}}</h5>
                 </div>
             </div>
 
-            <div class="order-items mt-4">
+            @php
+                $subTotal = 0;
+            @endphp
+            @foreach ($orderDetail->order_details as $order)
+             <div class="order-items mt-4">
                 <div class="row align-items-start">
                     <div class="col">
                         <img style="width: 100px; length: 100px" src="{{ asset("image/medicine1.jpeg") }}" alt="Medicine Image">
                     </div>
 
                     <div class="col-7">
-                        <h5>Actifed Plus Expectorant Sirup 60 ml (Hijau)</h5>
-                        <small class="text-muted">Per Botol</small><br>
+                        <h5>{{$order->product->name}}</h5>
+                        <small class="text-muted">{{$order->product->shortdesc}}</small><br>
                         <div class="row align-items-start">
                             <div class="col">
-                                <small class="text-muted">1x</small><br>
+                                <small class="text-muted">{{$order->quantity}}</small><br>
                             </div>
 
                             <div class="col">
-                                <small class="text-muted">@ Rp 69.800</small>
+                                <small class="text-muted">@ Rp {{ number_format($order->product->price, 0, ',', '.') }}</small>
                             </div>
                         </div>
                     </div>
 
                     <div class="col mt-4">
-                        <h5>Rp 69.800</h5>
+                        <h5>{{number_format($order->quantity * $order->product->price, 0, ',', '.') }}</h5>
+                        @php
+                            $subTotal += ($order->quantity * $order->product->price);
+                        @endphp
                     </div>
                 </div>
             </div>
 
-            <div class="order-items mt-4">
-                <div class="row align-items-start">
-                    <div class="col">
-                        <img style="width: 100px; length: 100px" src="{{ asset("image/panadolbiru.jpeg") }}" alt="Medicine Image">
-                    </div>
-
-                    <div class="col-7">
-                        <h5>Panadol 500 mg 10 Kaplet</h5>
-                        <small class="text-muted">Per Strip</small><br>
-                        <div class="row align-items-start">
-                            <div class="col">
-                                <small class="text-muted">2x</small><br>
-                            </div>
-
-                            <div class="col">
-                                <small class="text-muted">@ Rp 14.000</small>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col mt-4">
-                        <h5>Rp 28.000</h5>
-                    </div>
-                </div>
-            </div>
+            @endforeach
 
         </div>
 
@@ -78,26 +61,25 @@
         <div class="col" id="right-content">
             <div class="row">
                 <div class="col-md-6 mb-2">
-                    <h5 class ="mb-3" style="font-weight: bold">Metode Pembayaran</h5>
-                    <h5 class ="mb-3" style="font-weight: bold">Status Pembayaran</h5>
+                    <h5 class ="mb-3" style="font-weight: bold">Payment Method</h5>
+                    <h5 class ="mb-3" style="font-weight: bold">Payment Status</h5>
                 </div>
                 <div class="col-md-6 text-right">
-                    <h5 class ="mb-3 text-end">BCA Virtual Account</h5>
-                    <h5 class ="mb-3 text-end"">Berhasil</h5>
+                    <h5 class ="mb-3 text-end">{{$orderDetail->payment_method}}</h5>
+                    <h5 class ="mb-3 text-end"> {{$orderDetail->status}}</h5>
                 </div>
                 <hr>
-                <h5 class ="mb-3" style="font-weight: bold">Ringkasan Pembayaran</h5>
+                <h5 class ="mb-3" style="font-weight: bold">Detail</h5>
                 <div class="col-md-6">
                     <p>Subtotal </p>
-                    <p>Biaya Pengiriman </p>
                     <p>Diskon</p>
                     <p>Total</p>
                 </div>
+
                 <div class="col-md-6 text-right">
-                    <p class="text-end">Rp 97.800</p>
-                    <p class="text-end">Rp 15.000</p>
-                    <p class="text-end">-Rp 15.000</p>
-                    <p class="text-end">Rp 97.800</p>
+                    <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
+                    <p class="text-end">{{ number_format($subTotal * $orderDetail->promotion->discount, 0, ',', '.') }}</p>
+                    <p class="text-end">{{ number_format($subTotal - ($subTotal * $orderDetail->promotion->discount), 0, ',', '.') }}</p>
                 </div>
             </div>
         </div>
@@ -106,9 +88,8 @@
 
     <div class="row mt-5">
         <div class="col-md-6">
-            <h5>Alamat</h5>
-            <h6>Rumah Talenta BCA</h6>
-            <p>Jl. Pakuan No. 5, Kelurahan Sumur Batu, Kecamatan Babakan Madang, Kamar A328 (Dititipkan ke Satpam) Babakan Madang Kab. Bogor Jawa Barat 16810</p>
+            <h5>Address</h5>
+            <h6>{{$orderDetail->user->address}}</h6>
         </div>
     </div>
 
@@ -121,6 +102,9 @@
                     <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
                 </div>
             </div>
+
+
+            
             <div class="col-2">
                 <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 21:18 WIB</h6>
             </div>

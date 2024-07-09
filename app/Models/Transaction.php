@@ -26,7 +26,7 @@ class Transaction extends Model
     // }
 
     public function promotion() {
-        return $this->belongsTo(Promotion::class, 'promo_id');
+        return $this->belongsTo(Promotion::class);
     }
 
     public function user() {
@@ -35,5 +35,10 @@ class Transaction extends Model
 
     public function prescription() {
         return $this->hasOne(Prescription::class);
+    }
+
+    public function tracking_order()
+    {
+        return $this->hasOne(TrackingOrder::class);
     }
 }
