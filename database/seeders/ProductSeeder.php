@@ -115,7 +115,7 @@ class ProductSeeder extends Seeder
 //     "shortdesc" => "Per Strip",
 //     "description" => "
 // <strong>Deskripsi</strong><br>
-// PARADEX mengandung Paracetamol, Propyphenazone, Caffeine, dan Dextromethorphan HBr. Obat ini digunakan untuk meringankan sakit kepala, demam, dan sakit gigi.
+// PARAMEX mengandung Paracetamol, Propyphenazone, Caffeine, dan Dextromethorphan HBr. Obat ini digunakan untuk meringankan sakit kepala, demam, dan sakit gigi.
 // <br>
 // <strong>Indikasi Umum</strong><br>
 // Meringankan sakit kepala, demam, dan sakit gigi.
@@ -1599,6 +1599,580 @@ Herbalife<br>
 <strong>No. Registrasi</strong><br>
 BPOM: SI234567890"
 ]);
+//obat hearing
+Product::create([
+    "category_id" => 6,
+    "name" => "Ginkgo Biloba Extract",
+    "patent" => 0,
+    "slug" => "ginkgo-biloba-extract",
+    "stock" => 3200,
+    "price" => 50000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Ginkgo Biloba Extract adalah suplemen yang mengandung ekstrak daun Ginkgo Biloba untuk mendukung kesehatan pendengaran dan sirkulasi darah.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu meningkatkan sirkulasi darah ke otak dan telinga, serta mendukung fungsi pendengaran.<br>
+<strong>Komposisi</strong><br>
+Ekstrak Ginkgo Biloba 120 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 kapsul dua kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Nature's Way<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567891"
+]);
 
+Product::create([
+    "category_id" => 6,
+    "name" => "Neurobion Forte",
+    "patent" => 0,
+    "slug" => "neurobion-forte",
+    "stock" => 4100,
+    "price" => 52000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Neurobion Forte adalah suplemen yang mengandung vitamin B kompleks untuk mendukung kesehatan saraf dan pendengaran.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu menjaga kesehatan saraf dan fungsi pendengaran.<br>
+<strong>Komposisi</strong><br>
+Vitamin B1, B6, dan B12.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Merck<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI345678912"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Betahistine Mesylate",
+    "patent" => 1,
+    "slug" => "betahistine-mesylate",
+    "stock" => 2000,
+    "price" => 70000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Betahistine Mesylate adalah obat yang digunakan untuk mengatasi vertigo dan masalah pendengaran terkait dengan gangguan pada telinga bagian dalam.<br>
+<strong>Indikasi Umum</strong><br>
+Mengatasi vertigo dan gangguan pendengaran akibat masalah pada telinga bagian dalam.<br>
+<strong>Komposisi</strong><br>
+Betahistine Mesylate 24 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet dua kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen obat ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Strip<br>
+<strong>Manufaktur</strong><br>
+Novartis<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI456789012"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Tanakan",
+    "patent" => 0,
+    "slug" => "tanakan",
+    "stock" => 3200,
+    "price" => 1450000,
+    "shortdesc" => "Per Kotak",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Tanakan adalah suplemen yang mengandung ekstrak Ginkgo Biloba untuk mendukung kesehatan pendengaran dan fungsi kognitif.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu meningkatkan sirkulasi darah ke otak dan telinga, serta mendukung fungsi pendengaran.<br>
+<strong>Komposisi</strong><br>
+Ekstrak Ginkgo Biloba 40 mg.<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet tiga kali sehari setelah makan.<br>
+<strong>Aturan Pakai</strong><br>
+Diminum setelah makan.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan gangguan pencernaan ringan dan sakit kepala.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Kotak<br>
+<strong>Manufaktur</strong><br>
+Ipsen<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI567890123"
+]);
+
+Product::create([
+    "category_id" => 6,
+    "name" => "Acustivum",
+    "patent" => 0,
+    "slug" => "acustivum",
+    "stock" => 1500,
+    "price" => 85000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Acustivum adalah obat spray yang membantu menghilangkan wax plug yang ada, mencegah pembentukan wax plug, dan menjaga kebersihan saluran pendengaran<br>
+<strong>Indikasi Umum</strong><br>
+Mendukung kesehatan pendengaran dan kebersihan telinga.<br>
+<strong>Komposisi</strong><br>
+Sunflower oil, sweet almond oil, liquid paraffin, olive oil, jojoba oil, polysorbate 80, PPG-8, tocopherol (vitamin E), ascorbyl palmitate (vitamin C), ascorbic acid (vitamin C) , citric acid.<br>
+<strong>Aturen Pakai</strong><br>
+Dewasa: 1-2 semprotan di saluran pendengaran eksternal.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+jangan gunakan jika terjadi penyakit perforasi pada membran timpani atau adanya benda asing di telinga<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Zdrovit<br>"
+]);
+
+//obat dental
+Product::create([
+    "category_id" => 7,
+    "name" => "Parodontax",
+    "patent" => 0,
+    "slug" => "parodontax",
+    "stock" => 4000,
+    "price" => 90000,
+    "shortdesc" => "Per Tube",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Parodontax adalah pasta gigi yang diformulasikan khusus untuk membantu mengatasi masalah gusi berdarah dan menjaga kesehatan gusi.<br>
+<strong>Indikasi Umum</strong><br>
+Membantu mengatasi gusi berdarah dan menjaga kesehatan gusi.<br>
+<strong>Komposisi</strong><br>
+Bicarbonate Soda, Sodium Fluoride.<br>
+<strong>Dosis</strong><br>
+Dewasa: Sikat gigi dua kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Gunakan seperti pasta gigi biasa.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh penderita alergi terhadap komponen produk.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan iritasi pada beberapa individu.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Tube<br>
+<strong>Manufaktur</strong><br>
+GlaxoSmithKline<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI123456789"
+]);
+
+Product::create([
+    "category_id" => 7,
+    "name" => "Orajel",
+    "patent" => 1,
+    "slug" => "orajel",
+    "stock" => 2500,
+    "price" => 45000,
+    "shortdesc" => "Per Tube",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Orajel adalah gel anestesi topikal yang digunakan untuk meredakan nyeri gigi dan iritasi mulut.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan nyeri gigi dan iritasi mulut.<br>
+<strong>Komposisi</strong><br>
+Benzocaine 20%.<br>
+<strong>Dosis</strong><br>
+Oleskan secukupnya pada area yang sakit maksimal 4 kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Oleskan langsung pada area yang sakit.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap benzocaine.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan reaksi alergi pada beberapa individu.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Tube<br>
+<strong>Manufaktur</strong><br>
+Church & Dwight<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567890"
+]);
+
+Product::create([
+    "category_id" => 7,
+    "name" => "Lidocaine Viscous",
+    "patent" => 1,
+    "slug" => "lidocaine-viscous",
+    "stock" => 1500,
+    "price" => 60000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Lidocaine Viscous adalah larutan anestesi lokal yang digunakan untuk mengatasi nyeri mulut dan tenggorokan.<br>
+<strong>Indikasi Umum</strong><br>
+Mengatasi nyeri mulut dan tenggorokan.<br>
+<strong>Komposisi</strong><br>
+Lidocaine Hydrochloride 2%.<br>
+<strong>Dosis</strong><br>
+Oleskan secukupnya pada area yang sakit sesuai kebutuhan, maksimal 4 kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Oleskan langsung pada area yang sakit.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap lidocaine.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan reaksi alergi pada beberapa individu.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Pfizer<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI345678901"
+]);
+
+Product::create([
+    "category_id" => 7,
+    "name" => "Corsodyl Mouthwash",
+    "patent" => 0,
+    "slug" => "corsodyl-mouthwash",
+    "stock" => 3500,
+    "price" => 55000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Corsodyl Mouthwash adalah obat kumur yang mengandung Chlorhexidine untuk mengatasi infeksi mulut dan masalah gusi.<br>
+<strong>Indikasi Umum</strong><br>
+Mengatasi infeksi mulut dan masalah gusi.<br>
+<strong>Komposisi</strong><br>
+Chlorhexidine Digluconate 0.2%.<br>
+<strong>Dosis</strong><br>
+Berkumur 10 ml dua kali sehari.<br>
+<strong>Aturan Pakai</strong><br>
+Berkumur selama 30 detik lalu buang.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap chlorhexidine.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan perubahan warna gigi sementara.<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+GlaxoSmithKline<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI456789012"
+]);
+
+Product::create([
+    "category_id" => 7,
+    "name" => "Difflam Spray",
+    "patent" => 1,
+    "slug" => "difflam-spray",
+    "stock" => 1800,
+    "price" => 70000,
+    "shortdesc" => "Per Botol",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Difflam Spray adalah semprotan mulut yang mengandung Benzydamine untuk meredakan nyeri dan iritasi di mulut dan tenggorokan.<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan nyeri dan iritasi di mulut dan tenggorokan.<br>
+<strong>Komposisi</strong><br>
+Benzydamine Hydrochloride 0.15%.<br>
+<strong>Dosis</strong><br>
+Semprotkan 4-8 kali pada area yang sakit setiap 1.5-3 jam.<br>
+<strong>Aturan Pakai</strong><br>
+Semprotkan langsung pada area yang sakit.<br>
+<strong>Perhatian</strong><br>
+Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
+<strong>Kontra Indikasi</strong><br>
+Penderita hipersensitif terhadap benzydamine.<br>
+<strong>Efek Samping</strong><br>
+Pemakaian dapat menyebabkan rasa terbakar atau kesemutan sementara.<br>
+<strong>Golongan Produk</strong><br>
+Obat Keras<br>
+<strong>Kemasan</strong><br>
+Per Botol<br>
+<strong>Manufaktur</strong><br>
+Meda Pharmaceuticals<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI567890123"
+]);
+//obat flu
+Product::create([
+    "category_id" => 8,
+    "name" => "Decolgen",
+    "patent" => 0,
+    "slug" => "decolgen",
+    "stock" => 800,
+    "price" => 2500,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Decolgen adalah obat flu yang mengandung parasetamol, phenylpropanolamine HCl, dan chlorpheniramine maleate. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Komposisi</strong><br>
+Setiap tablet mengandung parasetamol 500 mg, phenylpropanolamine HCl 12.5 mg, dan chlorpheniramine maleate 2 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<br>
+<strong>Aturan Pakai</strong><br>
+Tablet ditelan utuh dengan segelas air.
+<br>
+<strong>Perhatian</strong><br>
+Tidak dianjurkan untuk digunakan lebih dari 7 hari berturut-turut. Tidak boleh digunakan oleh anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<br>
+<strong>Efek Samping</strong><br>
+Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Decolgen
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI234567890"
+]);
+
+Product::create([
+    "category_id" => 8,
+    "name" => "Antangin Junior",
+    "patent" => 0,
+    "slug" => "antangin-junior",
+    "stock" => 1200,
+    "price" => 15000,
+    "shortdesc" => "Per Kotak",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Antangin Junior adalah obat flu untuk anak-anak yang mengandung kombinasi antara parasetamol, pseudoephedrine HCl, dan chlorpheniramine maleate. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat pada anak-anak.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat pada anak-anak.
+<br>
+<strong>Komposisi</strong><br>
+Setiap tablet mengandung parasetamol 120 mg, pseudoephedrine HCl 15 mg, dan chlorpheniramine maleate 1 mg.
+<br>
+<strong>Dosis</strong><br>
+Anak-anak 6-12 tahun: 1 tablet setiap 6-8 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<br>
+<strong>Aturan Pakai</strong><br>
+Tablet ditelan utuh dengan segelas air.
+<br>
+<strong>Perhatian</strong><br>
+Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung antihistamin atau dekongestan. Tidak dianjurkan untuk anak di bawah 6 tahun kecuali atas petunjuk dokter.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<br>
+<strong>Efek Samping</strong><br>
+Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Kotak
+<br>
+<strong>Manufaktur</strong><br>
+Antangin
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI345678901"
+]);
+
+Product::create([
+    "category_id" => 8,
+    "name" => "Theraflu",
+    "patent" => 0,
+    "slug" => "theraflu",
+    "stock" => 600,
+    "price" => 250000,
+    "shortdesc" => "Per Kotak",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Theraflu adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan diphenhydramine HCl. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Komposisi</strong><br>
+Setiap sachet mengandung parasetamol 500 mg, phenylephrine HCl 10 mg, dan diphenhydramine HCl 12.5 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 sachet setiap 4-6 jam sesuai kebutuhan, maksimal 4 sachet dalam 24 jam.
+<br>
+<strong>Aturan Pakai</strong><br>
+Larutkan isi sachet dalam segelas air panas dan aduk hingga larut.
+<br>
+<strong>Perhatian</strong><br>
+Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung antihistamin atau dekongestan. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<br>
+<strong>Efek Samping</strong><br>
+Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Kotak
+<br>
+<strong>Manufaktur</strong><br>
+Theraflu
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI456789012"
+]);
+
+Product::create([
+"category_id" => 8,
+"name" => "Sinarest",
+"patent" => 0,
+"slug" => "sinarest",
+"stock" => 500,
+"price" => 32000,
+"shortdesc" => "Per Strip",
+"description" => "
+<strong>Deskripsi</strong><br>
+Sinarest adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan caffeine. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<br>
+<strong>Komposisi</strong><br>
+Setiap tablet mengandung parasetamol 500 mg, phenylephrine HCl 5 mg, dan caffeine 30 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<br>
+<strong>Aturan Pakai</strong><br>
+Tablet ditelan utuh dengan segelas air.
+<br>
+<strong>Perhatian</strong><br>
+Hindari penggunaan bersamaan dengan minuman beralkohol atau obat lain yang mengandung kafein. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<br>
+<strong>Efek Samping</strong><br>
+Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Sinarest
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI567890123"
+]);
+Product::create([
+    "category_id" => 8,
+    "name" => "Decolgen Cold and Flu",
+    "patent" => 0,
+    "slug" => "decolgen-cold-and-flu",
+    "stock" => 700,
+    "price" => 28000,
+    "shortdesc" => "Per Strip",
+    "description" => "
+<strong>Deskripsi</strong><br>
+Decolgen Cold and Flu adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan dextromethorphan HBr. Obat ini membantu meredakan gejala flu seperti demam, pilek, batuk, bersin, dan hidung tersumbat.
+<br>
+<strong>Indikasi Umum</strong><br>
+Meredakan gejala flu seperti demam, pilek, batuk, bersin, dan hidung tersumbat.
+<br>
+<strong>Komposisi</strong><br>
+Setiap tablet mengandung parasetamol 500 mg, phenylephrine HCl 5 mg, dan dextromethorphan HBr 15 mg.
+<br>
+<strong>Dosis</strong><br>
+Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<br>
+<strong>Aturan Pakai</strong><br>
+Tablet ditelan utuh dengan segelas air.
+<br>
+<strong>Perhatian</strong><br>
+Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung dextromethorphan. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<br>
+<strong>Kontra Indikasi</strong><br>
+Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<br>
+<strong>Efek Samping</strong><br>
+Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<br>
+<strong>Golongan Produk</strong><br>
+Obat Bebas
+<br>
+<strong>Kemasan</strong><br>
+Per Strip
+<br>
+<strong>Manufaktur</strong><br>
+Decolgen
+<br>
+<strong>No. Registrasi</strong><br>
+BPOM: SI678901234"
+]);
+//obat mata
     }
 }
