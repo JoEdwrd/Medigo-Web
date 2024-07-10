@@ -20,30 +20,25 @@
             </div>
             <div class="col-md-8 px-4 mt-5">
                 <div class="d-block justify-content-between align-items-center mb-3">
-                    <h4 class="text-left mt-3">{{$product->name}}</h4>
+                    <h4 class="text-left mt-3">{{ $product->name }}</h4>
                     <span class="h4 text-danger mt-3">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
-                    <p class="mt-2">{{$product->shortdesc}} </p>
+                    <p class="mt-2"> {{ $product->shortdesc }} </p>
                 </div>
+
                 <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
                     @csrf
                     <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
                 </form>
-                {{-- <a href="#" id="addbtn" class="btn mb-2">Add to Cart</a> --}}
+
                 <hr class="my-4">
 
                 <div class="mt-3">
-                    <div id="description-section">
+                    <h5 class="mb-0">[Masukkan text disini]</h5>
+                    <div id="more-info" class=collapse>
                         {!! $product->description !!}
-                        {{-- <p><strong>Description<br></strong>Allergy Relief Plus provides 24-hour relief from various allergy symptoms including sneezing, runny nose, itchy eyes, and itchy throat. Formulated with loratadine, a non-drowsy antihistamine, this medication is safe for adults and children 12 years and older. Allergy Relief Plus provides 24-hour relief from various allergy symptoms including sneezing, runny nose, itchy eyes, and itchy throat. Formulated with loratadine, a non-drowsy antihistamine, this medication is safe for adults and children 12 years and older.</p> --}}
                     </div>
 
-                    {{-- <div id="more-info" class="collapse">
-                        <p><strong>No. BPOM<br></strong>SD031508481</p>
-                        <p><strong>Manufacturer<br></strong>PT. Joel Bau Pertama</p>
-                        <p><strong>Category<br></strong>Bottle</p>
-                        <p><strong>Prescription Type<br></strong>Need Prescription</p>
-                        <p><strong>Side Effects<br></strong>SD031508481</p>
-                    </div> --}}
+                    <br>
 
                     <button class="custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#more-info" aria-expanded="false" aria-controls="more-info" id="toggleButton">
                         <strong>See More <i class="bi bi-chevron-down" id="toggleIcon"></i></strong>
@@ -55,44 +50,21 @@
     <hr>
     <div class="mt-5">
         <h2>Related Products</h2>
-
-        <div class="row text-center d-flex justify-content-between mt-4 mb-5">
-            <div class="card col-md-1" id="card_product">
-                <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
+        <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+            @foreach ($products as $product)
+            <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
+                <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
                 <div class="card-body" id="card-body">
-                    <h5 class="card-title" id="card-title">Card title</h5>
-                    <label class="card-desc" id="card-desc">Per Strip</label>
-                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                    <a href="#" id="addbtn" class="btn">ADD</a>
+                    <h5 class="card-title text-start" id="card-title">{{$product->name}}</h5>
+                    <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
+                    <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
+                    <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
+                        @csrf
+                        <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                    </form>
                 </div>
             </div>
-            <div class="card col-md-1" id="card_product">
-                <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body" id="card-body">
-                    <h5 class="card-title" id="card-title">Card title</h5>
-                    <label class="card-desc" id="card-desc">Per Strip</label>
-                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                    <a href="#" id="addbtn" class="btn">ADD</a>
-                </div>
-            </div>
-            <div class="card col-md-1" id="card_product">
-                <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body" id="card-body">
-                    <h5 class="card-title" id="card-title">Card title</h5>
-                    <label class="card-desc" id="card-desc">Per Strip</label>
-                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                    <a href="#" id="addbtn" class="btn">ADD</a>
-                </div>
-            </div>
-            <div class="card col-md-1" id="card_product">
-                <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                <div class="card-body" id="card-body">
-                    <h5 class="card-title" id="card-title">Card title</h5>
-                    <label class="card-desc" id="card-desc">Per Strip</label>
-                    <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                    <a href="#" id="addbtn" class="btn">ADD</a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

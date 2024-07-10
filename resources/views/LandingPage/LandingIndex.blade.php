@@ -3,7 +3,7 @@
 @section('container')
 
 <div>
-    <img src="{{ asset("image\BannerMain.svg") }}" style="width:100%;height:auto;"alt="">
+    <img src="{{ asset("image\main_banner.png") }}" style="width:100%;height:auto;"alt="">
     <div style="margin-top: 150px; width:100%">
         <h1 class="text-center" style="font-size: 40px;font-weight:600;" id="chopin">Categories</h1>
         <section class="mt-10" style="margin-top: 100px">

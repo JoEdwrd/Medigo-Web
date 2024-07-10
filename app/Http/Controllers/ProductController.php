@@ -58,13 +58,25 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         $user = auth()->user();
-        if($user){
-            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
-        }else{
+        if ($user) {
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id]);
+        } else {
             $cart = null;
         }
-        return view('Product.product', ['product' => $product, 'cart' => $cart]);
+
+        // Retrieve products of the same category as the current product
+        $productsInSameCategory = Product::where('category_id', $product->category_id)
+                                        ->where('id', '!=', $product->id) // exclude the current product
+                                        ->take(4)
+                                        ->get();
+
+        return view('Product.product', [
+            'product' => $product,
+            'cart' => $cart,
+            'products' => $productsInSameCategory // pass the products to the view
+        ]);
     }
+
 
     public function showByCategory(Category $category)
     {
