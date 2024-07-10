@@ -22,6 +22,14 @@ footer {
     border-radius: 63px;
     width: 150px;
 }
+
+#SeeAllBTN {
+    background-color: var(--main2-color);
+    border-radius: 63px;
+    width: 200px;
+    height: 50px;
+}
+
 :root {
     --main1-color: rgba(231, 244, 224, 100);
     --main2-color: rgba(81, 159, 145, 100);
