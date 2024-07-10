@@ -3,7 +3,7 @@
 @section('container')
     <div>
         <div class="mb-5">
-            <img src="image/jumbotronFAQ.png" class="w-100" style="max-height: 640px" alt="a jumbotron">
+            <img src="{{ asset("image/faq_banner.png") }}" style="width:100%;" alt="a jumbotron">
         </div>
 
         <div class="container">
