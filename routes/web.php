@@ -44,6 +44,7 @@ Route::post('/check', [LoginController::class, 'check'])->name('check');
 Route::get('/register', [RegisterController::class, 'index'])->name('register')->middleware('guest');
 Route::post('/register2', [RegisterController::class, 'store'])->name('register2');
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 //=========================================== user =====================================================
 Route::group(['middleware' => ['auth', 'userOnly']], function () {
@@ -55,7 +56,7 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/category/{category:slug}', [ProductController::class, 'showByCategory'])->name('category.show');
     
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');    
+        
     
     Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
     Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');

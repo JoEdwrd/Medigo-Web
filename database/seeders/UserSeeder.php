@@ -28,7 +28,8 @@ class UserSeeder extends Seeder
             "phone" => "0895338676787",
             "dob" => "2005-12-23",
             "gender" => "male",
-            "address" => "jl tuanku imam bonjol blok B5 no.16, bekasi barat, kabupaten pejuang"
+            "address" => "jl tuanku imam bonjol blok B5 no.16, bekasi barat, kabupaten pejuang",
+            'isAdmin' => 1,
         ]);
     }
 }

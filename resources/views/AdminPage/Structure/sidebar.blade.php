@@ -5,8 +5,8 @@
                 <div class="d-flex flex-row justify-content-center mt-2">
                     <img src="\image\PP.png" alt="profile picture" style="width: 50px;height:50px;margin-right:20px">
                     <div class="d-flex flex-column">
-                        <label id="textfont" style="font-weight: bold">Shamgar Eugene</label>
-                        <label id="textfont">CTO,Jakarta</label>
+                        <label id="textfont" style="font-weight: bold">{{auth()->user()->name}}</label>
+                        <label id="textfont">Staff, Jakarta</label>
                     </div>
                 </div>
                 <hr style="margin-left:4px;margin-right:4px">
@@ -58,10 +58,14 @@
         <hr style="margin-left:4px;margin-right:4px">
 
         <div class="nav-item">
-            <a class="nav-link" href="#">
-            <i class="bi bi-door-closed-fill  me-2"></i>
-            Logout
+            <a class="nav-link" style="cursor: pointer" onclick="document.getElementById('formAdminLogout').submit()">
+                <i class="bi bi-door-closed-fill  me-2"></i>
+                Logout
             </a>
+
+            <form id="formAdminLogout" action="{{route('logout')}}" method="POST">
+                @csrf
+            </form>
         </div>
 
         <div class="nav-item d-flex justify-content-center" style="margin-top: 80%">
