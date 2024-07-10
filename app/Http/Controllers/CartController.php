@@ -8,6 +8,7 @@ use App\Models\Promotion;
 use App\Models\CartDetail;
 use Illuminate\Support\Str;
 use App\Models\Prescription;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -45,11 +46,15 @@ class CartController extends Controller
         // dd($qty);
 
         $cartItem = $cart->cart_details()->where('product_id', $product_id)->first();
-
-        if($qty > 0){
+        
+        $product = $cartItem->product()->first();
+        
+        if($qty > $product->stock){
+            return redirect()->back()->withErrors(['quantity_error_' . $product_id => 'Available stock is '.$product->stock.'. Please reduce the quantity']);
+        }else if($qty > 0){
             $cartItem->quantity = $qty;
             $cartItem->save();
-        }else {
+        }else{
             $cartItem->delete();
         }
 
@@ -60,25 +65,30 @@ class CartController extends Controller
 
     public function addPromo(Request $request){
         $user = auth()->user();
-        $data = $request->all();
+        // $data = $request->all();
 
         // dd($request->promotionName);
 
         $cart = Cart::where('user_id', $user->id)->firstOrFail();
 
         // dd($cart);
+        // dd($request->all());
 
-        $promo = Promotion::where(['code' => $request->promotionName]);
-
+        $promo = Promotion::where(['code' => $request->promotionName])->first();
+        
         // dd($promo->exists());
+        // dd($promo);
+        $currentTime = Carbon::now();
 
-        if($promo->exists()){
+        if(isset($promo) && $currentTime->lte($promo->enddate) ){
             // $cart->promotion()->associate($promo);
-            $promo = $promo->get()->first();
-
             $cart->promotion_id = $promo->id;
 
             $cart->save();
+        }else if(!isset($promo)){
+            return redirect()->back()->withErrors(['promo_error' => 'Invalid promo code!']);
+        }else{
+            return redirect()->back()->withErrors(['promo_error' => 'Promo is unavailable!']);
         }
 
         return redirect()->back()->with('success', 'Promo added to cart');
@@ -114,6 +124,27 @@ class CartController extends Controller
 
         // Redirect to the cart index page with a success message
         return redirect()->back()->with('success', 'Product added to cart');
+    }
+
+    public function removePromo(Request $request){
+        $user = auth()->user();
+        // $data = $request->all();
+
+        // dd($request->promotionName);
+
+        $cart = Cart::where('user_id', $user->id)->firstOrFail();
+
+        // dd($cart);
+
+        
+
+        // dd($promo->exists());
+        if(isset($cart->promotion_id)){
+            $cart->promotion_id = null;
+            $cart->save();
+        }
+
+        return redirect()->back()->with('success', 'Promo removed from cart');
     }
 
     public function removeAllItems(Request $request){

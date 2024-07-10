@@ -43,7 +43,13 @@ class PromotionController extends Controller
      */
     public function show(Promotion $promotion)
     {
-        return view('Promotions.promoDetail',['promotion' => $promotion]);
+        $user = auth()->user();
+        if($user){
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+        }else{
+            $cart = null;
+        }
+        return view('Promotions.promoDetail',['promotion' => $promotion, 'cart' => $cart]);
     }
 
     /**

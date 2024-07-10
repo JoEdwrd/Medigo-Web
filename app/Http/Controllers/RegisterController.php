@@ -33,23 +33,23 @@ class RegisterController extends Controller
             $errors = $request->validator->errors()->messages();
 
             if (count($errors) > 0) {
-            // Return specific error message for each field
-            $errorMessage = '';
-            if (isset($errors['email'])) {
-                $errorMessage = $errors['email'][0]; // Get first email error message
-            } elseif (isset($errors['phone'])) {
-                $errorMessage = $errors['phone'][0]; // Get first phone error message
-            } elseif (isset($errors['dob'])) {
-                $errorMessage = $errors['dob'][0]; // Get first dob error message
-            } elseif (isset($errors['password'])) {
-                $errorMessage = $errors['password'][0]; // Get first password error message
-            }
-            // Return error message if any
-            if ($errorMessage) {
-                return back()->withErrors([$errorMessage]);
+                // Return specific error message for each field
+                $errorMessage = '';
+                if (isset($errors['email'])) {
+                    $errorMessage = $errors['email'][0]; // Get first email error message
+                } elseif (isset($errors['phone'])) {
+                    $errorMessage = $errors['phone'][0]; // Get first phone error message
+                } elseif (isset($errors['dob'])) {
+                    $errorMessage = $errors['dob'][0]; // Get first dob error message
+                } elseif (isset($errors['password'])) {
+                    $errorMessage = $errors['password'][0]; // Get first password error message
+                }
+                // Return error message if any
+                if ($errorMessage) {
+                    return back()->withErrors([$errorMessage]);
+                }
             }
         }
-          }
 
         // Create user on successful validation
         $input = $request->all();
@@ -63,6 +63,6 @@ class RegisterController extends Controller
             'password' => Hash::make($input['password']),
         ]);
 
-        return redirect()->route('LandingPage.LandingIndex'); // Redirect to Landing Page on success
+        return redirect()->route('login'); // Redirect to Landing Page on success
     }
 }

@@ -68,7 +68,16 @@ class DashboardTransactionController extends Controller
         //     $validatedData['image'] = $request->file('image')->store('tra$transaction-images');
         // }
 
-        Transaction::where('slug', $slug)->update(['status' => $request->status]);
+        $transaction = Transaction::where('slug', $slug)->first();
+        $transaction->update(['status' => $request->status]);
+        // dd($request->status);
+
+        if($request->status == 'Canceled'){
+            foreach($transaction->order_details as $item){
+                $item->product->stock += $item->quantity;
+                $item->product->save();
+            }
+        }
 
         return redirect('/dashboard/transactions')->with('success', 'Transaction has been updated!');
     }
