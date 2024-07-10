@@ -9,6 +9,9 @@
         <section class="mt-10" style="margin-top: 100px">
             <div class="col" style=" width:100%" >
                 @php
+                    // $categories = $categories->take(5);
+                    $idsToShow = [1, 2, 4, 8, 9];
+                    $categories = $categories->whereIn('id', $idsToShow);
                     $counter = 0;
                 @endphp
                 @foreach ($categories as $category)
@@ -29,6 +32,7 @@
                         </div>
                     @endif
                 @endforeach
+
                 {{-- <div class="row text-center d-flex justify-content-center m-0 " style="width: 100%;margin-top:100px">
                     <div class="col-md-2 mb-3 mt-0">
                         <img id="cateimg" src="image\Headache.png" alt="">
@@ -96,6 +100,12 @@
                 </div> --}}
             </div>
         </section>
+        <div style=" display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top: 100px">
+            <a href="/products">
+                <button style="border: none; color: white;" id="SeeAllBTN"><strong>See All</strong></button>
+            </a>
+
+        </div>
     </div>
 
     <div style="margin-top:150px; width:100%">
@@ -232,7 +242,7 @@
                             <label class="card-desc" id="card-desc">{{$disc->shortdesc}}</label>
                             <h5 class="card-title" id="card-title" style="color: red">Rp {{ number_format($disc->discprice, 0, ',', '.') }}</h5>
                             <label class="card-desc mb-3" id="card-desc" style="text-decoration-line:line-through;">Rp {{ number_format($disc->price, 0, ',', '.') }}</label>
-                            
+
                             <form action="{{ route('cart.add', ['productId' => $disc->id]) }}" method="POST" style="display:inline;">
                                 @csrf
                                 <button type="submit" class="btn mb-2 mt-2" id="addbtn">Add to cart</button>
