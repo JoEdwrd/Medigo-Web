@@ -3,7 +3,7 @@
 {{-- @section('container') --}}
 
 <div class="" style="width: 20%">
-    
+
     <nav class="">
         <ul class="nav nav-underline flex-column flex-column border border-grey shadow p-4 rounded-4">
             <li class="nav-item border-bottom">
@@ -13,7 +13,7 @@
               <a class="nav-link pb-3 pt-3 chpw" style="color: #55BC44" href="/changePassOld">Change Password</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link pb-3 pt-3 logout" style="color: #55BC44" href="/logout">Log Out</a>
+              <a class="nav-link pb-3 pt-3 logout" style="color: #55BC44" href="/logoutPage">Log Out</a>
             </li>
         </ul>
     </nav>
