@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string("shortdecs");
             $table->date("startdate");
             $table->date("enddate");
+            $table->boolean('disable')->default(0);
             $table->timestamps();
         });
     }

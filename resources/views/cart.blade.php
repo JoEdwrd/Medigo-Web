@@ -30,9 +30,9 @@
                                 <div class="card-text d-flex flex-grow-1 justify-content-between align-items-center">
                                     <div>
                                         <h5 class="card-title">{{$cart->cart_details[$i]->product->name}}</h5>
-                                        <p class="card-text">Rp {{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}</p>
+                                        <p class="card-text">Rp{{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}&nbsp;<i>per obat</i></p>
                                     </div>
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-around" style="width: 40%">
 
                                         {{-- <form action="{{ route('cart.remove', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
                                             @method("delete")
@@ -52,26 +52,30 @@
                                                 <input type="number" name="quantity" onchange="{{route(cart.changeQty, [])}}" class="form-control input-number" value="{{$cart->cart_details[$i]->quantity}}">
                                             </div>
                                         </div> --}}
-
+                                        
                                         <form style="display: inline;" method="POST" action="{{ route('cart.changeQty' , ['productId' => $cart->cart_details[$i]->product->id]) }}">
                                             @csrf
-                                            <input type="number" min="0" name="quantity" class="form-control input-number w-50" value="{{$cart->cart_details[$i]->quantity}}" onchange="this.form.submit()">
+                                            <input type="number" min="0" max="{{$cart->cart_details[$i]->product->stock}}" name="quantity" class="form-control input-number w-100" value="{{$cart->cart_details[$i]->quantity}}" onchange="this.form.submit()">
                                         </form>
-
+                                        
                                         <a href="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" onclick="event.preventDefault();
                                         document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none text-success"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
 
                                         <form id="delete-form-{{$cart->cart_details[$i]->product->id}}" action="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" method="POST" class="d-none">
                                             @csrf
                                             @method('delete')
-                                        </form>
-
-
+                                        </form>                                                                                
                                     </div>
+                                    
                                 </div>
                             </div>
+                            @if ($errors->has('quantity_error_' . $cart->cart_details[$i]->product->id))
+                                <div class="alert alert-danger text-center p-2 me-3 ms-3">
+                                    {{ $errors->first('quantity_error_' . $cart->cart_details[$i]->product->id) }}
+                                </div>
+                            @endif
                         </div>
-                        @if($cart->cart_details[$i]->product->patent == 1)
+                        @if($cart->cart_details[$i]->product->patent  == 1)
                             @php
                                 $check = true
                             @endphp
@@ -79,7 +83,10 @@
                     @endfor
                 </div>
                 @else
-                    <span class="text-center w-100 d-block text-success fs-5 mt-5">No items currently in your cart...</span>
+                    <div class="d-flex justify-content-center flex-column">
+                        <span class="text-center w-100 d-block text-success fs-5 mt-5 mb-4">No items currently in your cart...</span>
+                        <a class="d-inline-block btn btn-success s-25 m-auto" href="/products">Search for Products</a>
+                    </div>
                 @endif
             </div>
 
@@ -93,7 +100,7 @@
                     <span class="badge rounded-pill" style="background-color: var(--main2-color);">{{isset($cart->cart_details) ? count($cart->cart_details) : 0 }}</span>
                 </h4>
                 <ul class="list-group mb-3">
-                    @if(isset($cart->cart_details))
+                    @if(isset($cart->cart_details[0]))
                         <div class="overflow-auto" style="max-height: 169px;">
                             @for ($i = 0; $i < count($cart->cart_details); $i++)
                                 <li class="list-group-item d-flex justify-content-between lh-sm">
@@ -122,7 +129,10 @@
                                 <h6 class="my-0">Promo code</h6>
                                 <small>{{$cart->promotion->code}}</small>
                             </div>
-                            <span class="text-success">{{'- Rp '.$cart->promotion->discount * $total}}</span>
+                            <div class="d-flex justify-content-around" style="width: 30%">
+                                <span class="text-success">{{'- Rp '.$cart->promotion->discount * $total}}</span>
+                                <i role="button" onclick="document.getElementById('formRemovePromo').submit()" class="bi bi-x-lg"></i>
+                            </div>
                         </li>
                     @endif
                     <li class="list-group-item d-flex justify-content-between">
@@ -130,31 +140,52 @@
                         <strong>{{ isset($cart->promotion->discount) ? 'Rp '.$total - $cart->promotion->discount * $total : 'Rp '.$total}}</strong>
                     </li>
                 </ul>
+                @if (isset($cart->cart_details[0]))    
+                    <form class="card p-2" action="{{route('cart.promo.add')}}" method="POST">
+                        @csrf
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Promo code"
+                                name="promotionName"
+                            >
+                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                        </div>
+                    </form>
+                @endif
 
-                <form class="card p-2" action="{{route('cart.promo.add')}}" method="POST">
-                    @csrf
-                    <div class="input-group">
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Promo code"
-                            name="promotionName"
-                        >
-                        <button type="submit" class="btn btn-secondary">Redeem</button>
+                @if ($errors->has('promo_error'))
+                    <div class="alert alert-danger text-center p-2 mt-4">
+                        {{ $errors->first('promo_error') }}
                     </div>
+                @endif
+
+                <form class="hidden" id="formRemovePromo" action="{{route('cart.promo.remove')}}" method="POST">
+                    @csrf
                 </form>
 
                 <hr class="mb-4">
 
                 <div class="address">
                     <h4>Billing Address</h4>
-                    <p>Jl. Perum Sari Boga No.6, Kec. Sukasari, Kab. Bandung Barat, Bandung 44465</p>
+                    @if(isset($user->address))
+                        <p>{{$user->address}}</p>
+                    @else
+                        <p class="text-warning fs-5">You haven't input your address yet, please input your address to order!</p>
+                    @endif
                 </div>
 
                 {{-- <button class="w-100 btn btn-primary btn-md" type="submit">
                     Checkout
                 </button> --}}
                 {{-- <a href="" id="addbtn" class="btn mb-2">Add to Order</a> --}}
+
+                @if ($errors->has('order_error'))
+                    <div class="alert alert-danger text-center p-2 mt-4">
+                        {{ $errors->first('order_error') }}
+                    </div>
+                @endif
 
                 @if (isset($cart->cart_details[0]))
                     @if($check)

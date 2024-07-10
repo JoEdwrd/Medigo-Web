@@ -23,14 +23,14 @@
        <div class="container border border-grey rounded-4 shadow p-4">
             <ul class="list-unstyled">
                 <li class="d-flex flex-row justify-content-between mb-2 align-items-center ">
-                    <div class="d-flex flex-row justify-content-between align-items-center mb-3 " style="width:21.5%">
+                    <div class="d-flex flex-row justify-content-between align-items-center mb-3" style="width:25.5%">
                         <div>
                             {{-- <div class="rounded-circle bor  ">75</div> --}}
-                            <img src="" alt="" class="rounded-circle border border-black" style="min-width: 60px; min-height:60px">
+                            <img src="{{isset($user->profile_picture) ? asset("storage/".$user->profile_picture) : '/image/userTemp.png'}}" alt="" class="rounded-circle border border-black" style="min-width: 60px; max-width:100px; min-height:100px;object-fit:cover;">
                         </div>
                         <div>
                             <ul class="list-unstyled">
-                                <li>{{$user->name}}</li>
+                                <li class="mb-2">{{$user->name}}</li>
                                 <li>{{$user->phone}}</li>
                             </ul>
                         </div>
@@ -39,15 +39,9 @@
                     <div class="right-0">
                         {{-- <button type="button" class="btn btn-primary">Edit Profile</button> --}}
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Edit Profile
                         </button>
-                    </div>
-                </li>
-                <li class="border-bottom pt-3 pb-3">
-                    <div class="d-flex justify-content-between">
-                        <div class="fw-bold">Username</div>
-                        <div>{{$user->name}}</div>
                     </div>
                 </li>
                 <li class="border-bottom pt-3 pb-3">
@@ -65,7 +59,7 @@
                 <li class="border-bottom pt-3 pb-3">
                     <div class="d-flex justify-content-between">
                         <div class="fw-bold">Address</div>
-                        <div>{{$user->address}}</div>
+                        <div class="w-50" style="text-align: end">{{$user->address}}</div>
                     </div>
                 </li>
                 <li class="pt-3 pb-3">

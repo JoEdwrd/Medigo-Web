@@ -6,6 +6,7 @@ use App\Models\Cart;
 use App\Models\OrderDetail;
 use App\Models\Prescription;
 use App\Models\Transaction;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -34,9 +35,12 @@ class TransactionController extends Controller
     public function addTransaction(Request $request, $user_id)
     {
         $cart = Cart::with(['cart_details.product', 'promotion'])->where('user_id', $user_id)->get()->first();
+        $user = User::findOrFail($user_id);
         // dd($cart);
         // dd($cart->cart_details);
-
+        if(!isset($user->address)){
+            return redirect()->back()->withErrors(['order_error' => 'Please input your address!']);
+        }
         $check = 0;
 
         foreach ($cart->cart_details as $item) {
@@ -44,8 +48,12 @@ class TransactionController extends Controller
             if($item->product->patent == 1){
                 $check = 1;
             }
+
+            $item->product->stock -= $item->quantity;
+            $item->product->save();
         }
-        // dd($check);
+
+        
 
         if($check == 1){
             $trans = Transaction::create([
@@ -65,7 +73,6 @@ class TransactionController extends Controller
                 'slug' => $cart->id,
             ]);
         }
-
 
         // dd($trans);
 

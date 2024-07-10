@@ -74,7 +74,7 @@ class UserProfileController extends Controller
     }
 
     public function updateProfile(Request $request){
-        // dd($request);
+        // dd($request->all());
         $user = auth()->user();
         $rules=[
            'name' => 'required|string|max:255',
@@ -96,14 +96,13 @@ class UserProfileController extends Controller
             ],
             'dob' => 'required|date',
             'address'=> 'required|string',
-
-            // 'profile_photo_path' => 'nullable',
-            // 'profile_photo_path.*' => 'nullable | image | mimes : jpg ,jpeg,png |max:2048',
-            // 'role' => 'required|string|max:255'
+            'profile_picture' => 'nullable',
+            'profile_picture.*' => 'nullable | image | mimes : jpg ,jpeg,png |max:2048'
+            // 'role' => 'required|boolean|max:255'
         ];
 
         
-
+        
         // if($request->email!=$user->email){
         //     $rules["email"]= "required|unique:users";
         // }
@@ -111,6 +110,15 @@ class UserProfileController extends Controller
         //     $rules["phone"]= "required|max:255|unique:users";
         // }
         $validatedData=$request->validate($rules);
+        
+
+        if ($request->hasFile('profile_picture')) {
+            $profilePhotoPath = $request->file('profile_picture')->store('item');
+            $validatedData['profile_picture'] = $profilePhotoPath;
+            
+        } else {
+            $validatedData['profile_picture'] = $user->profile_picture;
+        }
         // dd($request);
         //  if($request->file("image")){
         //     if($request->oldImage){
