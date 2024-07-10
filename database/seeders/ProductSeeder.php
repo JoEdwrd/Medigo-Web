@@ -22,40 +22,40 @@ Product::create([
     "price" => 15500,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-PANADOL EXTRA merupakan obat dengan kandungan Paracetamol dan Caffeine. Obat ini dapat digunakan untuk meringankan sakit kepala dan sakit gigi. Paracetamol sebagai analgetik, bekerja dengan meningkatkan ambang rasa sakit dan Caffeine bekerja dengan menghambat kerja reseptor adenosin sehingga mengurangi rasa nyeri.
+<strong>Description</strong><br>
+PANADOL EXTRA contains Paracetamol and Caffeine. This medicine can be used to relieve headaches and toothaches. Paracetamol, as an analgesic, works by increasing the pain threshold, while Caffeine works by inhibiting the action of adenosine receptors, thereby reducing pain.
 <br>
-<strong>Indikasi Umum</strong><br>
-Obat ini digunakan untuk meringankan sakit kepala dan sakit gigi.
+<strong>General Indication</strong><br>
+This medicine is used to relieve headaches and toothaches.
 <br>
-<strong>Komposisi</strong><br>
-Tiap kaplet mengandung Paracetamol 500 mg dan Caffeine 65 mg.
+<strong>Composition</strong><br>
+Each caplet contains Paracetamol 500 mg and Caffeine 65 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa dan anak-anak lebih dari 12 tahun : 1 Kaplet, ditelan dengan segelas air, 3-4 kali sehari bila gejala memburuk. Tidak melebihi 8 kaplet dalam 24 jam. Minimum interval penggunaan dosis adalah 4 jam.
+<strong>Dosage</strong><br>
+Adults and children over 12 years: 1 caplet, taken with a glass of water, 3-4 times a day if symptoms worsen. Do not exceed 8 caplets in 24 hours. The minimum interval between doses is 4 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati penggunaan obat ini pada penderita penyakit ginjal. Bila setelah 2 hari demam tidak menurun atau setelah 5 hari nyeri tidak menghilang, segera hubungi Unit Pelayanan Kesehatan. Penggunaan obat ini pada penderita yang mengkonsumsi alkohol, dapat meningkatkan risiko kerusakan fungsi hati. Kategori kehamilan : Kategori C: Mungkin berisiko. Obat digunakan dengan hati-hati apabila besarnya manfaat yang diperoleh melebihi besarnya risiko terhadap janin. Penelitian pada hewan uji menunjukkan risiko terhadap janin dan belum terdapat penelitian langsung terhadap wanita hamil.
+<strong>Precautions</strong><br>
+Use this medicine with caution in patients with kidney disease. If fever does not subside after 2 days or pain does not go away after 5 days, immediately contact a healthcare provider. Use of this medicine in patients who consume alcohol can increase the risk of liver damage. Pregnancy Category: Category C: May be at risk. The drug should be used with caution if the benefits outweigh the risks to the fetus. Animal studies have shown risk to the fetus and there are no direct studies in pregnant women.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Wanita hamil dan menyusui. Tidak dianjurkan untuk digunakan pada anak dibawah usia 12 tahun
+<strong>Contraindications</strong><br>
+Pregnant and breastfeeding women. Not recommended for use in children under 12 years of age.
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian obat umumnya memiliki efek samping tertentu dan sesuai dengan masing-masing individu. Jika terjadi efek samping yang berlebih dan berbahaya, harap konsultasikan kepada tenaga medis. Penggunaan jangka panjang dan dosis harap konsultasikan kepada tenaga medis. Penggunaan jangka panjang dan dosis besar dapat menyebabkan kerusakan hati. Efek samping lain yaitu reaksi hipersensitifitas seperti kemerahan atau gatal pada kulit, kulit terkelupas, kadang-kadang gangguan pernafasan atau bengkak pada bibir, lidah, tenggorokan, sariawan, memar-memar, pendarahan. Namun, reaksi efek samping jarang terjadi. Hentikan penggunaan obat dan segera hubungi dokter jika mengalami efek samping.
+<strong>Side Effects</strong><br>
+The use of medication generally has certain side effects, depending on the individual. If excessive and dangerous side effects occur, please consult medical personnel. Long-term use and dosage should be consulted with medical personnel. Long-term use and high doses can cause liver damage. Other side effects include hypersensitivity reactions such as redness or itching of the skin, peeling skin, occasional breathing difficulties or swelling of the lips, tongue, throat, sores in the mouth, bruising, bleeding. However, side effect reactions are rare. Stop using the medicine and immediately contact a doctor if side effects occur.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Sterling
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL9424502004A1"
 ]);
 
@@ -68,40 +68,40 @@ Product::create([
     "price" => 12000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-BODREX MIGRA mengandung Paracetamol dan Caffeine. Obat ini digunakan untuk meringankan sakit kepala sebelah (migrain) dan sakit kepala lainnya.
+<strong>Description</strong><br>
+BODREX MIGRA contains Paracetamol and Caffeine. This medicine is used to relieve migraines and other headaches.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala sebelah (migrain) dan sakit kepala lainnya.
+<strong>General Indication</strong><br>
+To relieve migraines and other headaches.
 <br>
-<strong>Komposisi</strong><br>
-Paracetamol 500 mg dan Caffeine 50 mg.
+<strong>Composition</strong><br>
+Paracetamol 500 mg and Caffeine 50 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 kaplet setiap 4 jam jika diperlukan, maksimal 8 kaplet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 caplets every 4 hours as needed, with a maximum of 8 caplets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati, ginjal, alkoholik, atau wanita hamil dan menyusui.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, alcoholics, or pregnant and breastfeeding women.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap kandungan obat ini.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to the ingredients of this medicine.
 <br>
-<strong>Efek Samping</strong><br>
-Mual, muntah, dan reaksi alergi lainnya.
+<strong>Side Effects</strong><br>
+Nausea, vomiting, and other allergic reactions.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas Terbatas
+<strong>Product Category</strong><br>
+Over-the-counter Limited Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Tempo Scan Pacific
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL9237404016A1"
 ]);
 
@@ -114,40 +114,40 @@ Product::create([
     "price" => 11000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-PARAMEX mengandung Paracetamol, Propyphenazone, Caffeine, dan Dextromethorphan HBr. Obat ini digunakan untuk meringankan sakit kepala, demam, dan sakit gigi.
+<strong>Description</strong><br>
+PARAMEX contains Paracetamol, Propyphenazone, Caffeine, and Dextromethorphan HBr. This medicine is used to relieve headaches, fever, and toothaches.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, demam, dan sakit gigi.
+<strong>General Indication</strong><br>
+To relieve headaches, fever, and toothaches.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg, Propyphenazone 150 mg, Caffeine 50 mg, Dextromethorphan HBr 10 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet 3 kali sehari, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets 3 times a day, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Tidak dianjurkan untuk penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Not recommended for patients with liver or kidney impairment.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap kandungan obat ini.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to the ingredients of this medicine.
 <br>
-<strong>Efek Samping</strong><br>
-Pusing, mual, muntah, dan reaksi alergi lainnya.
+<strong>Side Effects</strong><br>
+Dizziness, nausea, vomiting, and other allergic reactions.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Konimex
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL7623404817A1"
 ]);
 
@@ -160,40 +160,40 @@ Product::create([
     "price" => 15000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-PANADOL REGULAR mengandung Paracetamol. Obat ini digunakan untuk meringankan sakit kepala dan nyeri ringan lainnya.
+<strong>Description</strong><br>
+PANADOL REGULAR contains Paracetamol. This medicine is used to relieve headaches and other mild pain.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala dan nyeri ringan lainnya.
+<strong>General Indication</strong><br>
+To relieve headaches and other mild pain.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Paracetamol.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 GlaxoSmithKline
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL1234567890A1"
 ]);
 
@@ -206,40 +206,40 @@ Product::create([
     "price" => 12000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-BODREX mengandung Paracetamol dan Caffeine. Obat ini digunakan untuk meringankan sakit kepala, sakit gigi, dan demam.
+<strong>Description</strong><br>
+BODREX contains Paracetamol and Caffeine. This medicine is used to relieve headaches, toothaches, and fever.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, sakit gigi, dan demam.
+<strong>General Indication</strong><br>
+To relieve headaches, toothaches, and fever.
 <br>
-<strong>Komposisi</strong><br>
-Paracetamol 500 mg dan Caffeine 50 mg.
+<strong>Composition</strong><br>
+Paracetamol 500 mg and Caffeine 50 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4 jam jika diperlukan, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4 hours as needed, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal, serta penderita yang mengkonsumsi alkohol.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, and in those who consume alcohol.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol dan Caffeine.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Paracetamol and Caffeine.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Tempo Scan Pacific
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL6543210987A1"
 ]);
 
@@ -252,40 +252,40 @@ Product::create([
     "price" => 14000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-DUMIN mengandung Paracetamol. Obat ini digunakan untuk meringankan sakit kepala, nyeri otot, nyeri sendi, dan demam.
+<strong>Description</strong><br>
+DUMIN contains Paracetamol. This medicine is used to relieve headaches, muscle pain, joint pain, and fever.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, nyeri otot, nyeri sendi, dan demam.
+<strong>General Indication</strong><br>
+To relieve headaches, muscle pain, joint pain, and fever.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Paracetamol.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Konimex
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL1122334455A1"
 ]);
 
@@ -298,40 +298,40 @@ Product::create([
     "price" => 13000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-NEOZEP FORTE mengandung Paracetamol, Phenylehrine HCl, Chlorpheniramine Maleate, dan Caffeine. Obat ini digunakan untuk meringankan gejala flu seperti sakit kepala, hidung tersumbat, dan demam.
+<strong>Description</strong><br>
+NEOZEP FORTE contains Paracetamol, Phenylephrine HCl, Chlorpheniramine Maleate, and Caffeine. This medicine is used to relieve flu symptoms such as headaches, nasal congestion, and fever.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan gejala flu seperti sakit kepala, hidung tersumbat, dan demam.
+<strong>General Indication</strong><br>
+To relieve flu symptoms such as headaches, nasal congestion, and fever.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg, Phenylephrine HCl 5 mg, Chlorpheniramine Maleate 2 mg, Caffeine 25 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet 3 kali sehari.
+<strong>Dosage</strong><br>
+Adults: 1 tablet 3 times a day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.
+<strong>Usage Instructions</strong><br>
+After meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal, hipertensi, dan diabetes.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, hypertension, and diabetes.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap kandungan obat ini.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to the ingredients of this medicine.
 <br>
-<strong>Efek Samping</strong><br>
-Mengantuk, pusing, mual, dan reaksi alergi lainnya.
+<strong>Side Effects</strong><br>
+Drowsiness, dizziness, nausea, and other allergic reactions.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas Terbatas
+<strong>Product Category</strong><br>
+Over-the-counter Limited Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Pfizer
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL3344556677A1"
 ]);
 
@@ -344,40 +344,40 @@ Product::create([
     "price" => 16000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-ANTALGIN mengandung Metamizole Sodium. Obat ini digunakan untuk meringankan sakit kepala, sakit gigi, dan nyeri lainnya.
+<strong>Description</strong><br>
+ANTALGIN contains Metamizole Sodium. This medicine is used to relieve headaches, toothaches, and other pain.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, sakit gigi, dan nyeri lainnya.
+<strong>General Indication</strong><br>
+To relieve headaches, toothaches, and other pain.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Metamizole Sodium 500 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet 2-3 kali sehari.
+<strong>Dosage</strong><br>
+Adults: 1 tablet 2-3 times a day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.
+<strong>Usage Instructions</strong><br>
+After meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal, serta penderita yang mengkonsumsi alkohol.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, and in those who consume alcohol.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Metamizole Sodium.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Metamizole Sodium.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Keras
+<strong>Product Category</strong><br>
+Prescription Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Kalbe Farma
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL7788990011A1"
 ]);
 
@@ -390,40 +390,40 @@ Product::create([
     "price" => 9000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-SANMOL mengandung Paracetamol. Obat ini digunakan untuk meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>Description</strong><br>
+SANMOL contains Paracetamol. This medicine is used to relieve headaches, mild pain, and fever.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>General Indication</strong><br>
+To relieve headaches, mild pain, and fever.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Paracetamol.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Sanbe Farma
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL9988776655A1"
 ]);
 
@@ -436,40 +436,40 @@ Product::create([
     "price" => 17000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-SARIDON mengandung Paracetamol, Propyphenazone, dan Caffeine. Obat ini digunakan untuk meringankan sakit kepala, sakit gigi, dan nyeri lainnya.
+<strong>Description</strong><br>
+SARIDON contains Paracetamol, Propyphenazone, and Caffeine. This medicine is used to relieve headaches, toothaches, and other pain.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, sakit gigi, dan nyeri lainnya.
+<strong>General Indication</strong><br>
+To relieve headaches, toothaches, and other pain.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 250 mg, Propyphenazone 150 mg, Caffeine 50 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal, serta penderita yang mengkonsumsi alkohol.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, and in those who consume alcohol.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap kandungan obat ini.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to the ingredients of this medicine.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas Terbatas
+<strong>Product Category</strong><br>
+Prescription Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Bayer
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL4455667788A1"
 ]);
 
@@ -482,40 +482,40 @@ Product::create([
     "price" => 10000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-SUMAGESIC mengandung Paracetamol. Obat ini digunakan untuk meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>Description</strong><br>
+SUMAGESIC contains Paracetamol. This medicine is used to relieve headaches, mild pain, and fever.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>General Indication</strong><br>
+To relieve headaches, mild pain, and fever.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, with a maximum of 8 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Usage Instructions</strong><br>
+Before or after meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Paracetamol.
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Mensa
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL5566778899A1"
 ]);
 
@@ -528,40 +528,40 @@ Product::create([
     "price" => 18000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-TENSILON mengandung Ibuprofen. Obat ini digunakan untuk meringankan sakit kepala, nyeri ringan hingga sedang, dan nyeri haid.
+<strong>Description</strong><br>
+TENSILON contains Ibuprofen. This medicine is used to relieve headaches, mild to moderate pain, and menstrual pain.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, nyeri ringan hingga sedang, dan nyeri haid.
+<strong>General Indication</strong><br>
+To relieve headaches, mild to moderate pain, and menstrual pain.
 <br>
-<strong>Komposisi</strong><br>
+<strong>Composition</strong><br>
 Ibuprofen 400 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet setiap 4-6 jam jika diperlukan, maksimal 3 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1 tablet every 4-6 hours as needed, with a maximum of 3 tablets per day.
 <br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.
+<strong>Usage Instructions</strong><br>
+After meals.
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal, tukak lambung, dan penderita yang mengkonsumsi alkohol.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney impairment, peptic ulcer disease, and in those who consume alcohol.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Ibuprofen.
+<strong>Contraindications</strong><br>
+Patients with hypersensitivity to Ibuprofen.
 <br>
-<strong>Efek Samping</strong><br>
-Mual, muntah, pusing, dan reaksi alergi lainnya.
+<strong>Side Effects</strong><br>
+Nausea, vomiting, dizziness, and other allergic reactions.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Keras
+<strong>Product Category</strong><br>
+Prescription Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Sanbe Farma
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL3344556677A2"
 ]);
 
@@ -574,40 +574,40 @@ Product::create([
     "price" => 9000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-PAMOL mengandung Paracetamol. Obat ini digunakan untuk meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>Description</strong><br>
+PAMOL contains <strong>Paracetamol</strong>. This medicine is used to alleviate headaches, mild pain, and fever.<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Meringankan sakit kepala, nyeri ringan, dan demam.
+<strong>General Indications</strong><br>
+Alleviates headaches, mild pain, and fever.<br>
 <br>
-<strong>Komposisi</strong><br>
-Paracetamol 500 mg.
+<strong>Composition</strong><br>
+Paracetamol 500 mg.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa : 1-2 tablet setiap 4-6 jam, maksimal 8 tablet per hari.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets every 4-6 hours, maximum 8 tablets per day.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Sebelum atau sesudah makan.
+<strong>Administration</strong><br>
+Before or after meals.<br>
 <br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati atau ginjal.
+<strong>Precautions</strong><br>
+Use with caution in patients with liver or kidney dysfunction.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Paracetamol.
+<strong>Contraindications</strong><br>
+Hypersensitive to <strong>Paracetamol</strong>.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-counter medicine.<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Strip
+<strong>Packaging</strong><br>
+Per strip.<br>
 <br>
-<strong>Manufaktur</strong><br>
-Sanbe Farma
+<strong>Manufacturer</strong><br>
+Sanbe Farma<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: DBL2233445566A1"
 ]);
 
@@ -619,42 +619,31 @@ Product::create([
     "slug" => "hevit-c-1000mg",
     "stock" => 800,
     "price" => 89900,
-    "shortdesc" => "Per Kotak",
+    "shortdesc" => "Per Box",
     "description" => "
-<strong>Deskripsi</strong><br>
-Hevit-C merupakan suplemen yang mengandung Vitamin C dosis tinggi yang membantu menjaga daya tahan tubuh dan sebagai antioksidan.<br>
-<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga daya tahan tubuh dan sebagai antioksidan.<br>
-<br>
-<strong>Komposisi</strong><br>
-Vitamin C 1000 mg.<br>
-<br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet sekali sehari.<br>
-<br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.<br>
-<br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi ginjal.<br>
-<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Vitamin C.<br>
-<br>
-<strong>Efek Samping</strong><br>
-Mual, muntah, dan gangguan pencernaan.<br>
-<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<br>
-<strong>Kemasan</strong><br>
-Per Kotak<br>
-<br>
-<strong>Manufaktur</strong><br>
-Kalbe Farma<br>
-<br>
-<strong>No. Registrasi</strong><br>
+<strong>Description</strong><br>
+Hevit-C is a supplement containing <strong>high-dose Vitamin C</strong> that helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br><br>
+<strong>General Indications</strong><br>
+Helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br><br>
+<strong>Composition</strong><br>
+Vitamin C 1000 mg.<br><br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet once daily.<br><br>
+<strong>Administration</strong><br>
+After meals.<br><br>
+<strong>Caution</strong><br>
+Use with caution in patients with kidney function disorders.<br><br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to Vitamin C.<br><br>
+<strong>Side Effects</strong><br>
+Nausea, vomiting, and digestive disturbances.<br><br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br><br>
+<strong>Packaging</strong><br>
+Per Box<br><br>
+<strong>Manufacturer</strong><br>
+Kalbe Farma<br><br>
+<strong>Registration Number</strong><br>
 BPOM: D1234567890A1"
 ]);
 
@@ -665,42 +654,31 @@ Product::create([
     "slug" => "vitamin-d3-1000-iu",
     "stock" => 600,
     "price" => 320000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Vitamin D3 1000 IU membantu menjaga kesehatan tulang dan mendukung sistem kekebalan tubuh.<br>
-<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga kesehatan tulang dan mendukung sistem kekebalan tubuh.<br>
-<br>
-<strong>Komposisi</strong><br>
-Vitamin D3 1000 IU.<br>
-<br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet sekali sehari.<br>
-<br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.<br>
-<br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita hiperkalsemia.<br>
-<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Vitamin D.<br>
-<br>
-<strong>Efek Samping</strong><br>
-Mual, muntah, dan gangguan pencernaan.<br>
-<br>
-<strong>Golongan Produk</strong><br>
-Suplemen Makanan<br>
-<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<br>
-<strong>Manufaktur</strong><br>
-Radiant Sentral Nutrindo<br>
-<br>
-<strong>No. Registrasi</strong><br>
+<strong>Description</strong><br>
+Vitamin D3 1000 IU helps maintain bone health and supports the immune system.<br><br>
+<strong>General Indications</strong><br>
+Helps maintain bone health and supports the immune system.<br><br>
+<strong>Composition</strong><br>
+Vitamin D3 1000 IU.<br><br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet once daily.<br><br>
+<strong>Administration</strong><br>
+After meals.<br><br>
+<strong>Caution</strong><br>
+Use with caution in patients with hypercalcemia.<br><br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to Vitamin D.<br><br>
+<strong>Side Effects</strong><br>
+Nausea, vomiting, and digestive disturbances.<br><br>
+<strong>Product Category</strong><br>
+Food Supplement<br><br>
+<strong>Packaging</strong><br>
+Per Bottle<br><br>
+<strong>Manufacturer</strong><br>
+Radiant Sentral Nutrindo<br><br>
+<strong>Registration Number</strong><br>
 BPOM: SI114303141"
 ]);
 
@@ -711,42 +689,31 @@ Product::create([
     "slug" => "vitamin-b-complex",
     "stock" => 700,
     "price" => 18000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Vitamin B Complex mengandung berbagai jenis Vitamin B yang membantu menjaga kesehatan saraf dan meningkatkan energi.<br>
-<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga kesehatan saraf dan meningkatkan energi.<br>
-<br>
-<strong>Komposisi</strong><br>
-Vitamin B1 100 mg, Vitamin B6 100 mg, Vitamin B12 100 mcg.<br>
-<br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet sekali sehari.<br>
-<br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.<br>
-<br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi hati.<br>
-<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Vitamin B.<br>
-<br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.<br>
-<br>
-<strong>Golongan Produk</strong><br>
-Suplemen Makanan<br>
-<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<br>
-<strong>Manufaktur</strong><br>
-Sanbe Farma<br>
-<br>
-<strong>No. Registrasi</strong><br>
+<strong>Description</strong><br>
+Vitamin B Complex contains various types of Vitamin B that help maintain nerve health and increase energy.<br><br>
+<strong>General Indications</strong><br>
+Helps maintain nerve health and increase energy.<br><br>
+<strong>Composition</strong><br>
+Vitamin B1 100 mg, Vitamin B6 100 mg, Vitamin B12 100 mcg.<br><br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet once daily.<br><br>
+<strong>Administration</strong><br>
+After meals.<br><br>
+<strong>Caution</strong><br>
+Use with caution in patients with liver function disorders.<br><br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to Vitamin B.<br><br>
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.<br><br>
+<strong>Product Category</strong><br>
+Food Supplement<br><br>
+<strong>Packaging</strong><br>
+Per Bottle<br><br>
+<strong>Manufacturer</strong><br>
+Sanbe Farma<br><br>
+<strong>Registration Number</strong><br>
 BPOM: D1122334455A1"
 ]);
 
@@ -757,42 +724,31 @@ Product::create([
     "slug" => "vitamin-e-400-iu",
     "stock" => 900,
     "price" => 30000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Nutrimax Vitamin E 400 IU adalah suplemen antioksidan yang membantu menjaga kesehatan kulit dan sel tubuh.<br>
-<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga kesehatan kulit dan sel tubuh.<br>
-<br>
-<strong>Komposisi</strong><br>
-Vitamin E 400 IU.<br>
-<br>
-<strong>Dosis</strong><br>
-Dewasa : 1 kapsul sekali sehari.<br>
-<br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.<br>
-<br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan pencernaan.<br>
-<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap Vitamin E.<br>
-<br>
-<strong>Efek Samping</strong><br>
-Reaksi alergi seperti ruam kulit dan gatal-gatal.<br>
-<br>
-<strong>Golongan Produk</strong><br>
-Suplemen Makanan<br>
-<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<br>
-<strong>Manufaktur</strong><br>
-Suryaprana Nutrisindo<br>
-<br>
-<strong>No. Registrasi</strong><br>
+<strong>Description</strong><br>
+Nutrimax Vitamin E 400 IU is an antioxidant supplement that helps maintain skin health and cell integrity.<br><br>
+<strong>General Indications</strong><br>
+Helps maintain skin health and cell integrity.<br><br>
+<strong>Composition</strong><br>
+Vitamin E 400 IU.<br><br>
+<strong>Dosage</strong><br>
+Adults: 1 capsule once daily.<br><br>
+<strong>Administration</strong><br>
+After meals.<br><br>
+<strong>Caution</strong><br>
+Use with caution in patients with digestive disorders.<br><br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to Vitamin E.<br><br>
+<strong>Side Effects</strong><br>
+Allergic reactions such as skin rash and itching.<br><br>
+<strong>Product Category</strong><br>
+Food Supplement<br><br>
+<strong>Packaging</strong><br>
+Per Bottle<br><br>
+<strong>Manufacturer</strong><br>
+Suryaprana Nutrisindo<br><br>
+<strong>Registration Number</strong><br>
 BPOM: SI184309721"
 ]);
 
@@ -805,40 +761,29 @@ Product::create([
     "price" => 22000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Zegafit adalah suplemen yang mengandung berbagai vitamin dan mineral yang membantu meningkatkan daya tahan tubuh dan kesehatan secara umum.<br>
-<br>
-<strong>Indikasi Umum</strong><br>
-Membantu meningkatkan daya tahan tubuh dan kesehatan secara umum.<br>
-<br>
-<strong>Komposisi</strong><br>
-Vitamin A 5000 IU, Vitamin B1 1.5 mg, Vitamin B2 1.7 mg, Vitamin B6 2 mg, Vitamin B12 6 mcg, Vitamin C 60 mg, Vitamin D 400 IU, Vitamin E 30 IU, Zinc 11 mg.<br>
-<br>
-<strong>Dosis</strong><br>
-Dewasa : 1 tablet sekali sehari.<br>
-<br>
-<strong>Aturan Pakai</strong><br>
-Sesudah makan.<br>
-<br>
-<strong>Perhatian</strong><br>
-Hati-hati pada penderita gangguan fungsi ginjal.<br>
-<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap komposisi vitamin dan mineral dalam produk ini.<br>
-<br>
-<strong>Efek Samping</strong><br>
-Mual, muntah, dan gangguan pencernaan.<br>
-<br>
-<strong>Golongan Produk</strong><br>
-Suplemen Makanan<br>
-<br>
-<strong>Kemasan</strong><br>
-Per Strip<br>
-<br>
-<strong>Manufaktur</strong><br>
-Kalbe Farma<br>
-<br>
-<strong>No. Registrasi</strong><br>
+<strong>Description</strong><br>
+Zegafit is a supplement containing various vitamins and minerals that help boost immune function and overall health.<br><br>
+<strong>General Indications</strong><br>
+Helps boost immune function and overall health.<br><br>
+<strong>Composition</strong><br>
+Vitamin A 5000 IU, Vitamin B1 1.5 mg, Vitamin B2 1.7 mg, Vitamin B6 2 mg, Vitamin B12 6 mcg, Vitamin C 60 mg, Vitamin D 400 IU, Vitamin E 30 IU, Zinc 11 mg.<br><br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet once daily.<br><br>
+<strong>Administration</strong><br>
+After meals.<br><br>
+<strong>Caution</strong><br>
+Use with caution in patients with kidney function disorders.<br><br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to the composition of vitamins and minerals in this product.<br><br>
+<strong>Side Effects</strong><br>
+Nausea, vomiting, and digestive disturbances.<br><br>
+<strong>Product Category</strong><br>
+Food Supplement<br><br>
+<strong>Packaging</strong><br>
+Per Strip<br><br>
+<strong>Manufacturer</strong><br>
+Kalbe Farma<br><br>
+<strong>Registration Number</strong><br>
 BPOM: SD151546531"
 ]);
 
@@ -852,40 +797,40 @@ Product::create([
     "price" => 9700,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Promag Tablet adalah obat yang digunakan untuk meredakan gejala maag dan sakit perut akibat kelebihan asam lambung.
+<strong>Description</strong><br>
+Promag Tablet is a medicine used to relieve symptoms of gastritis and stomach pain due to excess stomach acid.<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala maag, sakit perut, dan kelebihan asam lambung.
+<strong>General Indications</strong><br>
+Relieves symptoms of gastritis, stomach pain, and excess stomach acid.<br>
 <br>
-<strong>Komposisi</strong><br>
-Hydrotalcite 200 mg, Magnesium Hydroxide 150 mg, Simethicone 50 mg.
+<strong>Composition</strong><br>
+Hydrotalcite 200 mg, Magnesium Hydroxide 150 mg, Simethicone 50 mg.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets, 3-4 times a day after meals.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.
+<strong>Administration</strong><br>
+Take after meals.<br>
 <br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan konstipasi atau diare.
+<strong>Side Effects</strong><br>
+May cause constipation or diarrhea.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Strip
+<strong>Packaging</strong><br>
+Per Strip<br>
 <br>
-<strong>Manufaktur</strong><br>
-Kalbe Farma
+<strong>Manufacturer</strong><br>
+Kalbe Farma<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI123456789"
 ]);
 
@@ -896,42 +841,42 @@ Product::create([
     "slug" => "mylanta-liquid-50ml",
     "stock" => 800,
     "price" => 19000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Mylanta Liquid adalah obat cair yang membantu mengurangi gejala mulas dan gangguan pencernaan akibat asam lambung berlebih.
+<strong>Description</strong><br>
+Mylanta Liquid is a liquid medicine that helps reduce symptoms of heartburn and digestive disturbances due to excess stomach acid.<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala mulas dan gangguan pencernaan akibat asam lambung berlebih.
+<strong>General Indications</strong><br>
+Relieves symptoms of heartburn and digestive disturbances due to excess stomach acid.<br>
 <br>
-<strong>Komposisi</strong><br>
-Aluminium Hydroxide, Magnesium Hydroxide, Simethicone.
+<strong>Composition</strong><br>
+Aluminium Hydroxide, Magnesium Hydroxide, Simethicone.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 sendok makan, 3-4 kali sehari setelah makan dan sebelum tidur.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablespoons, 3-4 times a day after meals and before bedtime.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan dan sebelum tidur.
+<strong>Administration</strong><br>
+Take after meals and before bedtime.<br>
 <br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan konstipasi atau diare.
+<strong>Side Effects</strong><br>
+May cause constipation or diarrhea.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Botol
+<strong>Packaging</strong><br>
+Per Bottle<br>
 <br>
-<strong>Manufaktur</strong><br>
-Pfizer
+<strong>Manufacturer</strong><br>
+Pfizer<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567890"
 ]);
 
@@ -944,40 +889,40 @@ Product::create([
     "price" => 12000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Polysilane Tablet adalah obat yang digunakan untuk mengatasi gejala kembung, perut kembung, dan kelebihan gas di saluran pencernaan.
+<strong>Description</strong><br>
+Polysilane Tablet is a medicine used to relieve symptoms of bloating, abdominal distension, and excess gas in the digestive tract.<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala kembung dan kelebihan gas di saluran pencernaan.
+<strong>General Indications</strong><br>
+Relieves symptoms of bloating and excess gas in the digestive tract.<br>
 <br>
-<strong>Komposisi</strong><br>
-Dimethicone 50 mg, Aluminium Hydroxide 200 mg, Magnesium Hydroxide 200 mg.
+<strong>Composition</strong><br>
+Dimethicone 50 mg, Aluminium Hydroxide 200 mg, Magnesium Hydroxide 200 mg.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets, 3-4 times a day after meals.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.
+<strong>Administration</strong><br>
+Take after meals.<br>
 <br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan konstipasi atau diare.
+<strong>Side Effects</strong><br>
+May cause constipation or diarrhea.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Strip
+<strong>Packaging</strong><br>
+Per Strip<br>
 <br>
-<strong>Manufaktur</strong><br>
-Pharos
+<strong>Manufacturer</strong><br>
+Pharos<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI345678901"
 ]);
 
@@ -990,40 +935,40 @@ Product::create([
     "price" => 12000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Enzyplex Tablet adalah suplemen enzim yang membantu proses pencernaan makanan di dalam saluran pencernaan.
+<strong>Description</strong><br>
+Enzyplex Tablet is an enzyme supplement that aids in the digestion of food in the digestive tract.<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Membantu proses pencernaan makanan.
+<strong>General Indications</strong><br>
+Aids in the digestion of food.<br>
 <br>
-<strong>Komposisi</strong><br>
-Amylase, Protease, Lipase, dan enzim-enzim pencernaan lainnya.
+<strong>Composition</strong><br>
+Amylase, Protease, Lipase, and other digestive enzymes.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 tablet, 3 kali sehari setelah makan.
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets, 3 times a day after meals.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.
+<strong>Administration</strong><br>
+Take after meals.<br>
 <br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan seperti mual dan diare.
+<strong>Side Effects</strong><br>
+May cause digestive disturbances such as nausea and diarrhea.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Suplemen
+<strong>Product Category</strong><br>
+Supplement<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Strip
+<strong>Packaging</strong><br>
+Per Strip<br>
 <br>
-<strong>Manufaktur</strong><br>
-Meprofarm
+<strong>Manufacturer</strong><br>
+Meprofarm<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI456789012"
 ]);
 
@@ -1036,40 +981,40 @@ Product::create([
     "price" => 15000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Lansoprazole Capsule adalah obat yang digunakan untuk mengurangi produksi asam lambung dan mengobati tukak lambung serta gastroesophageal reflux disease (GERD).
+<strong>Description</strong><br>
+Lansoprazole Capsule is a medicine used to reduce stomach acid production and treat gastric ulcers and gastroesophageal reflux disease (GERD).<br>
 <br>
-<strong>Indikasi Umum</strong><br>
-Mengobati tukak lambung dan gastroesophageal reflux disease (GERD).
+<strong>General Indications</strong><br>
+Treats gastric ulcers and gastroesophageal reflux disease (GERD).<br>
 <br>
-<strong>Komposisi</strong><br>
-Lansoprazole 30 mg.
+<strong>Composition</strong><br>
+Lansoprazole 30 mg.<br>
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1 kapsul sehari sebelum makan.
+<strong>Dosage</strong><br>
+Adults: 1 capsule daily before meals.<br>
 <br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum makan.
+<strong>Administration</strong><br>
+Take before meals.<br>
 <br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
 <br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
 <br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan sakit kepala, diare, dan gangguan pencernaan.
+<strong>Side Effects</strong><br>
+May cause headache, diarrhea, and digestive disturbances.<br>
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Keras
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
 <br>
-<strong>Kemasan</strong><br>
-Per Strip
+<strong>Packaging</strong><br>
+Per Strip<br>
 <br>
-<strong>Manufaktur</strong><br>
-Hexpharm Jaya Laboratories
+<strong>Manufacturer</strong><br>
+Hexpharm Jaya Laboratories<br>
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: GKL 0308508603A1"
 ]);
 
@@ -1083,29 +1028,40 @@ Product::create([
     "price" => 25000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Cetirizine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti bersin, gatal, mata berair, dan pilek.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala alergi seperti bersin, gatal, mata berair, dan pilek.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Cetirizine Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, watery eyes, and runny nose.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves allergy symptoms such as sneezing, itching, watery eyes, and runny nose.<br>
+<br>
+<strong>Composition</strong><br>
 Cetirizine HCl 10 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum atau sesudah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet daily.<br>
+<br>
+<strong>Administration</strong><br>
+Take before or after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause drowsiness, dry mouth, and headache.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Hexpharm Jaya<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: GTL 0408511617A1"
 ]);
 
@@ -1116,31 +1072,42 @@ Product::create([
     "slug" => "loratadine-syrup",
     "stock" => 1500,
     "price" => 35000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Loratadine Syrup adalah antihistamin yang digunakan untuk meredakan gejala alergi pada anak-anak seperti bersin, gatal, mata berair, dan pilek.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala alergi pada anak-anak seperti bersin, gatal, mata berair, dan pilek.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Loratadine Syrup is an antihistamine used to relieve allergy symptoms in children such as sneezing, itching, watery eyes, and runny nose.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves allergy symptoms in children such as sneezing, itching, watery eyes, and runny nose.<br>
+<br>
+<strong>Composition</strong><br>
 Loratadine 5 mg/5 mL.<br>
-<strong>Dosis</strong><br>
-Anak-anak: 1-2 sendok teh (5-10 mL) sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum atau sesudah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Children: 1-2 teaspoons (5-10 mL) daily.<br>
+<br>
+<strong>Administration</strong><br>
+Take before or after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause drowsiness, dry mouth, and headache.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<br>
+<strong>Manufacturer</strong><br>
 Sanbe Farma<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI789012345"
 ]);
 
@@ -1153,29 +1120,40 @@ Product::create([
     "price" => 10000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Chlorpheniramine Maleate Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti bersin, gatal, dan mata berair.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala alergi seperti bersin, gatal, dan mata berair.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Chlorpheniramine Maleate Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, and watery eyes.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves allergy symptoms such as sneezing, itching, and watery eyes.<br>
+<br>
+<strong>Composition</strong><br>
 Chlorpheniramine Maleate 4 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet, 3-4 kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan kantuk, mulut kering, dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet, 3-4 times a day.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause drowsiness, dry mouth, and headache.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Kimia Farma<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI890123456"
 ]);
 
@@ -1188,29 +1166,40 @@ Product::create([
     "price" => 45000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Fexofenadine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti urtikaria (biduran) dan rinitis alergi.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala urtikaria (biduran) dan rinitis alergi.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Fexofenadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves symptoms of urticaria (hives) and allergic rhinitis.<br>
+<br>
+<strong>Composition</strong><br>
 Fexofenadine HCl 180 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum atau sesudah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan sakit kepala, mual, dan pusing.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet daily.<br>
+<br>
+<strong>Administration</strong><br>
+Take before or after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause headache, nausea, and dizziness.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Merck Sharp & Dohme<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI901234567"
 ]);
 
@@ -1223,29 +1212,40 @@ Product::create([
     "price" => 40000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Desloratadine Tablet adalah antihistamin yang digunakan untuk meredakan gejala alergi seperti urtikaria (biduran) dan rinitis alergi.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala urtikaria (biduran) dan rinitis alergi.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Desloratadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves symptoms of urticaria (hives) and allergic rhinitis.<br>
+<br>
+<strong>Composition</strong><br>
 Desloratadine 5 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum atau sesudah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen dari obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan sakit kepala, mulut kering, dan kelelahan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet daily.<br>
+<br>
+<strong>Administration</strong><br>
+Take before or after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medicine.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause headache, dry mouth, and fatigue.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Bayer<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI012345678"
 ]);
 
@@ -1259,29 +1259,40 @@ Product::create([
     "price" => 10000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Paracetamol Tablet adalah obat yang digunakan untuk meredakan nyeri ringan hingga sedang.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan nyeri ringan hingga sedang.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Paracetamol Tablet is a medication used to relieve mild to moderate pain.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves mild to moderate pain.<br>
+<br>
+<strong>Composition</strong><br>
 Paracetamol 500 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 tablet, 3-4 kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap paracetamol.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan mual dan ruam kulit.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets, 3-4 times a day.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to paracetamol.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause nausea and skin rash.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Kimia Farma<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI123456789"
 ]);
 
@@ -1294,29 +1305,40 @@ Product::create([
     "price" => 20000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Ibuprofen Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk meredakan nyeri dan peradangan.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan nyeri dan peradangan.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Ibuprofen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and inflammation.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves pain and inflammation.<br>
+<br>
+<strong>Composition</strong><br>
 Ibuprofen 400 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet, 3 kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap ibuprofen.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan dan mual.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet, 3 times a day after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to ibuprofen.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause digestive disorders and nausea.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Phapros<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567890"
 ]);
 
@@ -1329,29 +1351,40 @@ Product::create([
     "price" => 30000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Naproxen Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk mengurangi nyeri dan peradangan.<br>
-<strong>Indikasi Umum</strong><br>
-Mengurangi nyeri dan peradangan.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Naproxen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>
+<br>
+<strong>General Indications</strong><br>
+Reduces pain and inflammation.<br>
+<br>
+<strong>Composition</strong><br>
 Naproxen 500 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet, 2 kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap naproxen.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet, twice a day after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to naproxen.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause digestive disorders and headache.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Pfizer<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI345678901"
 ]);
 
@@ -1364,29 +1397,40 @@ Product::create([
     "price" => 15000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Aspirin Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk meredakan nyeri ringan hingga sedang.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan nyeri ringan hingga sedang.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Aspirin Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve mild to moderate pain.<br>
+<br>
+<strong>General Indications</strong><br>
+Relieves mild to moderate pain.<br>
+<br>
+<strong>Composition</strong><br>
 Aspirin 500 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 tablet, 3-4 kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap aspirin.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan dan perdarahan lambung.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1-2 tablets, 3-4 times a day after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to aspirin.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause digestive disorders and gastric bleeding.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Bayer<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI456789012"
 ]);
 
@@ -1399,29 +1443,40 @@ Product::create([
     "price" => 40000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Diclofenac Sodium Tablet adalah obat antiinflamasi nonsteroid (NSAID) yang digunakan untuk mengurangi nyeri dan peradangan.<br>
-<strong>Indikasi Umum</strong><br>
-Mengurangi nyeri dan peradangan.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Diclofenac Sodium Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>
+<br>
+<strong>General Indications</strong><br>
+Reduces pain and inflammation.<br>
+<br>
+<strong>Composition</strong><br>
 Diclofenac Sodium 50 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet, 2-3 kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap diclofenac sodium.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet, 2-3 times a day after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to diclofenac sodium.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause digestive disorders and headache.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Novartis<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI567890123"
 ]);
 
@@ -1433,31 +1488,42 @@ Product::create([
     "slug" => "hepabion-forte",
     "stock" => 3000,
     "price" => 50000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Hepabion Forte adalah suplemen yang mengandung vitamin dan mineral untuk mendukung kesehatan hati.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga kesehatan hati dan fungsi liver.<br>
-<strong>Komposisi</strong><br>
-Vitamin B12, B6, Nicotinamide, dan lainnya.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Hepabion Forte is a supplement containing vitamins and minerals to support liver health.<br>
+<br>
+<strong>General Indications</strong><br>
+Helps maintain liver health and function.<br>
+<br>
+<strong>Composition</strong><br>
+Vitamin B12, B6, Nicotinamide, and others.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<br>
+<strong>Manufacturer</strong><br>
 Kimia Farma<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI678901234"
 ]);
 
@@ -1468,31 +1534,42 @@ Product::create([
     "slug" => "liv-52",
     "stock" => 4500,
     "price" => 30000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Liv 52 adalah suplemen herbal yang digunakan untuk mendukung kesehatan hati dan memperbaiki fungsi liver.<br>
-<strong>Indikasi Umum</strong><br>
-Mendukung kesehatan hati dan memperbaiki fungsi liver.<br>
-<strong>Komposisi</strong><br>
-Ekstrak herbal seperti Capparis spinosa dan Cichorium intybus.<br>
-<strong>Dosis</strong><br>
-Dewasa: 2 tablet dua kali sehari sebelum makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum sebelum makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan reaksi alergi pada beberapa orang.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Liv 52 is an herbal supplement used to support liver health and improve liver function.<br>
+<br>
+<strong>General Indications</strong><br>
+Supports liver health and improves liver function.<br>
+<br>
+<strong>Composition</strong><br>
+Herbal extracts such as Capparis spinosa and Cichorium intybus.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 2 tablets twice daily before meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take before meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause allergic reactions in some individuals.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<br>
+<strong>Manufacturer</strong><br>
 Himalaya<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI789012345"
 ]);
 
@@ -1503,31 +1580,42 @@ Product::create([
     "slug" => "essentiale-forte",
     "stock" => 2000,
     "price" => 860000,
-    "shortdesc" => "Per Kotak",
+    "shortdesc" => "Per Box",
     "description" => "
-<strong>Deskripsi</strong><br>
-Essentiale Forte adalah suplemen yang mengandung fosfolipid esensial untuk mendukung kesehatan hati.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu memperbaiki fungsi hati dan melindungi sel-sel hati.<br>
-<strong>Komposisi</strong><br>
-Fosfolipid esensial 300 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1-2 kapsul tiga kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Kotak<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Essentiale Forte is a supplement containing essential phospholipids to support liver health.<br>
+<br>
+<strong>General Indications</strong><br>
+Helps improve liver function and protect liver cells.<br>
+<br>
+<strong>Composition</strong><br>
+Essential phospholipids 300 mg.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1-2 capsules three times daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Box<br>
+<br>
+<strong>Manufacturer</strong><br>
 Sanofi<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI890123456"
 ]);
 
@@ -1540,29 +1628,40 @@ Product::create([
     "price" => 40000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Silymarin Tablet adalah suplemen yang mengandung ekstrak Milk Thistle untuk mendukung kesehatan hati.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu melindungi sel-sel hati dan memperbaiki fungsi hati.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Silymarin Tablet is a supplement containing Milk Thistle extract to support liver health.<br>
+<br>
+<strong>General Indications</strong><br>
+Helps protect liver cells and improve liver function.<br>
+<br>
+<strong>Composition</strong><br>
 Silymarin 140 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet dua kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet twice daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Mega We Care<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI901234567"
 ]);
 
@@ -1573,71 +1672,93 @@ Product::create([
     "slug" => "livercare-capsule",
     "stock" => 2800,
     "price" => 45000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-LiverCare Capsule adalah suplemen yang mengandung herbal alami untuk mendukung fungsi hati dan melindungi sel-sel hati.<br>
-<strong>Indikasi Umum</strong><br>
-Mendukung kesehatan hati dan memperbaiki fungsi hati.<br>
-<strong>Komposisi</strong><br>
-Ekstrak Milk Thistle, Dandelion, dan Artichoke.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 kapsul dua kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+LiverCare Capsule is a supplement containing natural herbs to support liver function and protect liver cells.<br>
+<br>
+<strong>General Indications</strong><br>
+Supports liver health and improves liver function.<br>
+<br>
+<strong>Composition</strong><br>
+Milk Thistle Extract, Dandelion, and Artichoke.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 capsule twice daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<br>
+<strong>Manufacturer</strong><br>
 Herbalife<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567890"
 ]);
 //obat hearing
 Product::create([
-    "category_id" => 6,
+    "category_id" => 7,
     "name" => "Ginkgo Biloba Extract",
     "patent" => 0,
     "slug" => "ginkgo-biloba-extract",
     "stock" => 3200,
     "price" => 50000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Ginkgo Biloba Extract adalah suplemen yang mengandung ekstrak daun Ginkgo Biloba untuk mendukung kesehatan pendengaran dan sirkulasi darah.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu meningkatkan sirkulasi darah ke otak dan telinga, serta mendukung fungsi pendengaran.<br>
-<strong>Komposisi</strong><br>
-Ekstrak Ginkgo Biloba 120 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 kapsul dua kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Ginkgo Biloba Extract is a supplement containing Ginkgo Biloba leaf extract to support hearing health and blood circulation.<br>
+<br>
+<strong>General Indications</strong><br>
+Helps improve blood circulation to the brain and ears, and supports hearing function.<br>
+<br>
+<strong>Composition</strong><br>
+Ginkgo Biloba Extract 120 mg.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 capsule twice daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances and headaches.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<br>
+<strong>Manufacturer</strong><br>
 Nature's Way<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567891"
 ]);
 
 Product::create([
-    "category_id" => 6,
+    "category_id" => 7,
     "name" => "Neurobion Forte",
     "patent" => 0,
     "slug" => "neurobion-forte",
@@ -1645,34 +1766,45 @@ Product::create([
     "price" => 52000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Neurobion Forte adalah suplemen yang mengandung vitamin B kompleks untuk mendukung kesehatan saraf dan pendengaran.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu menjaga kesehatan saraf dan fungsi pendengaran.<br>
-<strong>Komposisi</strong><br>
-Vitamin B1, B6, dan B12.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<strong>Description</strong><br>
+Neurobion Forte is a supplement containing vitamin B complex to support nerve health and hearing.<br>
+<br>
+<strong>General Indications</strong><br>
+Helps maintain nerve health and hearing function.<br>
+<br>
+<strong>Composition</strong><br>
+Vitamin B1, B6, and B12.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Merck<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI345678912"
 ]);
 
 Product::create([
-    "category_id" => 6,
+    "category_id" => 7,
     "name" => "Betahistine Mesylate",
     "patent" => 1,
     "slug" => "betahistine-mesylate",
@@ -1680,99 +1812,121 @@ Product::create([
     "price" => 70000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Betahistine Mesylate adalah obat yang digunakan untuk mengatasi vertigo dan masalah pendengaran terkait dengan gangguan pada telinga bagian dalam.<br>
-<strong>Indikasi Umum</strong><br>
-Mengatasi vertigo dan gangguan pendengaran akibat masalah pada telinga bagian dalam.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Betahistine Mesylate is a medication used to treat vertigo and hearing problems associated with disorders of the inner ear.<br>
+<br>
+<strong>General Indications</strong><br>
+To alleviate vertigo and hearing disorders caused by issues in the inner ear.<br>
+<br>
+<strong>Composition</strong><br>
 Betahistine Mesylate 24 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet dua kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen obat ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet twice daily after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this medication.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause digestive disturbances and headaches.<br>
+<br>
+<strong>Product Category</strong><br>
+Prescription Medication<br>
+<br>
+<strong>Packaging</strong><br>
 Per Strip<br>
-<strong>Manufaktur</strong><br>
+<br>
+<strong>Manufacturer</strong><br>
 Novartis<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI456789012"
 ]);
 
 Product::create([
-    "category_id" => 6,
+    "category_id" => 7,
     "name" => "Tanakan",
     "patent" => 0,
     "slug" => "tanakan",
     "stock" => 3200,
     "price" => 1450000,
-    "shortdesc" => "Per Kotak",
+    "shortdesc" => "Per Box",
     "description" => "
-<strong>Deskripsi</strong><br>
-Tanakan adalah suplemen yang mengandung ekstrak Ginkgo Biloba untuk mendukung kesehatan pendengaran dan fungsi kognitif.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu meningkatkan sirkulasi darah ke otak dan telinga, serta mendukung fungsi pendengaran.<br>
-<strong>Komposisi</strong><br>
-Ekstrak Ginkgo Biloba 40 mg.<br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet tiga kali sehari setelah makan.<br>
-<strong>Aturan Pakai</strong><br>
-Diminum setelah makan.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap salah satu komponen suplemen ini.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan gangguan pencernaan ringan dan sakit kepala.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Kotak<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Tanakan is a supplement containing Ginkgo Biloba extract to support auditory health and cognitive function.<br>
+<br>
+<strong>General Indications</strong><br>
+To help improve blood circulation to the brain and ears, and support auditory function.<br>
+<br>
+<strong>Composition</strong><br>
+Ginkgo Biloba Extract 40 mg.<br>
+<br>
+<strong>Dosage</strong><br>
+Adults: 1 tablet three times a day after meals.<br>
+<br>
+<strong>Administration</strong><br>
+Take after meals.<br>
+<br>
+<strong>Caution</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<br>
+<strong>Contraindications</strong><br>
+Patients hypersensitive to any component of this supplement.<br>
+<br>
+<strong>Side Effects</strong><br>
+May cause mild digestive disturbances and headaches.<br>
+<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Supplement<br>
+<br>
+<strong>Packaging</strong><br>
+Per Box<br>
+<br>
+<strong>Manufacturer</strong><br>
 Ipsen<br>
-<strong>No. Registrasi</strong><br>
+<br>
+<strong>Registration Number</strong><br>
 BPOM: SI567890123"
 ]);
 
 Product::create([
-    "category_id" => 6,
+    "category_id" => 7,
     "name" => "Acustivum",
     "patent" => 0,
     "slug" => "acustivum",
     "stock" => 1500,
     "price" => 85000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Acustivum adalah obat spray yang membantu menghilangkan wax plug yang ada, mencegah pembentukan wax plug, dan menjaga kebersihan saluran pendengaran<br>
-<strong>Indikasi Umum</strong><br>
-Mendukung kesehatan pendengaran dan kebersihan telinga.<br>
-<strong>Komposisi</strong><br>
-Sunflower oil, sweet almond oil, liquid paraffin, olive oil, jojoba oil, polysorbate 80, PPG-8, tocopherol (vitamin E), ascorbyl palmitate (vitamin C), ascorbic acid (vitamin C) , citric acid.<br>
-<strong>Aturen Pakai</strong><br>
-Dewasa: 1-2 semprotan di saluran pendengaran eksternal.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-jangan gunakan jika terjadi penyakit perforasi pada membran timpani atau adanya benda asing di telinga<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Description</strong><br>
+Acustivum is a spray medication that helps remove existing wax plugs, prevents the formation of wax plugs, and maintains ear hygiene.<br>
+<strong>General Indication</strong><br>
+Supports ear health and cleanliness.<br>
+<strong>Composition</strong><br>
+Sunflower oil, sweet almond oil, liquid paraffin, olive oil, jojoba oil, polysorbate 80, PPG-8, tocopherol (vitamin E), ascorbyl palmitate (vitamin C), ascorbic acid (vitamin C), citric acid.<br>
+<strong>Directions for Use</strong><br>
+Adults: 1-2 sprays into the external auditory canal.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Do not use in case of perforation of the tympanic membrane or presence of a foreign body in the ear.<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<strong>Manufacturer</strong><br>
 Zdrovit<br>"
 ]);
 
 //obat dental
 Product::create([
-    "category_id" => 7,
+    "category_id" => 8,
     "name" => "Parodontax",
     "patent" => 0,
     "slug" => "parodontax",
@@ -1780,34 +1934,34 @@ Product::create([
     "price" => 90000,
     "shortdesc" => "Per Tube",
     "description" => "
-<strong>Deskripsi</strong><br>
-Parodontax adalah pasta gigi yang diformulasikan khusus untuk membantu mengatasi masalah gusi berdarah dan menjaga kesehatan gusi.<br>
-<strong>Indikasi Umum</strong><br>
-Membantu mengatasi gusi berdarah dan menjaga kesehatan gusi.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Parodontax is a toothpaste specially formulated to help address bleeding gums and maintain gum health.<br>
+<strong>General Indication</strong><br>
+Helps alleviate bleeding gums and maintain gum health.<br>
+<strong>Composition</strong><br>
 Bicarbonate Soda, Sodium Fluoride.<br>
-<strong>Dosis</strong><br>
-Dewasa: Sikat gigi dua kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Gunakan seperti pasta gigi biasa.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh penderita alergi terhadap komponen produk.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan iritasi pada beberapa individu.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
+<strong>Dosage</strong><br>
+Adults: Brush teeth twice a day.<br>
+<strong>Directions for Use</strong><br>
+Use like regular toothpaste.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Not suitable for individuals allergic to any of the product components.<br>
+<strong>Side Effects</strong><br>
+May cause irritation in some individuals.<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<strong>Packaging</strong><br>
 Per Tube<br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 GlaxoSmithKline<br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI123456789"
 ]);
 
 Product::create([
-    "category_id" => 7,
+    "category_id" => 8,
     "name" => "Orajel",
     "patent" => 1,
     "slug" => "orajel",
@@ -1815,139 +1969,139 @@ Product::create([
     "price" => 45000,
     "shortdesc" => "Per Tube",
     "description" => "
-<strong>Deskripsi</strong><br>
-Orajel adalah gel anestesi topikal yang digunakan untuk meredakan nyeri gigi dan iritasi mulut.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan nyeri gigi dan iritasi mulut.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Orajel is a topical anesthetic gel used to relieve toothache and mouth irritation.<br>
+<strong>General Indication</strong><br>
+Relieves toothache and mouth irritation.<br>
+<strong>Composition</strong><br>
 Benzocaine 20%.<br>
-<strong>Dosis</strong><br>
-Oleskan secukupnya pada area yang sakit maksimal 4 kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Oleskan langsung pada area yang sakit.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap benzocaine.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan reaksi alergi pada beberapa individu.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
+<strong>Dosage</strong><br>
+Apply a sufficient amount to the affected area up to 4 times daily.<br>
+<strong>Directions for Use</strong><br>
+Apply directly to the affected area.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to benzocaine.<br>
+<strong>Side Effects</strong><br>
+May cause allergic reactions in some individuals.<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<strong>Packaging</strong><br>
 Per Tube<br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Church & Dwight<br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567890"
 ]);
 
 Product::create([
-    "category_id" => 7,
+    "category_id" => 8,
     "name" => "Lidocaine Viscous",
     "patent" => 1,
     "slug" => "lidocaine-viscous",
     "stock" => 1500,
     "price" => 60000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Lidocaine Viscous adalah larutan anestesi lokal yang digunakan untuk mengatasi nyeri mulut dan tenggorokan.<br>
-<strong>Indikasi Umum</strong><br>
-Mengatasi nyeri mulut dan tenggorokan.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Lidocaine Viscous is a local anesthetic solution used to relieve mouth and throat pain.<br>
+<strong>General Indication</strong><br>
+Relieves mouth and throat pain.<br>
+<strong>Composition</strong><br>
 Lidocaine Hydrochloride 2%.<br>
-<strong>Dosis</strong><br>
-Oleskan secukupnya pada area yang sakit sesuai kebutuhan, maksimal 4 kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Oleskan langsung pada area yang sakit.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap lidocaine.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan reaksi alergi pada beberapa individu.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Dosage</strong><br>
+Apply a sufficient amount to the affected area as needed, up to 4 times daily.<br>
+<strong>Directions for Use</strong><br>
+Apply directly to the affected area.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to lidocaine.<br>
+<strong>Side Effects</strong><br>
+May cause allergic reactions in some individuals.<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<strong>Manufacturer</strong><br>
 Pfizer<br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI345678901"
 ]);
 
 Product::create([
-    "category_id" => 7,
+    "category_id" => 8,
     "name" => "Corsodyl Mouthwash",
     "patent" => 0,
     "slug" => "corsodyl-mouthwash",
     "stock" => 3500,
     "price" => 55000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Corsodyl Mouthwash adalah obat kumur yang mengandung Chlorhexidine untuk mengatasi infeksi mulut dan masalah gusi.<br>
-<strong>Indikasi Umum</strong><br>
-Mengatasi infeksi mulut dan masalah gusi.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Corsodyl Mouthwash is a mouthwash containing Chlorhexidine to treat oral infections and gum problems.<br>
+<strong>General Indication</strong><br>
+Treats oral infections and gum problems.<br>
+<strong>Composition</strong><br>
 Chlorhexidine Digluconate 0.2%.<br>
-<strong>Dosis</strong><br>
-Berkumur 10 ml dua kali sehari.<br>
-<strong>Aturan Pakai</strong><br>
-Berkumur selama 30 detik lalu buang.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap chlorhexidine.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan perubahan warna gigi sementara.<br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Dosage</strong><br>
+Rinse with 10 ml twice a day.<br>
+<strong>Directions for Use</strong><br>
+Rinse for 30 seconds and then spit out.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to chlorhexidine.<br>
+<strong>Side Effects</strong><br>
+May cause temporary discoloration of teeth.<br>
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<strong>Manufacturer</strong><br>
 GlaxoSmithKline<br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI456789012"
 ]);
 
 Product::create([
-    "category_id" => 7,
+    "category_id" => 8,
     "name" => "Difflam Spray",
     "patent" => 1,
     "slug" => "difflam-spray",
     "stock" => 1800,
     "price" => 70000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong><br>
-Difflam Spray adalah semprotan mulut yang mengandung Benzydamine untuk meredakan nyeri dan iritasi di mulut dan tenggorokan.<br>
-<strong>Indikasi Umum</strong><br>
-Meredakan nyeri dan iritasi di mulut dan tenggorokan.<br>
-<strong>Komposisi</strong><br>
+<strong>Description</strong><br>
+Difflam Spray is a mouth spray containing Benzydamine to relieve pain and irritation in the mouth and throat.<br>
+<strong>General Indication</strong><br>
+Relieves pain and irritation in the mouth and throat.<br>
+<strong>Composition</strong><br>
 Benzydamine Hydrochloride 0.15%.<br>
-<strong>Dosis</strong><br>
-Semprotkan 4-8 kali pada area yang sakit setiap 1.5-3 jam.<br>
-<strong>Aturan Pakai</strong><br>
-Semprotkan langsung pada area yang sakit.<br>
-<strong>Perhatian</strong><br>
-Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.<br>
-<strong>Kontra Indikasi</strong><br>
-Penderita hipersensitif terhadap benzydamine.<br>
-<strong>Efek Samping</strong><br>
-Pemakaian dapat menyebabkan rasa terbakar atau kesemutan sementara.<br>
-<strong>Golongan Produk</strong><br>
-Obat Keras<br>
-<strong>Kemasan</strong><br>
-Per Botol<br>
-<strong>Manufaktur</strong><br>
+<strong>Dosage</strong><br>
+Spray 4-8 times onto the affected area every 1.5-3 hours.<br>
+<strong>Directions for Use</strong><br>
+Spray directly onto the affected area.<br>
+<strong>Precautions</strong><br>
+Store in a cool, dry place, out of reach of children.<br>
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to benzydamine.<br>
+<strong>Side Effects</strong><br>
+May cause temporary burning sensation or numbness.<br>
+<strong>Product Category</strong><br>
+Prescription Medicine<br>
+<strong>Packaging</strong><br>
+Per Bottle<br>
+<strong>Manufacturer</strong><br>
 Meda Pharmaceuticals<br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI567890123"
 ]);
 //obat flu
 Product::create([
-    "category_id" => 8,
+    "category_id" => 9,
     "name" => "Decolgen",
     "patent" => 0,
     "slug" => "decolgen",
@@ -1955,137 +2109,137 @@ Product::create([
     "price" => 2500,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Decolgen adalah obat flu yang mengandung parasetamol, phenylpropanolamine HCl, dan chlorpheniramine maleate. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>Description</strong><br>
+Decolgen is a flu medicine containing paracetamol, phenylpropanolamine HCl, and chlorpheniramine maleate. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>General Indication</strong><br>
+Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Komposisi</strong><br>
-Setiap tablet mengandung parasetamol 500 mg, phenylpropanolamine HCl 12.5 mg, dan chlorpheniramine maleate 2 mg.
+<strong>Composition</strong><br>
+Each tablet contains paracetamol 500 mg, phenylpropanolamine HCl 12.5 mg, and chlorpheniramine maleate 2 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<strong>Dosage</strong><br>
+Adults: 1 tablet every 4-6 hours as needed, maximum 4 tablets in 24 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Tablet ditelan utuh dengan segelas air.
+<strong>Directions for Use</strong><br>
+Swallow the tablet whole with a glass of water.
 <br>
-<strong>Perhatian</strong><br>
-Tidak dianjurkan untuk digunakan lebih dari 7 hari berturut-turut. Tidak boleh digunakan oleh anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<strong>Precautions</strong><br>
+Not recommended for use for more than 7 consecutive days. Not to be used in children under 12 years old unless directed by a doctor.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to any component of this product.
 <br>
-<strong>Efek Samping</strong><br>
-Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<strong>Side Effects</strong><br>
+May cause side effects such as drowsiness, dry mouth, or sleep disturbances.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Decolgen
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI234567890"
 ]);
 
 Product::create([
-    "category_id" => 8,
+    "category_id" => 9,
     "name" => "Antangin Junior",
     "patent" => 0,
     "slug" => "antangin-junior",
     "stock" => 1200,
     "price" => 15000,
-    "shortdesc" => "Per Kotak",
+    "shortdesc" => "Per Box",
     "description" => "
-<strong>Deskripsi</strong><br>
-Antangin Junior adalah obat flu untuk anak-anak yang mengandung kombinasi antara parasetamol, pseudoephedrine HCl, dan chlorpheniramine maleate. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat pada anak-anak.
+<strong>Description</strong><br>
+Antangin Junior is a flu medicine for children containing a combination of paracetamol, pseudoephedrine HCl, and chlorpheniramine maleate. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion in children.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat pada anak-anak.
+<strong>General Indication</strong><br>
+Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion in children.
 <br>
-<strong>Komposisi</strong><br>
-Setiap tablet mengandung parasetamol 120 mg, pseudoephedrine HCl 15 mg, dan chlorpheniramine maleate 1 mg.
+<strong>Composition</strong><br>
+Each tablet contains paracetamol 120 mg, pseudoephedrine HCl 15 mg, and chlorpheniramine maleate 1 mg.
 <br>
-<strong>Dosis</strong><br>
-Anak-anak 6-12 tahun: 1 tablet setiap 6-8 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<strong>Dosage</strong><br>
+Children aged 6-12 years: 1 tablet every 6-8 hours as needed, maximum 4 tablets in 24 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Tablet ditelan utuh dengan segelas air.
+<strong>Directions for Use</strong><br>
+Swallow the tablet whole with a glass of water.
 <br>
-<strong>Perhatian</strong><br>
-Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung antihistamin atau dekongestan. Tidak dianjurkan untuk anak di bawah 6 tahun kecuali atas petunjuk dokter.
+<strong>Precautions</strong><br>
+Avoid simultaneous use with other cough medicines containing antihistamines or decongestants. Not recommended for children under 6 years old unless directed by a doctor.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to any component of this product.
 <br>
-<strong>Efek Samping</strong><br>
-Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<strong>Side Effects</strong><br>
+May cause side effects such as drowsiness, dry mouth, or sleep disturbances.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine
 <br>
-<strong>Kemasan</strong><br>
-Per Kotak
+<strong>Packaging</strong><br>
+Per Box
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Antangin
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI345678901"
 ]);
 
 Product::create([
-    "category_id" => 8,
+    "category_id" => 9,
     "name" => "Theraflu",
     "patent" => 0,
     "slug" => "theraflu",
     "stock" => 600,
     "price" => 250000,
-    "shortdesc" => "Per Kotak",
+    "shortdesc" => "Per Box",
     "description" => "
-<strong>Deskripsi</strong><br>
-Theraflu adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan diphenhydramine HCl. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>Description</strong><br>
+Theraflu is a flu medication containing a combination of paracetamol, phenylephrine HCl, and diphenhydramine HCl. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>General Indication</strong><br>
+Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Komposisi</strong><br>
-Setiap sachet mengandung parasetamol 500 mg, phenylephrine HCl 10 mg, dan diphenhydramine HCl 12.5 mg.
+<strong>Composition</strong><br>
+Each sachet contains paracetamol 500 mg, phenylephrine HCl 10 mg, and diphenhydramine HCl 12.5 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1 sachet setiap 4-6 jam sesuai kebutuhan, maksimal 4 sachet dalam 24 jam.
+<strong>Dosage</strong><br>
+Adults: 1 sachet every 4-6 hours as needed, maximum 4 sachets in 24 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Larutkan isi sachet dalam segelas air panas dan aduk hingga larut.
+<strong>Directions for Use</strong><br>
+Dissolve the contents of one sachet in a glass of hot water and stir until dissolved.
 <br>
-<strong>Perhatian</strong><br>
-Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung antihistamin atau dekongestan. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<strong>Precautions</strong><br>
+Avoid simultaneous use with other cough medicines containing antihistamines or decongestants. Not recommended for children under 12 years old unless directed by a doctor.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to any component of this product.
 <br>
-<strong>Efek Samping</strong><br>
-Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<strong>Side Effects</strong><br>
+May cause side effects such as drowsiness, dry mouth, or sleep disturbances.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine
 <br>
-<strong>Kemasan</strong><br>
-Per Kotak
+<strong>Packaging</strong><br>
+Per Box
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Theraflu
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI456789012"
 ]);
 
 Product::create([
-"category_id" => 8,
+"category_id" => 9,
 "name" => "Sinarest",
 "patent" => 0,
 "slug" => "sinarest",
@@ -2093,44 +2247,44 @@ Product::create([
 "price" => 32000,
 "shortdesc" => "Per Strip",
 "description" => "
-<strong>Deskripsi</strong><br>
-Sinarest adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan caffeine. Obat ini membantu meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>Description</strong><br>
+Sinarest is a flu medication containing a combination of paracetamol, phenylephrine HCl, and caffeine. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala flu seperti demam, pilek, bersin, dan hidung tersumbat.
+<strong>General Indication</strong><br>
+Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
-<strong>Komposisi</strong><br>
-Setiap tablet mengandung parasetamol 500 mg, phenylephrine HCl 5 mg, dan caffeine 30 mg.
+<strong>Composition</strong><br>
+Each tablet contains paracetamol 500 mg, phenylephrine HCl 5 mg, and caffeine 30 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<strong>Dosage</strong><br>
+Adults: 1 tablet every 4-6 hours as needed, maximum 4 tablets in 24 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Tablet ditelan utuh dengan segelas air.
+<strong>Directions for Use</strong><br>
+Swallow the tablet whole with a glass of water.
 <br>
-<strong>Perhatian</strong><br>
-Hindari penggunaan bersamaan dengan minuman beralkohol atau obat lain yang mengandung kafein. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<strong>Precautions</strong><br>
+Avoid simultaneous use with alcoholic beverages or other caffeine-containing medications. Not recommended for children under 12 years old unless directed by a doctor.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to any component of this product.
 <br>
-<strong>Efek Samping</strong><br>
-Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<strong>Side Effects</strong><br>
+May cause side effects such as drowsiness, dry mouth, or sleep disturbances.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Sinarest
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI567890123"
 ]);
 Product::create([
-    "category_id" => 8,
+    "category_id" => 9,
     "name" => "Decolgen Cold and Flu",
     "patent" => 0,
     "slug" => "decolgen-cold-and-flu",
@@ -2138,40 +2292,40 @@ Product::create([
     "price" => 28000,
     "shortdesc" => "Per Strip",
     "description" => "
-<strong>Deskripsi</strong><br>
-Decolgen Cold and Flu adalah obat flu yang mengandung kombinasi antara parasetamol, phenylephrine HCl, dan dextromethorphan HBr. Obat ini membantu meredakan gejala flu seperti demam, pilek, batuk, bersin, dan hidung tersumbat.
+<strong>Description</strong><br>
+Decolgen Cold and Flu is a flu medication containing a combination of paracetamol, phenylephrine HCl, and dextromethorphan HBr. This medication helps relieve flu symptoms such as fever, cold, cough, sneezing, and nasal congestion.
 <br>
-<strong>Indikasi Umum</strong><br>
-Meredakan gejala flu seperti demam, pilek, batuk, bersin, dan hidung tersumbat.
+<strong>General Indication</strong><br>
+Relieves flu symptoms such as fever, cold, cough, sneezing, and nasal congestion.
 <br>
-<strong>Komposisi</strong><br>
-Setiap tablet mengandung parasetamol 500 mg, phenylephrine HCl 5 mg, dan dextromethorphan HBr 15 mg.
+<strong>Composition</strong><br>
+Each tablet contains paracetamol 500 mg, phenylephrine HCl 5 mg, and dextromethorphan HBr 15 mg.
 <br>
-<strong>Dosis</strong><br>
-Dewasa: 1 tablet setiap 4-6 jam sesuai kebutuhan, maksimal 4 tablet dalam 24 jam.
+<strong>Dosage</strong><br>
+Adults: 1 tablet every 4-6 hours as needed, maximum 4 tablets in 24 hours.
 <br>
-<strong>Aturan Pakai</strong><br>
-Tablet ditelan utuh dengan segelas air.
+<strong>Directions for Use</strong><br>
+Swallow the tablet whole with a glass of water.
 <br>
-<strong>Perhatian</strong><br>
-Hindari penggunaan bersamaan dengan obat batuk lain yang mengandung dextromethorphan. Tidak dianjurkan untuk anak di bawah 12 tahun kecuali atas petunjuk dokter.
+<strong>Precautions</strong><br>
+Avoid simultaneous use with other cough medicines containing dextromethorphan. Not recommended for children under 12 years old unless directed by a doctor.
 <br>
-<strong>Kontra Indikasi</strong><br>
-Tidak boleh digunakan oleh individu yang memiliki hipersensitivitas terhadap salah satu komponen dalam produk ini.
+<strong>Contraindications</strong><br>
+Not suitable for individuals hypersensitive to any component of this product.
 <br>
-<strong>Efek Samping</strong><br>
-Dapat menyebabkan efek samping seperti kantuk, mulut kering, atau gangguan tidur.
+<strong>Side Effects</strong><br>
+May cause side effects such as drowsiness, dry mouth, or sleep disturbances.
 <br>
-<strong>Golongan Produk</strong><br>
-Obat Bebas
+<strong>Product Category</strong><br>
+Over-the-Counter Medicine
 <br>
-<strong>Kemasan</strong><br>
+<strong>Packaging</strong><br>
 Per Strip
 <br>
-<strong>Manufaktur</strong><br>
+<strong>Manufacturer</strong><br>
 Decolgen
 <br>
-<strong>No. Registrasi</strong><br>
+<strong>Registration Number</strong><br>
 BPOM: SI678901234"
 ]);
 //obat mata
@@ -2182,31 +2336,31 @@ Product::create([
     "slug" => "visine-original-eye-drops",
     "stock" => 2000,
     "price" => 200000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong>
-<br>Visine Original Eye Drops adalah tetes mata yang membantu meredakan kemerahan pada mata.
-<br><strong>Indikasi Umum</strong>
-<br>Mengurangi kemerahan pada mata akibat iritasi ringan.
-<br><strong>Komposisi</strong>
+<strong>Description</strong>
+<br>Visine Original Eye Drops are eye drops that help relieve redness in the eyes.
+<br><strong>General Indications</strong>
+<br>Reduces eye redness due to mild irritation.
+<br><strong>Composition</strong>
 <br>Tetrahydrozoline HCl 0.05%.
-<br><strong>Dosis</strong>
-<br>1-2 tetes pada mata yang teriritasi, maksimal 4 kali sehari.
-<br><strong>Aturan Pakai</strong>
-<br>Teteskan pada mata yang teriritasi.
-<br><strong>Perhatian</strong>
-<br>Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
-<br><strong>Kontra Indikasi</strong>
-<br>Penderita hipersensitif terhadap salah satu komponen dari obat ini.
-<br><strong>Efek Samping</strong>
-<br>Rasa perih atau iritasi ringan pada awal penggunaan.
-<br><strong>Golongan Produk</strong>
-<br>Obat Bebas
-<br><strong>Kemasan</strong>
-<br>Per Botol
-<br><strong>Manufaktur</strong>
+<br><strong>Dosage</strong>
+<br>Instill 1-2 drops into the affected eye(s), up to 4 times daily.
+<br><strong>Administration</strong>
+<br>Apply to the irritated eye(s).
+<br><strong>Caution</strong>
+<br>Store in a cool, dry place; keep out of reach of children.
+<br><strong>Contraindications</strong>
+<br>Patients hypersensitive to any of the components of this medication.
+<br><strong>Side Effects</strong>
+<br>Mild stinging or irritation upon initial use.
+<br><strong>Product Category</strong>
+<br>Over-the-Counter Medicine
+<br><strong>Packaging</strong>
+<br>Per Bottle
+<br><strong>Manufactured By</strong>
 <br>Johnson & Johnson
-<br><strong>No. Registrasi</strong>
+<br><strong>Registration Number</strong>
 <br>BPOM: DTL041231231"
 ]);
 
@@ -2217,31 +2371,31 @@ Product::create([
     "slug" => "rohto-cool-eye-drops",
     "stock" => 1500,
     "price" => 28000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong>
-<br>Rohto Cool Eye Drops adalah tetes mata yang memberikan sensasi sejuk dan nyaman pada mata.
-<br><strong>Indikasi Umum</strong>
-<br>Mengurangi kemerahan dan iritasi mata.
-<br><strong>Komposisi</strong>
+<strong>Description</strong>
+<br>Rohto Cool Eye Drops are eye drops that provide a cool and comfortable sensation to the eyes.
+<br><strong>General Indications</strong>
+<br>Reduces redness and irritation of the eyes.
+<br><strong>Composition</strong>
 <br>Menthol, Chlorpheniramine Maleate.
-<br><strong>Dosis</strong>
-<br>1-2 tetes pada mata yang teriritasi, maksimal 4 kali sehari.
-<br><strong>Aturan Pakai</strong>
-<br>Teteskan pada mata yang teriritasi.
-<br><strong>Perhatian</strong>
-<br>Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
-<br><strong>Kontra Indikasi</strong>
-<br>Penderita hipersensitif terhadap salah satu komponen dari obat ini.
-<br><strong>Efek Samping</strong>
-<br>Rasa perih atau iritasi ringan pada awal penggunaan.
-<br><strong>Golongan Produk</strong>
-<br>Obat Bebas
-<br><strong>Kemasan</strong>
-<br>Per Botol
-<br><strong>Manufaktur</strong>
+<br><strong>Dosage</strong>
+<br>Instill 1-2 drops into the affected eye(s), up to 4 times daily.
+<br><strong>Administration</strong>
+<br>Apply to the irritated eye(s).
+<br><strong>Caution</strong>
+<br>Store in a cool, dry place; keep out of reach of children.
+<br><strong>Contraindications</strong>
+<br>Patients hypersensitive to any of the components of this medication.
+<br><strong>Side Effects</strong>
+<br>Mild stinging or irritation upon initial use.
+<br><strong>Product Category</strong>
+<br>Over-the-Counter Medicine
+<br><strong>Packaging</strong>
+<br>Per Bottle
+<br><strong>Manufactured By</strong>
 <br>Rohto Pharmaceutical
-<br><strong>No. Registrasi</strong>
+<br><strong>Registration Number</strong>
 <br>BPOM: DTL041231232"
 ]);
 
@@ -2252,31 +2406,31 @@ Product::create([
     "slug" => "cendo-xitrol-eye-drops",
     "stock" => 800,
     "price" => 60000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong>
-<br>Cendo Xitrol Eye Drops adalah tetes mata antibiotik dan anti-inflamasi.
-<br><strong>Indikasi Umum</strong>
-<br>Mengobati infeksi mata dan inflamasi.
-<br><strong>Komposisi</strong>
+<strong>Description</strong>
+<br>Cendo Xitrol Eye Drops are antibiotic and anti-inflammatory eye drops.
+<br><strong>General Indications</strong>
+<br>Treats eye infections and inflammation.
+<br><strong>Composition</strong>
 <br>Neomycin, Polymyxin B, Dexamethasone.
-<br><strong>Dosis</strong>
-<br>1-2 tetes pada mata yang terinfeksi, 4-6 kali sehari.
-<br><strong>Aturan Pakai</strong>
-<br>Teteskan pada mata yang terinfeksi.
-<br><strong>Perhatian</strong>
-<br>Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
-<br><strong>Kontra Indikasi</strong>
-<br>Penderita hipersensitif terhadap salah satu komponen dari obat ini.
-<br><strong>Efek Samping</strong>
-<br>Rasa perih atau iritasi ringan pada awal penggunaan.
-<br><strong>Golongan Produk</strong>
-<br>Obat Keras
-<br><strong>Kemasan</strong>
-<br>Per Botol
-<br><strong>Manufaktur</strong>
+<br><strong>Dosage</strong>
+<br>Instill 1-2 drops into the infected eye(s), 4-6 times daily.
+<br><strong>Administration</strong>
+<br>Apply to the infected eye(s).
+<br><strong>Caution</strong>
+<br>Store in a cool, dry place; keep out of reach of children.
+<br><strong>Contraindications</strong>
+<br>Patients hypersensitive to any of the components of this medication.
+<br><strong>Side Effects</strong>
+<br>Mild stinging or irritation upon initial use.
+<br><strong>Product Category</strong>
+<br>Prescription Medicine
+<br><strong>Packaging</strong>
+<br>Per Bottle
+<br><strong>Manufactured By</strong>
 <br>Cendo
-<br><strong>No. Registrasi</strong>
+<br><strong>Registration Number</strong>
 <br>BPOM: DTL041231233"
 ]);
 
@@ -2287,31 +2441,31 @@ Product::create([
     "slug" => "insto-regular-eye-drops",
     "stock" => 2500,
     "price" => 25000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong>
-<br>Insto Regular Eye Drops adalah tetes mata untuk meredakan mata kering dan iritasi ringan.
-<br><strong>Indikasi Umum</strong>
-<br>Mengurangi kekeringan dan iritasi mata.
-<br><strong>Komposisi</strong>
+<strong>Description</strong>
+<br>Insto Regular Eye Drops are eye drops designed to alleviate dry and mildly irritated eyes.
+<br><strong>General Indications</strong>
+<br>Reduces dryness and eye irritation.
+<br><strong>Composition</strong>
 <br>Hydroxypropyl Methylcellulose, Benzalkonium Chloride.
-<br><strong>Dosis</strong>
-<br>1-2 tetes pada mata yang teriritasi, maksimal 4 kali sehari.
-<br><strong>Aturan Pakai</strong>
-<br>Teteskan pada mata yang teriritasi.
-<br><strong>Perhatian</strong>
-<br>Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
-<br><strong>Kontra Indikasi</strong>
-<br>Penderita hipersensitif terhadap salah satu komponen dari obat ini.
-<br><strong>Efek Samping</strong>
-<br>Rasa perih atau iritasi ringan pada awal penggunaan.
-<br><strong>Golongan Produk</strong>
-<br>Obat Bebas
-<br><strong>Kemasan</strong>
-<br>Per Botol
-<br><strong>Manufaktur</strong>
+<br><strong>Dosage</strong>
+<br>Instill 1-2 drops into the irritated eye(s), up to 4 times daily.
+<br><strong>Administration</strong>
+<br>Apply to the irritated eye(s).
+<br><strong>Caution</strong>
+<br>Store in a cool, dry place; keep out of reach of children.
+<br><strong>Contraindications</strong>
+<br>Patients hypersensitive to any of the components of this medication.
+<br><strong>Side Effects</strong>
+<br>Mild stinging or irritation upon initial use.
+<br><strong>Product Category</strong>
+<br>Over-the-Counter Medicine
+<br><strong>Packaging</strong>
+<br>Per Bottle
+<br><strong>Manufactured By</strong>
 <br>Combiphar
-<br><strong>No. Registrasi</strong>
+<br><strong>Registration Number</strong>
 <br>BPOM: DTL041231234"
 ]);
 
@@ -2322,31 +2476,31 @@ Product::create([
     "slug" => "allergan-refresh-tears",
     "stock" => 1000,
     "price" => 45000,
-    "shortdesc" => "Per Botol",
+    "shortdesc" => "Per Bottle",
     "description" => "
-<strong>Deskripsi</strong>
-<br>Allergan Refresh Tears adalah tetes mata untuk melembapkan dan memberikan kenyamanan pada mata kering.
-<br><strong>Indikasi Umum</strong>
-<br>Melembapkan mata kering.
-<br><strong>Komposisi</strong>
+<strong>Description</strong>
+<br>Allergan Refresh Tears are eye drops designed to moisturize and provide comfort to dry eyes.
+<br><strong>General Indications</strong>
+<br>Moisturizes dry eyes.
+<br><strong>Composition</strong>
 <br>Carboxymethylcellulose Sodium 0.5%.
-<br><strong>Dosis</strong>
-<br>1-2 tetes pada mata yang kering, sesuai kebutuhan.
-<br><strong>Aturan Pakai</strong>
-<br>Teteskan pada mata yang kering.
-<br><strong>Perhatian</strong>
-<br>Simpan di tempat yang sejuk dan kering, jauhkan dari jangkauan anak-anak.
-<br><strong>Kontra Indikasi</strong>
-<br>Penderita hipersensitif terhadap salah satu komponen dari obat ini.
-<br><strong>Efek Samping</strong>
-<br>Rasa perih atau iritasi ringan pada awal penggunaan.
-<br><strong>Golongan Produk</strong>
-<br>Obat Bebas
-<br><strong>Kemasan</strong>
-<br>Per Botol
-<br><strong>Manufaktur</strong>
+<br><strong>Dosage</strong>
+<br>Instill 1-2 drops into the dry eye(s), as needed.
+<br><strong>Administration</strong>
+<br>Apply to the dry eye(s).
+<br><strong>Caution</strong>
+<br>Store in a cool, dry place; keep out of reach of children.
+<br><strong>Contraindications</strong>
+<br>Patients hypersensitive to any of the components of this medication.
+<br><strong>Side Effects</strong>
+<br>Mild stinging or irritation upon initial use.
+<br><strong>Product Category</strong>
+<br>Over-the-Counter Medicine
+<br><strong>Packaging</strong>
+<br>Per Bottle
+<br><strong>Manufactured By</strong>
 <br>Allergan
-<br><strong>No. Registrasi</strong>
+<br><strong>Registration Number</strong>
 <br>BPOM: DTL041231235"
 ]);
 

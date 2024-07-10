@@ -13,36 +13,36 @@ class PromotionSeeder extends Seeder
     public function run(): void
     {
         Promotion::create([
-    'name' => 'Flash Sale - Up to 50% Off!',
-    'slug' => 'flash-sale-50',
-    'code' => '50FSOF',
-    'shortdecs' => 'Up to 10 users only',
-    'startdate' => '2024-11-27',
-    'enddate' => '2024-11-30',
+    'name' => 'Chinesse New Year Flash Sale - Up to 50% Off!',
+    'slug' => 'chinesse-new-year-flash-sale-50',
+    'code' => 'CNY50OFF',
+    'shortdecs' => 'Limited Time Offer!',
+    'startdate' => '2025-01-29',
+    'enddate' => '2025-01-30',
     'discount' => 0.5,
-    'terms' => 'Nikmati diskon besar hingga 50% hanya untuk 10 pengguna pertama! Segera manfaatkan kesempatan ini untuk mendapatkan produk favorit Anda dengan harga spesial. Penawaran ini berlaku mulai dari 27 November hingga 30 November 2024. Jangan sampai ketinggalan!',
+    'terms' => "Celebrate Chinese New Year with up to 50% off! Take advantage of this opportunity to purchase your medicine stock at special prices. This offer is valid from January 29th to January 30th, 2025. Don't miss out!",
 ]);
 
 Promotion::create([
-    'name' => 'Welcome Offer - 10% Off First Purchase',
-    'slug' => 'welcome-offer-10',
-    'code' => '10WOFP',
-    'shortdecs' => 'Only for new User',
-    'startdate' => '2024-12-15',
-    'enddate' => '2024-12-30',
+    'name' => 'Welcome 2025 Offer - 10% Off!',
+    'slug' => 'welcome-2025-offer',
+    'code' => '1STDAY2025',
+   'shortdecs' => 'Only for first day in 2025!',
+    'startdate' => '2025-01-01',
+    'enddate' => '2025-01-02',
     'discount' => 0.1,
-    'terms' => 'Selamat datang! Dapatkan diskon 10% untuk pembelian pertama Anda dengan kode promo 10WOFP. Penawaran ini hanya berlaku untuk pengguna baru dari tanggal 15 Desember hingga 30 Desember 2024. Mulailah pengalaman belanja Anda dengan hemat!',
+    'terms' => 'Welcome! Get a 10% discount on your purchases on the first day of this year with promo code 1STDAY2025. This offer is valid only for users on January 1st, 2025. Start your shopping experience in the new year with savings!',
 ]);
 
 Promotion::create([
-    'name' => 'Buy One Get One (BOGO) Sale!',
-    'slug' => 'buy-one-get-one',
+    'name' => 'Buy One Get One Independence Day Sale!',
+    'slug' => 'buy-one-get-one-independence-day-sale',
     'code' => 'BOGO05',
-    'shortdecs' => 'Only for Jabodetabek user',
-    'startdate' => '2024-10-26',
-    'enddate' => '2024-11-26',
+    'shortdecs' => 'Limited for indepence day only!',
+    'startdate' => '2024-08-17',
+    'enddate' => '2024-08-18',
     'discount' => 0.5,
-    'terms' => 'Dapatkan penawaran spesial Buy One Get One Free untuk pengguna di area Jabodetabek! Gunakan kode promo BOGO05 untuk menikmati penawaran ini dari 26 Oktober hingga 26 November 2024. Beli satu produk dan dapatkan satu lagi secara gratis!',
+    'terms' => 'Get a special Buy One Get One Free offer for all users on Independence Day! Use promo code BOGO05 to enjoy this offer from August 17th to August 18th, 2024. Buy one product and get another one for free!',
 ]);
 
 Promotion::create([
@@ -53,29 +53,29 @@ Promotion::create([
     'startdate' => '2024-07-01',
     'enddate' => '2024-07-15',
     'discount' => 0.7,
-    'terms' => 'Jangan lewatkan kesempatan untuk mendapatkan diskon besar hingga 70% di Summer Clearance Sale kami! Penawaran ini hanya berlaku dari 1 Juli hingga 15 Juli 2024. Segera dapatkan produk musim panas favorit Anda dengan harga terbaik!',
+    'terms' => "Don't miss out on the opportunity to get up to 70% off in our Summer Clearance Sale! This offer is valid only from July 1st to July 15th, 2024. Get your favorite summer products at the best prices now!",
 ]);
 
 Promotion::create([
     'name' => 'Back-to-School Special - Buy One Get One Free!',
     'slug' => 'back-to-school-bogo',
     'code' => 'BTSBOGO',
-    'shortdecs' => 'Limited time offer for students!',
+    'shortdecs' => 'Limited time offer for 1 month only!',
     'startdate' => '2024-08-15',
     'enddate' => '2024-09-15',
     'discount' => 0.5,
-    'terms' => 'Persiapkan diri Anda untuk tahun ajaran baru dengan penawaran spesial Buy One Get One Free! Gunakan kode promo BTSBOGO untuk mendapatkan diskon ini dari 15 Agustus hingga 15 September 2024. Penawaran ini khusus untuk siswa, jadi jangan sampai ketinggalan!',
+    'terms' => "Get ready for the new school year with our special Buy One Get One Free offer! Use promo code BTSBOGO to avail of this discount from August 15th to September 15th, 2024. This offer is exclusively for 1 month, so don't miss out!",
 ]);
 
 Promotion::create([
     'name' => 'Winter Warm-up Sale - 25% Off Jackets!',
-    'slug' => 'winter-warmup-jackets',
+    'slug' => 'winter-warmup-sale',
     'code' => 'WINTER25',
     'shortdecs' => 'Stay cozy and save!',
     'startdate' => '2024-11-01',
     'enddate' => '2024-11-30',
     'discount' => 0.25,
-    'terms' => 'Persiapkan diri Anda untuk cuaca dingin dengan diskon 25% untuk semua jaket di Winter Warm-up Sale kami! Gunakan kode promo WINTER25 di checkout untuk menikmati diskon ini sepanjang bulan November. Tetap hangat dan hemat!',
+    'terms' => 'Prepare yourself for the cold weather with a 25% discount on all medicines in our Winter Warm-up Sale! Use promo code WINTER25 at checkout to enjoy this discount throughout the month of November. Stay healthy and save!',
 ]);
 
 Promotion::create([
@@ -86,7 +86,7 @@ Promotion::create([
     'startdate' => '2024-12-10',
     'enddate' => '2024-12-25',
     'discount' => 0.2,
-    'terms' => 'Membuat belanja liburan Anda lebih meriah dengan diskon 20% untuk semua produk! Gunakan kode promo HOLIDAY20 dari tanggal 10 Desember hingga 25 Desember 2024 untuk menikmati diskon ini. Sebarkan kebahagiaan dan hemat di musim liburan ini!',
+    'terms' => 'Make your holiday medicine shopping more festive with a 20% discount on all products! Use promo code HOLIDAY20 from December 10th to December 25th, 2024, to enjoy this discount. Spread happiness and savings this holiday season!',
 ]);
 
     }
