@@ -63,7 +63,7 @@
     </div>
 
     <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-        @foreach ($category->products as $product)
+        @foreach ($category->products->take(5) as $product)
         <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
             <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
             <div class="card-body" id="card-body">
@@ -73,7 +73,7 @@
                 <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
                     @csrf
                     <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
-                </form>  
+                </form>
                 {{-- <a href="{{ route('cart.add', ['productId' => $product->id]) }}" id="addbtn" class="btn">ADD</a> --}}
             </div>
         </div>
