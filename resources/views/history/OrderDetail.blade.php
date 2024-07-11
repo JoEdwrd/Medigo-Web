@@ -20,7 +20,7 @@
                 $subTotal = 0;
             @endphp
             @foreach ($orderDetail->order_details as $order)
-             <div class="order-items mt-4">
+             <div class="order-items mt-4" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $order->product->slug) }}';">
                 <div class="row align-items-start">
                     <div class="col">
                         <img style="width: 100px; length: 100px" src="{{ asset("image/medicine1.jpeg") }}" alt="Medicine Image">
