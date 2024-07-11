@@ -18,9 +18,12 @@ class TrackingOrderSeeder extends Seeder
             "transaction_id" => 847821,
             'waiting_for_verification'=> "2024-07-09 05:37:01",
             'waiting_for_payment' => "2024-07-09 06:54:07",
-            'already_paid' => "2024-07-09 07:22:03",
-            'on_the_way' => "2024-07-09 08:18:20",
+            'in_progress' => "2024-07-09 07:22:03",
             'completed' => "2024-07-09 09:45:01"
+        ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 1
         ]);
     }
 }

@@ -52,21 +52,21 @@
                                                 <input type="number" name="quantity" onchange="{{route(cart.changeQty, [])}}" class="form-control input-number" value="{{$cart->cart_details[$i]->quantity}}">
                                             </div>
                                         </div> --}}
-                                        
+
                                         <form style="display: inline;" method="POST" action="{{ route('cart.changeQty' , ['productId' => $cart->cart_details[$i]->product->id]) }}">
                                             @csrf
                                             <input type="number" min="0" max="{{$cart->cart_details[$i]->product->stock}}" name="quantity" class="form-control input-number w-100" value="{{$cart->cart_details[$i]->quantity}}" onchange="this.form.submit()">
                                         </form>
-                                        
+
                                         <a href="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" onclick="event.preventDefault();
                                         document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none text-success"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
 
                                         <form id="delete-form-{{$cart->cart_details[$i]->product->id}}" action="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" method="POST" class="d-none">
                                             @csrf
                                             @method('delete')
-                                        </form>                                                                                
+                                        </form>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             @if ($errors->has('quantity_error_' . $cart->cart_details[$i]->product->id))
@@ -140,7 +140,7 @@
                         <strong>{{ isset($cart->promotion->discount) ? 'Rp '.$total - $cart->promotion->discount * $total : 'Rp '.$total}}</strong>
                     </li>
                 </ul>
-                @if (isset($cart->cart_details[0]))    
+                @if (isset($cart->cart_details[0]))
                     <form class="card p-2" action="{{route('cart.promo.add')}}" method="POST">
                         @csrf
                         <div class="input-group">
@@ -169,10 +169,12 @@
 
                 <div class="address">
                     <h4>Billing Address</h4>
-                    @if(isset($user->address))
+                    @if(isset($user->address) && $user->address != '')
                         <p>{{$user->address}}</p>
                     @else
                         <p class="text-warning fs-5">You haven't input your address yet, please input your address to order!</p>
+                        <a href="/profile">
+                        <button class="btn btn-outline-success">Go to profile</button></a>
                     @endif
                 </div>
 
