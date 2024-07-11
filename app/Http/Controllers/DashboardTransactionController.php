@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\OrderDetail;
+use App\Models\TrackingOrder;
 use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class DashboardTransactionController extends Controller
@@ -13,9 +15,9 @@ class DashboardTransactionController extends Controller
      */
     public function index()
     {
-        
+
         // dd($data);
-        return view("AdminPage.transactions.index",[    
+        return view("AdminPage.transactions.index",[
             'transactions' => Transaction::all()
         ]);
     }
@@ -78,6 +80,30 @@ class DashboardTransactionController extends Controller
                 $item->product->save();
             }
         }
+
+        $tracking = Transaction::where('slug', $slug)->first();
+
+        if ($request->status == 'Waiting for verification') {
+            TrackingOrder::where('transaction_id', $tracking->id)->update(['waiting_for_verification' => Carbon::now()]);
+        };
+
+        if ($request->status == 'Waiting for payment') {
+            TrackingOrder::where('transaction_id', $tracking->id)->update(['waiting_for_payment' => Carbon::now()]);
+        };
+
+        if (
+            $request->status == 'In Progress'
+        ) {
+            TrackingOrder::where('transaction_id', $tracking->id)->update(['in_progress' => Carbon::now()]);
+        };
+
+        if ($request->status == 'Completed') {
+            TrackingOrder::where('transaction_id', $tracking->id)->update(['completed' => Carbon::now()]);
+        };
+
+        if ($request->status == 'Canceled') {
+            TrackingOrder::where('transaction_id', $tracking->id)->update(['canceled' => Carbon::now()]);
+        };
 
         return redirect('/dashboard/transactions')->with('success', 'Transaction has been updated!');
     }

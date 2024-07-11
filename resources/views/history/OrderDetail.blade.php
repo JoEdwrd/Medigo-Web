@@ -78,8 +78,16 @@
 
                 <div class="col-md-6 text-right">
                     <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
-                    <p class="text-end">{{ number_format($subTotal * $orderDetail->promotion->discount, 0, ',', '.') }}</p>
-                    <p class="text-end">{{ number_format($subTotal - ($subTotal * $orderDetail->promotion->discount), 0, ',', '.') }}</p>
+
+                    @if (isset($orderDetail->promotion) && $orderDetail->promotion != '')
+                        <p class="text-end">{{ number_format($subTotal * $orderDetail->promotion->discount, 0, ',', '.') }}</p>
+                        <p class="text-end">{{ number_format($subTotal - ($subTotal * $orderDetail->promotion->discount), 0, ',', '.') }}</p>
+                    @else
+                        <p class="text-end">{{ number_format($subTotal * 0, 0, ',', '.') }}</p>
+                        <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
+
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -95,74 +103,112 @@
 
     <div class="row mt-5">
         <h5 class="mb-3">Track Your Order</h5>
-        <div class="row align-items-start mt-3">
-            <div class="col-md-1 d-flex justify-content-center">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+
+        @if ($orderDetail->tracking_order->completed != "")
+            <div class="row align-items-start mt-3">
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                        <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->completed}}</h6>
+                </div>
+
+                <div class="col text-start">
+                    <h5 class="mb-3">Order Completed</h5>
                 </div>
             </div>
 
+        @endif
 
-            
-            <div class="col-2">
-                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 21:18 WIB</h6>
-            </div>
+        @if ($orderDetail->tracking_order->canceled != "")
+            <div class="row align-items-start mt-3">
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                        <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                    </div>
+                </div>
 
-            <div class="col text-start">
-                <h5 class="mb-3">Order Completed</h5>
-            </div>
-        </div>
+                <div class="col-2">
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->canceled}}</h6>
+                </div>
 
-        <div class="row align-items-start">
-            <div class="col-md-1 d-flex justify-content-center">
-                 <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                <div class="col text-start">
+                    <h5 class="mb-3">Order Canceled</h5>
                 </div>
             </div>
-            <div class="col-2">
-                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:02 WIB</h6>
-            </div>
 
-            <div class="col text-start">
-                <h5 class="mb-3">On Its Way</h5>
-            </div>
-        </div>
+        @endif
 
-        <div class="row align-items-start">
-            <div class="col-md-1 d-flex justify-content-center">
-                 <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+        @if ($orderDetail->tracking_order->in_progress != "")
+            <div class="row align-items-start">
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                        <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->in_progress}}</h6>
+                </div>
+
+                <div class="col text-start">
+                    <h5 class="mb-3">In Progress</h5>
                 </div>
             </div>
-            <div class="col-2">
-                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:02 WIB</h6>
-            </div>
+        @endif
 
-            <div class="col text-start">
-                <h5 class="mb-3">On Process</h5>
-            </div>
-        </div>
 
-        <div class="row align-items-start">
-            <div class="col-md-1 d-flex justify-content-center">
-                 <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+        @if ($orderDetail->tracking_order->waiting_for_payment != "")
+            <div class="row align-items-start">
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                        <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->waiting_for_payment}}</h6>
+                </div>
+
+                <div class="col text-start">
+                    <h5 class="mb-3">Waiting for Payment</h5>
                 </div>
             </div>
-            <div class="col-2">
-                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:01 WIB</h6>
-            </div>
+        @endif
 
-            <div class="col text-start">
-                <h5 class="mb-3">Already Paid</h5>
-            </div>
-        </div>
 
-        <div class="row align-items-start">
+          @if ($orderDetail->tracking_order->waiting_for_verification != "")
+            <div class="row align-items-start">
+                <div class="col-md-1 d-flex justify-content-center">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                    </div>
+                </div>
+
+                <div class="col-2">
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->waiting_for_verification}}</h6>
+                </div>
+
+                <div class="col text-start">
+                    <h5 class="mb-3">Waiting for Prescription Confirmation</h5>
+                </div>
+            </div>
+        @endif
+
+
+
+
+
+
+
+        {{-- <div class="row align-items-start">
             <div class="col-md-1 d-flex justify-content-center">
                 <div class="d-flex flex-column align-items-center">
                     <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
@@ -176,22 +222,9 @@
             <div class="col text-start">
                 <h5 class="mb-3">Waiting for Payment</h5>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="row align-items-start">
-            <div class="col-md-1 d-flex justify-content-center">
-                 <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                </div>
-            </div>
-            <div class="col-2">
-                <h6 class="text-muted" style="margin-top: 3px;">3 May 2024 - 19:50 WIB</h6>
-            </div>
 
-            <div class="col text-start">
-                <h5>Waiting for Prescription Confirmation</h5>
-            </div>
-        </div>
     </div>
 </div>
 

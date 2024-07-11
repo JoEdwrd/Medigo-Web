@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\OrderDetail;
 use App\Models\Prescription;
+use App\Models\TrackingOrder;
 use App\Models\Transaction;
 use App\Models\User;
 use Carbon\Carbon;
@@ -53,7 +54,7 @@ class TransactionController extends Controller
             $item->product->save();
         }
 
-        
+
 
         if($check == 1){
             $trans = Transaction::create([
@@ -66,11 +67,21 @@ class TransactionController extends Controller
             Prescription::latest('created_at')->first()->update([
                 'transaction_id' => $trans->id
             ]);
+
+            TrackingOrder::create([
+                'transaction_id' => $trans->id,
+                'waiting_for_verification' => Carbon::now()
+            ]);
         }else{
             $trans = Transaction::create([
                 'promotion_id' => $cart->promotion_id,
                 'user_id' => $cart->user_id,
                 'slug' => $cart->id,
+            ]);
+
+            TrackingOrder::create([
+                'transaction_id' => $trans->id,
+                'waiting_for_payment' => Carbon::now()
             ]);
         }
 
