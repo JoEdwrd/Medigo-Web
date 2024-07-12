@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\OrderDetail;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
 
@@ -19,5 +20,19 @@ class OrderDetailController extends Controller
         $orderDetail = Transaction::find($order);
         // dd($orderDetail);
         return view('history.OrderDetail', compact('cart', 'orderDetail'));
+    }
+
+    public function cancel($id)
+    {
+        $orderDetail = Transaction::where('id', $id)->first();
+
+        if ($orderDetail) {
+            $orderDetail->status = 'Canceled';
+            $orderDetail->save();
+
+            return redirect()->back()->with('success', 'Order has been canceled.');
+        }
+
+        return redirect()->back()->with('error', 'Order not found.');
     }
 }
