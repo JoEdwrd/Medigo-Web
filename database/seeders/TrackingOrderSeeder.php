@@ -33,5 +33,22 @@ class TrackingOrderSeeder extends Seeder
         TrackingOrder::create([
             "transaction_id" => 3
         ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 4
+        ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 5
+        ]);
+
+
+        TrackingOrder::create([
+            "transaction_id" => 6
+        ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 7
+        ]);
     }
 }
