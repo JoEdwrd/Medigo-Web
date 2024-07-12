@@ -88,6 +88,10 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
 
     Route::post('/cart/addPromo', [CartController::class, 'addPromo'])->name('cart.promo.add');
     Route::post('/cart/removePromo', [CartController::class, 'removePromo'])->name('cart.promo.remove');
+
+    // Payment
+    Route::get('/get-snap-token', [PaymentController::class, 'getSnapToken']);
+    Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
 });
 
 
@@ -107,11 +111,6 @@ Route::group(['middleware' => ['admin']], function () {
     Route::get('/dashboard/categories/{category:slug}',[DashboardCategoryController::class,"show"]);
     //Transactions
     Route::resource('/dashboard/transactions', DashboardTransactionController::class);
-    // Payment
-
-    Route::get('/get-snap-token', [PaymentController::class, 'getSnapToken']);
-    Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
-
 
     Route::put('/dashboard/transactions/{transaction:slug}/edit', [DashboardTransactionController::class, "update"]);
 

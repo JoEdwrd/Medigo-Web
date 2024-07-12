@@ -20,7 +20,7 @@ footer {
 #loginBTN {
     background-color: var(--main2-color);
     border-radius: 63px;
-    width: 150px;
+    width: auto;
 }
 
 #SeeAllBTN {
