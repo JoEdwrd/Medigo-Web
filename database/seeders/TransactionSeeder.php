@@ -77,5 +77,15 @@ class TransactionSeeder extends Seeder
             'promotion_id' => 1,
             'payment_method' => 'BCA',
         ]);
+
+        // Payment Dummy -Shamgar
+         Transaction::create([
+            'id' => 99999,
+            'slug' => 'transaction#99999',
+            'user_id' => 1,
+            'status' => 'Waiting for payment',
+            'promotion_id' => 2,
+            'payment_method' => 'BCA',
+        ]);
     }
 }

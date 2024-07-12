@@ -45,6 +45,15 @@
             @endif
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" id="NavItems" href="/history">
+            @if(Request::is("history"))
+              <u>HISTORY</u>
+            @else
+              HISTORY
+            @endif
+          </a>
+        </li>
   
         @auth
           <li class="nav-item">
@@ -55,7 +64,7 @@
                 CART
               @endif
               @if(isset($cart->cart_details) && count($cart->cart_details) > 0)
-                <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="top: 7px; left:65px">
+                <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="top: 7px; left:60px">
                   {{count($cart->cart_details)}}
                   <span class="visually-hidden">unread messages</span>
                 </span>
@@ -77,7 +86,14 @@
         @auth
           <li class="nav-item">
             <a class="text-decoration-none" href="/profile">
-              <button class="nav-link text-light rounded-50 text-decoration-none" id="loginBTN"><strong>{{ Str::upper(auth()->user()->name) }}</strong></button>
+              {{-- <button class="nav-link text-light rounded-50 text-decoration-none px-4" id="loginBTN">
+                <strong>{{ Str::upper(auth()->user()->name) }}</strong>
+              </button> --}}
+              @if (auth()->user()->profile_picture) 
+                <img src="{{ asset("/storage/". auth()->user()->profile_picture) }}" alt="Profile Picture" class="profile-img-circle" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+              @else
+                <img src="/image/userTemp.png" alt="Profile Picture" class="profile-img-circle" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+              @endif
             </a>
           </li>
         @else

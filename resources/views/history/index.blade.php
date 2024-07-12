@@ -31,64 +31,64 @@
                         </button>
                     @endif
                 </div>
+
                 <hr style="border: 1px solid black;">
                 <div id="order-info-{{ $status }}" class="{{ in_array($status, ['completed', 'canceled']) ? 'collapse' : '' }}">
                     @foreach($$status as $transaction)
-                        <div style="border: 2px solid rgba(0,0,0,0.3);padding:20px;border-radius:10px;margin-top:20px">
-                            <div class="d-flex flex-row justify-content-between align-items-center">
-                                <div class="d-flex flex-row justify-content-between">
-                                    <img class="" src="\image\Drug.png" style="width:70px;height:70px;border-radius:5px;background:#F2F2F2" alt="">
-                                    <div class="d-flex flex-column justify-content-between" style="margin-left: 20px">
-                                        <label style="font-family: 'Chopin-Trial';font-weight: 400;">Order ID: {{ $transaction->id }}</label>
-                                        <label style="font-family: 'Chopin-Trial';font-weight: bold; font-size:20px;">
-                                            {{ $transaction->order_details->first()->product->name }}
-                                        </label>
-                                        <label style="font-family: 'Chopin-Trial';font-weight: 400;">
-                                            Number of products: {{ $transaction->order_details->count() }}
-                                        </label>
+                        <a href="/orderdetail/{{$transaction->id}}" style="text-decoration: none; color: inherit;">
+                            <div style="border: 2px solid rgba(0,0,0,0.3);padding:20px;border-radius:10px;margin-top:20px">
+                                <div class="d-flex flex-row justify-content-between align-items-center">
+                                    <div class="d-flex flex-row justify-content-between">
+                                        <img class="" src="{{ asset('storage/'.$transaction->order_details->first()->product->image) }}" style="width:70px;height:70px;border-radius:5px;background:#F2F2F2" alt="">
+                                        <div class="d-flex flex-column justify-content-between" style="margin-left: 20px">
+                                            <label style="font-family: 'Chopin-Trial';font-weight: 400;">Order ID: {{ $transaction->id }}</label>
+                                            <label style="font-family: 'Chopin-Trial';font-weight: bold; font-size:20px;">
+                                                {{ $transaction->order_details->first()->product->name }}
+                                            </label>
+                                            <label style="font-family: 'Chopin-Trial';font-weight: 400;">
+                                                Number of products: {{ $transaction->order_details->count() }}
+                                            </label>
+                                        </div>
                                     </div>
+                                    <label class="align-self-baseline">{{ $transaction->created_at }} WIB</label>
                                 </div>
-                                <label class="align-self-baseline">{{ $transaction->created_at }} WIB</label>
+                                <div class="d-flex flex-row justify-content-between mt-3">
+                                    @if ($transaction->status == 'Completed')
+                                        <div style="border: 2px solid var(--main2-color);border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:var(--main2-color);font-family: 'Chopin-Trial';font-weight: 600;">
+                                            {{ strtoupper($transaction->status) }}
+                                        </div>
+                                    @elseif ($transaction->status == 'Canceled')
+                                        <div style="border: 2px solid red;border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:red;font-family: 'Chopin-Trial';font-weight: 600;">
+                                            {{ strtoupper($transaction->status) }}
+                                        </div>
+                                    @elseif ($transaction->status == 'In progress')
+                                        <div style="border: 2px solid #165CA2;border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
+                                            {{ strtoupper($transaction->status) }}
+                                        </div>
+                                    @elseif ($transaction->status == 'Waiting for payment')
+                                        <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
+                                            {{ strtoupper($transaction->status) }}
+                                        </div>
+                                        <form action="" method="GET" style="display:inline;">
+                                            @csrf
+                                            <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+                                            @foreach ($transaction->order_details as $index => $orderDetail)
+                                                <input type="hidden" name="products[{{ $index }}][id]" value="{{ $orderDetail->product->id }}">
+                                                <input type="hidden" name="products[{{ $index }}][name]" value="{{ $orderDetail->product->name }}">
+                                                <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
+                                                <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
+                                            @endforeach
+                                            <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
+                                            <button type="submit" class="trackbutton" id="checkoutButton">PAY</button>
+                                        </form>
+                                    @else
+                                        <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
+                                            {{ strtoupper($transaction->status) }}
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
-                            <div class="d-flex flex-row justify-content-between mt-3">
-                                @if ($transaction->status == 'Completed')
-                                    <div style="border: 2px solid var(--main2-color);border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:var(--main2-color);font-family: 'Chopin-Trial';font-weight: 600;">
-                                        {{ strtoupper($transaction->status) }}
-                                    </div>
-                                    <a href="/orderdetail/{{$transaction->id}}" style="text-decoration: none" class="trackbutton">TRACK</a>
-                                @elseif ($transaction->status == 'Canceled')
-                                    <div style="border: 2px solid red;border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:red;font-family: 'Chopin-Trial';font-weight: 600;">
-                                        {{ strtoupper($transaction->status) }}
-                                    </div>
-                                    <a href="/orderdetail/{{$transaction->id}}" style="text-decoration: none" class="trackbutton">TRACK</a>
-                                @elseif ($transaction->status == 'In progress')
-                                    <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
-                                        {{ strtoupper($transaction->status) }}
-                                    </div>
-                                    <a href="/orderdetail/{{$transaction->id}}" style="text-decoration: none" class="trackbutton">TRACK</a>
-                                @elseif ($transaction->status == 'Waiting for payment')
-                                    <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
-                                        {{ strtoupper($transaction->status) }}
-                                    </div>
-                                    <form action="" method="GET" style="display:inline;">
-                                        @csrf
-                                        <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
-                                        @foreach ($transaction->order_details as $index => $orderDetail)
-                                            <input type="hidden" name="products[{{ $index }}][id]" value="{{ $orderDetail->product->id }}">
-                                            <input type="hidden" name="products[{{ $index }}][name]" value="{{ $orderDetail->product->name }}">
-                                            <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
-                                            <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
-                                        @endforeach
-                                        <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
-                                        <button type="submit" class="trackbutton" id="checkoutButton">PAY</button>
-                                    </form>
-                                @else
-                                    <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
-                                        {{ strtoupper($transaction->status) }}
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
+                        </a>
                     @endforeach
                 </div>
             </div>

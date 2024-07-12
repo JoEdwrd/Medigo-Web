@@ -36,33 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     var checkoutButton = document.getElementById("checkoutButton");
-
-//     checkoutButton.addEventListener("click", function (e) {
-//         e.preventDefault();
-//         var form = this.closest("form"); // Get the closest form element
-//         var formData = new FormData(form);
-//         var data = new URLSearchParams(formData);
-//         var objData = Object.fromEntries(data.entries());
-
-//         // Calculate the total price
-//         var total = 0;
-//         formData.forEach((value, key) => {
-//             if (key.includes("products") && key.endsWith("[price]")) {
-//                 var index = key.match(/\[(\d+)\]/)[1]; // Extract the product index
-//                 var quantity = formData.get(`products[${index}][quantity]`);
-//                 total += parseFloat(value) * parseInt(quantity);
-//             }
-//         });
-
-//         // Add the total attribute to objData
-//         objData.total = total;
-
-//         console.log(objData);
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
     var checkoutButton = document.getElementById("checkoutButton");
 

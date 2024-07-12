@@ -63,5 +63,17 @@ class OrderDetailSeeder extends Seeder
             "quantity" => 2
         ]);
 
+        // Payment Dummy -Shamgar
+        OrderDetail::create([
+            "transaction_id" => 99999,
+            "product_id" => 1,
+            "quantity" => 2
+        ]);
+        OrderDetail::create([
+            "transaction_id" => 99999,
+            "product_id" => 3,
+            "quantity" => 5
+        ]);
+
     }
 }
