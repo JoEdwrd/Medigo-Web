@@ -8,18 +8,18 @@
         <div class="col-7" id="left-content">
              <div class="row align-items-start">
                 <div class="col">
-                    <h5 >Order ID: {{$orderDetail->id}}</h5>
+                    <h5 >Order ID: {{$transaction->id}}</h5>
                 </div>
 
                 <div class="col text-end">
-                    <h5>{{$orderDetail->created_at}}</h5>
+                    <h5>{{$transaction->created_at}}</h5>
                 </div>
             </div>
 
             @php
                 $subTotal = 0;
             @endphp
-            @foreach ($orderDetail->order_details as $order)
+            @foreach ($transaction->order_details as $order)
              <div class="order-items mt-4" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $order->product->slug) }}';">
                 <div class="row align-items-start">
                     <div class="col">
@@ -61,15 +61,15 @@
         <div class="col" id="right-content">
             <div class="row">
                 <div class="col-md-6 mb-2">
-                    <h5 class ="mb-3" style="font-weight: bold">Payment Method</h5>
-                    <h5 class ="mb-3" style="font-weight: bold">Payment Status</h5>
+                    <h5 class="mb-3" style="font-weight: bold">Payment Method</h5>
+                    <h5 class="mb-3" style="font-weight: bold">Payment Status</h5>
                 </div>
                 <div class="col-md-6 text-right">
-                    <h5 class ="mb-3 text-end">{{$orderDetail->payment_method}}</h5>
-                    <h5 class ="mb-3 text-end"> {{$orderDetail->status}}</h5>
+                    <h5 class="mb-3 text-end">{{ $transaction->payment_method }}</h5>
+                    <h5 class="mb-3 text-end">{{ $transaction->status }}</h5>
                 </div>
                 <hr>
-                <h5 class ="mb-3" style="font-weight: bold">Detail</h5>
+                <h5 class="mb-3" style="font-weight: bold">Detail</h5>
                 <div class="col-md-6">
                     <p>Subtotal </p>
                     <p>Diskon</p>
@@ -79,32 +79,54 @@
                 <div class="col-md-6 text-right">
                     <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
 
-                    @if (isset($orderDetail->promotion) && $orderDetail->promotion != '')
-                        <p class="text-end">{{ number_format($subTotal * $orderDetail->promotion->discount, 0, ',', '.') }}</p>
-                        <p class="text-end">{{ number_format($subTotal - ($subTotal * $orderDetail->promotion->discount), 0, ',', '.') }}</p>
+                    @if (isset($transaction->promotion) && $transaction->promotion != '')
+                        <p class="text-end">{{ number_format($subTotal * $transaction->promotion->discount, 0, ',', '.') }}</p>
+                        <p class="text-end">{{ number_format($subTotal - ($subTotal * $transaction->promotion->discount), 0, ',', '.') }}</p>
                     @else
                         <p class="text-end">{{ number_format($subTotal * 0, 0, ',', '.') }}</p>
                         <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
-
                     @endif
+                </div>
+            </div>
 
+            @if ($transaction->status == 'Waiting for verification' || $transaction->status == 'Waiting for payment')
+                <div class="d-flex justify-content-end">
+                    <button style="border: none; color: white; background-color: red;" id="SeeAllBTN" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                        <strong>Cancel</strong>
+                    </button>
+                </div>
+            @endif
+        </div>
+{{-- @dd($transaction) --}}
+        <!-- Modal -->
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content container border border-grey rounded-4 shadow p-4">
+                    <h3 class="text-center mb-4">Are you sure you want to cancel?</h3>
+                    <div class="d-flex justify-content-around w-50 mx-auto p-2">
+                        <form action="{{ route('order.cancel', $transaction->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-danger" style="width:100px">Confirm</button>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width:100px">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
 
-    </div>
-
     <div class="row mt-5">
         <div class="col-md-6">
             <h5>Address</h5>
-            <h6>{{$orderDetail->user->address}}</h6>
+            <h6>{{$transaction->user->address}}</h6>
         </div>
     </div>
 
     <div class="row mt-5">
-        <h5 class="mb-3">Track Your Order</h5>
+        @if (isset($transaction->tracking_order) && $transaction->tracking_order != "")
+            <h5 class="mb-3">Track Your Order</h5>
+        @endif
 
-        @if ($orderDetail->tracking_order->completed != "")
+        @if ($transaction->tracking_order->completed != "")
             <div class="row align-items-start mt-3">
                 <div class="col-md-1 d-flex justify-content-center">
                     <div class="d-flex flex-column align-items-center">
@@ -114,7 +136,7 @@
                 </div>
 
                 <div class="col-2">
-                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->completed}}</h6>
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->completed}}</h6>
                 </div>
 
                 <div class="col text-start">
@@ -124,7 +146,7 @@
 
         @endif
 
-        @if ($orderDetail->tracking_order->canceled != "")
+        @if ($transaction->tracking_order->canceled != "")
             <div class="row align-items-start mt-3">
                 <div class="col-md-1 d-flex justify-content-center">
                     <div class="d-flex flex-column align-items-center">
@@ -134,7 +156,7 @@
                 </div>
 
                 <div class="col-2">
-                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->canceled}}</h6>
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->canceled}}</h6>
                 </div>
 
                 <div class="col text-start">
@@ -144,7 +166,7 @@
 
         @endif
 
-        @if ($orderDetail->tracking_order->in_progress != "")
+        @if ($transaction->tracking_order->in_progress != "")
             <div class="row align-items-start">
                 <div class="col-md-1 d-flex justify-content-center">
                     <div class="d-flex flex-column align-items-center">
@@ -154,7 +176,7 @@
                 </div>
 
                 <div class="col-2">
-                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->in_progress}}</h6>
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->in_progress}}</h6>
                 </div>
 
                 <div class="col text-start">
@@ -164,7 +186,7 @@
         @endif
 
 
-        @if ($orderDetail->tracking_order->waiting_for_payment != "")
+        @if ($transaction->tracking_order->waiting_for_payment != "")
             <div class="row align-items-start">
                 <div class="col-md-1 d-flex justify-content-center">
                     <div class="d-flex flex-column align-items-center">
@@ -174,7 +196,7 @@
                 </div>
 
                 <div class="col-2">
-                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->waiting_for_payment}}</h6>
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->waiting_for_payment}}</h6>
                 </div>
 
                 <div class="col text-start">
@@ -184,7 +206,7 @@
         @endif
 
 
-          @if ($orderDetail->tracking_order->waiting_for_verification != "")
+          @if ($transaction->tracking_order->waiting_for_verification != "")
             <div class="row align-items-start">
                 <div class="col-md-1 d-flex justify-content-center">
                     <div class="d-flex flex-column align-items-center">
@@ -193,7 +215,7 @@
                 </div>
 
                 <div class="col-2">
-                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$orderDetail->tracking_order->waiting_for_verification}}</h6>
+                    <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->waiting_for_verification}}</h6>
                 </div>
 
                 <div class="col text-start">
@@ -201,29 +223,6 @@
                 </div>
             </div>
         @endif
-
-
-
-
-
-
-
-        {{-- <div class="row align-items-start">
-            <div class="col-md-1 d-flex justify-content-center">
-                <div class="d-flex flex-column align-items-center">
-                    <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
-                    <div class="flex-grow-1" style="width: 2px; height: 50px; background-color: var(--main2-color);"></div>
-                </div>
-            </div>
-            <div class="col-2">
-                <h6 class="mb-3 text-muted" style="margin-top: 3px;">3 May 2024 - 20:00 WIB</h6>
-            </div>
-
-            <div class="col text-start">
-                <h5 class="mb-3">Waiting for Payment</h5>
-            </div>
-        </div> --}}
-
 
     </div>
 </div>

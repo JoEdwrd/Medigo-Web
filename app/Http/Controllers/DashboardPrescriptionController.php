@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Prescription;
+use App\Models\TrackingOrder;
 use App\Models\Transaction;
+use Carbon\Carbon;
 
 class DashboardPrescriptionController extends Controller
 {
@@ -50,11 +52,16 @@ class DashboardPrescriptionController extends Controller
             $transaction = Transaction::findOrFail($prescription->transaction_id);
             $transaction->status = 'Waiting for payment';
             $transaction->save();
+
+            TrackingOrder::where('transaction_id', $$prescription->transaction_id)->update(['waiting_for_payment' => Carbon::now()]);
         }else if($request->status == 'Rejected') {
             // Temukan transaksi terkait dan perbarui statusnya
             $transaction = Transaction::findOrFail($prescription->transaction_id);
             $transaction->status = 'Canceled';
             $transaction->save();
+
+            TrackingOrder::where('transaction_id', $$prescription->transaction_id)->update(['canceled' => Carbon::now()]);
+
         }
         $prescription->save();
 

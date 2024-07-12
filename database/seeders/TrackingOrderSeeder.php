@@ -22,7 +22,6 @@ class TrackingOrderSeeder extends Seeder
             'completed' => "2024-07-09 09:45:01"
         ]);
 
-        // Semua transaksi user gladys
         TrackingOrder::create([
             "transaction_id" => 1
         ]);
@@ -37,6 +36,18 @@ class TrackingOrderSeeder extends Seeder
         ]);
         TrackingOrder::create([
             "transaction_id" => 99999
+        ]);
+      
+        TrackingOrder::create([
+            "transaction_id" => 3
+        ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 5
+        ]);
+
+        TrackingOrder::create([
+            "transaction_id" => 7
         ]);
     }
 }

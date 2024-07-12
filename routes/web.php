@@ -51,16 +51,16 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     Route::get('/', [LandingPageController::class, 'index'])->name('LandingPage.LandingIndex');
     Route::get('/addTransaction/{cartId}', [TransactionController::class, 'addTransaction']);
     Route::get('/history', [HistoryController::class, 'index'])->name('history-index');
-    
+
     Route::get('/product/{product:slug}', [ProductController::class, 'show'])->name('product.show');
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
     Route::get('/category/{category:slug}', [ProductController::class, 'showByCategory'])->name('category.show');
-    
-        
-    
+
+
+
     Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
     Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
-    
+
     // profile
     Route::get('/profile', [UserProfileController::class, 'index']);
     Route::get('/changePassOld', [UserProfileController::class, 'checkPassPage'])->name('oldPassPage');
@@ -68,23 +68,24 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     Route::post('/changePassword', [UserProfileController::class, 'changePassword']);
     Route::get('/logoutPage', [UserProfileController::class, 'logoutPage']);
     Route::put('/updateProfile', [UserProfileController::class, 'updateProfile']);
-    
+
     Route::get('/faq', [PageController::class, 'faq']);
     Route::get('/termsandconditions', [PageController::class,'termsandconditions']);
     Route::get('/aboutus', [PageController::class,"aboutus"]);
-    
+
     Route::get('/orderdetail/{order}', [OrderDetailController::class, 'index']);
-    
+    Route::post('/order/cancel/{transaction_id}', [OrderDetailController::class, 'cancel'])->name('order.cancel');
+
     Route::get('/promotions', [PromotionController::class, 'index']);
     Route::get('/promotions/{promotion:slug}', [PromotionController::class, 'show']);
-    
+
     // Routes for managing the cart
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::post('/cart/add/{productId}', [CartController::class, 'addProduct'])->name('cart.add');
     Route::delete('/cart/remove/{productId}', [CartController::class, 'removeFromCart'])->name('cart.remove');
     Route::delete('/cart/removeAll', [CartController::class, 'removeAllItems'])->name('cart.removeAll');
     Route::post('cart/changeQty/{productId}', [CartController::class, 'changeQty'])->name('cart.changeQty');
-    
+
     Route::post('/cart/addPromo', [CartController::class, 'addPromo'])->name('cart.promo.add');
     Route::post('/cart/removePromo', [CartController::class, 'removePromo'])->name('cart.promo.remove');
 
