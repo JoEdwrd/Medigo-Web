@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\OrderDetail;
+use App\Models\TrackingOrder;
 use App\Models\Transaction;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class OrderDetailController extends Controller
@@ -17,18 +19,20 @@ class OrderDetailController extends Controller
         }else{
             $cart = null;
         }
-        $orderDetail = Transaction::find($order);
+        $transaction = Transaction::find($order);
         // dd($orderDetail);
-        return view('history.OrderDetail', compact('cart', 'orderDetail'));
+        return view('history.OrderDetail', compact('cart', 'transaction'));
     }
 
-    public function cancel($id)
+    public function cancel($transaction_id)
     {
-        $orderDetail = Transaction::where('id', $id)->first();
+        $transaction = Transaction::where('id', $transaction_id)->first();
 
-        if ($orderDetail) {
-            $orderDetail->status = 'Canceled';
-            $orderDetail->save();
+        if ($transaction) {
+            $transaction->status = 'Canceled';
+            $transaction->save();
+
+            TrackingOrder::where('transaction_id', $transaction_id)->update(['canceled' => Carbon::now()]);
 
             return redirect()->back()->with('success', 'Order has been canceled.');
         }
