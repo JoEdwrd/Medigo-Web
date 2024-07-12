@@ -61,15 +61,15 @@
         <div class="col" id="right-content">
             <div class="row">
                 <div class="col-md-6 mb-2">
-                    <h5 class ="mb-3" style="font-weight: bold">Payment Method</h5>
-                    <h5 class ="mb-3" style="font-weight: bold">Payment Status</h5>
+                    <h5 class="mb-3" style="font-weight: bold">Payment Method</h5>
+                    <h5 class="mb-3" style="font-weight: bold">Payment Status</h5>
                 </div>
                 <div class="col-md-6 text-right">
-                    <h5 class ="mb-3 text-end">{{$orderDetail->payment_method}}</h5>
-                    <h5 class ="mb-3 text-end"> {{$orderDetail->status}}</h5>
+                    <h5 class="mb-3 text-end">{{ $orderDetail->payment_method }}</h5>
+                    <h5 class="mb-3 text-end">{{ $orderDetail->status }}</h5>
                 </div>
                 <hr>
-                <h5 class ="mb-3" style="font-weight: bold">Detail</h5>
+                <h5 class="mb-3" style="font-weight: bold">Detail</h5>
                 <div class="col-md-6">
                     <p>Subtotal </p>
                     <p>Diskon</p>
@@ -85,14 +85,34 @@
                     @else
                         <p class="text-end">{{ number_format($subTotal * 0, 0, ',', '.') }}</p>
                         <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
-
                     @endif
+                </div>
+            </div>
 
+            @if ($orderDetail->status == 'Waiting for verification' || $orderDetail->status == 'Waiting for payment')
+                <div class="d-flex justify-content-end">
+                    <button style="border: none; color: white; background-color: red;" id="SeeAllBTN" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                        <strong>Cancel</strong>
+                    </button>
+                </div>
+            @endif
+        </div>
+{{-- @dd($orderDetail) --}}
+        <!-- Modal -->
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content container border border-grey rounded-4 shadow p-4">
+                    <h3 class="text-center mb-4">Are you sure you want to cancel?</h3>
+                    <div class="d-flex justify-content-around w-50 mx-auto p-2">
+                        <form action="{{ route('order.cancel', $orderDetail->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-danger" style="width:100px">Confirm</button>
+                        </form>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width:100px">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-
-    </div>
 
     <div class="row mt-5">
         <div class="col-md-6">
