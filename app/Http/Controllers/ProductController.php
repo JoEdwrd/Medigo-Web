@@ -13,20 +13,27 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index()
     {
         $user = auth()->user();
-        if($user){
-            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
-        }else{
+        if ($user) {
+            $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id' => $user->id]);
+        } else {
             $cart = null;
         }
+
         $searchTerm = request('search');
         $productsQuery = Product::query();
 
         if ($searchTerm) {
-            // Fetch products that match the search term
-            $productsQuery->where('name', 'like', '%' . $searchTerm . '%');
+            // Fetch products that match the search term in product name or category name
+            $productsQuery->where(function ($query) use ($searchTerm) {
+                $query->where('name', 'like', '%' . $searchTerm . '%')
+                    ->orWhereHas('category', function ($q) use ($searchTerm) {
+                        $q->where('name', 'like', '%' . $searchTerm . '%');
+                    });
+            });
         }
 
         // Fetch only existing products from the database
@@ -35,6 +42,29 @@ class ProductController extends Controller
         $categories = Category::with('products')->get();
         return view('Product.Products', compact('categories', 'products', 'searchTerm', 'cart'));
     }
+
+    // public function index()
+    // {
+    //     $user = auth()->user();
+    //     if($user){
+    //         $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
+    //     }else{
+    //         $cart = null;
+    //     }
+    //     $searchTerm = request('search');
+    //     $productsQuery = Product::query();
+
+    //     if ($searchTerm) {
+    //         // Fetch products that match the search term
+    //         $productsQuery->where('name', 'like', '%' . $searchTerm . '%');
+    //     }
+
+    //     // Fetch only existing products from the database
+    //     $products = $productsQuery->get();
+
+    //     $categories = Category::with('products')->get();
+    //     return view('Product.Products', compact('categories', 'products', 'searchTerm', 'cart'));
+    // }
 
     /**
      * Show the form for creating a new resource.
