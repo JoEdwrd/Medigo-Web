@@ -89,6 +89,7 @@
               {{-- <button class="nav-link text-light rounded-50 text-decoration-none px-4" id="loginBTN">
                 <strong>{{ Str::upper(auth()->user()->name) }}</strong>
               </button> --}}
+              
               @if (auth()->user()->profile_picture) 
                 <img src="{{ asset("/storage/". auth()->user()->profile_picture) }}" alt="Profile Picture" class="profile-img-circle" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
               @else
