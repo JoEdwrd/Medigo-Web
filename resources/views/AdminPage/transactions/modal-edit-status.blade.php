@@ -16,7 +16,7 @@
                             <select class="form-select" aria-label="Default select example" id="statusInput" name="status" required>
                                 <option value="Waiting for verification">Waiting for verification</option>
                                 <option value="Waiting for payment">Waiting for payment</option>
-                                <option value="In Progress">In Progress</option>
+                                <option value="In progress">In progress</option>
                                 <option value="Canceled">Canceled</option>
                                 <option value="Completed">Completed</option>
                             </select>

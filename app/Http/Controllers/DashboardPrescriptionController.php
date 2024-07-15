@@ -53,7 +53,7 @@ class DashboardPrescriptionController extends Controller
             $transaction->status = 'Waiting for payment';
             $transaction->save();
 
-            TrackingOrder::where('transaction_id', $$prescription->transaction_id)->update(['waiting_for_payment' => Carbon::now()]);
+            TrackingOrder::where('transaction_id', $prescription->transaction_id)->update(['waiting_for_payment' => Carbon::now()]);
         }else if($request->status == 'Rejected') {
             // Temukan transaksi terkait dan perbarui statusnya
             $transaction = Transaction::findOrFail($prescription->transaction_id);
