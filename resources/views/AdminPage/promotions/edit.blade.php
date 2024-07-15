@@ -18,7 +18,6 @@
                 <h3>Promo Image</h3>
                 <br>
                 <input type="hidden" name="oldImage" value="{{ $promotion->image }}">
-                {{-- <img src="{{ asset('storage/'.$product->image) }}" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
                 <img src="{{ asset('storage/'.$promotion->image) }}" class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
                 <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
                 @error("image")
@@ -26,7 +25,16 @@
                         {{ $message }}
                     </div>
                 @enderror
-            
+                <h3>Promo Image Banner</h3>
+                <br>
+                <input type="hidden" name="oldImageBanner" value="{{ $promotion->imagebanner }}">
+                <img src="{{ asset('storage/'.$promotion->imagebanner) }}" class="img-preview2 img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                <input class="form-control @error("imagebanner") is-invalid @enderror" style="width: 100%" type="file" id="imagebanner" name="imagebanner" onchange="previewImage2()">
+                @error("imagebanner")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
                 <div class="col-md-12 d-flex justify-content-between p-0 mb-4">
                     <div class="col-md-6" style="background-color: #eeebeb; border-radius:20px; width:515px;">
                         <div class="container mt-4 d-flex flex-column">
@@ -110,7 +118,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-5" style="background-color: #eeebeb; border-radius:20px; width:710px;">
+                    <div class="col-md-5" style="background-color: #eeebeb; border-radius:20px; width:600px;">
                         <div class="container mt-4 d-flex flex-column" style="">
                             <h3><label for="terms" class="form-label">Terms</label></h3>
                             

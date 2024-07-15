@@ -14,8 +14,8 @@
 
     <div class="col-md-4">
         <div class="card">
-            <div class="d-flex justify-content-center align-items-center px-3 pt-3" style="height: 250px;">
-                <img src="{{ asset("storage/".$promo->image) }}" style="height: 100%; width: 100%;border-radius:10px" class="img-fluid" alt="Promo 1">
+            <div class="d-flex justify-content-center align-items-center px-3 pt-3" style="height: 100%; overflow: hidden;">
+                <img src="{{ asset("storage/".$promo->image) }}" style="border-radius:10px;object-fit: cover;" class="img-fluid" alt="Promo 1">
             </div>
             <div class="card-body">
                 <h5 class="card-title">{{ $promo->name }}</h5>

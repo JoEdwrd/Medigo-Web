@@ -114,7 +114,7 @@
 
         <div class="row text-center d-flex justify-content-evenly m-0" style="margin-top: 50px;width:100%">
             @forelse ($promotions as $promo)
-                       <div id="PromoBanner" style="cursor: pointer; background-image: url('{{ asset('storage/' . $promo->image) }}'); background-size: cover; background-position: center;" onclick="window.location='/promotions/{{$promo->slug}}';" class="col-md-2 mb-3 mt-0">
+                       <div id="PromoBanner" style="cursor: pointer; background-image: url('{{ asset('storage/' . $promo->imagebanner) }}'); background-size: cover; background-position: center;" onclick="window.location='/promotions/{{$promo->slug}}';" class="col-md-2 mb-3 mt-0">
                             <div style="height: 100%; display: flex; align-items: flex-end; justify-content:center;">
                                 <div style="margin-bottom: 20px">
                                     <h5 class="font-weight-bold" id="NavItems" style="margin-bottom: 0px">

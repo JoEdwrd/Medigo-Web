@@ -57,7 +57,7 @@ Promotion::create([
 ]);
 
 Promotion::create([
-    'name' => ' ',
+    'name' => 'Back-to-School Special - Buy One Get One Free!',
     'slug' => 'back-to-school-bogo',
     'code' => 'BTSBOGO',
     'shortdecs' => 'Limited time offer for 1 month only!',
@@ -68,7 +68,7 @@ Promotion::create([
 ]);
 
 Promotion::create([
-    'name' => 'Winter Warm-up Sale - 25% Off Jackets!',
+    'name' => 'Winter Warm-up Sale - 25% Off    !',
     'slug' => 'winter-warmup-sale',
     'code' => 'WINTER25',
     'shortdecs' => 'Stay cozy and save!',
