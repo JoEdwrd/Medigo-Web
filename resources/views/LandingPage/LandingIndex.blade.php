@@ -100,11 +100,10 @@
                 </div> --}}
             </div>
         </section>
-        <div style=" display: flex; flex-direction: row; align-items: center; justify-content: center; margin-top: 100px">
+        <div style=" display: flex; justify-content: center; margin-top: 70px">
             <a href="/products">
                 <button style="border: none; color: white;" id="SeeAllBTN"><strong>See All</strong></button>
             </a>
-
         </div>
     </div>
 
@@ -158,6 +157,12 @@
                 </div>
             </div>
             @endforelse
+        </div>
+
+        <div style=" display: flex; justify-content: center; margin-top: 50px">
+            <a href="/promotions">
+                <button style="border: none; color: white;" id="SeeAllBTN"><strong>See All</strong></button>
+            </a>
         </div>
     </div>
 

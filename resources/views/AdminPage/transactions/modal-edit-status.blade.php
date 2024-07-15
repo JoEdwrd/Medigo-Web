@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 <div>
-                    <form method="post" action="/dashboard/transactions/{{ $transaction->slug }}/edit" class="row g-3"> 
+                    <form method="post" action="/dashboard/transactions/{{ $transaction->slug }}/edit" class="row g-3">
                         @csrf
                         @method("put")
                         <div class="mb-3">

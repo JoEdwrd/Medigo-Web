@@ -38,7 +38,7 @@
                                         @csrf
                                         @method('put')
                                         <div class="m-2 ps-2 py-2" style="background-color: #d9d9d9; border-radius:10px;">
-                                            <select name="status" class="form-control">
+                                            <select name="status" class="form-label" style="width: 90%; border: none; height: 30px; border-radius: 5px">
                                                 <option value="Waiting for verification" {{ $prescriptions->status == 'waiting for verification' ? 'selected' : '' }}>Waiting for Verification</option>
                                                 <option value="Approved" {{ $prescriptions->status == 'Approved' ? 'selected' : '' }}>Approved</option>
                                                 <option value="Rejected" {{ $prescriptions->status == 'Rejected' ? 'selected' : '' }}>Rejected</option>
