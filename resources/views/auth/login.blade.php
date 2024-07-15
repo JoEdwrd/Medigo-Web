@@ -33,16 +33,16 @@
                     <div>
                         <label for="email" value="{{ __('Email') }}" >
                             <p class="fontlabel" id="chopin1">Email Address</p>
-                            <input id="email" class="input-field" type="email" name="email" :value="old('email')"
-                            required autofocus autocomplete="email"/>
+                            <input id="email" class="input-field ps-2" type="email" name="email" :value="old('email')"
+                            required autofocus autocomplete="email" style='font-size: 16px;'/>
                         </label>
                     </div>
 
                     <div>
                         <label for="password" value="{{ __('Password') }}" >
                             <p class="fontlabel" id="chopin1">Password</p>
-                            <input id="password" class="input-field" type="password" name="password" required
-                                autocomplete="current-password"/>
+                            <input id="password" class="input-field ps-2" type="password" name="password" required
+                                autocomplete="current-password" style='font-size: 16px;'/>
                         </label>
                         <div class="row-2">
                             <input type="checkbox" onclick="showPass()">
