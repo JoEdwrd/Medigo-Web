@@ -33,7 +33,7 @@
                 <hr class="my-4">
 
                 <div class="mt-3">
-                    <h5 class="mb-0">[Masukkan text disini]</h5>
+                    <p class="mb-0">{!! $product->minimizedesc !!}</p>
                     <div id="more-info" class=collapse>
                         {!! $product->description !!}
                     </div>

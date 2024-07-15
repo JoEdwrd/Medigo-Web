@@ -21,10 +21,10 @@ Product::create([
     "stock" => 1000,
     "price" => 15500,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 PANADOL EXTRA contains Paracetamol and Caffeine. This medicine can be used to relieve headaches and toothaches. Paracetamol, as an analgesic, works by increasing the pain threshold, while Caffeine works by inhibiting the action of adenosine receptors, thereby reducing pain.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 This medicine is used to relieve headaches and toothaches.
 <br>
@@ -67,10 +67,10 @@ Product::create([
     "stock" => 500,
     "price" => 12000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 BODREX MIGRA contains Paracetamol and Caffeine. This medicine is used to relieve migraines and other headaches.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve migraines and other headaches.
 <br>
@@ -113,10 +113,10 @@ Product::create([
     "stock" => 800,
     "price" => 11000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 PARAMEX contains Paracetamol, Propyphenazone, Caffeine, and Dextromethorphan HBr. This medicine is used to relieve headaches, fever, and toothaches.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, fever, and toothaches.
 <br>
@@ -159,10 +159,10 @@ Product::create([
     "stock" => 700,
     "price" => 15000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 PANADOL REGULAR contains Paracetamol. This medicine is used to relieve headaches and other mild pain.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches and other mild pain.
 <br>
@@ -205,10 +205,10 @@ Product::create([
     "stock" => 900,
     "price" => 12000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 BODREX contains Paracetamol and Caffeine. This medicine is used to relieve headaches, toothaches, and fever.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, toothaches, and fever.
 <br>
@@ -251,10 +251,10 @@ Product::create([
     "stock" => 600,
     "price" => 14000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 DUMIN contains Paracetamol. This medicine is used to relieve headaches, muscle pain, joint pain, and fever.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, muscle pain, joint pain, and fever.
 <br>
@@ -297,10 +297,10 @@ Product::create([
     "stock" => 400,
     "price" => 13000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 NEOZEP FORTE contains Paracetamol, Phenylephrine HCl, Chlorpheniramine Maleate, and Caffeine. This medicine is used to relieve flu symptoms such as headaches, nasal congestion, and fever.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve flu symptoms such as headaches, nasal congestion, and fever.
 <br>
@@ -343,10 +343,10 @@ Product::create([
     "stock" => 300,
     "price" => 16000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 ANTALGIN contains Metamizole Sodium. This medicine is used to relieve headaches, toothaches, and other pain.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, toothaches, and other pain.
 <br>
@@ -389,10 +389,10 @@ Product::create([
     "stock" => 1000,
     "price" => 9000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 SANMOL contains Paracetamol. This medicine is used to relieve headaches, mild pain, and fever.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, mild pain, and fever.
 <br>
@@ -435,10 +435,10 @@ Product::create([
     "stock" => 600,
     "price" => 17000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 SARIDON contains Paracetamol, Propyphenazone, and Caffeine. This medicine is used to relieve headaches, toothaches, and other pain.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, toothaches, and other pain.
 <br>
@@ -481,10 +481,10 @@ Product::create([
     "stock" => 500,
     "price" => 10000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 SUMAGESIC contains Paracetamol. This medicine is used to relieve headaches, mild pain, and fever.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, mild pain, and fever.
 <br>
@@ -527,10 +527,10 @@ Product::create([
     "stock" => 700,
     "price" => 18000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 TENSILON contains Ibuprofen. This medicine is used to relieve headaches, mild to moderate pain, and menstrual pain.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 To relieve headaches, mild to moderate pain, and menstrual pain.
 <br>
@@ -573,10 +573,10 @@ Product::create([
     "stock" => 800,
     "price" => 9000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 PAMOL contains <strong>Paracetamol</strong>. This medicine is used to alleviate headaches, mild pain, and fever.<br>
-<br>
+<br>",
+    "description" => "
 <strong>General Indications</strong><br>
 Alleviates headaches, mild pain, and fever.<br>
 <br>
@@ -620,29 +620,29 @@ Product::create([
     "stock" => 800,
     "price" => 89900,
     "shortdesc" => "Per Box",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Hevit-C is a supplement containing <strong>high-dose Vitamin C</strong> that helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br>",
     "description" => "
-<strong>Description</strong><br>
-Hevit-C is a supplement containing <strong>high-dose Vitamin C</strong> that helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br><br>
 <strong>General Indications</strong><br>
-Helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br><br>
+Helps maintain <strong>immune function</strong> and acts as an <strong>antioxidant</strong>.<br>
 <strong>Composition</strong><br>
-Vitamin C 1000 mg.<br><br>
+Vitamin C 1000 mg.<br>
 <strong>Dosage</strong><br>
-Adults: 1 tablet once daily.<br><br>
+Adults: 1 tablet once daily.<br>
 <strong>Administration</strong><br>
-After meals.<br><br>
+After meals.<br>
 <strong>Caution</strong><br>
-Use with caution in patients with kidney function disorders.<br><br>
+Use with caution in patients with kidney function disorders.<br>
 <strong>Contraindications</strong><br>
-Patients hypersensitive to Vitamin C.<br><br>
+Patients hypersensitive to Vitamin C.<br>
 <strong>Side Effects</strong><br>
-Nausea, vomiting, and digestive disturbances.<br><br>
+Nausea, vomiting, and digestive disturbances.<br>
 <strong>Product Category</strong><br>
-Over-the-Counter Medicine<br><br>
+Over-the-Counter Medicine<br>
 <strong>Packaging</strong><br>
-Per Box<br><br>
+Per Box<br>
 <strong>Manufacturer</strong><br>
-Kalbe Farma<br><br>
+Kalbe Farma<br>
 <strong>Registration Number</strong><br>
 BPOM: D1234567890A1"
 ]);
@@ -655,29 +655,29 @@ Product::create([
     "stock" => 600,
     "price" => 320000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Vitamin D3 1000 IU helps maintain bone health and supports the immune system.<br>",
     "description" => "
-<strong>Description</strong><br>
-Vitamin D3 1000 IU helps maintain bone health and supports the immune system.<br><br>
 <strong>General Indications</strong><br>
-Helps maintain bone health and supports the immune system.<br><br>
+Helps maintain bone health and supports the immune system.<br>
 <strong>Composition</strong><br>
-Vitamin D3 1000 IU.<br><br>
+Vitamin D3 1000 IU.<br>
 <strong>Dosage</strong><br>
-Adults: 1 tablet once daily.<br><br>
+Adults: 1 tablet once daily.<br>
 <strong>Administration</strong><br>
-After meals.<br><br>
+After meals.<br>
 <strong>Caution</strong><br>
-Use with caution in patients with hypercalcemia.<br><br>
+Use with caution in patients with hypercalcemia.<br>
 <strong>Contraindications</strong><br>
-Patients hypersensitive to Vitamin D.<br><br>
+Patients hypersensitive to Vitamin D.<br>
 <strong>Side Effects</strong><br>
-Nausea, vomiting, and digestive disturbances.<br><br>
+Nausea, vomiting, and digestive disturbances.<br>
 <strong>Product Category</strong><br>
-Food Supplement<br><br>
+Food Supplement<br>
 <strong>Packaging</strong><br>
-Per Bottle<br><br>
+Per Bottle<br>
 <strong>Manufacturer</strong><br>
-Radiant Sentral Nutrindo<br><br>
+Radiant Sentral Nutrindo<br>
 <strong>Registration Number</strong><br>
 BPOM: SI114303141"
 ]);
@@ -690,29 +690,29 @@ Product::create([
     "stock" => 700,
     "price" => 18000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Vitamin B Complex contains various types of Vitamin B that help maintain nerve health and increase energy.<br>",
     "description" => "
-<strong>Description</strong><br>
-Vitamin B Complex contains various types of Vitamin B that help maintain nerve health and increase energy.<br><br>
 <strong>General Indications</strong><br>
-Helps maintain nerve health and increase energy.<br><br>
+Helps maintain nerve health and increase energy.<br>
 <strong>Composition</strong><br>
-Vitamin B1 100 mg, Vitamin B6 100 mg, Vitamin B12 100 mcg.<br><br>
+Vitamin B1 100 mg, Vitamin B6 100 mg, Vitamin B12 100 mcg.<br>
 <strong>Dosage</strong><br>
-Adults: 1 tablet once daily.<br><br>
+Adults: 1 tablet once daily.<br>
 <strong>Administration</strong><br>
-After meals.<br><br>
+After meals.<br>
 <strong>Caution</strong><br>
-Use with caution in patients with liver function disorders.<br><br>
+Use with caution in patients with liver function disorders.<br>
 <strong>Contraindications</strong><br>
-Patients hypersensitive to Vitamin B.<br><br>
+Patients hypersensitive to Vitamin B.<br>
 <strong>Side Effects</strong><br>
-Allergic reactions such as skin rash and itching.<br><br>
+Allergic reactions such as skin rash and itching.<br>
 <strong>Product Category</strong><br>
-Food Supplement<br><br>
+Food Supplement<br>
 <strong>Packaging</strong><br>
-Per Bottle<br><br>
+Per Bottle<br>
 <strong>Manufacturer</strong><br>
-Sanbe Farma<br><br>
+Sanbe Farma<br>
 <strong>Registration Number</strong><br>
 BPOM: D1122334455A1"
 ]);
@@ -725,29 +725,29 @@ Product::create([
     "stock" => 900,
     "price" => 30000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Nutrimax Vitamin E 400 IU is an antioxidant supplement that helps maintain skin health and cell integrity.<br>",
     "description" => "
-<strong>Description</strong><br>
-Nutrimax Vitamin E 400 IU is an antioxidant supplement that helps maintain skin health and cell integrity.<br><br>
 <strong>General Indications</strong><br>
-Helps maintain skin health and cell integrity.<br><br>
+Helps maintain skin health and cell integrity.<br>
 <strong>Composition</strong><br>
-Vitamin E 400 IU.<br><br>
+Vitamin E 400 IU.<br>
 <strong>Dosage</strong><br>
-Adults: 1 capsule once daily.<br><br>
+Adults: 1 capsule once daily.<br>
 <strong>Administration</strong><br>
-After meals.<br><br>
+After meals.<br>
 <strong>Caution</strong><br>
-Use with caution in patients with digestive disorders.<br><br>
+Use with caution in patients with digestive disorders.<br>
 <strong>Contraindications</strong><br>
-Patients hypersensitive to Vitamin E.<br><br>
+Patients hypersensitive to Vitamin E.<br>
 <strong>Side Effects</strong><br>
-Allergic reactions such as skin rash and itching.<br><br>
+Allergic reactions such as skin rash and itching.<br>
 <strong>Product Category</strong><br>
-Food Supplement<br><br>
+Food Supplement<br>
 <strong>Packaging</strong><br>
-Per Bottle<br><br>
+Per Bottle<br>
 <strong>Manufacturer</strong><br>
-Suryaprana Nutrisindo<br><br>
+Suryaprana Nutrisindo<br>
 <strong>Registration Number</strong><br>
 BPOM: SI184309721"
 ]);
@@ -760,29 +760,29 @@ Product::create([
     "stock" => 850,
     "price" => 22000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Zegafit is a supplement containing various vitamins and minerals that help boost immune function and overall health.<br>",
     "description" => "
-<strong>Description</strong><br>
-Zegafit is a supplement containing various vitamins and minerals that help boost immune function and overall health.<br><br>
 <strong>General Indications</strong><br>
-Helps boost immune function and overall health.<br><br>
+Helps boost immune function and overall health.<br>
 <strong>Composition</strong><br>
-Vitamin A 5000 IU, Vitamin B1 1.5 mg, Vitamin B2 1.7 mg, Vitamin B6 2 mg, Vitamin B12 6 mcg, Vitamin C 60 mg, Vitamin D 400 IU, Vitamin E 30 IU, Zinc 11 mg.<br><br>
+Vitamin A 5000 IU, Vitamin B1 1.5 mg, Vitamin B2 1.7 mg, Vitamin B6 2 mg, Vitamin B12 6 mcg, Vitamin C 60 mg, Vitamin D 400 IU, Vitamin E 30 IU, Zinc 11 mg.<br>
 <strong>Dosage</strong><br>
-Adults: 1 tablet once daily.<br><br>
+Adults: 1 tablet once daily.<br>
 <strong>Administration</strong><br>
-After meals.<br><br>
+After meals.<br>
 <strong>Caution</strong><br>
-Use with caution in patients with kidney function disorders.<br><br>
+Use with caution in patients with kidney function disorders.<br>
 <strong>Contraindications</strong><br>
-Patients hypersensitive to the composition of vitamins and minerals in this product.<br><br>
+Patients hypersensitive to the composition of vitamins and minerals in this product.<br>
 <strong>Side Effects</strong><br>
-Nausea, vomiting, and digestive disturbances.<br><br>
+Nausea, vomiting, and digestive disturbances.<br>
 <strong>Product Category</strong><br>
-Food Supplement<br><br>
+Food Supplement<br>
 <strong>Packaging</strong><br>
-Per Strip<br><br>
+Per Strip<br>
 <strong>Manufacturer</strong><br>
-Kalbe Farma<br><br>
+Kalbe Farma<br>
 <strong>Registration Number</strong><br>
 BPOM: SD151546531"
 ]);
@@ -796,10 +796,9 @@ Product::create([
     "stock" => 1000,
     "price" => 9700,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Promag Tablet is a medicine used to relieve symptoms of gastritis and stomach pain due to excess stomach acid.<br>",
     "description" => "
-<strong>Description</strong><br>
-Promag Tablet is a medicine used to relieve symptoms of gastritis and stomach pain due to excess stomach acid.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves symptoms of gastritis, stomach pain, and excess stomach acid.<br>
 <br>
@@ -842,10 +841,9 @@ Product::create([
     "stock" => 800,
     "price" => 19000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Mylanta Liquid is a liquid medicine that helps reduce symptoms of heartburn and digestive disturbances due to excess stomach acid.<br>",
     "description" => "
-<strong>Description</strong><br>
-Mylanta Liquid is a liquid medicine that helps reduce symptoms of heartburn and digestive disturbances due to excess stomach acid.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves symptoms of heartburn and digestive disturbances due to excess stomach acid.<br>
 <br>
@@ -888,10 +886,9 @@ Product::create([
     "stock" => 1200,
     "price" => 12000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Polysilane Tablet is a medicine used to relieve symptoms of bloating, abdominal distension, and excess gas in the digestive tract.<br>",
     "description" => "
-<strong>Description</strong><br>
-Polysilane Tablet is a medicine used to relieve symptoms of bloating, abdominal distension, and excess gas in the digestive tract.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves symptoms of bloating and excess gas in the digestive tract.<br>
 <br>
@@ -934,10 +931,9 @@ Product::create([
     "stock" => 900,
     "price" => 12000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Enzyplex Tablet is an enzyme supplement that aids in the digestion of food in the digestive tract.<br>",
     "description" => "
-<strong>Description</strong><br>
-Enzyplex Tablet is an enzyme supplement that aids in the digestion of food in the digestive tract.<br>
-<br>
 <strong>General Indications</strong><br>
 Aids in the digestion of food.<br>
 <br>
@@ -980,10 +976,9 @@ Product::create([
     "stock" => 700,
     "price" => 15000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Lansoprazole Capsule is a medicine used to reduce stomach acid production and treat gastric ulcers and gastroesophageal reflux disease (GERD).<br>",
     "description" => "
-<strong>Description</strong><br>
-Lansoprazole Capsule is a medicine used to reduce stomach acid production and treat gastric ulcers and gastroesophageal reflux disease (GERD).<br>
-<br>
 <strong>General Indications</strong><br>
 Treats gastric ulcers and gastroesophageal reflux disease (GERD).<br>
 <br>
@@ -1027,10 +1022,9 @@ Product::create([
     "stock" => 2000,
     "price" => 25000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Cetirizine Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, watery eyes, and runny nose.<br>",
     "description" => "
-<strong>Description</strong><br>
-Cetirizine Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, watery eyes, and runny nose.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves allergy symptoms such as sneezing, itching, watery eyes, and runny nose.<br>
 <br>
@@ -1073,10 +1067,9 @@ Product::create([
     "stock" => 1500,
     "price" => 35000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Loratadine Syrup is an antihistamine used to relieve allergy symptoms in children such as sneezing, itching, watery eyes, and runny nose.<br>",
     "description" => "
-<strong>Description</strong><br>
-Loratadine Syrup is an antihistamine used to relieve allergy symptoms in children such as sneezing, itching, watery eyes, and runny nose.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves allergy symptoms in children such as sneezing, itching, watery eyes, and runny nose.<br>
 <br>
@@ -1119,10 +1112,9 @@ Product::create([
     "stock" => 3000,
     "price" => 10000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Chlorpheniramine Maleate Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, and watery eyes.<br>",
     "description" => "
-<strong>Description</strong><br>
-Chlorpheniramine Maleate Tablet is an antihistamine used to relieve allergy symptoms such as sneezing, itching, and watery eyes.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves allergy symptoms such as sneezing, itching, and watery eyes.<br>
 <br>
@@ -1165,10 +1157,9 @@ Product::create([
     "stock" => 1200,
     "price" => 45000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Fexofenadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>",
     "description" => "
-<strong>Description</strong><br>
-Fexofenadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves symptoms of urticaria (hives) and allergic rhinitis.<br>
 <br>
@@ -1211,10 +1202,9 @@ Product::create([
     "stock" => 1000,
     "price" => 40000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Desloratadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>",
     "description" => "
-<strong>Description</strong><br>
-Desloratadine Tablet is an antihistamine used to relieve allergy symptoms such as urticaria (hives) and allergic rhinitis.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves symptoms of urticaria (hives) and allergic rhinitis.<br>
 <br>
@@ -1258,10 +1248,9 @@ Product::create([
     "stock" => 5000,
     "price" => 10000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Paracetamol Tablet is a medication used to relieve mild to moderate pain.<br>",
     "description" => "
-<strong>Description</strong><br>
-Paracetamol Tablet is a medication used to relieve mild to moderate pain.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves mild to moderate pain.<br>
 <br>
@@ -1304,10 +1293,9 @@ Product::create([
     "stock" => 4000,
     "price" => 20000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Ibuprofen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and inflammation.<br>",
     "description" => "
-<strong>Description</strong><br>
-Ibuprofen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve pain and inflammation.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves pain and inflammation.<br>
 <br>
@@ -1350,10 +1338,9 @@ Product::create([
     "stock" => 2500,
     "price" => 30000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Naproxen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>",
     "description" => "
-<strong>Description</strong><br>
-Naproxen Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>
-<br>
 <strong>General Indications</strong><br>
 Reduces pain and inflammation.<br>
 <br>
@@ -1396,10 +1383,9 @@ Product::create([
     "stock" => 3500,
     "price" => 15000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Aspirin Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve mild to moderate pain.<br>",
     "description" => "
-<strong>Description</strong><br>
-Aspirin Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to relieve mild to moderate pain.<br>
-<br>
 <strong>General Indications</strong><br>
 Relieves mild to moderate pain.<br>
 <br>
@@ -1442,10 +1428,9 @@ Product::create([
     "stock" => 1800,
     "price" => 40000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Diclofenac Sodium Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>",
     "description" => "
-<strong>Description</strong><br>
-Diclofenac Sodium Tablet is a nonsteroidal anti-inflammatory drug (NSAID) used to reduce pain and inflammation.<br>
-<br>
 <strong>General Indications</strong><br>
 Reduces pain and inflammation.<br>
 <br>
@@ -1489,10 +1474,9 @@ Product::create([
     "stock" => 3000,
     "price" => 50000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Hepabion Forte is a supplement containing vitamins and minerals to support liver health.<br>",
     "description" => "
-<strong>Description</strong><br>
-Hepabion Forte is a supplement containing vitamins and minerals to support liver health.<br>
-<br>
 <strong>General Indications</strong><br>
 Helps maintain liver health and function.<br>
 <br>
@@ -1535,10 +1519,9 @@ Product::create([
     "stock" => 4500,
     "price" => 30000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Liv 52 is an herbal supplement used to support liver health and improve liver function.<br>",
     "description" => "
-<strong>Description</strong><br>
-Liv 52 is an herbal supplement used to support liver health and improve liver function.<br>
-<br>
 <strong>General Indications</strong><br>
 Supports liver health and improves liver function.<br>
 <br>
@@ -1581,10 +1564,9 @@ Product::create([
     "stock" => 2000,
     "price" => 860000,
     "shortdesc" => "Per Box",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Essentiale Forte is a supplement containing essential phospholipids to support liver health.<br>",
     "description" => "
-<strong>Description</strong><br>
-Essentiale Forte is a supplement containing essential phospholipids to support liver health.<br>
-<br>
 <strong>General Indications</strong><br>
 Helps improve liver function and protect liver cells.<br>
 <br>
@@ -1627,10 +1609,9 @@ Product::create([
     "stock" => 3500,
     "price" => 40000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Silymarin Tablet is a supplement containing Milk Thistle extract to support liver health.<br>",
     "description" => "
-<strong>Description</strong><br>
-Silymarin Tablet is a supplement containing Milk Thistle extract to support liver health.<br>
-<br>
 <strong>General Indications</strong><br>
 Helps protect liver cells and improve liver function.<br>
 <br>
@@ -1673,10 +1654,9 @@ Product::create([
     "stock" => 2800,
     "price" => 45000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+LiverCare Capsule is a supplement containing natural herbs to support liver function and protect liver cells.<br>",
     "description" => "
-<strong>Description</strong><br>
-LiverCare Capsule is a supplement containing natural herbs to support liver function and protect liver cells.<br>
-<br>
 <strong>General Indications</strong><br>
 Supports liver health and improves liver function.<br>
 <br>
@@ -1719,10 +1699,9 @@ Product::create([
     "stock" => 3200,
     "price" => 50000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Ginkgo Biloba Extract is a supplement containing Ginkgo Biloba leaf extract to support hearing health and blood circulation.<br>",
     "description" => "
-<strong>Description</strong><br>
-Ginkgo Biloba Extract is a supplement containing Ginkgo Biloba leaf extract to support hearing health and blood circulation.<br>
-<br>
 <strong>General Indications</strong><br>
 Helps improve blood circulation to the brain and ears, and supports hearing function.<br>
 <br>
@@ -1765,10 +1744,9 @@ Product::create([
     "stock" => 4100,
     "price" => 52000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Neurobion Forte is a supplement containing vitamin B complex to support nerve health and hearing.<br>",
     "description" => "
-<strong>Description</strong><br>
-Neurobion Forte is a supplement containing vitamin B complex to support nerve health and hearing.<br>
-<br>
 <strong>General Indications</strong><br>
 Helps maintain nerve health and hearing function.<br>
 <br>
@@ -1811,10 +1789,9 @@ Product::create([
     "stock" => 2000,
     "price" => 70000,
     "shortdesc" => "Per Strip",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Betahistine Mesylate is a medication used to treat vertigo and hearing problems associated with disorders of the inner ear.<br>",
     "description" => "
-<strong>Description</strong><br>
-Betahistine Mesylate is a medication used to treat vertigo and hearing problems associated with disorders of the inner ear.<br>
-<br>
 <strong>General Indications</strong><br>
 To alleviate vertigo and hearing disorders caused by issues in the inner ear.<br>
 <br>
@@ -1857,10 +1834,9 @@ Product::create([
     "stock" => 3200,
     "price" => 1450000,
     "shortdesc" => "Per Box",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Tanakan is a supplement containing Ginkgo Biloba extract to support auditory health and cognitive function.<br>",
     "description" => "
-<strong>Description</strong><br>
-Tanakan is a supplement containing Ginkgo Biloba extract to support auditory health and cognitive function.<br>
-<br>
 <strong>General Indications</strong><br>
 To help improve blood circulation to the brain and ears, and support auditory function.<br>
 <br>
@@ -1903,9 +1879,9 @@ Product::create([
     "stock" => 1500,
     "price" => 85000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Acustivum is a spray medication that helps remove existing wax plugs, prevents the formation of wax plugs, and maintains ear hygiene.<br>",
     "description" => "
-<strong>Description</strong><br>
-Acustivum is a spray medication that helps remove existing wax plugs, prevents the formation of wax plugs, and maintains ear hygiene.<br>
 <strong>General Indication</strong><br>
 Supports ear health and cleanliness.<br>
 <strong>Composition</strong><br>
@@ -1933,9 +1909,9 @@ Product::create([
     "stock" => 4000,
     "price" => 90000,
     "shortdesc" => "Per Tube",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Parodontax is a toothpaste specially formulated to help address bleeding gums and maintain gum health.<br>",
     "description" => "
-<strong>Description</strong><br>
-Parodontax is a toothpaste specially formulated to help address bleeding gums and maintain gum health.<br>
 <strong>General Indication</strong><br>
 Helps alleviate bleeding gums and maintain gum health.<br>
 <strong>Composition</strong><br>
@@ -1968,9 +1944,9 @@ Product::create([
     "stock" => 2500,
     "price" => 45000,
     "shortdesc" => "Per Tube",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Orajel is a topical anesthetic gel used to relieve toothache and mouth irritation.<br>",
     "description" => "
-<strong>Description</strong><br>
-Orajel is a topical anesthetic gel used to relieve toothache and mouth irritation.<br>
 <strong>General Indication</strong><br>
 Relieves toothache and mouth irritation.<br>
 <strong>Composition</strong><br>
@@ -2003,9 +1979,9 @@ Product::create([
     "stock" => 1500,
     "price" => 60000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Lidocaine Viscous is a local anesthetic solution used to relieve mouth and throat pain.<br>",
     "description" => "
-<strong>Description</strong><br>
-Lidocaine Viscous is a local anesthetic solution used to relieve mouth and throat pain.<br>
 <strong>General Indication</strong><br>
 Relieves mouth and throat pain.<br>
 <strong>Composition</strong><br>
@@ -2038,9 +2014,9 @@ Product::create([
     "stock" => 3500,
     "price" => 55000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Corsodyl Mouthwash is a mouthwash containing Chlorhexidine to treat oral infections and gum problems.<br>",
     "description" => "
-<strong>Description</strong><br>
-Corsodyl Mouthwash is a mouthwash containing Chlorhexidine to treat oral infections and gum problems.<br>
 <strong>General Indication</strong><br>
 Treats oral infections and gum problems.<br>
 <strong>Composition</strong><br>
@@ -2073,9 +2049,9 @@ Product::create([
     "stock" => 1800,
     "price" => 70000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong><br>
+Difflam Spray is a mouth spray containing Benzydamine to relieve pain and irritation in the mouth and throat.<br>",
     "description" => "
-<strong>Description</strong><br>
-Difflam Spray is a mouth spray containing Benzydamine to relieve pain and irritation in the mouth and throat.<br>
 <strong>General Indication</strong><br>
 Relieves pain and irritation in the mouth and throat.<br>
 <strong>Composition</strong><br>
@@ -2108,10 +2084,10 @@ Product::create([
     "stock" => 800,
     "price" => 2500,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 Decolgen is a flu medicine containing paracetamol, phenylpropanolamine HCl, and chlorpheniramine maleate. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
@@ -2154,10 +2130,10 @@ Product::create([
     "stock" => 1200,
     "price" => 15000,
     "shortdesc" => "Per Box",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 Antangin Junior is a flu medicine for children containing a combination of paracetamol, pseudoephedrine HCl, and chlorpheniramine maleate. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion in children.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion in children.
 <br>
@@ -2200,10 +2176,10 @@ Product::create([
     "stock" => 600,
     "price" => 250000,
     "shortdesc" => "Per Box",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 Theraflu is a flu medication containing a combination of paracetamol, phenylephrine HCl, and diphenhydramine HCl. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
@@ -2246,10 +2222,10 @@ Product::create([
 "stock" => 500,
 "price" => 32000,
 "shortdesc" => "Per Strip",
-"description" => "
-<strong>Description</strong><br>
+"minimizedesc"=>"<strong>Description</strong><br>
 Sinarest is a flu medication containing a combination of paracetamol, phenylephrine HCl, and caffeine. This medication helps relieve flu symptoms such as fever, cold, sneezing, and nasal congestion.
-<br>
+<br>",
+"description" => "
 <strong>General Indication</strong><br>
 Relieves flu symptoms such as fever, cold, sneezing, and nasal congestion.
 <br>
@@ -2291,10 +2267,10 @@ Product::create([
     "stock" => 700,
     "price" => 28000,
     "shortdesc" => "Per Strip",
-    "description" => "
-<strong>Description</strong><br>
+    "minimizedesc"=>"<strong>Description</strong><br>
 Decolgen Cold and Flu is a flu medication containing a combination of paracetamol, phenylephrine HCl, and dextromethorphan HBr. This medication helps relieve flu symptoms such as fever, cold, cough, sneezing, and nasal congestion.
-<br>
+<br>",
+    "description" => "
 <strong>General Indication</strong><br>
 Relieves flu symptoms such as fever, cold, cough, sneezing, and nasal congestion.
 <br>
@@ -2337,9 +2313,9 @@ Product::create([
     "stock" => 2000,
     "price" => 200000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong>
+<br>Visine Original Eye Drops are eye drops that help relieve redness in the eyes.",
     "description" => "
-<strong>Description</strong>
-<br>Visine Original Eye Drops are eye drops that help relieve redness in the eyes.
 <br><strong>General Indications</strong>
 <br>Reduces eye redness due to mild irritation.
 <br><strong>Composition</strong>
@@ -2372,9 +2348,9 @@ Product::create([
     "stock" => 1500,
     "price" => 28000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong>
+<br>Rohto Cool Eye Drops are eye drops that provide a cool and comfortable sensation to the eyes.",
     "description" => "
-<strong>Description</strong>
-<br>Rohto Cool Eye Drops are eye drops that provide a cool and comfortable sensation to the eyes.
 <br><strong>General Indications</strong>
 <br>Reduces redness and irritation of the eyes.
 <br><strong>Composition</strong>
@@ -2407,9 +2383,9 @@ Product::create([
     "stock" => 800,
     "price" => 60000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong>
+<br>Cendo Xitrol Eye Drops are antibiotic and anti-inflammatory eye drops.",
     "description" => "
-<strong>Description</strong>
-<br>Cendo Xitrol Eye Drops are antibiotic and anti-inflammatory eye drops.
 <br><strong>General Indications</strong>
 <br>Treats eye infections and inflammation.
 <br><strong>Composition</strong>
@@ -2442,9 +2418,9 @@ Product::create([
     "stock" => 2500,
     "price" => 25000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong>
+<br>Insto Regular Eye Drops are eye drops designed to alleviate dry and mildly irritated eyes.",
     "description" => "
-<strong>Description</strong>
-<br>Insto Regular Eye Drops are eye drops designed to alleviate dry and mildly irritated eyes.
 <br><strong>General Indications</strong>
 <br>Reduces dryness and eye irritation.
 <br><strong>Composition</strong>
@@ -2477,9 +2453,9 @@ Product::create([
     "stock" => 1000,
     "price" => 45000,
     "shortdesc" => "Per Bottle",
+    "minimizedesc"=>"<strong>Description</strong>
+<br>Allergan Refresh Tears are eye drops designed to moisturize and provide comfort to dry eyes.",
     "description" => "
-<strong>Description</strong>
-<br>Allergan Refresh Tears are eye drops designed to moisturize and provide comfort to dry eyes.
 <br><strong>General Indications</strong>
 <br>Moisturizes dry eyes.
 <br><strong>Composition</strong>

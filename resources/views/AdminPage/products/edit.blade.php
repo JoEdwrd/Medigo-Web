@@ -37,7 +37,14 @@
                     </div>
                 @enderror
                 <br>
-                <label for="description" class="form-label">Description Product</label>
+                <label for="minimizedesc" class="form-label">Shown Description Product</label>
+                @error("minimizedesc")
+                <p class="text-danger">{{ $message }}</p>
+                @enderror
+                <input id="minimizedesc" type="hidden" name="minimizedesc" value="{{ old("minimizedesc",$product->minimizedesc) }}">
+                <trix-editor input="minimizedesc" style="background: white;width:100%;border-radius:5px;height:200px;border:none;overflow:scroll"></trix-editor>
+                <br>
+                <label for="description" class="form-label">Hide Description Product</label>
                 @error("description")
                 <p class="text-danger">{{ $message }}</p>
                 @enderror

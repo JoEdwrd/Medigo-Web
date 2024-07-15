@@ -21,6 +21,7 @@ return new class extends Migration
             $table->double("discprice")->nullable();
             $table->string("name");
             $table->text("description");
+            $table->text("minimizedesc");
             $table->string("shortdesc");
             $table->string("image")->nullable();
             $table->timestamps();

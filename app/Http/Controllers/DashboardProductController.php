@@ -44,6 +44,7 @@ class DashboardProductController extends Controller
             "stock"=>"required|numeric|min:0",
             "shortdesc"=>"required|max:50",
             "description"=>"required",
+            "minimizedesc"=>"required",
             "image"=>"required|image|file|max:1024",
         ]);
         if($request->file("image")){
@@ -88,6 +89,7 @@ class DashboardProductController extends Controller
             "stock"=>"required|numeric|min:0",
             "discprice" => "numeric|nullable",
             "shortdesc" => "required|max:50",
+            "minimizedesc"=>"required",
             "image"=>"image|file|max:1024",
             "description"=>"required"
         ];

@@ -26,6 +26,7 @@
                 <label>Description Product</label>
                 <div id="descbox" class="mt-2" style="background: #D9D9D9;width:100%;border-radius:5px;height:200px;overflow:scroll">
                     <article class="p-2">
+                        {!! $product->minimizedesc !!}
                         {!! $product->description !!}
                     </article>
                 </div>
