@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string("code")->unique();
             $table->float("discount");
             $table->string("image")->nullable();
+            $table->string("imagebanner")->nullable();
             $table->text("terms");
             $table->string("shortdecs");
             $table->date("startdate");

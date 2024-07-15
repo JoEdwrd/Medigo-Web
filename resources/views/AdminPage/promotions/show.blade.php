@@ -11,8 +11,10 @@
             <div class="p-5 col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background-color: #eeebeb; border-radius:20px;">
                 <h3>Promo Image</h3>
                 <br>
-                <img src="{{ asset('storage/'.$promotion->image) }}" alt="Promotion Banner" class="img-fluid px-5 pt-5 mb-3" style="border-radius:20px;">
-                {{-- <p class="pb-2">{{ $promotion->name }}</p> --}}
+                <img src="{{ asset('storage/'.$promotion->image) }}" alt="Promotion Banner" class="img-fluid px-5 pt-5 mb-3">
+                <h3>Promo Image Banner</h3>
+                <br>
+                <img src="{{ asset('storage/'.$promotion->imagebanner) }}" alt="Promotion Banner Image" class="img-fluid px-5 pt-5 mb-3">
             </div>
             
             <div class="col-md-12 d-flex justify-content-between p-0 mb-4">

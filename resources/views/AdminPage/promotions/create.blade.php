@@ -21,10 +21,19 @@
                 <div class="p-5 col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background:#EEEBEB;border-radius:20px">
                 <h3>Promo Image</h3>
                 <br>
-                {{-- <img src="{{ asset('storage/'.$product->image) }}" style="width:375px;height:375px;overflow:hidden;border-radius:20px"> --}}
                 <img class="img-preview img-fluid mb-3 col-sm-12" style="border-radius: 20px">
                 <input class="form-control @error("image") is-invalid @enderror" style="width: 100%" type="file" id="image" name="image" onchange="previewImage()">
                 @error("image")
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+                <div class="p-5 col-md-12 mb-4 d-flex flex-column justify-content-center align-items-center text-center" style="background:#EEEBEB;border-radius:20px">
+                <h3>Promo Image Bannner</h3>
+                <br>
+                <img class="img-preview2 img-fluid mb-3 col-sm-12" style="border-radius: 20px">
+                <input class="form-control @error("imagebanner") is-invalid @enderror" style="width: 100%" type="file" id="imagebanner" name="imagebanner" onchange="previewImage2()">
+                @error("imagebanner")
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
@@ -113,7 +122,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-5" style="background-color: #eeebeb; border-radius:20px; width:710px;">
+                    <div class="col-md-5" style="background-color: #eeebeb; border-radius:20px; width:600px;">
                         <div class="container mt-4 d-flex flex-column" style="">
                             <h3><label for="terms" class="form-label">Terms</label></h3>
                             

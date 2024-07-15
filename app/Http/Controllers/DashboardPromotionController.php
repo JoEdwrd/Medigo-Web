@@ -37,6 +37,7 @@ class DashboardPromotionController extends Controller
             'code' => 'required|unique:promotions',
             'discount' => 'required|numeric',
             'image' => 'required|image|file|max:1024',
+            'imagebanner' => 'required|image|file|max:1024',
             'terms' => 'required',
             'shortdecs' => 'required|max:55',
             'startdate' => 'required|date_format:Y-m-d',
@@ -46,7 +47,9 @@ class DashboardPromotionController extends Controller
         if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('promotion-images');
         }
-
+        if ($request->file('imagebanner')) {
+            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images');
+        }
         Promotion::create($validatedData);
 
         return redirect('/dashboard/promotions')->with('success', 'New Promotion has been added!');
@@ -80,6 +83,7 @@ class DashboardPromotionController extends Controller
         $rules = [
             'discount' => 'required|numeric',
             'image' => 'image|file|max:1024',
+            'imagebanner' => 'image|file|max:1024',
             'terms' => 'required',
             'shortdecs' => 'required|max:55',
             'startdate' => 'required|date_format:Y-m-d',
@@ -108,6 +112,16 @@ class DashboardPromotionController extends Controller
             $validatedData['image'] = $request->oldImage;
         
         }
+        if ($request->file('imagebanner')) {
+            if ($request->oldImageBanner) {
+                Storage::delete($request->oldImageBanner);
+            }
+            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images');
+        }
+        else{
+            $validatedData['imagebanner'] = $request->oldImageBanner;
+        
+        }
         Promotion::where('id', $promotion->id)->update($validatedData);
 
         return redirect('/dashboard/promotions')->with('success', 'Promotion has been updated!');
@@ -120,6 +134,9 @@ class DashboardPromotionController extends Controller
     {
         if($promotion->image){
                 Storage::delete($promotion->image);
+            }
+        if($promotion->imagebanner){
+                Storage::delete($promotion->imagebanner);
             }
         Promotion::destroy($promotion->id);
 
