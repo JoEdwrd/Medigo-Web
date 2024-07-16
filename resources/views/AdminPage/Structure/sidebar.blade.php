@@ -2,11 +2,11 @@
     <div class="position-sticky pt-3 d-flex flex-column">
         <ul class="nav flex-column">
             <li>
-                <div class="d-flex flex-row justify-content-center mt-2">
-                    <img src="\image\PP.png" alt="profile picture" style="width: 50px;height:50px;margin-right:20px">
+                <div class="d-flex flex-row ms-2 mt-2">
+                    <img src="\image\userTemp.png" alt="profile picture" style="width: 50px;height:50px;margin-right:20px;border-radius: 50%">
                     <div class="d-flex flex-column">
                         <label id="textfont" style="font-weight: bold">{{auth()->user()->name}}</label>
-                        <label id="textfont">Staff, Jakarta</label>
+                        <label id="textfont">Staff ID : {{auth()->user()->id}}</label>
                     </div>
                 </div>
                 <hr style="margin-left:4px;margin-right:4px">
@@ -68,7 +68,7 @@
             </form>
         </div>
 
-        <div class="nav-item d-flex justify-content-center" style="margin-top: 80%">
+        <div class="nav-item d-flex justify-content-center" style="margin-top: 70%">
             <a class="navbar-brand flex-grow-1 text-center P-0 m-0" href="/dashboard">
                 <img src="\image\MedigoLogo.svg" alt="Medigo Logo">
             </a>

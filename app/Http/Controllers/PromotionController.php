@@ -49,7 +49,7 @@ class PromotionController extends Controller
         }else{
             $cart = null;
         }
-        return view('Promotions.promoDetail',['promotion' => $promotion, 'cart' => $cart]);
+        return view('Promotions.promoDetail',['promotion' => $promotion, 'cart' => $cart, 'user' => $user]);
     }
 
     /**

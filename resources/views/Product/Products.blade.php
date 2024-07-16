@@ -15,9 +15,9 @@
         <div class="row mb-4">
             <div class="col">
                 <form class="input-group" action="/products" method="GET">
-                    <input type="text" class="form-control" placeholder="Search..." name="search">
+                    <input type="text" class="form-control" placeholder="Search for products here..." name="search" style="min-height: 50px;">
                     <div class="input-group-append">
-                        <button class="btn btn-success" type="submit" style="background-color:var(--main2-color)">Search</button>
+                        <button class="btn btn-success" type="submit" style="background-color:var(--main2-color); min-height: 50px; border-radius: 0%; width: 110px;border-radius: 0% 6% 6% 0%"><i style="color: var(--main1-color)" class="bi bi-search fs-4"></i></button>
                     </div>
                 </form>
             </div>

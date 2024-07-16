@@ -64,6 +64,7 @@ class CartController extends Controller
     }
 
     public function addPromo(Request $request){
+
         $user = auth()->user();
         // $data = $request->all();
 
@@ -91,7 +92,7 @@ class CartController extends Controller
             return redirect()->back()->withErrors(['promo_error' => 'Promo is unavailable!']);
         }
 
-        return redirect()->back()->with('success', 'Promo added to cart');
+        return redirect()->route('cart.index')->with('success', 'Promo added to cart');
     }
 
     public function addProduct(Request $request, $product_id){

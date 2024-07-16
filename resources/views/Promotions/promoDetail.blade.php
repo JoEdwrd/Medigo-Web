@@ -53,8 +53,19 @@ use Carbon\Carbon;
             <p><strong>Contact Information:</strong> For more details or assistance, please contact our customer service team at <a href="mailto:support@pharmahealth.com">support@medigo.com</a> or call (800) 123-4567.</p> --}}
 
             <div class="d-flex justify-content-between align-items-center mt-3">
-                <button class="btn" style="background-color: var(--main2-color); color: white;"">Apply offers</button>
+                
             </div>
+
+            @if(isset($cart->cart_details[0]))
+                <form action="{{route('cart.promo.add')}}" method="POST" class="d-inline">
+                    @csrf
+                    <input type="text" name="promotionName" value="{{$promotion->code}}" class="hidden">
+                    <button class="btn" style="background-color: var(--main2-color); color: white;"">Apply offers</button>
+                </form>
+            @else
+                <button class="btn disabled" style="background-color: var(--main2-color); color: white;"">Apply offers</button>
+                <span class="text-danger d-block">Please add products to your cart to use this promo!</span>
+            @endif
         </div>
     </div>
 </div>
