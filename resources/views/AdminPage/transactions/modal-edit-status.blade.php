@@ -14,11 +14,11 @@
                         <div class="mb-3">
                             <label for="statusInput" class="form-label">Status</label>
                             <select class="form-select" aria-label="Default select example" id="statusInput" name="status" required>
-                                <option value="Waiting for verification">Waiting for verification</option>
-                                <option value="Waiting for payment">Waiting for payment</option>
-                                <option value="In progress">In progress</option>
-                                <option value="Canceled">Canceled</option>
-                                <option value="Completed">Completed</option>
+                                <option value="Waiting for verification" {{ $transaction->status == 'Waiting for verification' ? 'selected' : '' }}>Waiting for verification</option>
+                                <option value="Waiting for payment" {{ $prescriptions->status == 'Waiting for payment' ? 'selected' : '' }}>Waiting for payment</option>
+                                <option value="In progress" {{ $prescriptions->status == 'In progress' ? 'selected' : '' }}>In Progress</option>
+                                <option value="Canceled" {{ $prescriptions->status == 'Canceled' ? 'selected' : '' }}>Canceled</option>
+                                <option value="Completed" {{ $prescriptions->status == 'Completed' ? 'selected' : '' }}>Completed</option>
                             </select>
                             <div class="invalid-feedback">
                                 Please choose a status.

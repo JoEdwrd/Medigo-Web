@@ -95,13 +95,17 @@ class UserProfileController extends Controller
                 Rule::unique('users')->ignore($user->id),
             ],
             'dob' => 'required|date',
-            'address'=> 'required|string',
+            'province'=> 'required|string',
+            'city'=> 'required|string',
+            'district'=> 'required|string',
+            'street'=> 'required|string',
+            'postalCode'=> 'required|string',
+            'description'=> 'string',
             'profile_picture' => 'nullable',
             'profile_picture.*' => 'nullable | image | mimes : jpg ,jpeg,png |max:2048'
-            // 'role' => 'required|boolean|max:255'
         ];
 
-        
+        // dd($request);
         
         // if($request->email!=$user->email){
         //     $rules["email"]= "required|unique:users";
@@ -110,6 +114,18 @@ class UserProfileController extends Controller
         //     $rules["phone"]= "required|max:255|unique:users";
         // }
         $validatedData=$request->validate($rules);
+
+        $validatedData['address'] = $validatedData['street'] . ', ' . $validatedData['district'] . ', ' . $validatedData['city'] . ', ' . $validatedData['province'] . ', ' . $validatedData['postalCode'].', ' . '(' . $validatedData['description'] . ')';
+
+        
+        unset(
+            $validatedData['street'],
+            $validatedData['city'],
+            $validatedData['district'],
+            $validatedData['postalCode'],
+            $validatedData['province'],
+            $validatedData['description']
+        );
         
 
         if ($request->hasFile('profile_picture')) {
