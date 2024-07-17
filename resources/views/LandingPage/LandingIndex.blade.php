@@ -321,6 +321,10 @@
 
         </div>
     </div>
+    <a href="/" class="wellness-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Consult your illness with our partners.">
+        <img src="/image/logo-wellness-invert.png" alt="" style="width: 80%">
+    </a>
+    
 </div>
 @endsection
 
