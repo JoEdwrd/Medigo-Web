@@ -35,7 +35,7 @@
                 <div class="order-items mt-4" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $order->product->slug) }}';">
                     <div class="row align-items-start">
                         <div class="col">
-                            <img style="width: 100px; length: 100px" src="{{ asset("image/medicine1.jpeg") }}" alt="Medicine Image">
+                            <img style="width: 100px; length: 100px" src="{{ asset("storage/".$order->product->image) }}" alt="Medicine Image">
                         </div>
 
                         <div class="col-7">
