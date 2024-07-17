@@ -75,7 +75,11 @@
                                             @foreach ($transaction->order_details as $index => $orderDetail)
                                                 <input type="hidden" name="products[{{ $index }}][id]" value="{{ $orderDetail->product->id }}">
                                                 <input type="hidden" name="products[{{ $index }}][name]" value="{{ $orderDetail->product->name }}">
-                                                <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
+                                                @if ($orderDetail->product->discprice)
+                                                    <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->discprice }}">
+                                                @else
+                                                    <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
+                                                @endif
                                                 <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
                                             @endforeach
                                             <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">

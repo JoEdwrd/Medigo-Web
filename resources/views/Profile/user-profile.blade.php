@@ -24,7 +24,7 @@
             <ul class="list-unstyled">
                 <li class="d-flex flex-row justify-content-between mb-2 align-items-center ">
                     <div class="d-flex flex-row justify-content-between align-items-center mb-3" style="width:25.5%">
-                        <div>
+                        <div class="me-4">
                             <img src="{{isset($user->profile_picture) ? asset("storage/".$user->profile_picture) : '/image/userTemp.png'}}" alt="" class="rounded-circle border border-black" style="min-width: 100px; max-width:100px; min-height:100px;object-fit:cover;max-height:100px">
                             {{-- <img src="{{'/image/userTemp.png'}}" alt="" class="rounded-circle border border-black" style="min-width: 60px; max-width:100px; min-height:100px;object-fit:cover;"> --}}
                         </div>

@@ -47,13 +47,13 @@
                                 </div>
 
                                 <div class="col">
-                                    <small class="text-muted">@ Rp {{ number_format($order->product->price, 0, ',', '.') }}</small>
+                                    <small class="text-muted">@ Rp. {{ number_format($order->product->price, 0, ',', '.') }}</small>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col mt-4">
-                            <h5>{{number_format($order->quantity * $order->product->price, 0, ',', '.') }}</h5>
+                            <h5>Rp. {{number_format($order->quantity * $order->product->price, 0, ',', '.') }}</h5>
                             @php
                                 $subTotal += ($order->quantity * $order->product->price);
                             @endphp
@@ -89,14 +89,14 @@
                     </div>
 
                     <div class="col-md-6 text-right">
-                        <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
+                        <p class="text-end">Rp. {{ number_format($subTotal, 0, ',', '.') }}</p>
 
                         @if (isset($transaction->promotion) && $transaction->promotion != '')
-                            <p class="text-end">{{ number_format($subTotal * $transaction->promotion->discount, 0, ',', '.') }}</p>
-                            <p class="text-end">{{ number_format($subTotal - ($subTotal * $transaction->promotion->discount), 0, ',', '.') }}</p>
+                            <p class="text-end">Rp. {{ number_format($subTotal * $transaction->promotion->discount, 0, ',', '.') }}</p>
+                            <p class="text-end">Rp. {{ number_format($subTotal - ($subTotal * $transaction->promotion->discount), 0, ',', '.') }}</p>
                         @else
-                            <p class="text-end">{{ number_format($subTotal * 0, 0, ',', '.') }}</p>
-                            <p class="text-end">{{ number_format($subTotal, 0, ',', '.') }}</p>
+                            <p class="text-end">Rp. {{ number_format($subTotal * 0, 0, ',', '.') }}</p>
+                            <p class="text-end">Rp. {{ number_format($subTotal, 0, ',', '.') }}</p>
                         @endif
                     </div>
                 </div>
