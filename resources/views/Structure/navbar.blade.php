@@ -30,7 +30,7 @@
         <li class="nav-item">
           <a class="nav-link text-dark" id="NavItems" href="/">
             @if(Request::is("/"))
-              <u>HOME</u>
+              <span class="border-bottom border-dark border-2">HOME</span>
             @else
               HOME
             @endif
@@ -39,7 +39,7 @@
         <li class="nav-item">
           <a class="nav-link text-dark" id="NavItems" href="/products">
             @if(Request::is("products"))
-              <u>PRODUCT</u>
+              <span class="border-bottom border-dark border-2">PRODUCT</span>
             @else
               PRODUCT
             @endif
@@ -48,7 +48,7 @@
         <li class="nav-item">
           <a class="nav-link text-dark" id="NavItems" href="/history">
             @if(Request::is("history"))
-              <u>HISTORY</u>
+              <span class="border-bottom border-dark border-2">HISTORY</span>
             @else
               HISTORY
             @endif
@@ -59,7 +59,7 @@
           <li class="nav-item">
             <a class="position-relative nav-link text-dark" id="NavItems" href="/cart" style="width: 45%">
               @if(Request::is("cart"))
-                <u>CART</u>
+                <span class="border-bottom border-dark border-2">CART</span>
               @else
                 CART
               @endif
@@ -75,7 +75,7 @@
           <li class="nav-item">
             <a class="position-relative nav-link text-dark" id="NavItems" href="/login" style="width: 45%">
               @if(Request::is("cart"))
-                <u>CART</u>
+                <span class="border-bottom border-dark border-2">CART</span>
               @else
                 CART
               @endif

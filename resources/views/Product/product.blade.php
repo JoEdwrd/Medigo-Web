@@ -21,7 +21,11 @@
             <div class="col-md-8 px-4 mt-5">
                 <div class="d-block justify-content-between align-items-center mb-3">
                     <h4 class="text-left mt-3">{{ $product->name }}</h4>
-                    <span class="h4 text-danger mt-3">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
+                    @if ($product->discprice)
+                        <span class="h4 text-danger mt-3">Rp {{ number_format($product->discprice, 0, ',', '.') }}</span>
+                    @else
+                        <span class="h4 text-danger mt-3">Rp {{ number_format($product->price, 0, ',', '.') }}</span>
+                    @endif
                     <p class="mt-2"> {{ $product->shortdesc }} </p>
                 </div>
 
