@@ -18,7 +18,7 @@
     .profile label {
         display: inline-block;
         width: 100%;
-        height: 100%; 
+        height: 100%;
         text-align: center;
         /* line-height: 227px; */
         overflow: hidden;
@@ -59,7 +59,7 @@
 
         padding: .5rem;
         background: rgb(255, 255, 255);
-        width: 51px;    
+        width: 51px;
         height: 51px;
         border-radius: 50%;
         font-size: 1.5rem;
@@ -130,14 +130,14 @@
                                     @if(isset($user->profile_picture))
                                         <img class="user" src="{{"storage/".$user->profile_picture}}" alt="">
                                     @else
-                                        <img class="user" style="width: 15rem" src="/image/userTemp.png" alt=""> 
+                                        <img class="user" style="width: 15rem" src="/image/userTemp.png" alt="">
                                     @endif
                                     <span class="camera"><i class="bi bi-pencil-square"></i></span>
                                     <input type="file" name="profile_picture">
                                 </label>
                             </div>
                         </div>
-                        <div class="row g-3">   
+                        <div class="row g-3">
                             <div class="mb-3 col-md-6">
                                 <label for="nameInput" class="form-label">Name</label>
                                 <input type="text" class="form-control" id="nameInput" name="name" placeholder="Input your name here" value={{ old("name",$user->name) }} required>
@@ -177,13 +177,13 @@
                                     Please choose a gender.
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
                     <h4 class="mb-4">Address</h4>
                     <div class="row g-3">
-                        
+
                         <div class="mb-3 col-md-6">
                             <label for="provinceInput" class="form-label">Province</label>
                             <input type="text" class="form-control" value="{{ old('province', explode(', ', $user->address)[3] ?? '') }}" id="provinceInput" name="province" placeholder="Input your province here" required>
@@ -191,9 +191,9 @@
                                 Please input your province.
                             </div>
                         </div>
-                    
 
-                    
+
+
                         <div class="mb-3 col-md-6">
                             <label for="cityInput" class="form-label">City</label>
                             <input type="text" class="form-control" value="{{ old('city', explode(', ', $user->address)[2] ?? '') }}" id="cityInput" name="city" placeholder="Input your city here" required>
@@ -201,9 +201,9 @@
                                 Please input your city.
                             </div>
                         </div>
-                    
 
-                    
+
+
                         <div class="mb-3 col-md-6">
                             <label for="districtInput" class="form-label">District</label>
                             <input type="text" class="form-control" value="{{ old('district', explode(', ', $user->address)[1] ?? '') }}" id="districtInput" name="district" placeholder="Input your district here" required>
@@ -211,9 +211,9 @@
                                 Please input your district.
                             </div>
                         </div>
-                    
 
-                    
+
+
                         <div class="mb-3 col-md-6">
                             <label for="streetInput" class="form-label">Street</label>
                             <input type="text" class="form-control" value="{{ old('street', explode(', ', $user->address)[0] ?? '') }}" id="streetInput" name="street" placeholder="Input your street here" required>
@@ -221,9 +221,9 @@
                                 Please input your street.
                             </div>
                         </div>
-                    
 
-                    
+
+
                         <div class="mb-3 col-md-6">
                             <label for="postalCodeInput" class="form-label">Postal code</label>
                             <input type="text" class="form-control" value="{{ old('postalCode', explode(', ', $user->address)[4] ?? '') }}" id="postalCodeInput" name="postalCode" placeholder="Input your postal code here" required>
@@ -231,9 +231,9 @@
                                 Please input your postal code.
                             </div>
                         </div>
-                    
 
-                    
+
+
                         <div class="mb-3 col-md-6">
                             <label for="descriptionInput" class="form-label">Description (Optional)</label>
                             <textarea type="text" class="form-control" id="descriptionInput" name="description" placeholder="Input your description here" required>{{str_replace(['(', ')'], '', old('description', explode(', ', $user->address)[5] ?? ''))}}</textarea>
@@ -241,11 +241,11 @@
                                 Please input your description.
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-success" onclick="validateAndSubmitForm()">Save Changes</button>
+                    <button type="button" class="btn" id="custombtn" onclick="validateAndSubmitForm()">Save Changes</button>
                 </div>
             </form>
         </div>

@@ -13,7 +13,7 @@
                         <form action="{{route('cart.removeAll')}}" method="POST">
                             @csrf
                             @method('delete')
-                            <button class="btn btn-outline-success" type="submit"> <i class="bi bi-eraser"></i> Clear all Items</button>
+                            <button class="btn btn-outline-success" type="submit" id="custombtn"> <i class="bi bi-eraser"></i> Clear all Items</button>
                         </form>
                     @endif
                 </div>
@@ -59,7 +59,7 @@
                                         </form>
 
                                         <a href="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" onclick="event.preventDefault();
-                                        document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none text-success"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
+                                        document.getElementById('delete-form-{{ $cart->cart_details[$i]->product->id }}').submit();" class="text-decoration-none" style="color: var(--main2-color)"> <i class="bi bi-trash3-fill"></i> Delete Item</a>
 
                                         <form id="delete-form-{{$cart->cart_details[$i]->product->id}}" action="{{route('cart.remove', $cart->cart_details[$i]->product->id)}}" method="POST" class="d-none">
                                             @csrf
@@ -150,7 +150,7 @@
                                 placeholder="Promo code"
                                 name="promotionName"
                             >
-                            <button type="submit" class="btn btn-secondary">Redeem</button>
+                            <button type="submit" class="btn btn-success" style="background-color: var(--main2-color)">Redeem</button>
                         </div>
                     </form>
                 @endif

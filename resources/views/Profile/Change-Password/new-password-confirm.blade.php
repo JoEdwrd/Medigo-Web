@@ -17,7 +17,7 @@
     @include("Structure.side-nav-profile")
     <div class="w-75">
         <h1 class="mb-4">Change Password</h1>
-        <div class="container border border-grey rounded-4 shadow p-4">  
+        <div class="container border border-grey rounded-4 shadow p-4">
             <form action="/changePassword" method="POST">
                 @csrf
                 <ul class="ps-0">
@@ -39,7 +39,7 @@
                         </div>
                     @endif
                     <li class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-outline-success" style="width:18%">Confirm</button>
+                        <button type="submit" class="btn btn-outline-success" id="custombtn" style="width:18%">Confirm</button>
                     </li>
                 </ul>
             </form>
