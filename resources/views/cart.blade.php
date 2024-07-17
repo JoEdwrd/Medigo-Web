@@ -25,12 +25,12 @@
                             <div class="card-header"># {{ $i+1 }}</div>
                             <div class="card-body d-flex align-items-center gap-3">
                                 <div class="card-img" style="max-width: 100px;">
-                                    <img src="image/medicine1.jpeg" alt="Medicine Image" class="img-fluid">
+                                    <img src={{ asset("storage/".$cart->cart_details[$i]->product->image) }} alt="Medicine Image" class="img-fluid">
                                 </div>
                                 <div class="card-text d-flex flex-grow-1 justify-content-between align-items-center">
                                     <div>
                                         <h5 class="card-title">{{$cart->cart_details[$i]->product->name}}</h5>
-                                        <p class="card-text">Rp{{isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price}}&nbsp;<i>per obat</i></p>
+                                        <p class="card-text">Rp{{number_format(isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price, 0, ',', '.')}}&nbsp;<i>per obat</i></p>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-around" style="width: 40%">
 
@@ -107,8 +107,8 @@
                                     <div>
                                         <h6 class="my-0">{{$cart->cart_details[$i]->product->name}}</h6>
                                         {{-- <small class="text-body-secondary">Brief description</small> --}}
-                                    </div>
-                                    <span class="text-body-secondary">{{'Rp '.(isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price).' x '.$cart->cart_details[$i]->quantity}}</span>
+                                    </di>
+                                    <span class="text-body-secondary">{{'Rp '.(number_format(isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price, 0, ',', '.')).' x '.$cart->cart_details[$i]->quantity}}</span>
 
                                 </li>
                                 @php
@@ -121,7 +121,7 @@
                         <li class="list-group-item d-flex justify-content-between">
                             <span>Subtotal (IDR)</span>
                             {{-- <strong>{{'Rp '.$total}}</strong> --}}
-                            <span class="text-body-secondary">{{'Rp '.$total}}</span>
+                            <span class="text-body-secondary">{{'Rp ' .number_format($total, 0, ',', '.')}}</span>
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
@@ -130,14 +130,14 @@
                                 <small>{{$cart->promotion->code}}</small>
                             </div>
                             <div class="d-flex justify-content-around" style="width: 30%">
-                                <span class="text-success">{{'- Rp '.$cart->promotion->discount * $total}}</span>
+                                <span class="text-success">{{'- Rp '.number_format($cart->promotion->discount * $total, 0, ',', '.')}}</span>
                                 <i role="button" onclick="document.getElementById('formRemovePromo').submit()" class="bi bi-x-lg"></i>
                             </div>
                         </li>
                     @endif
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Total (IDR)</span>
-                        <strong>{{ isset($cart->promotion->discount) ? 'Rp '.$total - $cart->promotion->discount * $total : 'Rp '.$total}}</strong>
+                        <strong>{{ isset($cart->promotion->discount) ? 'Rp '.number_format($total - $cart->promotion->discount * $total, 0, ',', '.') : 'Rp '.number_format($total, 0, ',', '.')}}</strong>
                     </li>
                 </ul>
                 @if (isset($cart->cart_details[0]))
