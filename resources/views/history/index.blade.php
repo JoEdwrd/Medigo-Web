@@ -13,7 +13,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/" style="color: #55BC44">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44;font-weight:bold;">History</li>
+                <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44;">History</li>
             </ol>
         </nav>
         <h1 id="NavItems" style="color: var(--main2-color)">Transaction History</h1>

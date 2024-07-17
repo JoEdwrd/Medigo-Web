@@ -30,8 +30,8 @@
                         </div>
                         <div>
                             <ul class="list-unstyled">
-                                <li class="mb-2 h4"><strong>{{$user->name}}</strong></li>
-                                <li>{{$user->phone}}</li>
+                                <li class="mb-2 h4 mx-3"><strong>{{$user->name}}</strong></li>
+                                <li class="mx-3">{{$user->phone}}</li>
                             </ul>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                     <div class="right-0">
                         {{-- <button type="button" class="btn btn-primary">Edit Profile</button> --}}
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn-outline-success" id="custombtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Edit Profile
                         </button>
                     </div>

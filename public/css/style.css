@@ -406,6 +406,26 @@ footer {
     background-color: var(--main2-color);
 }
 
+#custombtn{
+    border-color: var(--main2-color);
+    border: solid 2px var(--main2-color);
+    border-radius: 10px;
+    width: 100%;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: var(--main2-color);
+}
+
+#custombtn:hover {
+    border-color: var(--main2-color);
+    background-color: var(--main2-color);
+    border-radius: 10px;
+    width: 100%;
+    font-family: "Chopin-Trial";
+    font-weight: bold;
+    color: white;
+}
+
 .card-header {
     background-color: var(--main1-color);
 }
