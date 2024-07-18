@@ -25,62 +25,62 @@
     </div>
 
     @if ($products->count() > 0)
-    @if ($searchTerm)
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h4>Search Results for "{{ $searchTerm }}"</h4>
+        @if ($searchTerm)
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h4>Search Results for "{{ $searchTerm }}"</h4>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-        @foreach ($products as $product)
-        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
-            <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
-            <div class="card-body" id="card-body">
-                <h5 class="card-title text-start" id="card-title">{{$product->name}}</h5>
-                <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
-                <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
-                <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
-                    @csrf
-                    <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
-                </form>
+            <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+                @foreach ($products->where('stock', '>', 0) as $product)
+                    <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
+                        <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
+                        <div class="card-body" id="card-body">
+                            <h5 class="card-title text-start" id="card-title">{{$product->name}}</h5>
+                            <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
+                            <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
+                            <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                            </form>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-        </div>
-        @endforeach
-    </div>
-    @else
-    <!-- Show all products if no search query -->
-    @foreach ($categories as $category)
-    <div class="row mt-5" style="width: 100%">
-        <div class="col-10" style="margin-left:90px">
-            <h2>{{ $category->name }}</h2>
-        </div>
-        <div class="col mt-2">
-            <a href="{{ route('category.show', $category->slug) }}" class="text-secondary h3" style="text-decoration: none;">See all</a>
-        </div>
-    </div>
+        @else
+        <!-- Show all products if no search query -->
+            @foreach ($categories as $category)
+                <div class="row mt-5" style="width: 100%">
+                    <div class="col-10" style="margin-left:90px">
+                        <h2>{{ $category->name }}</h2>
+                    </div>
+                    <div class="col mt-2">
+                        <a href="{{ route('category.show', $category->slug) }}" class="text-secondary h3" style="text-decoration: none;">See all</a>
+                    </div>
+                </div>
 
-    <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-        @foreach ($category->products->take(5) as $product)
-        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
-            <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
-            <div class="card-body" id="card-body">
-                <h5 class="card-title text-start" id="card-title">{{ $product->name }}</h5>
-                <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
-                <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
-                <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
-                    @csrf
-                    <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
-                </form>
-                {{-- <a href="{{ route('cart.add', ['productId' => $product->id]) }}" id="addbtn" class="btn">ADD</a> --}}
-            </div>
-        </div>
-        @endforeach
-    </div>
-    @endforeach
-    @endif
+                <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
+                    @foreach ($category->products->where('stock', '>', 0)->take(5) as $product)
+                        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
+                            <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
+                            <div class="card-body" id="card-body">
+                                <h5 class="card-title text-start" id="card-title">{{ $product->name }}</h5>
+                                <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
+                                <h5 class="card-title" id="card-title">Rp {{ number_format($product->price, 0, ',', '.') }}</h5>
+                                <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                                </form>
+                                {{-- <a href="{{ route('cart.add', ['productId' => $product->id]) }}" id="addbtn" class="btn">ADD</a> --}}
+                            </div>
+                    </div>
+                    @endforeach
+                </div>
+            @endforeach
+        @endif
 
     @else
     <div class="container">
