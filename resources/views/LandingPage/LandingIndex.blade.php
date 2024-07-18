@@ -171,75 +171,31 @@
         <label for="Best_Seller" class="tabs__label">Best</label>
         <div class="tabs__content" style="width:100%">
               <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-                    @forelse($bestseller as $best)
-                    <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $best->slug) }}';">
-                        <img src="{{ asset("storage/".$best->image) }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title text-start" id="card-title">{{$best->name}}</h5>
-                            <label class="card-desc" id="card-desc">{{$best->shortdesc}}</label>
-                            <h5 class="card-title" id="card-title">Rp {{ number_format($best->price, 0, ',', '.') }}</h5>
-                            <form action="{{ route('cart.add', ['productId' => $best->id]) }}" method="POST" style="display:inline;">
-                                @csrf
-                                <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
-                            </form>
-                            {{-- <a href="#" id="addbtn" class="btn">ADD</a> --}}
+                    @forelse($bestseller->where('stock', '>', 0) as $best)
+                        <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $best->slug) }}';">
+                            <img src="{{ asset("storage/".$best->image) }}" class="crd-img" alt="...">
+                            <div class="card-body" id="card-body">
+                                <h5 class="card-title text-start" id="card-title">{{$best->name}}</h5>
+                                <label class="card-desc" id="card-desc">{{$best->shortdesc}}</label>
+                                <h5 class="card-title" id="card-title">Rp {{ number_format($best->price, 0, ',', '.') }}</h5>
+                                <form action="{{ route('cart.add', ['productId' => $best->id]) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
+                                </form>
+                                {{-- <a href="#" id="addbtn" class="btn">ADD</a> --}}
+                            </div>
                         </div>
-                    </div>
                     @empty
                         <h1>There is no transactions yet</h1>
                     @endforelse
-                    {{-- <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/BannerMain.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Card title</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title">Rp 70.000</h5>
-                            <a href="#" id="addbtn" class="btn">ADD</a>
-                        </div>
-                    </div> --}}
+
                 </div>
         </div>
         <input type="radio" class="tabs__radio" name="tabs-div" id="sale">
         <label for="sale" class="tabs__label">Sale</label>
         <div class="tabs__content">
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
-                @foreach($discounts as $disc)
+                @foreach($discounts->where('stock', '>', 0) as $disc)
                     <div class="card col-md-1" id="card_product" style="width: 420px" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $disc->slug) }}';">
                         <img src="{{ asset("storage/".$disc->image) }}" class="crd-img" alt="...">
                         <div class="card-body" id="card-body">
@@ -255,76 +211,15 @@
                         </div>
                     </div>
                 @endforeach
-                     {{-- @for ($i = 0; $i < 3; $i++)
-                        <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">{{ $products[$i]->name }}</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div>
-                     @endfor --}}
-                    {{-- <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Botak</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Botak</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Botak</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Botak</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div>
-                    <div class="card col-md-1" id="card_product" style="width: 420px">
-                        <img src="{{ asset("image/Drug.png") }}" class="crd-img" alt="...">
-                        <div class="card-body" id="card-body">
-                            <h5 class="card-title" id="card-title">Botak</h5>
-                            <label class="card-desc" id="card-desc">Per Strip</label>
-                            <h5 class="card-title" id="card-title" style="color: red">Rp 70.000</h5>
-                            <label class="card-desc" id="card-desc" style="text-decoration-line:line-through;">Rp 100.000</label>
-                            <a href="#" id="addbtn" style="margin-top: 20px" class="btn">ADD</a>
-                        </div>
-                    </div> --}}
-                </div>
+
+            </div>
 
         </div>
     </div>
     <a href="/" class="wellness-btn" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Consult your illness with our partners.">
         <img src="/image/logo-wellness-invert.png" alt="" style="width: 80%">
     </a>
-    
+
 </div>
 @endsection
 
