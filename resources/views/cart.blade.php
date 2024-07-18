@@ -34,24 +34,7 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-around" style="width: 40%">
 
-                                        {{-- <form action="{{ route('cart.remove', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
-                                            @method("delete")
-                                            @csrf
-                                            <button type="submit" class="btn btn-primary btn-sm me-2 quantity-btn">-</button>
-                                        </form>
 
-                                        <span>{{$cart->cart_details[$i]->quantity}}</span>
-
-                                        <form action="{{ route('cart.add', ['productId' => $cart->cart_details[$i]->product->id]) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            <button type="submit" class="btn btn-primary btn-sm ms-2 quantity-btn">+</button>
-                                        </form> --}}
-
-                                        {{-- <div class="qty-box">
-                                            <div class="input-group">
-                                                <input type="number" name="quantity" onchange="{{route(cart.changeQty, [])}}" class="form-control input-number" value="{{$cart->cart_details[$i]->quantity}}">
-                                            </div>
-                                        </div> --}}
 
                                         <form style="display: inline;" method="POST" action="{{ route('cart.changeQty' , ['productId' => $cart->cart_details[$i]->product->id]) }}">
                                             @csrf
@@ -84,8 +67,8 @@
                 </div>
                 @else
                     <div class="d-flex justify-content-center flex-column">
-                        <span class="text-center w-100 d-block text-success fs-5 mt-5 mb-4">No items currently in your cart...</span>
-                        <a class="d-inline-block btn btn-success s-25 m-auto" href="/products">Search for Products</a>
+                        <span class="text-center w-100 d-block fs-5 mt-5 mb-4" style="color: var(--main2-color)">No items currently in your cart...</span>
+                        <a class="d-inline-block btn s-25 m-auto" id="custombtn" style="width: 200px" href="/products">Search for Products</a>
                     </div>
                 @endif
             </div>
@@ -172,9 +155,9 @@
                     @if(isset($user->address) && $user->address != '')
                         <p>{{$user->address}}</p>
                     @else
-                        <p class="text-warning fs-5">You haven't input your address yet, please input your address to order!</p>
+                        <p class="text-danger fs-6">You haven't input your address yet, please input your address to order!</p>
                         <a href="/profile">
-                        <button class="btn btn-outline-success">Go to profile</button></a>
+                        <button class="btn btn-outline-success" id="custombtn">Go to profile</button></a>
                     @endif
                 </div>
 
@@ -189,7 +172,7 @@
                     </div>
                 @endif
 
-                @if (isset($cart->cart_details[0]))
+                @if (isset($cart->cart_details[0]) && isset($user->address) && $user->address != '')
                     @if($check)
                         <button type="button" id="addbtn" class="btn mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             Add to Order

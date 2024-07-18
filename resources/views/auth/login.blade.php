@@ -60,10 +60,6 @@
 
                     <button type="submit" id="login-btn" style="background-color: rgb(81,159,145); color:white">Login</button>
 
-                    <div>
-                        <a href=""  style="font-size: 16px; color:rgb(178,177,177);">Forgot Password</a>
-                    </div>
-
                 </div>
 
                 <div class="col-md-9 col-lg-6 col-xl-5">

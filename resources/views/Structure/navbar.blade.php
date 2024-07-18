@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark p-0 py-2" style="background-color: var(--main1-color) ">
+<nav class="navbar navbar-expand-lg navbar-dark p-0 py-3" style="background-color: var(--main1-color) ">
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="bi bi-list" style="color:var(--main2-color)"></i>
   </button>
@@ -23,7 +23,7 @@
         </div>
       @endif
     </div>
-    
+
 
     <div class="nav-content" style="width: 550px">
       <ul class="navbar-nav d-flex justify-content-between">
@@ -54,7 +54,7 @@
             @endif
           </a>
         </li>
-  
+
         @auth
           <li class="nav-item">
             <a class="position-relative nav-link text-dark" id="NavItems" href="/cart" style="width: 45%">
@@ -82,15 +82,15 @@
             </a>
           </li>
         @endauth
-  
+
         @auth
           <li class="nav-item">
             <a class="text-decoration-none" href="/profile">
               {{-- <button class="nav-link text-light rounded-50 text-decoration-none px-4" id="loginBTN">
                 <strong>{{ Str::upper(auth()->user()->name) }}</strong>
               </button> --}}
-              
-              @if (auth()->user()->profile_picture) 
+
+              @if (auth()->user()->profile_picture)
                 <img src="{{ asset("/storage/". auth()->user()->profile_picture) }}" alt="Profile Picture" class="profile-img-circle border border-success border-2" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
               @else
                 <img src="/image/userTemp.png" alt="Profile Picture" class="profile-img-circle" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">

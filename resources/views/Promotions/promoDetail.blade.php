@@ -29,41 +29,18 @@ use Carbon\Carbon;
             <hr>
             {!! $promotion->terms !!}
 
-            {{-- <p><strong>Offer Description: </strong>Enjoy a 50% discount on all allergy relief medications during our special promotion.</p>
-
-            <p><strong>How to Redeem:</strong> Enter promo code ALLERGY50 at checkout to apply the discount on eligible allergy relief medications.</p>
-
-            <p><strong>Exclusions and Limitations:</strong></p>
-            <ul>
-                <li>Offer excludes prescription medications, over-the-counter supplements, and items already discounted.</li>
-                <li>Limited to one use per customer.</li>
-                <li>Not valid on bulk purchases exceeding three units of the same product.</li>
-            </ul>
-
-            <p><strong>Terms and Conditions:</strong></p>
-            <ul>
-                <li>The discount applies only to eligible allergy relief medications.</li>
-                <li>This offer cannot be combined with any other promotions, discounts, or loyalty points.</li>
-                <li>Standard return policy applies.</li>
-                <li>The promotion is subject to availability and may be withdrawn or modified at any time without prior notice.</li>
-                <li>Customers must adhere to the recommended dosage and guidelines for all medications.</li>
-            </ul>
-
-            <p><strong>Important Note:</strong> Always read the label and use only as directed. Consult your healthcare professional if symptoms persist.</p>
-            <p><strong>Contact Information:</strong> For more details or assistance, please contact our customer service team at <a href="mailto:support@pharmahealth.com">support@medigo.com</a> or call (800) 123-4567.</p> --}}
-
             <div class="d-flex justify-content-between align-items-center mt-3">
-                
+
             </div>
 
             @if(isset($cart->cart_details[0]))
                 <form action="{{route('cart.promo.add')}}" method="POST" class="d-inline">
                     @csrf
                     <input type="text" name="promotionName" value="{{$promotion->code}}" class="hidden">
-                    <button class="btn" style="background-color: var(--main2-color); color: white;"">Apply offers</button>
+                    <button class="btn" style="background-color: var(--main2-color); color: white;">Apply offers</button>
                 </form>
             @else
-                <button class="btn disabled" style="background-color: var(--main2-color); color: white;"">Apply offers</button>
+                <button class="btn disabled" style="background-color: var(--main2-color); color: white;">Apply offers</button>
                 <span class="text-danger d-block">Please add products to your cart to use this promo!</span>
             @endif
         </div>

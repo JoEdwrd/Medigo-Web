@@ -31,19 +31,19 @@ class UserProfileController extends Controller
         ]);
 
         // dd($request);
-        
+
         $user = auth()->user();
         $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id]);
 
         $userInput = $request->old_password;
-        if(Hash::check($userInput, $user->password)){    
+        if(Hash::check($userInput, $user->password)){
             return view('Profile.Change-Password.new-password-confirm', compact('cart', 'user'));
         }else{
             return redirect()->back()->withErrors("Incorrect Password!");
         }
     }
 
-    
+
 
     public function changePassword(Request $request){
         $user = auth()->user();
@@ -60,7 +60,7 @@ class UserProfileController extends Controller
             User::whereId($user->id)->update([
                 'password' => Hash::make($newPass)
             ]);
-    
+
             return redirect()->route('oldPassPage')->with("Password changed successfully!", compact('cart', 'user'));
         }else{
             return redirect()->back()->withErrors("New Password and Confirm Password do not match!");
@@ -100,13 +100,13 @@ class UserProfileController extends Controller
             'district'=> 'required|string',
             'street'=> 'required|string',
             'postalCode'=> 'required|string',
-            'description'=> 'string',
+            'description' =>'nullable',
             'profile_picture' => 'nullable',
             'profile_picture.*' => 'nullable | image | mimes : jpg ,jpeg,png |max:2048'
         ];
 
         // dd($request);
-        
+
         // if($request->email!=$user->email){
         //     $rules["email"]= "required|unique:users";
         // }
@@ -115,9 +115,13 @@ class UserProfileController extends Controller
         // }
         $validatedData=$request->validate($rules);
 
-        $validatedData['address'] = $validatedData['street'] . ', ' . $validatedData['district'] . ', ' . $validatedData['city'] . ', ' . $validatedData['province'] . ', ' . $validatedData['postalCode'].', ' . '(' . $validatedData['description'] . ')';
+        $validatedData['address'] = $validatedData['street'] . ', ' . $validatedData['district'] . ', ' . $validatedData['city'] . ', ' . $validatedData['province'] . ', ' . $validatedData['postalCode'];
 
-        
+        if(isset($validatedData['description'])){
+            $validatedData['address'] = $validatedData['address'].', ' . $validatedData['description'];
+        }
+
+
         unset(
             $validatedData['street'],
             $validatedData['city'],
@@ -126,12 +130,12 @@ class UserProfileController extends Controller
             $validatedData['province'],
             $validatedData['description']
         );
-        
+
 
         if ($request->hasFile('profile_picture')) {
             $profilePhotoPath = $request->file('profile_picture')->store('item');
             $validatedData['profile_picture'] = $profilePhotoPath;
-            
+
         } else {
             $validatedData['profile_picture'] = $user->profile_picture;
         }
