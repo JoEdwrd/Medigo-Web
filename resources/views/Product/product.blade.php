@@ -13,6 +13,12 @@
         </ol>
     </nav>
 
+      @if(session()->has("success"))
+        <div id="success-alert" class="alert alert-success col m-5" role="alert">
+            {{ session("success") }}
+        </div>
+    @endif
+
     <div class="container mt-3 mb-5 mx-auto" style="max-width: 1200px;">
         <div class="row g-4">
             <div class="col-md-4 px-4">
@@ -72,4 +78,16 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var alert = document.getElementById('success-alert');
+        if (alert) {
+            setTimeout(function() {
+                alert.style.display = 'none';
+            }, 3000); // 3 seconds timeout
+        }
+    });
+</script>
 @endsection

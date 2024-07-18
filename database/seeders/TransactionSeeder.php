@@ -14,7 +14,7 @@ class TransactionSeeder extends Seeder
     {
         Transaction::create([
             // "transaction_date" => '2024-04-01',
-            'slug' => 'transac2023',
+            'slug' => 'transac1',
             'user_id' => 2,
             'status' => 'In progress',
             'promotion_id' => 1,
@@ -22,7 +22,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2023-02-09',
-            'slug' => 'transac2024',
+            'slug' => 'transac2',
             'user_id' => 1,
             'status' => 'In progress',
             'promotion_id' => 2,
@@ -30,7 +30,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2024-05-03',
-            'slug' => 'transaction#3',
+            'slug' => 'transaction3',
             'user_id' => 2,
             'status' => 'Waiting for verification',
             'promotion_id' => 1,
@@ -38,7 +38,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2023-04-10',
-            'slug' => 'transaction#4',
+            'slug' => 'transaction4',
             'user_id' => 1,
             'status' => 'Waiting for verification',
             'promotion_id' => 2,
@@ -46,7 +46,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2024-05-08',
-            'slug' => 'transaction#5',
+            'slug' => 'transaction5',
             'user_id' => 2,
             'status' => 'Completed',
             'promotion_id' => 1,
@@ -54,7 +54,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2024-10-03',
-            'slug' => 'transaction#6',
+            'slug' => 'transaction6',
             'user_id' => 1,
             'status' => 'Completed',
             'promotion_id' => 1,
@@ -62,7 +62,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2024-06-03',
-            'slug' => 'transaction#7',
+            'slug' => 'transaction7',
             'user_id' => 2,
             'status' => 'Canceled',
             'promotion_id' => 1,
@@ -71,7 +71,7 @@ class TransactionSeeder extends Seeder
          Transaction::create([
             // "transaction_date" => '2024-07-03',
             'id' => 847821,
-            'slug' => 'transaction#847821',
+            'slug' => 'transaction847821',
             'user_id' => 2,
             'status' => 'Waiting for payment',
             'promotion_id' => 1,
@@ -81,7 +81,7 @@ class TransactionSeeder extends Seeder
         // Payment Dummy -Shamgar
          Transaction::create([
             'id' => 99999,
-            'slug' => 'transaction#99999',
+            'slug' => 'transaction99999',
             'user_id' => 1,
             'status' => 'Waiting for payment',
             'promotion_id' => 2,

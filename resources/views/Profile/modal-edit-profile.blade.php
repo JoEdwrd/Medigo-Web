@@ -236,7 +236,7 @@
 
                         <div class="mb-3 col-md-6">
                             <label for="descriptionInput" class="form-label">Description (Optional)</label>
-                            <textarea type="text" class="form-control" id="descriptionInput" name="description" placeholder="Input your description here" required>{{str_replace(['(', ')'], '', old('description', explode(', ', $user->address)[5] ?? ''))}}</textarea>
+                            <textarea type="text" class="form-control" id="descriptionInput" name="description" placeholder="Input your description here">{{old('description', explode(', ', $user->address)[5] ?? '') }}</textarea>
                             <div class="invalid-feedback">
                                 Please input your description.
                             </div>

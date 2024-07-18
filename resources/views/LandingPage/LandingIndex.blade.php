@@ -3,6 +3,13 @@
 @section('container')
 
 <div>
+
+    @if(session()->has("success"))
+        <div id="success-alert" class="alert alert-success col m-5" style="position: absolute; width: 1500px" role="alert">
+            {{ session("success") }}
+        </div>
+    @endif
+
     <img src="{{ asset("image\main_banner.png") }}" style="width:100%;height:auto;"alt="">
     <div style="margin-top: 150px; width:100%">
         <h1 class="text-center" style="font-size: 40px;font-weight:600;" id="chopin">Categories</h1>
@@ -33,71 +40,6 @@
                     @endif
                 @endforeach
 
-                {{-- <div class="row text-center d-flex justify-content-center m-0 " style="width: 100%;margin-top:100px">
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Headache.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Headache</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Vitamin.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Vitamin</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Ingestion.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Ingestion</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Allergy.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Allergy</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\NeckPain.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Neck Pain</a>
-                        </h6>
-                    </div>
-                </div>
-
-                <div class="row text-center d-flex justify-content-center m-0" style="margin-top: 100px;width:100%">
-                    <div id="mg" class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Liver.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems"  style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Liver</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Hearing.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems"  style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Hearing</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Dental.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems"  style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Dental</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Flu.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems"  style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Flu</a>
-                        </h6>
-                    </div>
-                    <div class="col-md-2 mb-3 mt-0">
-                        <img id="cateimg" src="image\Eyesight.png" alt="">
-                        <h6 class="font-weight-bold" id="NavItems" style="margin-top: 10px">
-                        <a href="/" class="text-black text-decoration-none">Eyesight</a>
-                        </h6>
-                    </div>
-                </div> --}}
             </div>
         </section>
         <div style=" display: flex; justify-content: center; margin-top: 70px">
@@ -221,5 +163,19 @@
     </a>
 
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var alert = document.getElementById('success-alert');
+        if (alert) {
+            setTimeout(function() {
+                alert.style.display = 'none';
+            }, 3000); // 3 seconds timeout
+        }
+    });
+</script>
+
 @endsection
+
+
 

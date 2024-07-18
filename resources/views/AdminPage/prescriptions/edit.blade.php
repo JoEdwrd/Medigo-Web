@@ -44,7 +44,7 @@
                                                 <option value="Rejected" {{ $prescriptions->status == 'Rejected' ? 'selected' : '' }}>Rejected</option>
                                             </select>
                                         </div>
-                                        <button type="submit" class="btn btn-primary mt-2" style="background-color: rgba(81, 159, 145, 1);border: none;">Update Status</button>
+                                        <button type="submit" id="btnselect" class="btn mt-2">Update Status</button>
                                     </form>
                                 </div>
 

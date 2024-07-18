@@ -9,10 +9,16 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/" style="color: #55BC44">Home</a></li>
                     <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/products" style="color: #55BC44">Products</a></li>
-                    <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44">{{ $category->name }}</li>
+                    <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44; font-weight:bold;">{{ $category->name }}</li>
                 </ol>
             </nav>
         </div>
+
+        @if(session()->has("success"))
+            <div id="success-alert" class="alert alert-success col m-5" role="alert">
+                {{ session("success") }}
+            </div>
+        @endif
 
        <div class="container mt-5">
             <div class="row mb-4">
@@ -65,5 +71,16 @@
 
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var alert = document.getElementById('success-alert');
+        if (alert) {
+            setTimeout(function() {
+                alert.style.display = 'none';
+            }, 3000); // 3 seconds timeout
+        }
+    });
+</script>
 
 @endsection
