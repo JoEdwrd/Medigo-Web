@@ -8,17 +8,17 @@
     <!-- Section: Social media -->
     <section class="mb-4 d-flex align-items-center justify-content-center" style="  flex-grow:0; ">
       <!-- Facebook -->
-      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="" role="button"
+      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="https://www.instagram.com/medigo.co?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" role="button"
         data-mdb-ripple-color="dark">
         <i class="bi bi-instagram"></i>
       </a>
-      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="">
+      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="https://www.facebook.com/profile.php?id=61562889509987&mibextid=ZbWKwL">
         <i class="bi bi-facebook"></i>
       </a>
-      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="">
+      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="https://x.com/Medigo_co">
         <i class="bi bi-twitter-x"></i>
       </a>
-      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="">
+      <a class="btn btn-link btn-floating btn-lg text-body mt-4" href="https://www.youtube.com/@Medigo_co">
         <i class="bi bi-youtube"></i>
       </a>
 
