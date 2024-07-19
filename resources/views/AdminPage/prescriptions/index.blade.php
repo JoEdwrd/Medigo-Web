@@ -25,21 +25,23 @@
           </thead>
           <tbody>
             @foreach ($prescriptions as $prescription)
-            <tr>
-                <td class="">{{$prescription->id}}</td>
-                <td class="">{{ $prescription->transaction_id}}</td>
-                <td>
-                    <img src="{{asset('storage/'.$prescription->image)}}" width= '50' height='50' class="img img-responsive" />
-
-                </td>
-                <td class="">{{ $prescription->status }}</td>
-                <td class="">
-                    <a href="/dashboard/prescriptions/{{ $prescription->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
-                    <a href="/dashboard/prescriptions/{{ $prescription->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                </td>
-                </tr>
+                @if ($prescription->transaction->status !== 'Canceled')
+                    <tr>
+                        <td class="">{{$prescription->id}}</td>
+                        <td class="">{{ $prescription->transaction_id}}</td>
+                        <td>
+                            <img src="{{asset('storage/'.$prescription->image)}}" width='50' height='50' class="img img-responsive" />
+                        </td>
+                        <td class="">{{ $prescription->status }}</td>
+                        <td class="">
+                            <a href="/dashboard/prescriptions/{{ $prescription->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
+                            <a href="/dashboard/prescriptions/{{ $prescription->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                @endif
             @endforeach
-          </tbody>
+        </tbody>
+
         </table>
       </div>
 @endsection
