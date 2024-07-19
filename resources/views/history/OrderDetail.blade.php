@@ -7,7 +7,7 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item text-decoration-none" ><a class="text-decoration-none" href="/history" style="color: #55BC44">History</a></li>
-            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44;">order {{$transaction->id}}</li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44; font-weight:bold;">order {{$transaction->id}}</li>
             </ol>
         </nav>
     </div>

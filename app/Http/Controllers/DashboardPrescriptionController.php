@@ -60,7 +60,7 @@ class DashboardPrescriptionController extends Controller
             $transaction->status = 'Canceled';
             $transaction->save();
 
-            TrackingOrder::where('transaction_id', $$prescription->transaction_id)->update(['canceled' => Carbon::now()]);
+            TrackingOrder::where('transaction_id', $prescription->transaction_id)->update(['canceled' => Carbon::now()]);
 
         }
         $prescription->save();

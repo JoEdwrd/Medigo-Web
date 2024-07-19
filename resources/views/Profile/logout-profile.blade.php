@@ -8,7 +8,7 @@
         <ol class="breadcrumb">
             <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/" style="color: #55BC44">Home</a></li>
             <li class="breadcrumb-item text-decoration-none"><a class="text-decoration-none" href="/profile" style="color: #55BC44">Profile</a></li>
-            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44">Logout</li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44; font-weight:bold;">Logout</li>
         </ol>
     </nav>
 </div>
