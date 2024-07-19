@@ -57,10 +57,10 @@
                 </article>
             </div>
         </div>
-        <br>    
+        <br>
         <div style="width: 36%">
             <div class="d-flex justify-content-center align-item-center mb-3 p-4" style="background:#EEEBEB;border-radius:20px">
-                <img src="\image\medicine1.jpeg" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
+                <img src="{{ asset('storage/'.$user->profile_picture) }}" style="width:375px;height:375px;overflow:hidden;border-radius:20px">
             </div>
             <div class="d-flex flex-column p-4" style="background:#EEEBEB;border-radius:20px">
                 <label>Address</label>

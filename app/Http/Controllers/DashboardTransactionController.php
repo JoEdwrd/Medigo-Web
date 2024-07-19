@@ -92,7 +92,7 @@ class DashboardTransactionController extends Controller
         };
 
         if (
-            $request->status == 'In Progress'
+            $request->status == 'In progress'
         ) {
             TrackingOrder::where('transaction_id', $tracking->id)->update(['in_progress' => Carbon::now()]);
         };

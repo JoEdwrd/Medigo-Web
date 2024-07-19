@@ -16,7 +16,7 @@
                             <select class="form-select" aria-label="Default select example" id="statusInput" name="status" required>
                                 <option value="Waiting for verification" {{ $transaction->status == 'Waiting for verification' ? 'selected' : '' }}>Waiting for verification</option>
                                 <option value="Waiting for payment" {{ $transaction->status == 'Waiting for payment' ? 'selected' : '' }}>Waiting for payment</option>
-                                <option value="In progress" {{ $transaction->status == 'In progress' ? 'selected' : '' }}>In Progress</option>
+                                <option value="In progress" {{ $transaction->status == 'In progress' ? 'selected' : '' }}>In progress</option>
                                 <option value="Canceled" {{ $transaction->status == 'Canceled' ? 'selected' : '' }}>Canceled</option>
                                 <option value="Completed" {{ $transaction->status == 'Completed' ? 'selected' : '' }}>Completed</option>
                             </select>
