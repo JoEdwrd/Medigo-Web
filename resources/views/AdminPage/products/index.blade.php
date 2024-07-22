@@ -19,9 +19,10 @@
             <tr>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">Product ID</th>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">Category</th>
-              <th scope="col" class="col-3 " style="background: var(--main1-color);">Name</th>
+              <th scope="col" class="col-2 " style="background: var(--main1-color);">Name</th>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">Price</th>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">Stock</th>
+              <th scope="col" class="col-2 " style="background: var(--main1-color);">Patent</th>
               <th scope="col" class="col-1 " style="background: var(--main1-color);">Action</th>
             </tr>
           </thead>
@@ -33,6 +34,11 @@
                 <td class="">{{ $product->name }}</td>
                 <td class="">{{ $product->price }}</td>
                 <td class="">{{ $product->stock }}</td>
+                @if($product->patent == 1)
+                <td class="">Prescription Medicine</td>
+                @else
+                <td class="">Over-the-Counter Medicine</td>
+                @endif
                 <td class="">
                     <a href="/dashboard/products/{{ $product->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
                     <a href="/dashboard/products/{{ $product->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
