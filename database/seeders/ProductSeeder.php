@@ -16,7 +16,7 @@ class ProductSeeder extends Seeder
 Product::create([
     "category_id" => 1,
     "name" => "Panadol Extra",
-    "patent" => 1,
+    "patent" => 0,
     "slug" => "panadol-extra",
     "stock" => 1000,
     "price" => 15500,
@@ -62,7 +62,7 @@ BPOM: DBL9424502004A1"
 Product::create([
     "category_id" => 1,
     "name" => "Bodrex Migra",
-    "patent" => 1,
+    "patent" => 0,
     "slug" => "bodrex-migra",
     "stock" => 500,
     "price" => 12000,
@@ -292,7 +292,7 @@ BPOM: DBL1122334455A1"
 Product::create([
     "category_id" => 1,
     "name" => "Neozep Forte",
-    "patent" => 1,
+    "patent" => 0,
     "slug" => "neozep-forte",
     "stock" => 400,
     "price" => 13000,
