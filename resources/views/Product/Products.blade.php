@@ -91,7 +91,7 @@
     @else
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col" style="min-height: 320px">
                 @if ($searchTerm)
                 <h4>No products found for "{{ $searchTerm }}"</h4>
                 @else
