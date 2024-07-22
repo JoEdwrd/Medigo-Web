@@ -15,7 +15,7 @@
     @php
     use Carbon\Carbon;
     @endphp
-    @foreach ($promotions as $index => $promo)
+    @forelse ($promotions as $index => $promo)
     @if ($index % 3 == 0)
         <div class="row mt-4 mb-4">
     @endif
@@ -45,7 +45,12 @@
     @if (($index + 1) % 3 == 0 || $loop->last)
         </div> <!-- close the row -->
     @endif
-@endforeach
+@empty
+    <div class="text-center" style="min-height: 320px">
+        <h1 class="text-center">No Promotions Available</h1>
+        <p class="text-center" >Please wait for our upcoming promo</p>
+    </div>
+@endforelse
 
 </div>
 

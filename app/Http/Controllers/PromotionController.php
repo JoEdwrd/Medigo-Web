@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
-
+use Carbon\Carbon;
 class PromotionController extends Controller
 {
     /**
@@ -19,7 +19,14 @@ class PromotionController extends Controller
         }else{
             $cart = null;
         }
-        return view('Promotions.promotions',["promotions" => Promotion::all(), 'cart' => $cart]);
+        $today = Carbon::today();
+        $promotions = Promotion::where('startdate', '<=', $today)
+                        ->where('enddate', '>=', $today)
+                        ->get();
+        return view('Promotions.promotions', [
+            'promotions' => $promotions,
+            'cart' => $cart
+        ]);
     }
 
     /**
