@@ -11,11 +11,22 @@ class DashboardProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view("AdminPage.products.index",[
-            "products"=>Product::all()
+        $query = Product::query();
+
+        if ($search = $request->input('search')) {
+            $query->where('name', 'like', "%{$search}%");
+        }
+
+        $products = $query->get();
+
+        return view('AdminPage.products.index', [
+            'products' => $products
         ]);
+        // return view("AdminPage.products.index",[
+        //     "products"=>Product::all()
+        // ]);
     }
 
     /**
