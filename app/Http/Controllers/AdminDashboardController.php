@@ -43,7 +43,7 @@ class AdminDashboardController extends Controller
                                   ->orderBy('month', 'asc')
                                   ->get();
                                 //   dd($monthlyEarnings); 
-        
+        // dd($transactions);
         return view('AdminPage.home',compact('user','product','transaction','totalEarnings','transactions','monthlyEarnings'));
     }
 }

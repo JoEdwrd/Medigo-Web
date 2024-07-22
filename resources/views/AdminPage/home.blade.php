@@ -61,8 +61,8 @@
                 <td>{{ $trans->created_at }}</td>
                 <td>{{ $trans->id }}</td>
                 <td>{{ $trans->user->name }}</td>
-                @if ($trans->promo_id != null)
-                    <td>{{ $trans->promotion->code }}</td>
+                @if ($trans->promotion_id != null)
+                    <td>{{ $trans->promotion_id }}</td>
                 @else
                     <td>-</td>
                 @endif
