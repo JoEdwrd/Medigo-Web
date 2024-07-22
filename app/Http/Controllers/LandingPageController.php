@@ -8,7 +8,7 @@ use App\Models\Category;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-
+use Carbon\Carbon;
 class LandingPageController extends Controller
 {
     public function index()
@@ -20,7 +20,12 @@ class LandingPageController extends Controller
         }else{
             $cart = null;
         }
-        $promotions = Promotion::orderByDesc('id')->take(3)->get();
+        $today = Carbon::today(); // Mendapatkan tanggal hari ini
+        $promotions = Promotion::where('startdate', '<=', $today)
+                                ->where('enddate', '>=', $today)
+                                ->orderByDesc('id') // Mengurutkan berdasarkan ID secara menurun
+                                ->take(3) // Membatasi hasil hanya 3 promosi
+                                ->get();
         $topProducts = Product::select('products.*', DB::raw('SUM(order_details.quantity) as total_sold'))
         ->join('order_details', 'products.id', '=', 'order_details.product_id')
         ->join('transactions', 'order_details.transaction_id', '=', 'transactions.id')
