@@ -22,8 +22,11 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users', // Ensure unique email
             'phone' => 'required|string|min:10|regex:/^\d+$/|unique:users', // Ensure unique phone number
-            'dob' => 'required|date|before:17 years ago', // Minimum age of 17 years
+            'dob' => 'required|date|before:17 years ago|after:100 years ago',
             'password' => 'required|string|min:8',
+        ],[
+            'dob.before' => 'Age must be at least 17 years old.',
+            'dob.after' => 'Age must be under 100 years old.',
         ]);
 
         // Handle validation errors (optional, but recommended for user feedback)

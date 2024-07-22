@@ -33,7 +33,7 @@
                     <div>
                         <label for="email" value="{{ __('Email') }}" >
                             <p class="fontlabel" id="chopin1">Email Address</p>
-                            <input id="email" class="input-field ps-2" type="email" name="email" :value="old('email')"
+                            <input id="email" class="input-field ps-2" type="email" name="email" value="{{ old('email') }}"
                             required autofocus autocomplete="email" style='font-size: 16px;'/>
                         </label>
                     </div>

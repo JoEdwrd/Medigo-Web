@@ -29,14 +29,14 @@
                     <div>
                         <label for="name" value="{{ __('Name') }}" >
                             <p class="fontlabel" id="chopin1">Name</p>
-                            <input id="name" class="input-field ps-2" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" style='font-size: 16px;'/>
+                            <input id="name" class="input-field ps-2" type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" style='font-size: 16px;'/>
                         </label>
                     </div>
 
                     <div>
                         <label for="email" value="{{ __('Email') }}" >
                             <p class="fontlabel" id="chopin1">Email Address</p>
-                            <input id="email" class="input-field ps-2" type="email" name="email" :value="old('email')" required autocomplete="username" style='font-size: 16px;'/>
+                            <input id="email" class="input-field ps-2" type="email" name="email" value="{{ old('email') }}" required autocomplete="username" style='font-size: 16px;'/>
                         </label>
                     </div>
 
@@ -49,7 +49,7 @@
                     <div>
                         <label for="phone" value="{{ __('Phone') }}" >
                             <p class="fontlabel" id="chopin1">Phone Number</p>
-                            <input id="phone" class="input-field ps-2" type="string" name="phone" :value="old('phone')" required autocomplete="phone" style='font-size: 16px;'/>
+                            <input id="phone" class="input-field ps-2" type="string" name="phone" value="{{ old('phone') }}" required autocomplete="phone" style='font-size: 16px;'/>
                         </label>
                     </div>
 
@@ -60,15 +60,15 @@
                     </div>
 
                     <div>
-                        <label for="dob" value="{{ __('Date of Birth') }}" >
+                        <label for="dob" value="{{ __('Date of Birth') }}">
                             <p class="fontlabel" id="chopin1">Date Of Birth</p>
-                            <input id="dob" class="input-field ps-2" type="date" name="dob" required autocomplete="dob" style='width: 209px;font-size: 16px;' />
+                            <input id="dob" class="input-field ps-2" type="date" name="dob" value="{{ old('dob') }}" required autocomplete="dob" style='width: 209px; font-size: 16px;' />
                         </label>
                     </div>
 
                     <div class="error-messages" style="color: red">
                         @if ($errors->has('dob'))
-                            <p>{{ __('You must be at least 17 years old') }}</p>
+                            <p>{{ $errors->first('dob') }}</p>
                         @endif
                     </div>
 
