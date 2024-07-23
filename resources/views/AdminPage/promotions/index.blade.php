@@ -10,10 +10,22 @@
     @if (session()->has('success'))
         <div class="alert alert-success col-lg-6" role="alert">{{ session('success') }}</div>
     @endif
+    @if (session()->has('error'))
+        <div class="alert alert-danger col-lg-6" role="alert">{{ session('error') }}</div>
+    @endif
     
     <div class="table-responsive col-lg-10">
         {{-- <a href="/" class="btn btn-success mb-3">Add New Promotion</a> --}}
-        <a href="/dashboard/promotions/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Promotion</a>
+        <div class="d-flex justify-content-between">
+            <a href="/dashboard/promotions/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Promotion</a>
+            <form action="{{ url('/dashboard/promotions') }}" method="GET" class="d-flex col-4 mt-2" style="height: 40px">
+                <input type="text" name="search" class="form-control" placeholder="Search promotion name..." value="{{ request('search') }}" >
+                {{-- <button type="submit" class="btn btn-primary ml-2 col-2" style="display: none">Search</button> --}}
+                <button class="btn" style="background-color: var(--main2-color)" type="submit">
+                    <i style="color: var(--main1-color)" class="bi bi-search"></i>
+                </button>
+            </form>
+        </div>
         <table class="table table-md">
             <thead>
                 <tr>

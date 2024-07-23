@@ -5,15 +5,25 @@ namespace App\Http\Controllers;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\QueryException;
+
 class DashboardPromotionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        $query = Promotion::query();
+
+        if ($search = $request->input('search')) {
+            $query->where('name', 'like', "%{$search}%");
+        }
+
+        $promotions = $query->get();
+
         return view('AdminPage.promotions.index', [
-            'promotions' => Promotion::all()
+            'promotions' => $promotions
         ]);
     }
 
@@ -132,14 +142,24 @@ class DashboardPromotionController extends Controller
      */
     public function destroy(Promotion $promotion)
     {
-        if($promotion->image){
+        try {
+            // Attempt to delete the promotion
+            if($promotion->image) {
                 Storage::delete($promotion->image);
             }
-        if($promotion->imagebanner){
+            if($promotion->imagebanner) {
                 Storage::delete($promotion->imagebanner);
             }
-        Promotion::destroy($promotion->id);
-
-        return redirect('/dashboard/promotions')->with('success', 'Promotion has been deleted!');
+            Promotion::destroy($promotion->id);
+            
+            return redirect("/dashboard/promotions")->with('success', 'Promotion deleted successfully.');
+        } catch (QueryException $e) {
+            // Check if the error is a foreign key constraint violation
+            if ($e->getCode() == 23000) {
+                return redirect("/dashboard/promotions")->with('error', 'Cannot delete promotion as it is associated with one or more orders.');
+            }
+            // Tangani kesalahan lain jika perlu
+            return redirect("/dashboard/promotions")->with('error', 'An error occurred while trying to delete the promotion.');
+        }
     }
 }

@@ -2,31 +2,32 @@
 
 // use App\Http\Controllers\TermsPage;
 
-use App\Http\Controllers\AdminDashboardController;
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\FaqController;
 use App\Http\Controllers\CartController;
+// use App\Http\Controllers\FaqController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\WebhookController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\OrderDetailController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\DashboardUserController;
 use App\Http\Controllers\LogoutProfileController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\MidtransWebhookController;
 use App\Http\Controllers\DashboardProductController;
 use App\Http\Controllers\OldPasswordCheckController;
 use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
 use App\Http\Controllers\DashboardTransactionController;
-use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\WebhookController;
 use App\Http\Controllers\DashboardPrescriptionController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\TransactionController;
 // use App\Models\Transaction;
 
 /*
@@ -45,6 +46,8 @@ Route::get('/register', [RegisterController::class, 'index'])->name('register')-
 Route::post('/register2', [RegisterController::class, 'store'])->name('register2');
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::post('/midtrans-webhook', [MidtransWebhookController::class, 'handleWebhook']);
+
 
 //=========================================== user =======================================================
 Route::group(['middleware' => ['auth', 'userOnly']], function () {
@@ -77,8 +80,6 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
 
     // Payment
     Route::get('/get-snap-token', [PaymentController::class, 'getSnapToken']);
-    Route::post('/midtrans/webhook', [WebhookController::class, 'handleWebhook']);
-
 });
 
 //=========================================== not auth =================================================
