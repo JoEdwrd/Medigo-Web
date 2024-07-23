@@ -9,7 +9,7 @@
             <div class="col-md-8">
                 <div class="d-flex justify-content-between">
                     <h2 class="mb-3">Your Cart</h2>
-                    @if (isset($cart->cart_details[0]))
+                    @if (isset($cart->cart_details[0])) 
                         <form action="{{route('cart.removeAll')}}" method="POST">
                             @csrf
                             @method('delete')

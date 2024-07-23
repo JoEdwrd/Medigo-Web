@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void 
     {
         Schema::create('order_details', function (Blueprint $table) {
             $table->primary(['transaction_id', 'product_id']);

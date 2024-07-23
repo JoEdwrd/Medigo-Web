@@ -2,7 +2,7 @@
 
 @section('container')
 
-<div class="container mt-4">
+<div class="container mt-4"> 
 
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
