@@ -33,21 +33,21 @@
             <label>Promo ID</label>
             <div id="descbox" class="mt-2" style="background: #D9D9D9;width:100%;border-radius:5px;">
                 <article class="p-2">
-                    {!! $transaction[0]->promo_id !!}
+                    {{isset($transaction[0]->promo_id) ? $transaction[0]->promo_id : "-" }}
                 </article>
             </div>
             <br>
             <label>Payment Method</label>
             <div id="descbox" class="mt-2" style="background: #D9D9D9;width:100%;border-radius:5px;">
                 <article class="p-2">
-                    {!! $transaction[0]->payment_method !!}
+                    {{isset($transaction[0]->payment_method) ? $transaction[0]->payment_method : "-"}}
                 </article>
             </div>
             <br>
             <label>Transaction Date</label>
             <div id="descbox" class="mt-2" style="background: #D9D9D9;width:100%;border-radius:5px;">
                 <article class="p-2">
-                    {!! $transaction[0]->transaction_date !!}
+                    {!! $transaction[0]->created_at->toDateString() !!}
                 </article>
             </div>
             <br>

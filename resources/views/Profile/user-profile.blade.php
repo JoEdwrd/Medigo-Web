@@ -22,6 +22,19 @@
        <h1 class="mb-4">My Profile</h1>
        <div class="container border border-grey rounded-4 shadow p-4">
             <ul class="list-unstyled">
+                @if ($errors->any())
+                    <div class="alert alert-danger mb-3">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @elseif(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
                 <li class="d-flex flex-row justify-content-between mb-2 align-items-center ">
                     <div class="d-flex flex-row justify-content-between align-items-center mb-3" style="width:25.5%">
                         <div class="me-4">

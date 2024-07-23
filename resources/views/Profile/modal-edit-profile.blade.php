@@ -118,7 +118,7 @@
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit your profile here</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form class="needs-validation" novalidate action="/updateProfile" id="formEditProfile" method="POST" enctype="multipart/form-data">
+            <form class="" novalidate action="/updateProfile" id="formEditProfile" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('put')
                 <div class="modal-body">
@@ -188,7 +188,7 @@
                             <label for="provinceInput" class="form-label">Province</label>
                             <input type="text" class="form-control" value="{{ old('province', explode(', ', $user->address)[3] ?? '') }}" id="provinceInput" name="province" placeholder="Input your province here" required>
                             <div class="invalid-feedback">
-                                Please input your province.
+                                Edit profile failed, The province field must not contain symbols, numbers, or leading whitespaces. Please try again.
                             </div>
                         </div>
 
@@ -198,7 +198,7 @@
                             <label for="cityInput" class="form-label">City</label>
                             <input type="text" class="form-control" value="{{ old('city', explode(', ', $user->address)[2] ?? '') }}" id="cityInput" name="city" placeholder="Input your city here" required>
                             <div class="invalid-feedback">
-                                Please input your city.
+                                Edit profile failed, The city field must not contain symbols, numbers, or leading whitespaces. Please try again.
                             </div>
                         </div>
 
@@ -208,7 +208,7 @@
                             <label for="districtInput" class="form-label">District</label>
                             <input type="text" class="form-control" value="{{ old('district', explode(', ', $user->address)[1] ?? '') }}" id="districtInput" name="district" placeholder="Input your district here" required>
                             <div class="invalid-feedback">
-                                Please input your district.
+                                Edit profile failed, The district field must not contain symbols, numbers, or leading whitespaces. Please try again.
                             </div>
                         </div>
 
@@ -218,7 +218,7 @@
                             <label for="streetInput" class="form-label">Street</label>
                             <input type="text" class="form-control" value="{{ old('street', explode(', ', $user->address)[0] ?? '') }}" id="streetInput" name="street" placeholder="Input your street here" required>
                             <div class="invalid-feedback">
-                                Please input your street.
+                                Edit profile failed, The street field must not contain symbols or leading whitespaces. Please try again.
                             </div>
                         </div>
 
@@ -228,7 +228,7 @@
                             <label for="postalCodeInput" class="form-label">Postal code</label>
                             <input type="text" class="form-control" value="{{ old('postalCode', explode(', ', $user->address)[4] ?? '') }}" id="postalCodeInput" name="postalCode" placeholder="Input your postal code here" required>
                             <div class="invalid-feedback">
-                                Please input your postal code.
+                                Edit profile failed, The postal code must be a number with a maximum length of 5 digits. Please try again.
                             </div>
                         </div>
 
@@ -237,9 +237,6 @@
                         <div class="mb-3 col-md-6">
                             <label for="descriptionInput" class="form-label">Description (Optional)</label>
                             <textarea type="text" class="form-control" id="descriptionInput" name="description" placeholder="Input your description here">{{old('description', explode(', ', $user->address)[5] ?? '') }}</textarea>
-                            <div class="invalid-feedback">
-                                Please input your description.
-                            </div>
                         </div>
 
                     </div>
@@ -326,10 +323,11 @@
             genderInput.classList.add('is-valid');
         }
 
-        // Address validation
+         // Address validation
         const provinceInput = document.querySelector('#provinceInput');
-        if (provinceInput.value.trim() === '') {
-            provinceInput.setCustomValidity('Please enter your province.');
+        const provinceCityDistrictRegex = /^[a-zA-Z\s]+$/; // Only letters and spaces
+        if (!provinceCityDistrictRegex.test(provinceInput.value) || provinceInput.value.trim() === '') {
+            provinceInput.setCustomValidity('Please enter a valid province (only letters and spaces, no leading or trailing spaces).');
             provinceInput.classList.add('is-invalid');
             valid = false;
         } else {
@@ -339,8 +337,8 @@
         }
 
         const cityInput = document.querySelector('#cityInput');
-        if (cityInput.value.trim() === '') {
-            cityInput.setCustomValidity('Please enter your city.');
+        if (!provinceCityDistrictRegex.test(cityInput.value) || cityInput.value.trim() === '') {
+            cityInput.setCustomValidity('Please enter a valid city (only letters and spaces, no leading or trailing spaces).');
             cityInput.classList.add('is-invalid');
             valid = false;
         } else {
@@ -350,8 +348,8 @@
         }
 
         const districtInput = document.querySelector('#districtInput');
-        if (districtInput.value.trim() === '') {
-            districtInput.setCustomValidity('Please enter your district.');
+        if (!provinceCityDistrictRegex.test(districtInput.value) || districtInput.value.trim() === '') {
+            districtInput.setCustomValidity('Please enter a valid district (only letters and spaces, no leading or trailing spaces).');
             districtInput.classList.add('is-invalid');
             valid = false;
         } else {
@@ -361,8 +359,9 @@
         }
 
         const postalCodeInput = document.querySelector('#postalCodeInput');
-        if (postalCodeInput.value.trim() === '') {
-            postalCodeInput.setCustomValidity('Please enter your postalCode.');
+        const postalCodeRegex = /^\d{5}$/;
+        if (!postalCodeRegex.test(postalCodeInput.value) || postalCodeInput.value.trim() === '') {
+            postalCodeInput.setCustomValidity('Please enter a valid postal code (5 digits).');
             postalCodeInput.classList.add('is-invalid');
             valid = false;
         } else {
@@ -372,8 +371,10 @@
         }
 
         const streetInput = document.querySelector('#streetInput');
-        if (streetInput.value.trim() === '') {
-            streetInput.setCustomValidity('Please enter your street.');
+        const streetRegex = /^[a-zA-Z\d\s\.]+$/; // Letters, digits, spaces, and dots
+        const notRegex = /^\s/; // Checks for leading spaces
+        if (!streetRegex.test(streetInput.value) || notRegex.test(streetInput.value) || streetInput.value.trim() === '') {
+            streetInput.setCustomValidity('Please enter a valid street (letters, digits, spaces, and dots; cannot start with a space).');
             streetInput.classList.add('is-invalid');
             valid = false;
         } else {

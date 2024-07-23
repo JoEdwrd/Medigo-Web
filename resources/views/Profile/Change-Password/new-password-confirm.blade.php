@@ -20,6 +20,7 @@
         <div class="container border border-grey rounded-4 shadow p-4">
             <form action="/changePassword" method="POST">
                 @csrf
+                @method('put')
                 <ul class="ps-0">
                     <li class="d-flex border-0 justify-content-between border-bottom pt-3 pb-3">
                         <label for="newPassword">New Password</label>

@@ -139,8 +139,12 @@
                 @endif
 
                 @if ($errors->has('promo_error'))
-                    <div class="alert alert-danger text-center p-2 mt-4">
+                    <div class="alert alert-danger text-center p-2 mt-3">
                         {{ $errors->first('promo_error') }}
+                    </div>
+                @elseif(session('success'))
+                    <div class="alert alert-success text-center p-2 mt-3">
+                        {{ session('success') }}
                     </div>
                 @endif
 

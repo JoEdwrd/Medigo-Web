@@ -10,12 +10,25 @@ class DashboardUserController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        // dd(User::all());
-        return view("AdminPage.Users.index",[    
-            'users' => User::all()
+
+        $query = User::query();
+
+        if ($search = $request->input('search')) {
+            $query->where('name', 'like', "%{$search}%");
+        }
+
+        $users = $query->get();
+
+        return view('AdminPage.Users.index', [
+            'users' => $users
         ]);
+
+        // dd(User::all());
+        // return view("AdminPage.Users.index",[    
+        //     'users' => User::all()
+        // ]);
     }
 
     /**

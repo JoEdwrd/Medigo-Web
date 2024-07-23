@@ -13,13 +13,31 @@ class DashboardTransactionController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        // dd($data);
-        return view("AdminPage.transactions.index",[
-            'transactions' => Transaction::all()
+        $query = Transaction::query();
+    
+        if ($search = $request->input('search')) {
+            $query->where(function ($q) use ($search) {
+                $q->whereDate('created_at', 'like', "%{$search}%")
+                  ->orWhere('status', 'like', "%{$search}%");
+            });
+            
+        }
+
+        // dd($query->toSql(), $query->getBindings());
+
+        $transactions = $query->get();
+
+        return view('AdminPage.transactions.index', [
+            'transactions' => $transactions
         ]);
+
+        // dd($data);
+        // return view("AdminPage.transactions.index",[
+        //     'transactions' => Transaction::all()
+        // ]);
     }
 
     /**
@@ -70,8 +88,15 @@ class DashboardTransactionController extends Controller
         //     $validatedData['image'] = $request->file('image')->store('tra$transaction-images');
         // }
 
+        // $validatedData = $request->validate([
+
+        // ])
+
         $transaction = Transaction::where('slug', $slug)->first();
-        $transaction->update(['status' => $request->status]);
+        $transaction->update([
+            'status' => $request->status,
+            'payment_method' => $request->paymentMethod
+        ]);
         // dd($request->status);
 
         if($request->status == 'Canceled'){
