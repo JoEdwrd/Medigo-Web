@@ -57,8 +57,9 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     // profile
     Route::get('/profile', [UserProfileController::class, 'index']);
     Route::get('/changePassOld', [UserProfileController::class, 'checkPassPage'])->name('oldPassPage');
-    Route::post('/newPass', [UserProfileController::class, 'newPassPage']);
-    Route::post('/changePassword', [UserProfileController::class, 'changePassword']);
+    Route::post('/validateOldPass', [UserProfileController::class, 'validateOldPass'])->name('validateOldPass');
+    Route::get('/newPass', [UserProfileController::class, 'newPassPage']);
+    Route::put('/changePassword', [UserProfileController::class, 'changePassword']);
     Route::get('/logoutPage', [UserProfileController::class, 'logoutPage']);
     Route::put('/updateProfile', [UserProfileController::class, 'updateProfile']);
 

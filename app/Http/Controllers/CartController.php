@@ -81,7 +81,7 @@ class CartController extends Controller
         // dd($promo);
         $currentTime = Carbon::now();
 
-        if(isset($promo) && $currentTime->lte($promo->enddate) ){
+        if(isset($promo) && $currentTime->lte($promo->enddate) && $currentTime->gte($promo->startdate)){
             // $cart->promotion()->associate($promo);
             $cart->promotion_id = $promo->id;
 
@@ -92,7 +92,7 @@ class CartController extends Controller
             return redirect()->back()->withErrors(['promo_error' => 'Promo is unavailable!']);
         }
 
-        return redirect()->route('cart.index')->with('success', 'Promo added to cart');
+        return redirect()->route('cart.index')->with('success', 'Promo successfully added to cart');
     }
 
     public function addProduct(Request $request, $product_id){

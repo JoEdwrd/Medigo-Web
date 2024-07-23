@@ -21,7 +21,7 @@ return new class extends Migration
             $table->dateTime('completed')->nullable();
             $table->dateTime('canceled')->nullable();
 
-            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('restrict');
+            $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
 
         });
     }

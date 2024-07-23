@@ -15,9 +15,9 @@
     <div class="table-responsive col-lg-10">
         <div class="d-flex justify-content-between mb-4">
           <a href="/dashboard/products/create" id="addbtn" class="btn col-3" style="max-width: 250px">Add New Product</a>
-          <form action="{{ url('/dashboard/products') }}" method="GET" class="d-flex col-5 mt-2">
+          <form action="{{ url('/dashboard/products') }}" method="GET" class="d-flex col-5 mt-2 position-relative">
               <input type="text" name="search" class="form-control col-2" placeholder="Search product name..." value="{{ request('search') }}">
-              <button type="submit" class="btn btn-primary ml-2 col-2" style="display: none">Search</button>
+              <button type="submit" class="btn btn-primary ml-2 col-2 position-absolute end-0" style="border-start-start-radius: 0px; border-end-start-radius: 0px">Search</button>
           </form>
       </div>
       <table class="table table-md">

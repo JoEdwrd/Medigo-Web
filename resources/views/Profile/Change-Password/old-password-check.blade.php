@@ -16,9 +16,15 @@
 <div class="container d-flex flex-row mt-5 justify-content-between">
     @include("Structure.side-nav-profile")
     <div class="w-75">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <h1 class="mb-4">Change Password</h1>
         <div class="container border border-grey rounded-4 shadow p-4">
-            <form action="/newPass" method="post">
+            <form action="{{route('validateOldPass')}}" method="post">
                 @csrf
                 <div class=" border-0  border-bottom pt-3 pb-3 mb-4">
                     <div class="d-flex justify-content-between mb-4">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId("user_id")->constrained("users")->onDelete("restrict");
+            $table->foreignId("user_id")->constrained("users")->onDelete("cascade");
             $table->unsignedBigInteger('promotion_id')->nullable();
             $table->string("status")->default("Waiting for payment"); // waiting for payment, waiting for verification, in progress, completed, canceled
             $table->string("slug")->unique();
