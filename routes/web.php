@@ -28,7 +28,6 @@ use App\Http\Controllers\DashboardPromotionController;
 use App\Http\Controllers\NewPasswordConfirmController;
 use App\Http\Controllers\DashboardTransactionController;
 use App\Http\Controllers\DashboardPrescriptionController;
-// use App\Models\Transaction;
 
 /*
 |--------------------------------------------------------------------------

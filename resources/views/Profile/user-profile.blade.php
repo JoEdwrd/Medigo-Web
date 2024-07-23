@@ -19,7 +19,7 @@
 
     @include("Structure.side-nav-profile")
     <div class="w-75">
-       <h1 class="mb-4">My Profile</h1>
+       <h1 class="mb-4">My Profile</h1> 
        <div class="container border border-grey rounded-4 shadow p-4">
             <ul class="list-unstyled">
                 @if ($errors->any())

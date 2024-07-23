@@ -1,6 +1,6 @@
 @extends('Structure.main')
 
-@section('container')
+@section('container') 
 
 <div class="container mt-4">
 

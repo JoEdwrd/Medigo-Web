@@ -86,7 +86,7 @@ class CartController extends Controller
             $cart->promotion_id = $promo->id;
 
             $cart->save();
-        }else if(!isset($promo)){
+        }else if(!isset($promo)) {
             return redirect()->back()->withErrors(['promo_error' => 'Invalid promo code!']);
         }else{
             return redirect()->back()->withErrors(['promo_error' => 'Promo is unavailable!']);

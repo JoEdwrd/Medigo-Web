@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="my-4">
-        <h1 class="h2">All Products</h1>
+        <h1 class="h2">All Products</h1> 
     </div>
 
     <hr>

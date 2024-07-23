@@ -2,7 +2,7 @@
 
 @section('container')
     {{-- @dd($transaction) --}}
-    <div class="my-4 d-flex flex-row justify-content-between">
+    <div class="my-4 d-flex flex-row justify-content-between"> 
         <h1 class="h2">Transaction Detail</h1>
         <a href="/dashboard/transactions" id="addbtn" class="btn mb-2" style="max-width: 250px">Back</a>
     </div>
