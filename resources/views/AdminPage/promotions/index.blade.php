@@ -18,10 +18,10 @@
         {{-- <a href="/" class="btn btn-success mb-3">Add New Promotion</a> --}}
         <div class="d-flex justify-content-between">
             <a href="/dashboard/promotions/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Promotion</a>
-            <form action="{{ url('/dashboard/promotions') }}" method="GET" class="d-flex col-4 mt-2" style="height: 40px">
-                <input type="text" name="search" class="form-control" placeholder="Search promotion name..." value="{{ request('search') }}" >
+            <form action="{{ url('/dashboard/promotions') }}" method="GET" class="d-flex col-4 mt-2" style="height: 40px; width: 37%">
+                <input type="text" name="search" class="form-control" placeholder="Search promotions by name" value="{{ request('search') }}" style="border-top-right-radius: 0%; border-bottom-right-radius: 0%">
                 {{-- <button type="submit" class="btn btn-primary ml-2 col-2" style="display: none">Search</button> --}}
-                <button class="btn" style="background-color: var(--main2-color)" type="submit">
+                <button class="btn" style="background-color: var(--main2-color);border-top-left-radius: 0%; border-bottom-left-radius: 0%" type="submit">
                     <i style="color: var(--main1-color)" class="bi bi-search"></i>
                 </button>
             </form>

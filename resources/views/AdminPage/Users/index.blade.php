@@ -14,9 +14,12 @@
     @endif
     <div class="table-responsive col-lg-10">
       <div class="d-flex justify-content-end mb-4">
-        <form action="{{ url('/dashboard/users') }}" method="GET" class="d-flex col-5 mt-2 position-relative">
-            <input type="text" name="search" class="form-control col-2" placeholder="Search users by name..." value="{{ request('search') }}">
-            <button type="submit" class="btn btn-primary ml-2 col-2 position-absolute end-0" style="border-start-start-radius: 0px; border-end-start-radius: 0px">Search</button>
+        <form action="{{ url('/dashboard/users') }}" method="GET" class="d-flex col-4 mt-2" style="height: 40px; width: 37%">
+            <input type="text" name="search" class="form-control" placeholder="Search users by name" value="{{ request('search') }}" style="border-top-right-radius: 0%; border-bottom-right-radius: 0%">
+            {{-- <button type="submit" class="btn btn-primary ml-2 col-2" style="display: none">Search</button> --}}
+            <button class="btn" style="background-color: var(--main2-color);border-top-left-radius: 0%; border-bottom-left-radius: 0%" type="submit">
+                <i style="color: var(--main1-color)" class="bi bi-search"></i>
+            </button>
         </form>
       </div>
       {{-- <a href="/" class="btn btn-success mb-3">Add New user</a> --}}
@@ -53,7 +56,7 @@
               @endforeach
             @else
                   <div class="p-2 me-3 ms-3 alert alert-danger">
-                    <h5 class="text-center">User not Found</h5>
+                    <h5 class="text-center">User not found</h5>
                   </div>
             @endif
           </tbody>

@@ -14,13 +14,12 @@
         }
     </style>
 
-    <div class="login-container">
+    <div class="login-container" style="min-height: 100vh">
         <div class="background-image-login">
 
-
-        <form method="POST" action="{{ route('check') }}" class="card-body p-md-5 mx-md-4;">
+        <form method="POST" action="{{ route('check') }}" class="card-body mx-md-4;">
             @csrf
-            <div class="border-login">
+            <div class="border-login" style="height: 100vh;">
                 <div class="background-form" >
                     <div>
                         <h1 class="login-title">Login</h1>
