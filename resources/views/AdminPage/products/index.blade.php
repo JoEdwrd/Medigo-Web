@@ -59,8 +59,8 @@
                 </tr>
             @endforeach
             @else
-            <div class="p-2 me-3 ms-3 alert alert-danger">
-              <h5 class="text-center">Product not found</h5>
+            <div class="p-2 mx-3 alert alert-danger d-flex justify-content-center">
+              <h5 class="p-0 m-0 text-center">Product not found</h5>
             </div>
             @endif
           </tbody>
