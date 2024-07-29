@@ -4,9 +4,7 @@
     <div class="my-4">
         <h1 class="h2">All Products</h1> 
     </div>
-
     <hr>
-
     @if(session()->has("success"))
       <div class="alert alert-success col-lg-6" role="alert">
         {{ session("success") }}
