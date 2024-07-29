@@ -47,33 +47,7 @@ class OrderDetailSeeder extends Seeder
             "product_id" => 2,
             "quantity" => 10
         ]);
-        OrderDetail::create([
-            "transaction_id" => 847821,
-            "product_id" => 3,
-            "quantity" => 5
-        ]);
-        OrderDetail::create([
-            "transaction_id" => 847821,
-            "product_id" => 2,
-            "quantity" => 2
-        ]);
-        OrderDetail::create([
-            "transaction_id" => 847821,
-            "product_id" => 1,
-            "quantity" => 2
-        ]);
 
-        // Payment Dummy -Shamgar
-        OrderDetail::create([
-            "transaction_id" => 99999,
-            "product_id" => 1,
-            "quantity" => 2
-        ]);
-        OrderDetail::create([
-            "transaction_id" => 99999,
-            "product_id" => 3,
-            "quantity" => 5
-        ]);
 
     }
 }
