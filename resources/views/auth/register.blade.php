@@ -13,12 +13,12 @@
             display: none;
         }
     </style>
-    <div >
+    <div>
         <div class="background-image-login">
         <form method="POST" action="{{ route('register2') }}" id="card-body-register">
             @csrf
-            <div class="border-register" style="align-items: center; margin-top: 50px">
-                <div class="background-form-register " style="align-content: center;">
+            <div class="border-register" style="align-items: center;">
+                <div class="background-form-register" style="align-content: center;">
                     <div>
                         <h1 class="login-title">Sign Up</h1>
                     </div>
@@ -42,7 +42,7 @@
 
                     <div class="error-messages" style="color: red">
                         @if ($errors->has('email'))
-                            <p>{{ $errors->first('email') }}</p>
+                            <p class="m-0">{{ $errors->first('email') }}</p>
                         @endif
                     </div>
 
@@ -53,22 +53,22 @@
                         </label>
                     </div>
 
-                    <div class="error-messages" style="color: red">
+                    <div class="error-messages" style="color: red; margin: 0; ">
                         @if ($errors->has('phone'))
-                            <p>{{ $errors->first('phone') }}</p>
+                            <p class="m-0">{{ $errors->first('phone') }}</p>
                         @endif
                     </div>
 
-                    <div>
+                    <div style="margin-top: 2px">
                         <label for="dob" value="{{ __('Date of Birth') }}">
                             <p class="fontlabel" id="chopin1">Date Of Birth</p>
                             <input id="dob" class="input-field ps-2" type="date" name="dob" value="{{ old('dob') }}" required autocomplete="dob" style='width: 209px; font-size: 16px;' />
                         </label>
                     </div>
 
-                    <div class="error-messages" style="color: red">
+                    <div class="error-messages" style="color: red; margin: 0; ">
                         @if ($errors->has('dob'))
-                            <p>{{ $errors->first('dob') }}</p>
+                            <p class="m-0">{{ $errors->first('dob') }}</p>
                         @endif
                     </div>
 
@@ -84,15 +84,13 @@
                         </div>
                     </div>
 
-                    <div class="error-messages" style="color: red">
+                    <div class="error-messages" style="color: red; margin-bottom: 0;">
                         @if ($errors->has('password'))
-                            <p>{{ $errors->first('password') }}</p>
+                            <p class="m-0">{{ $errors->first('password') }}</p>
                         @endif
                     </div>
 
-
                     <button type="submit" id="registerbtn" style="background-color: rgb(81,159,145); color:white">Sign Up</button>
-
 
                 </div>
 
