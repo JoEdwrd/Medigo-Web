@@ -101,10 +101,15 @@
                     </div>
                 </div>
 
+
+
                 @if ($transaction->status == 'Waiting for verification' || $transaction->status == 'Waiting for payment')
-                    <div class="d-flex justify-content-end">
-                        <button style="border: none; color: white; background-color: red;" id="SeeAllBTN" data-bs-toggle="modal" data-bs-target="#cancelModal">
-                            <strong>Cancel</strong>
+                    <div class="d-flex justify-content-end gap-3 mt-3">
+                             @if ($transaction->status == 'Waiting for payment')
+                                <button type="submit" style="border: none; color: white; width:50% ;background-color: var(--main2-color); padding: 10px 20px; border-radius: 30px; font-weight: bold;" id="checkoutButton">PAY</button>
+                            @endif
+                        <button style="border: none; width:50%; border-radius: 30px; color: white; background-color: red;" id="SeeAllBTN" data-bs-toggle="modal" data-bs-target="#cancelModal">
+                            <strong>CANCEL</strong>
                         </button>
                     </div>
                 @endif
