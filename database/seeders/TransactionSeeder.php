@@ -14,7 +14,7 @@ class TransactionSeeder extends Seeder
     {
         Transaction::create([
             // "transaction_date" => '2024-04-01',
-            'slug' => 'transac1',
+            'slug' => 'transaction1',
             'user_id' => 2,
             'status' => 'In progress',
             'promotion_id' => 1,
@@ -22,7 +22,7 @@ class TransactionSeeder extends Seeder
         ]);
         Transaction::create([
             // "transaction_date" => '2023-02-09',
-            'slug' => 'transac2',
+            'slug' => 'transaction2',
             'user_id' => 1,
             'status' => 'In progress',
             'promotion_id' => 2,
@@ -68,24 +68,6 @@ class TransactionSeeder extends Seeder
             'promotion_id' => 1,
             'payment_method' => 'BCA',
         ]);
-         Transaction::create([
-            // "transaction_date" => '2024-07-03',
-            'id' => 847821,
-            'slug' => 'transaction847821',
-            'user_id' => 2,
-            'status' => 'Waiting for payment',
-            'promotion_id' => 1,
-            'payment_method' => 'BCA',
-        ]);
-
-        // Payment Dummy -Shamgar
-         Transaction::create([
-            'id' => 99999,
-            'slug' => 'transaction99999',
-            'user_id' => 1,
-            'status' => 'Waiting for payment',
-            'promotion_id' => 2,
-            'payment_method' => 'BCA',
-        ]);
+        
     }
 }
