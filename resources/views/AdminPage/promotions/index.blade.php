@@ -37,23 +37,29 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($promotions as $promotion)
-                    <tr>
-                        <td>{{ $promotion->id }}</td>
-                        <td>{{ $promotion->name }}</td>
-                        <td>{{ $promotion->code }}</td>
-                        <td>{{ $promotion->discount }}</td>
-                        <td>
-                            <a href="/dashboard/promotions/{{ $promotion->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
-                            <a href="/dashboard/promotions/{{ $promotion->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
-                            <form action="/dashboard/promotions/{{ $promotion->slug }}" method="post" class="d-inline">
-                                @method("delete")   
-                                @csrf
-                                <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><i class="bi bi-trash-fill"></i></button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
+                @if(isset($promotions[0]))
+                    @foreach ($promotions as $promotion)
+                        <tr>
+                            <td>{{ $promotion->id }}</td>
+                            <td>{{ $promotion->name }}</td>
+                            <td>{{ $promotion->code }}</td>
+                            <td>{{ $promotion->discount }}</td>
+                            <td>
+                                <a href="/dashboard/promotions/{{ $promotion->slug }}" class="badge bg-success"><i class="bi bi-eye-fill"></i></a>
+                                <a href="/dashboard/promotions/{{ $promotion->slug }}/edit" class="badge bg-warning"><i class="bi bi-pencil-square"></i></a>
+                                <form action="/dashboard/promotions/{{ $promotion->slug }}" method="post" class="d-inline">
+                                    @method("delete")   
+                                    @csrf
+                                    <button class="badge bg-danger border-0" onclick="return confirm('Are You Sure?')"><i class="bi bi-trash-fill"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                @else
+                    <div class="p-2 mx-3 alert alert-danger d-flex justify-content-center">
+                      <h5 class="p-0 m-0 text-center">Promotion not found</h5>
+                    </div>
+                @endif
             </tbody>
         </table>
     </div>
