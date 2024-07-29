@@ -3,7 +3,7 @@
 @section('container')
 {{$check = null}}
 
-<div class="container">
+<div class="container" style="min-height: 320px">
     <div class="py-4">
         <div class="row gx-5">
             <div class="col-md-8">
