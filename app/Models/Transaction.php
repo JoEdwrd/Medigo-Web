@@ -21,10 +21,6 @@ class Transaction extends Model
         return $this->hasMany(OrderDetail::class);
     }
 
-    // public function prescriptions(){
-    //     return $this->hasMany(Prescription::class);
-    // }
-
     public function promotion() {
         return $this->belongsTo(Promotion::class);
     }

@@ -16,6 +16,19 @@
         </nav>
         <h1 id="NavItems" style="color: var(--main2-color)">Transaction History</h1>
         <br>
+
+        @if(session()->has("success"))
+            <div class="alert alert-success" role="alert">
+                {{ session("success") }}
+            </div>
+        @endif
+        @if(session()->has("error"))
+            <div class="alert alert-danger" role="alert">
+                {{ session("error") }}
+            </div>
+        @endif
+
+        <!-- Loop through all statuses -->
         @foreach (['waitForVerification' => 'Waiting for verification', 'waitForPayment' => 'Waiting for payment', 'inProgress' => 'In progress', 'completed' => 'Completed', 'canceled' => 'Canceled'] as $status => $title)
             <div>
                 <div class="d-flex justify-content-between">
@@ -59,6 +72,10 @@
                                         <div style="border: 2px solid #165CA2;border-radius:5px; width:180px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
                                             {{ strtoupper($transaction->status) }}
                                         </div>
+                                        <form action="{{ route('transaction.complete', $transaction->id) }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="trackbutton">COMPLETE</button>
+                                        </form>
                                     @elseif ($transaction->status == 'Waiting for payment')
                                         <div style="border: 2px solid #165CA2;border-radius:5px; width:250px;height:40px;display:flex;text-align:center; align-items: center;justify-content: center;color:#165CA2;font-family: 'Chopin-Trial';font-weight: 600;">
                                             {{ strtoupper($transaction->status) }}

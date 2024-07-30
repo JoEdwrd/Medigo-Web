@@ -55,6 +55,7 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     Route::get('/history', [HistoryController::class, 'index'])->name('history-index');
     Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
     Route::post('/upload.prescription',[CartController::class, 'store'])->name('upload.prescription');
+    Route::post('/transaction/complete/{id}', [HistoryController::class, 'completeTransaction'])->name('transaction.complete');
 
     // profile
     Route::get('/profile', [UserProfileController::class, 'index']);
