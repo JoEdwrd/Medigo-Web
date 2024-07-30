@@ -1,6 +1,5 @@
 @extends('Structure.main')
 @section('container')
-
 @php
 use Carbon\Carbon;
 @endphp
@@ -14,12 +13,9 @@ use Carbon\Carbon;
     <br>
     <div class="card">
         <img src="{{ asset('storage/'.$promotion->image) }}" style="height: 400px; width: 100%; object-fit: cover;" class="card-img-top" alt="Voucher Image">
-
-
         <div class="card-body">
             <div class="d-flex justif   y-content-between align-items-center">
                 <h4 class="card-title">{{$promotion->name}}</h4>
-                {{-- <span class="badge bg-warning text-dark">50% off</span> --}}
             </div>
             <hr>
             <ul class="list-unstyled">
@@ -28,11 +24,8 @@ use Carbon\Carbon;
             </ul>
             <hr>
             {!! $promotion->terms !!}
-
             <div class="d-flex justify-content-between align-items-center mt-3">
-
             </div>
-
             @if(isset($cart->cart_details[0]))
                 <form action="{{route('cart.promo.add')}}" method="POST" class="d-inline">
                     @csrf

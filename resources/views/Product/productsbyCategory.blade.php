@@ -1,8 +1,6 @@
 @extends('Structure.main')
 @section('container')
-
 <div style="min-height: 300px">
-
     <div class="mb-5">
         <div class="mt-4" style="margin-left: 90px">
             <nav aria-label="breadcrumb">
@@ -13,7 +11,6 @@
                 </ol>
             </nav>
         </div>
-
         @if(session()->has("success"))
             <div id="success-alert" class="alert alert-success col m-5" role="alert">
                 {{ session("success") }}
@@ -32,7 +29,6 @@
                 </div>
             </div>
         </div>
-
         @if ($products->count() > 0)
         <div class="container">
             <div class="row">
@@ -40,7 +36,6 @@
                     <h2>Products in {{ $category->name }}</h2>
                 </div>
             </div>
-
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                 @foreach ($products->where('stock', '>', 0) as $product)
                     <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
@@ -66,21 +61,17 @@
                 </div>
             </div>
         </div>
-
         @endif
-
     </div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var alert = document.getElementById('success-alert');
         if (alert) {
             setTimeout(function() {
                 alert.style.display = 'none';
-            }, 3000); // 3 seconds timeout
+            }, 3000);
         }
     });
 </script>
-
 @endsection

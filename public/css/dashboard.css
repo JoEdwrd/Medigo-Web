@@ -2,45 +2,38 @@
     --main1-color: rgba(231, 244, 224, 100);
     --main2-color: rgba(81, 159, 145, 100);
 }
-
 #textfont {
     font-family: "Chopin-Trial";
 }
-
 @media (max-width: 767.98px) {
     .sidebar {
         top: 5rem;
     }
 }
-
 #sidebarMenu {
     height: 100vh;
     padding-top: 0;
     margin-top: 0;
 }
-
 .sidebar-sticky {
     position: relative;
     top: 0;
     height: calc(100vh - 48px);
     padding-top: 0.5rem;
     overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    overflow-y: auto;
 }
-
 .sidebar .nav-link {
     font-weight: 600;
     color: #333;
     font-family: "Chopin-Trial";
     width: 200px;
 }
-
 .sidebar .nav-link.active {
     background: var(--main2-color);
     color: white;
     border-radius: 10px;
 }
-
 .sidebar .nav-link:hover .feather,
 .sidebar .nav-link.active .feather {
     color: inherit;
@@ -56,17 +49,4 @@
 #descbox::-webkit-scrollbar {
     display: none;
 }
-/*
- * Sidebar
- */
 
-/* .sidebar {
-  position: fixed;
-  margin-top: 0px;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 100; 
-  padding: 48px 0 0;
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-} */

@@ -47,7 +47,11 @@ class OrderDetailSeeder extends Seeder
             "product_id" => 2,
             "quantity" => 10
         ]);
-
+        OrderDetail::create([
+            "transaction_id" => 8,
+            "product_id" => 2,
+            "quantity" => 10
+        ]);
 
     }
 }

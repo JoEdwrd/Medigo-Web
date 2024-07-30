@@ -1,9 +1,7 @@
 @push('scripts')
     <script src="/js/product.js"></script>
 @endpush
-
 @extends('Structure.main')
-
 @section('container')
 <div class="container mt-4">
     <nav aria-label="breadcrumb">
@@ -12,13 +10,11 @@
           <li class="breadcrumb-item active" aria-current="page" style="color: #55BC44">{{$product->name}}</li>
         </ol>
     </nav>
-
       @if(session()->has("success"))
         <div id="success-alert" class="alert alert-success col m-5" role="alert">
             {{ session("success") }}
         </div>
     @endif
-
     <div class="container mt-3 mb-5 mx-auto" style="max-width: 1200px;">
         <div class="row g-4">
             <div class="col-md-4 px-4">
@@ -34,22 +30,17 @@
                     @endif
                     <p class="mt-2"> {{ $product->shortdesc }} </p>
                 </div>
-
                 <form action="{{ route('cart.add', ['productId' => $product->id]) }}" method="POST" style="display:inline;">
                     @csrf
                     <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
                 </form>
-
                 <hr class="my-4">
-
                 <div class="mt-3">
                     <p class="mb-0">{!! $product->minimizedesc !!}</p>
                     <div id="more-info" class=collapse>
                         {!! $product->description !!}
                     </div>
-
                     <br>
-
                     <button class="custom-btn" type="button" data-bs-toggle="collapse" data-bs-target="#more-info" aria-expanded="false" aria-controls="more-info" id="toggleButton">
                         <strong>See More <i class="bi bi-chevron-down" id="toggleIcon"></i></strong>
                     </button>
@@ -78,15 +69,13 @@
         </div>
     </div>
 </div>
-
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var alert = document.getElementById('success-alert');
         if (alert) {
             setTimeout(function() {
                 alert.style.display = 'none';
-            }, 3000); // 3 seconds timeout
+            }, 3000); 
         }
     });
 </script>

@@ -68,6 +68,12 @@ class TransactionSeeder extends Seeder
             'promotion_id' => 1,
             'payment_method' => 'BCA',
         ]);
-        
+        Transaction::create([
+            // "transaction_date" => '2024-06-03',
+            'slug' => 'transaction8',
+            'user_id' => 2,
+            'status' => 'Canceled',
+            'payment_method' => 'BCA',
+        ]);
     }
 }
