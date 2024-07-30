@@ -187,7 +187,7 @@
                     </div>
                 </div>
             @endif
-            @if ($transaction->tracking_order->waiting_for_payment != "")
+            @if ($transaction->tracking_order->waiting_for_verification != "" &&$transaction->tracking_order->waiting_for_payment != "")
                 <div class="row align-items-start">
                     <div class="col-md-1 d-flex justify-content-center">
                         <div class="d-flex flex-column align-items-center">
@@ -202,6 +202,23 @@
                         <h5 class="mb-3">Waiting for Payment</h5>
                     </div>
                 </div>
+                @elseif ($transaction->tracking_order->waiting_for_verification == "" &&$transaction->tracking_order->waiting_for_payment != "")
+                <div class="row align-items-start">
+                    <div class="col-md-1 d-flex justify-content-center">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="rounded-circle" style="width: 20px; height: 20px; background-color: var(--main2-color);"></div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <h6 class="mb-3 text-muted" style="margin-top: 3px;">{{$transaction->tracking_order->waiting_for_payment}}</h6>
+                    </div>
+                    <div class="col text-start">
+                        <h5 class="mb-3">Waiting for Payment</h5>
+                    </div>
+                </div>
+
+
+
             @endif
             @if ($transaction->tracking_order->waiting_for_verification != "")
                 <div class="row align-items-start">
