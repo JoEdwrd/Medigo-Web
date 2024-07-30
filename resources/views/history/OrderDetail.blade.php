@@ -114,6 +114,11 @@
                         @endif
                     </div>
                 @endif
+                @if ($transaction->status == 'In progress')
+                    <div class="d-flex justify-content-end gap-3 mt-3">
+                        <button class="trackbutton" id="checkoutButton" data-bs-toggle="modal" data-bs-target="#cancelModal">COMPLETE</button>
+                    </div>
+                @endif
             </div>
             <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
