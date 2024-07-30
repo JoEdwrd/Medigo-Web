@@ -7,7 +7,7 @@
             <div class="col-md-8">
                 <div class="d-flex justify-content-between">
                     <h2 class="mb-3">Your Cart</h2>
-                    @if (isset($cart->cart_details[0])) 
+                    @if (isset($cart->cart_details[0]))
                         <form action="{{route('cart.removeAll')}}" method="POST">
                             @csrf
                             @method('delete')
@@ -79,7 +79,7 @@
                                 <li class="list-group-item d-flex justify-content-between lh-sm">
                                     <div>
                                         <h6 class="my-0">{{$cart->cart_details[$i]->product->name}}</h6>
-                                    </di>
+                                    </div>
                                     <span class="text-body-secondary">{{'Rp '.(number_format(isset($cart->cart_details[$i]->product->discprice) ? $cart->cart_details[$i]->product->discprice : $cart->cart_details[$i]->product->price, 0, ',', '.')).' x '.$cart->cart_details[$i]->quantity}}</span>
                                 </li>
                                 @php

@@ -91,28 +91,27 @@
                     </div>
                 </div>
                 @if ($transaction->status == 'Waiting for verification' || $transaction->status == 'Waiting for payment')
-                    <div class="d-flex justify-content-end gap-3 mt-3">
-                            @if ($transaction->status == 'Waiting for payment')
-                                <form action="" method="GET" style="width:50%">
-                                    @csrf
-                                    <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
-                                    @foreach ($transaction->order_details as $index => $orderDetail)
-                                        <input type="hidden" name="products[{{ $index }}][id]" value="{{ $orderDetail->product->id }}">
-                                        <input type="hidden" name="products[{{ $index }}][name]" value="{{ $orderDetail->product->name }}">
-                                        @if ($orderDetail->product->discprice)
-                                            <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->discprice }}">
-                                        @else
-                                            <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
-                                        @endif
-                                        <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
-                                    @endforeach
-                                    <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
-                                    <button type="submit" style="border: none; color: white; width:100%; height:50px ;background-color: var(--main2-color); padding: 10px 20px; border-radius: 30px; font-weight: bold;" id="checkoutButton">PAY</button>
-                                </form>
-                            @endif
-                        <button style="border: none; width:50%; border-radius: 30px; color: white; height:50px; background-color: red;" id="SeeAllBTN" data-bs-toggle="modal" data-bs-target="#cancelModal">
-                            <strong>CANCEL</strong>
-                        </button>
+                    <div class="d-flex justify-content-between gap-3 mt-3">
+                        <button class="cancelbutton" id="checkoutButton" data-bs-toggle="modal" data-bs-target="#cancelModal">CANCEL</button>
+
+                        @if ($transaction->status == 'Waiting for payment')
+                            <form action="" method="GET">
+                                @csrf
+                                <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
+                                @foreach ($transaction->order_details as $index => $orderDetail)
+                                    <input type="hidden" name="products[{{ $index }}][id]" value="{{ $orderDetail->product->id }}">
+                                    <input type="hidden" name="products[{{ $index }}][name]" value="{{ $orderDetail->product->name }}">
+                                    @if ($orderDetail->product->discprice)
+                                        <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->discprice }}">
+                                    @else
+                                        <input type="hidden" name="products[{{ $index }}][price]" value="{{ $orderDetail->product->price }}">
+                                    @endif
+                                    <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
+                                @endforeach
+                                <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
+                                <button type="submit" class="trackbutton" id="checkoutButton">PAY</button>
+                            </form>
+                        @endif
                     </div>
                 @endif
             </div>
