@@ -1,7 +1,5 @@
 @extends('Structure.main')
 @section('container')
-
-
 <div class="container mt-5">
     <div class="mt-4">
         <nav aria-label="breadcrumb">
@@ -19,7 +17,6 @@
     @if ($index % 3 == 0)
         <div class="row mt-4 mb-4">
     @endif
-
     <div class="col-md-4">
         <div class="card">
             <div class="d-flex justify-content-center align-items-center px-3 pt-3" style="height: 100%; overflow: hidden;">
@@ -41,9 +38,8 @@
             </div>
         </div>
     </div>
-
     @if (($index + 1) % 3 == 0 || $loop->last)
-        </div> <!-- close the row -->
+        </div> 
     @endif
 @empty
     <div class="text-center" style="min-height: 320px">
@@ -51,7 +47,5 @@
         <p class="text-center" >Please wait for our upcoming promo</p>
     </div>
 @endforelse
-
 </div>
-
 @endsection

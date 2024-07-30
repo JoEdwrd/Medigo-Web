@@ -58,5 +58,11 @@ class TrackingOrderSeeder extends Seeder
             'in_progress' => "2024-07-09 07:22:03",
             'canceled' => "2024-07-09 09:45:01"
         ]);
+        TrackingOrder::create([
+            "transaction_id" => 8,
+            'waiting_for_verification' => "2024-07-09 05:37:01",
+            'waiting_for_payment' => "2024-07-09 06:54:07",
+            'canceled' => "2024-07-09 09:45:01"
+        ]);
     }
 }

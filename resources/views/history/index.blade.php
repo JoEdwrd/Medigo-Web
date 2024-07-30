@@ -3,9 +3,7 @@
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 @endpush
-
 @extends('Structure.main')
-
 @section('title', $title)
 @section('container')
     <div class="container">
@@ -18,20 +16,16 @@
         </nav>
         <h1 id="NavItems" style="color: var(--main2-color)">Transaction History</h1>
         <br>
-
-        <!-- Loop through all statuses -->
         @foreach (['waitForVerification' => 'Waiting for verification', 'waitForPayment' => 'Waiting for payment', 'inProgress' => 'In progress', 'completed' => 'Completed', 'canceled' => 'Canceled'] as $status => $title)
             <div>
                 <div class="d-flex justify-content-between">
                     <h3>{{ $title }}</h3>
-                    <!-- Only add toggle button for 'completed' and 'canceled' statuses -->
                     @if (in_array($status, ['completed', 'canceled']))
                         <button class="custom-btn toggleButton" type="button" data-bs-toggle="collapse" data-bs-target="#order-info-{{ $status }}" aria-expanded="false" aria-controls="order-info-{{ $status }}">
                             <i class="bi bi-chevron-down toggleIcon" style="font-size: 2em;"></i>
                         </button>
                     @endif
                 </div>
-
                 <hr style="border: 1px solid black;">
                 <div id="order-info-{{ $status }}" class="{{ in_array($status, ['completed', 'canceled']) ? 'collapse' : '' }}">
                     @foreach($$status as $transaction)

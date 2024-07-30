@@ -123,18 +123,22 @@
                             @endforeach
                         </select>
                     </div>
-                    <div class="d-flex flex-column" style="width:40%">
+                    @php
+                    $type=[0,1];
+                    @endphp
+                   <div class="d-flex flex-column" style="width:40%">
                         <label for="patent" class="form-label">Product Type</label>
                         <select class="form-select" name="patent">
-                            @for($i=0;$i<2;$i++)
-                                @if(old("type")==$i)
-                                    <option value="{{ $i }}" selected>{{ $i }}</option>
+                            @foreach($type as $t)
+                                @if(old("type",$product->patent)==$t)
+                                    <option value="{{ $t }}" selected>{{ $t }}</option>
                                 @else
-                                    <option value="{{ $i }}">{{ $i }}</option>
+                                    <option value="{{ $t }}">{{ $t }}</option>
                                 @endif
-                            @endfor
+                            @endforeach
                         </select>
                     </div>
+
                 </div>
             </div>
         </div>

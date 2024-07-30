@@ -1,6 +1,5 @@
 @extends('Structure.main')
 @section('container')
-
 <div class="mb-5">
     <div class="mt-4" style="margin-left: 90px">
         <nav aria-label="breadcrumb">
@@ -10,13 +9,11 @@
             </ol>
         </nav>
     </div>
-
     @if(session()->has("success"))
         <div id="success-alert" class="alert alert-success col m-5" role="alert">
             {{ session("success") }}
         </div>
     @endif
-
     <div class="container mt-5">
         <div class="row mb-4">
             <div class="col">
@@ -29,7 +26,6 @@
             </div>
         </div>
     </div>
-
     @if ($products->count() > 0)
         @if ($searchTerm)
             <div class="container">
@@ -39,7 +35,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                 @foreach ($products->where('stock', '>', 0) as $product)
                     <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
@@ -57,7 +52,6 @@
                 @endforeach
             </div>
         @else
-        <!-- Show all products if no search query -->
             @foreach ($categories as $category)
                 <div class="row mt-5" style="width: 100%">
                     <div class="col-10" style="margin-left:90px">
@@ -67,7 +61,6 @@
                         <a href="{{ route('category.show', $category->slug) }}" class="text-secondary h3" style="text-decoration: none;">See all</a>
                     </div>
                 </div>
-
                 <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                     @foreach ($category->products->where('stock', '>', 0)->take(5) as $product)
                         <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
@@ -80,14 +73,12 @@
                                     @csrf
                                     <button type="submit" class="btn mb-2" id="addbtn">Add to cart</button>
                                 </form>
-                                {{-- <a href="{{ route('cart.add', ['productId' => $product->id]) }}" id="addbtn" class="btn">ADD</a> --}}
                             </div>
                     </div>
                     @endforeach
                 </div>
             @endforeach
         @endif
-
     @else
     <div class="container">
         <div class="row">
@@ -101,18 +92,15 @@
         </div>
     </div>
     @endif
-
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var alert = document.getElementById('success-alert');
         if (alert) {
             setTimeout(function() {
                 alert.style.display = 'none';
-            }, 3000); // 3 seconds timeout
+            }, 3000); 
         }
     });
 </script>
-
 @endsection

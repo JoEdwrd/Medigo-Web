@@ -2,12 +2,10 @@
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="bi bi-list" style="color:var(--main2-color)"></i>
   </button>
-
   <div class="collapse navbar-collapse d-flex justify-content-between mx-5" id="navbarSupportedContent">
     <div class="nav-logo">
       <a class="navbar-brand" href="/"><img src="\image\MedigoLogo.svg" alt="Medigo Logo"></a>
     </div>
-
     <div class="nav-searchbar" style="width: 500px">
       @if(!(Request::is('products')))
         <form class="form-inline" action="/products">
@@ -23,8 +21,6 @@
         </div>
       @endif
     </div>
-
-
     <div class="nav-content" style="width: 550px">
       <ul class="navbar-nav d-flex justify-content-between">
         <li class="nav-item">
@@ -82,13 +78,9 @@
             </a>
           </li>
         @endauth
-
         @auth
           <li class="nav-item">
             <a class="text-decoration-none" href="/profile">
-              {{-- <button class="nav-link text-light rounded-50 text-decoration-none px-4" id="loginBTN">
-                <strong>{{ Str::upper(auth()->user()->name) }}</strong>
-              </button> --}}
 
               @if (auth()->user()->profile_picture)
                 <img src="{{ asset("/storage/". auth()->user()->profile_picture) }}" alt="Profile Picture" class="profile-img-circle border border-success border-2" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
