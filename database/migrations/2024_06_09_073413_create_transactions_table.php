@@ -18,9 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('promotion_id')->nullable();
             $table->string("status")->default("Waiting for payment"); // waiting for payment, waiting for verification, in progress, completed, canceled
             $table->string("slug")->unique();
-            // $table->foreignId("promo_id")->nullable()->constrained("promotions")->onDelete("restrict");
             $table->foreign('promotion_id')->references('id')->on('promotions')->onDelete('restrict');
-            // $table->date("transaction_date");
             $table->string('payment_method')->nullable();
         });
     }

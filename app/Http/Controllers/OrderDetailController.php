@@ -33,7 +33,7 @@ class OrderDetailController extends Controller
             $transaction->status = 'Canceled';
             $transaction->save();
 
-            TrackingOrder::where('transaction_id', $transaction_id)->update(['canceled' => Carbon::now()]);
+            TrackingOrder::where('transaction_id', $transaction_id)->update(['Canceled' => Carbon::now()]);
 
             return redirect()->back()->with('success', 'Order has been canceled.');
         }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Transaction;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
+use App\Models\TrackingOrder;
 
 class HistoryController extends Controller
 {
@@ -35,6 +37,21 @@ class HistoryController extends Controller
             'cart' => $cart,
             'title' => $title
         ]);
+    }
+
+    public function completeTransaction($id)
+    {
+        $transaction = Transaction::find($id);
+
+        if ($transaction && $transaction->status == 'In progress') {
+            $transaction->status = 'Completed';
+            $transaction->save();
+            TrackingOrder::where('transaction_id', $id)->update(['Completed' => Carbon::now()]);
+
+            return redirect()->back()->with('success', 'Transaction marked as completed.');
+        }
+
+        return redirect()->back()->with('error', 'Transaction not found.');
     }
 }
 
