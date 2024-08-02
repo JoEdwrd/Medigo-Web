@@ -29,15 +29,15 @@ class CartController extends Controller
 
     public function changeQty(Request $request, $product_id){
         $user = auth()->user();
-        
+
         $cart = Cart::firstOrCreate(['user_id' => $user->id]);
 
         $qty = $request->quantity;
 
         $cartItem = $cart->cart_details()->where('product_id', $product_id)->first();
-        
+
         $product = $cartItem->product()->first();
-        
+
         if($qty > $product->stock){
             return redirect()->back()->withErrors(['quantity_error_' . $product_id => 'Available stock is '.$product->stock.'. Please reduce the quantity']);
         }else if($qty > 0){
@@ -92,7 +92,7 @@ class CartController extends Controller
             $cartItem = new CartDetail(['product_id' => $product_id, 'cart_id' => $cart->id, 'quantity' => 1]);
             $cart->cart_details()->save($cartItem);
         }
-        
+
         $cartItem->save();
 
         return redirect()->back()->with('success', 'Product added to cart');
@@ -138,7 +138,7 @@ class CartController extends Controller
         ]);
 
         if($request->file("image")){
-            $validatedData["image"]=$request->file("image")->store("prescription-images");
+            $validatedData["image"]=$request->file("image")->store("pres-images");
         }
         $validatedData['slug'] = Str::slug($validatedData['image']) . '-' . Str::lower(Str::random(5));
 
