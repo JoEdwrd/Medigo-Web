@@ -30,7 +30,7 @@
                         <td class="">{{$prescription->id}}</td>
                         <td class="">{{ $prescription->transaction_id}}</td>
                         <td>
-                            <img src="{{asset('storage/'.$prescription->image)}}" width='50' height='50' class="img img-responsive" />
+                            <img src="{{asset('storage/'.$prescription->image)}}" width='50' height='50' class="img img-responsive" alt="{{$prescription->image}}" />
                         </td>
                         <td class="">{{ $prescription->status }}</td>
                         <td class="">
