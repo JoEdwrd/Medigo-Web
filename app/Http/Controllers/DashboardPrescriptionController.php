@@ -16,12 +16,9 @@ class DashboardPrescriptionController extends Controller
         return view('AdminPage.prescriptions.index', compact('prescriptions'));
     }
 
-
     public function show($slug)
     {
-
         $prescriptions = Prescription::where('slug', $slug)->firstOrFail();
-
         return view('AdminPage.prescriptions.show', [
             'prescriptions' => $prescriptions,
         ]);
@@ -37,7 +34,6 @@ class DashboardPrescriptionController extends Controller
 
     public function update(Request $request, $id)
     {
-        // dd($request->status);
         $prescriptions = Prescription::all();
         $request->validate([
             'status' => 'required|in:Waiting for Verification,Approved,Rejected',
@@ -46,16 +42,13 @@ class DashboardPrescriptionController extends Controller
         $prescription = Prescription::findOrFail($id);
         $prescription->status = $request->status;
 
-        // Cek apakah status prescription menjadi "approved"
         if ($request->status == 'Approved') {
-            // Temukan transaksi terkait dan perbarui statusnya
             $transaction = Transaction::findOrFail($prescription->transaction_id);
             $transaction->status = 'Waiting for payment';
             $transaction->save();
 
             TrackingOrder::where('transaction_id', $prescription->transaction_id)->update(['waiting_for_payment' => Carbon::now()]);
         }else if($request->status == 'Rejected') {
-            // Temukan transaksi terkait dan perbarui statusnya
             $transaction = Transaction::findOrFail($prescription->transaction_id);
             $transaction->status = 'Canceled';
             $transaction->save();
@@ -66,6 +59,5 @@ class DashboardPrescriptionController extends Controller
         $prescription->save();
 
         return redirect()->route('admin.prescriptions.updateIndex')->with('success', 'Status updated successfully.');
-
     }
 }

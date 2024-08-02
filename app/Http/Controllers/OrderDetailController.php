@@ -19,9 +19,7 @@ class OrderDetailController extends Controller
         }else{
             $cart = null;
         }
-        // dwq
         $transaction = Transaction::find($order);
-        // dd($orderDetail);
         return view('history.OrderDetail', compact('cart', 'transaction'));
     }
 

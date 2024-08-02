@@ -12,7 +12,6 @@ class DashboardUserController extends Controller
      */
     public function index(Request $request)
     {
-
         $query = User::query();
 
         if ($search = $request->input('search')) {
@@ -24,11 +23,6 @@ class DashboardUserController extends Controller
         return view('AdminPage.Users.index', [
             'users' => $users
         ]);
-
-        // dd(User::all());
-        // return view("AdminPage.Users.index",[    
-        //     'users' => User::all()
-        // ]);
     }
 
     /**

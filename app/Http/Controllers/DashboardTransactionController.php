@@ -15,7 +15,6 @@ class DashboardTransactionController extends Controller
      */
     public function index(Request $request)
     {
-
         $query = Transaction::query();
     
         if ($search = $request->input('search')) {
@@ -26,18 +25,11 @@ class DashboardTransactionController extends Controller
             
         }
 
-        // dd($query->toSql(), $query->getBindings());
-
         $transactions = $query->get();
 
         return view('AdminPage.transactions.index', [
             'transactions' => $transactions
         ]);
-
-        // dd($data);
-        // return view("AdminPage.transactions.index",[
-        //     'transactions' => Transaction::all()
-        // ]);
     }
 
     /**
@@ -72,32 +64,11 @@ class DashboardTransactionController extends Controller
      */
     public function update(Request $request, string $slug)
     {
-        // dd($request->all());
-        // $rules = [
-        //     'status' => 'max:100'
-        // ];
-        // $validatedData = $request->validate($rules);
-        // dd($request);
-
-        // dd($validatedData);
-
-        // if ($request->file('image')) {
-        //     if ($request->oldImage) {
-        //         Storage::delete($request->oldImage);
-        //     }
-        //     $validatedData['image'] = $request->file('image')->store('tra$transaction-images');
-        // }
-
-        // $validatedData = $request->validate([
-
-        // ])
-
         $transaction = Transaction::where('slug', $slug)->first();
         $transaction->update([
             'status' => $request->status,
             'payment_method' => $request->paymentMethod
         ]);
-        // dd($request->status);
 
         if($request->status == 'Canceled'){
             foreach($transaction->order_details as $item){

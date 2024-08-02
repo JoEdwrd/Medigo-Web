@@ -20,8 +20,8 @@ class RegisterController extends Controller
         // Validate user input
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users', // Ensure unique email
-            'phone' => 'required|string|min:10|regex:/^\d+$/|unique:users', // Ensure unique phone number
+            'email' => 'required|string|email|max:255|unique:users',
+            'phone' => 'required|string|min:10|regex:/^\d+$/|unique:users',
             'dob' => 'required|date|before:17 years ago|after:100 years ago',
             'password' => 'required|string|min:8',
         ],[
@@ -29,32 +29,28 @@ class RegisterController extends Controller
             'dob.after' => 'Age must be under 100 years old.',
         ]);
 
-        // Handle validation errors (optional, but recommended for user feedback)
-        // Get all validation errors
         if ($request->validator && $request->validator->fails()) {
-            // Access validation errors here
+            
             $errors = $request->validator->errors()->messages();
 
             if (count($errors) > 0) {
-                // Return specific error message for each field
                 $errorMessage = '';
                 if (isset($errors['email'])) {
-                    $errorMessage = $errors['email'][0]; // Get first email error message
+                    $errorMessage = $errors['email'][0];
                 } elseif (isset($errors['phone'])) {
-                    $errorMessage = $errors['phone'][0]; // Get first phone error message
+                    $errorMessage = $errors['phone'][0];
                 } elseif (isset($errors['dob'])) {
-                    $errorMessage = $errors['dob'][0]; // Get first dob error message
+                    $errorMessage = $errors['dob'][0];
                 } elseif (isset($errors['password'])) {
-                    $errorMessage = $errors['password'][0]; // Get first password error message
+                    $errorMessage = $errors['password'][0];
                 }
-                // Return error message if any
+
                 if ($errorMessage) {
                     return back()->withErrors([$errorMessage]);
                 }
             }
         }
 
-        // Create user on successful validation
         $input = $request->all();
 
         User::create([
@@ -66,6 +62,6 @@ class RegisterController extends Controller
             'password' => Hash::make($input['password']),
         ]);
 
-        return redirect()->route('login'); // Redirect to Landing Page on success
+        return redirect()->route('login');
     }
 }

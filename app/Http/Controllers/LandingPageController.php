@@ -13,18 +13,17 @@ class LandingPageController extends Controller
 {
     public function index()
     {
-        
         $user = auth()->user();
         if($user){
             $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
         }else{
             $cart = null;
         }
-        $today = Carbon::today(); // Mendapatkan tanggal hari ini
+        $today = Carbon::today();
         $promotions = Promotion::where('startdate', '<=', $today)
                                 ->where('enddate', '>=', $today)
-                                ->orderByDesc('id') // Mengurutkan berdasarkan ID secara menurun
-                                ->take(3) // Membatasi hasil hanya 3 promosi
+                                ->orderByDesc('id')
+                                ->take(3)
                                 ->get();
         $topProducts = Product::select('products.*', DB::raw('SUM(order_details.quantity) as total_sold'))
         ->join('order_details', 'products.id', '=', 'order_details.product_id')
@@ -45,7 +44,6 @@ class LandingPageController extends Controller
             ->take(5)
             ->get();
         $categories=Category::all();
-        // return $categories;
         return view('LandingPage.LandingIndex',[
             "products"=>Product::all(),
             "promotions"=>$promotions,
