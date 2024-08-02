@@ -1,26 +1,20 @@
-<!-- Modal -->
 <style>
-    /*1st custom file upload button*/ 
-
     * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
     }
-
     .profile {
         position: relative;
         width: 200px;
         height: 200px;
         transition: .3s ease-in-out;
     }
-
     .profile label {
         display: inline-block;
         width: 100%;
         height: 100%;
         text-align: center;
-        /* line-height: 227px; */
         overflow: hidden;
         border-radius: 50%;
         cursor: pointer;
@@ -28,35 +22,29 @@
         align-items: center;
         justify-content: center;
     }
-
     .profile label img{
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensure the image covers the container */
+        object-fit: cover; 
         object-position: center;
     }
-
     .profile label:hover .camera {
         transform: translate(-146.5%, -123%)scale(3.9);
         background: rgba(255, 255, 255, 0.8);
         width: 51px;
         height: 51px;
     }
-
     .profile input[ type="file"] {
         display: none;
     }
-
     .profile .user {
         -webkit-background-clip: text;
     }
-
     .profile .camera {
         position: absolute;
         line-height: normal;
         bottom: 12px;
         right: 0px;
-
         padding: .5rem;
         background: rgb(255, 255, 255);
         width: 51px;
@@ -66,20 +54,14 @@
         border: 0.5px solid #888888;
         transition: .3s ease-in-out;
     }
-
-    /*2nd file upload button*/
-
     .file_upload_button {
         width: 200px;
         transition: .3s ease-in-out;
     }
-
     .profile:hover,
     .file_upload_button:hover {
         transform: scale(1.06);
-        /* filter: brightness(150%); */
     }
-
     .file_upload_button::-webkit-file-upload-button {
         width: 100%;
         padding: 1.5rem 2rem;
@@ -87,17 +69,12 @@
         border: none;
         border-radius: 2rem;
     }
-
-    /*3rd File upload button*/
-
     .file_upload_button.v2::-webkit-file-upload-button {
         background: none;
         border: 3px solid orange;
         color: orange;
         background-size: contain;
     }
-
-    /* Add styles for sticky modal footer */
     .modal-footer {
         position: sticky;
         bottom: 0;
@@ -107,7 +84,7 @@
         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
     }
     .modal-body {
-        max-height: calc(100vh - 200px); /* Adjust according to your header and footer heights */
+        max-height: calc(100vh - 200px);
         overflow-y: auto;
     }
 </style>
@@ -221,9 +198,6 @@
                                 Edit profile failed, The street field must not contain symbols or leading whitespaces. Please try again.
                             </div>
                         </div>
-
-
-
                         <div class="mb-3 col-md-6">
                             <label for="postalCodeInput" class="form-label">Postal code</label>
                             <input type="text" class="form-control" value="{{ old('postalCode', explode(', ', $user->address)[4] ?? '') }}" id="postalCodeInput" name="postalCode" placeholder="Input your postal code here" required>
@@ -231,14 +205,10 @@
                                 Edit profile failed, The postal code must be a number with a maximum length of 5 digits. Please try again.
                             </div>
                         </div>
-
-
-
                         <div class="mb-3 col-md-6">
                             <label for="descriptionInput" class="form-label">Description (Optional)</label>
                             <textarea type="text" class="form-control" id="descriptionInput" name="description" placeholder="Input your description here">{{old('description', explode(', ', $user->address)[5] ?? '') }}</textarea>
                         </div>
-
                     </div>
                 </div>
                 <div class="modal-footer">
