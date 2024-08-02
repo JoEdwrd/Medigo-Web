@@ -138,7 +138,7 @@ class CartController extends Controller
         ]);
 
         if($request->file("image")){
-            $validatedData["image"]=$request->file("image")->store("pres-images");
+            $validatedData["image"]=$request->file("image")->store("pres-images", "public");
         }
         $validatedData['slug'] = Str::slug($validatedData['image']) . '-' . Str::lower(Str::random(5));
 

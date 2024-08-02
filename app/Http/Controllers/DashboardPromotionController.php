@@ -55,10 +55,10 @@ class DashboardPromotionController extends Controller
         ]);
 
         if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('promotion-images');
+            $validatedData['image'] = $request->file('image')->store('promotion-images', "public");
         }
         if ($request->file('imagebanner')) {
-            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images');
+            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images', "public");
         }
         Promotion::create($validatedData);
 
@@ -99,7 +99,7 @@ class DashboardPromotionController extends Controller
             'startdate' => 'required|date_format:Y-m-d',
             'enddate' => 'required|date_format:Y-m-d',
         ];
-        
+
         if ($request->name != $promotion->name) {
             $rules['name'] = 'required|max:255|unique:promotions';
         }
@@ -116,21 +116,21 @@ class DashboardPromotionController extends Controller
             if ($request->oldImage) {
                 Storage::delete($request->oldImage);
             }
-            $validatedData['image'] = $request->file('image')->store('promotion-images');
+            $validatedData['image'] = $request->file('image')->store('promotion-images', "public");
         }
         else{
             $validatedData['image'] = $request->oldImage;
-        
+
         }
         if ($request->file('imagebanner')) {
             if ($request->oldImageBanner) {
                 Storage::delete($request->oldImageBanner);
             }
-            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images');
+            $validatedData['imagebanner'] = $request->file('imagebanner')->store('promotionbanner-images', "public");
         }
         else{
             $validatedData['imagebanner'] = $request->oldImageBanner;
-        
+
         }
         Promotion::where('id', $promotion->id)->update($validatedData);
 
@@ -150,7 +150,7 @@ class DashboardPromotionController extends Controller
                 Storage::delete($promotion->imagebanner);
             }
             Promotion::destroy($promotion->id);
-            
+
             return redirect("/dashboard/promotions")->with('success', 'Promotion deleted successfully.');
         } catch (QueryException $e) {
             if ($e->getCode() == 23000) {

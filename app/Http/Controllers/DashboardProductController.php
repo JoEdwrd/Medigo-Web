@@ -57,7 +57,7 @@ class DashboardProductController extends Controller
             "image"=>"required|image|file|max:1024",
         ]);
         if($request->file("image")){
-            $validatedData["image"]=$request->file("image")->store("product-images");
+            $validatedData["image"]=$request->file("image")->store("product-images", "public");
         }
         Product::create($validatedData);
         return redirect("/dashboard/products")->with("success","New product has been added!");
@@ -114,7 +114,7 @@ class DashboardProductController extends Controller
             if($request->oldImage){
                 Storage::delete($request->oldImage);
             }
-            $validatedData["image"]=$request->file("image")->store("prod-images");
+            $validatedData["image"]=$request->file("image")->store("product-images","public");
         }
         else{
             $validatedData["image"]=$request->oldImage;
