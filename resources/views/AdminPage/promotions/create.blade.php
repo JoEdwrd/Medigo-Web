@@ -46,7 +46,7 @@
 
                             <br>
 
-                            <div id="descbox" class="overflow-auto" style="height: 350px">
+                            <div class="overflow-auto" style="height: 350px">
                                 <div class="mb-3 mx-1">
                                     <label for="name">Promotion Name</label>
                                     <input class="mt-2 p-2 form-control @error("name") is-invalid @enderror" style="width:100%;border-radius:5px;border:none" type="text" id="name" name="name"  autofocus required value="{{ old("name") }}">
