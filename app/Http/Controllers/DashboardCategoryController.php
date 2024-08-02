@@ -40,7 +40,7 @@ class DashboardCategoryController extends Controller
             "description"=>"required"
         ]);
         if($request->file("image")){
-            $validatedData["image"]=$request->file("image")->store("category-images");
+            $validatedData["image"]=$request->file("image")->store("category-images", "public");
         }
         Category::create($validatedData);
         return redirect("/dashboard/categories")->with("success","New category has been added!");
@@ -76,7 +76,7 @@ class DashboardCategoryController extends Controller
             "description"=>"required",
             "image"=>"image|file|max:1024",
         ];
-       
+
         if($request->slug!=$category->slug){
             $rules["slug"]= "required|unique:categories";
         }
@@ -88,7 +88,7 @@ class DashboardCategoryController extends Controller
             if($request->oldImage){
                 Storage::delete($request->oldImage);
             }
-            $validatedData["image"]=$request->file("image")->store("category-images");
+            $validatedData["image"]=$request->file("image")->store("category-images","public");
         }
         else{
             $validatedData["image"]=$request->oldImage;
@@ -103,7 +103,7 @@ class DashboardCategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        
+
         try{
             if($category->image){
                 Storage::delete($category->image);

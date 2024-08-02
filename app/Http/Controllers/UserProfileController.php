@@ -6,7 +6,7 @@ use App\Models\Cart;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Support\Facades\Hash; 
+use Illuminate\Support\Facades\Hash;
 
 class UserProfileController extends Controller
 {
@@ -133,7 +133,7 @@ class UserProfileController extends Controller
 
 
         if ($request->hasFile('profile_picture')) {
-            $profilePhotoPath = $request->file('profile_picture')->store('item');
+            $profilePhotoPath = $request->file('profile_picture')->store('item', "public");
             $validatedData['profile_picture'] = $profilePhotoPath;
 
         } else {
