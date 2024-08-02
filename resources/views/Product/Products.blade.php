@@ -64,7 +64,7 @@
                 <div class="row text-center d-flex justify-content-center m-0" style="width: 100%">
                     @foreach ($category->products->where('stock', '>', 0)->take(5) as $product)
                         <div class="card col-md-1" id="card_product" style="cursor: pointer;" onclick="window.location='{{ route('product.show', $product->slug) }}';">
-                            <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->name }}">
+                            <img src="{{ asset("storage/".$product->image) }}" class="crd-img" alt="{{ $product->image }}">
                             <div class="card-body" id="card-body">
                                 <h5 class="card-title text-start" id="card-title">{{ $product->name }}</h5>
                                 <label class="card-desc" id="card-desc">{{ $product->shortdesc }}</label>
@@ -99,7 +99,7 @@
         if (alert) {
             setTimeout(function() {
                 alert.style.display = 'none';
-            }, 3000); 
+            }, 3000);
         }
     });
 </script>
