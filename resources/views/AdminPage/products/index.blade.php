@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="my-4">
-        <h1 class="h2">All Products</h1> 
+        <h1 class="h2">All Products</h1>
     </div>
     <hr>
     @if(session()->has("success"))
@@ -10,6 +10,11 @@
         {{ session("success") }}
       </div>
     @endif
+    @if(session()->has("error"))
+    <div class="alert alert-danger col-lg-6" role="alert">
+        {{ session('error') }}
+    </div>
+  @endif
     <div class="table-responsive col-lg-10">
       <div class="d-flex justify-content-between">
         <a href="/dashboard/products/create" id="addbtn" class="btn mb-4" style="max-width: 250px">Add New Product</a>

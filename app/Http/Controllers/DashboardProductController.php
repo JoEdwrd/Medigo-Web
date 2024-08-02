@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\QueryException;
 class DashboardProductController extends Controller
 {
     /**
@@ -131,11 +132,25 @@ class DashboardProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        if($product->image){
+        // if($product->image){
+        //         Storage::delete($product->image);
+        // }
+        // Product::destroy($product->id);
+        // return redirect("/dashboard/products")->with("success","Product has been deleted!");
+
+        try {
+            if ($product->image) {
                 Storage::delete($product->image);
+            }
+            Product::destroy($product->id);
+            return redirect("/dashboard/products")->with("success", "Product has been deleted!");
+        } catch (QueryException $e) {
+            if ($e->getCode() == 23000) {
+                return redirect("/dashboard/products")->with('error', 'Cannot delete product as it is associated with one or more transactions.');
+            }
+            // Tangani kesalahan lain jika perlu
+            return redirect("/dashboard/products")->with('error', 'An error occurred while trying to delete the product.');
         }
-        Product::destroy($product->id);
-        return redirect("/dashboard/products")->with("success","Product has been deleted!");
     }
 }
 
