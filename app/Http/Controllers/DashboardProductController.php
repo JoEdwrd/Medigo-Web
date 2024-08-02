@@ -25,9 +25,6 @@ class DashboardProductController extends Controller
         return view('AdminPage.products.index', [
             'products' => $products
         ]);
-        // return view("AdminPage.products.index",[
-        //     "products"=>Product::all()
-        // ]);
     }
 
     /**

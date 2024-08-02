@@ -9,7 +9,6 @@ class PageController extends Controller
 {
     public function faq()
     {
-        // Your logic here
         $user = auth()->user();
         if($user){
             $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id ]);
@@ -27,7 +26,6 @@ class PageController extends Controller
         }else{
             $cart = null;
         }
-        // Your logic here
         return view('FooterLink.tnc', compact('cart')); // Return the 'faq' view
     }
     public function aboutus()
@@ -38,7 +36,6 @@ class PageController extends Controller
         }else{
             $cart = null;
         }
-        // Your logic here
         return view('FooterLink.aboutus', compact('cart')); // Return the 'faq' view
     }
 }

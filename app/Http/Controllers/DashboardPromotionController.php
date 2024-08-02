@@ -143,7 +143,6 @@ class DashboardPromotionController extends Controller
     public function destroy(Promotion $promotion)
     {
         try {
-            // Attempt to delete the promotion
             if($promotion->image) {
                 Storage::delete($promotion->image);
             }
@@ -154,11 +153,9 @@ class DashboardPromotionController extends Controller
             
             return redirect("/dashboard/promotions")->with('success', 'Promotion deleted successfully.');
         } catch (QueryException $e) {
-            // Check if the error is a foreign key constraint violation
             if ($e->getCode() == 23000) {
                 return redirect("/dashboard/promotions")->with('error', 'Cannot delete promotion as it is associated with one or more orders.');
             }
-            // Tangani kesalahan lain jika perlu
             return redirect("/dashboard/promotions")->with('error', 'An error occurred while trying to delete the promotion.');
         }
     }

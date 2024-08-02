@@ -19,11 +19,9 @@ class MidtransWebhookController extends Controller
             $transactionStatus = $notification->transaction_status;
             $orderId = $notification->order_id;
 
-            // Find the transaction in the database
             $transaction = Transaction::find($orderId);
 
             if ($transaction) {
-                // Update transaction status based on Midtrans status
                 switch ($transactionStatus) {
                     case 'capture':
                     case 'settlement':
@@ -42,7 +40,6 @@ class MidtransWebhookController extends Controller
                         break;
                 }
 
-                // Save the updated transaction
                 $transaction->save();
 
                 return response()->json(['message' => 'Transaction status updated successfully'], 200);

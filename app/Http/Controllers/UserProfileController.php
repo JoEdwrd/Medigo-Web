@@ -35,8 +35,6 @@ class UserProfileController extends Controller
             'old_password' => 'required'
         ]);
 
-        // dd($request);
-
         $user = auth()->user();
         $cart = Cart::with(['cart_details.product', 'promotion'])->firstOrCreate(['user_id'=> $user->id]);
 
@@ -79,7 +77,6 @@ class UserProfileController extends Controller
     }
 
     public function updateProfile(Request $request){
-        // dd($request->all());
         $user = auth()->user();
         $rules=[
            'name' => 'required|string|max:255',
@@ -110,14 +107,6 @@ class UserProfileController extends Controller
             'profile_picture.*' => 'nullable | image | mimes : jpg ,jpeg,png |max:2048'
         ];
 
-        // dd($request);
-
-        // if($request->email!=$user->email){
-        //     $rules["email"]= "required|unique:users";
-        // }
-        // if($request->phone!=$user->phone){
-        //     $rules["phone"]= "required|max:255|unique:users";
-        // }
         $validatedData=$request->validate($rules, [
             'province.regex' => 'Edit profile failed, The province field must not contain symbols, numbers, or leading whitespaces. Please try again.',
             'city.regex' => 'Edit profile failed, The city field must not contain symbols, numbers, or leading whitespaces. Please try again.',
@@ -150,13 +139,7 @@ class UserProfileController extends Controller
         } else {
             $validatedData['profile_picture'] = $user->profile_picture;
         }
-        // dd($request);
-        //  if($request->file("image")){
-        //     if($request->oldImage){
-        //         Storage::delete($request->oldImage);
-        //     }
-        //     $validatedData["image"]=$request->file("image")->store("post-images");
-        // }
+
         User::where("id",$user->id)
         ->update($validatedData);
         return redirect("/profile")->with("success","Profile has been updated!");

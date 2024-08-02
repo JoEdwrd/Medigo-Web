@@ -15,7 +15,6 @@ class LoginController extends Controller
 
     public function check(Request $request)
     {
-        // @dd($request);
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -23,13 +22,11 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            if (Auth::user()->isAdmin) {
-                
+            if (Auth::user()->isAdmin) {    
                 return redirect()->intended('/dashboard');
             }
             return redirect()->intended('/');
         } else {
-            // Handle failed login attempt
             $errorMessage = 'Invalid email or password. Please try again.';
             return redirect()->back()->withErrors(['email' => $errorMessage]);
         }
