@@ -114,7 +114,7 @@ class DashboardProductController extends Controller
             if($request->oldImage){
                 Storage::delete($request->oldImage);
             }
-            $validatedData["image"]=$request->file("image")->store("product-images");
+            $validatedData["image"]=$request->file("image")->store("prod-images");
         }
         else{
             $validatedData["image"]=$request->oldImage;
