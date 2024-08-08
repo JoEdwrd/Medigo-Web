@@ -3,6 +3,7 @@
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 @endpush
+
 @extends('Structure.main')
 @section('title', $title)
 @section('container')
@@ -94,6 +95,11 @@
                                                 <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
                                             @endforeach
                                             <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
+                                            <input type="hidden" name="promotion_id" value="{{ $transaction->promotion_id }}">
+                                            @if ($transaction->promotion)
+                                                <input type="hidden" name="discount" value="{{ $transaction->promotion->discount }}">
+                                                <input type="hidden" name="promotion_name" value="{{ $transaction->promotion->name }}">
+                                            @endif
                                             <button type="submit" class="trackbutton" id="checkoutButton">PAY</button>
                                         </form>
                                     @else

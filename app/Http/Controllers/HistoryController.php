@@ -15,7 +15,7 @@ class HistoryController extends Controller
         $user = auth()->user();
         
         if ($user) {
-            $transactions = Transaction::with(['order_details.product'])
+            $transactions = Transaction::with(['order_details.product', 'promotion'])
                 ->where('user_id', $user->id)
                 ->orderBy('created_at', 'desc')
                 ->get()
