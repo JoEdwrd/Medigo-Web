@@ -1,9 +1,8 @@
 @push('scripts')
-    <script src="/js/order_detail_payment.js"></script>
+    <script src="/js/transaction_history.js"></script>
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ env('MIDTRANS_CLIENT_KEY') }}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 @endpush
-
 @extends('Structure.main')
 @section('container')
 <div class="mb-5">
@@ -110,36 +109,50 @@
                                     <input type="hidden" name="products[{{ $index }}][quantity]" value="{{ $orderDetail->quantity }}">
                                 @endforeach
                                 <input type="hidden" name="transaction_date" value="{{ $transaction->created_at }}">
-                                <input type="hidden" name="promotion_id" value="{{ $transaction->promotion_id }}">
-                                @if ($transaction->promotion)
-                                    <input type="hidden" name="discount" value="{{ $transaction->promotion->discount }}">
-                                    <input type="hidden" name="promotion_name" value="{{ $transaction->promotion->name }}">
-                                @endif
-                                <button type="submit" class="trackbutton" id="checkoutButtonOD">PAY</button>
+                                <button type="submit" class="trackbutton" id="checkoutButton">PAY</button>
                             </form>
                         @endif
                     </div>
                 @endif
                 @if ($transaction->status == 'In progress')
                     <div class="d-flex justify-content-end gap-3 mt-3">
-                        <button class="trackbutton" id="checkoutButton" data-bs-toggle="modal" data-bs-target="#cancelModal">COMPLETE</button>
+                        <button class="trackbutton" id="checkoutButton" data-bs-toggle="modal" data-bs-target="#completeModal">COMPLETE</button>
                     </div>
                 @endif
-            </div>
-            <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content container border border-grey rounded-4 shadow p-4">
-                        <h3 class="text-center mb-4">Are you sure you want to cancel?</h3>
-                        <div class="d-flex justify-content-around w-50 mx-auto p-2">
-                            <form action="{{ route('order.cancel', $transaction->id) }}" method="POST">
-                                @csrf
-                                <button type="submit" class="btn btn-outline-danger" style="width:100px">Confirm</button>
-                            </form>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width:100px">Close</button>
-                        </div>
+        </div>
+        <div class="modal fade" id="cancelModal" tabindex="-1" aria-labelledby="cancelModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content container border border-grey rounded-4 shadow p-4">
+                    <h3 class="text-center mb-4">Are you sure you want to cancel?</h3>
+                    <div class="d-flex justify-content-around w-50 mx-auto p-2">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width:100px">Close</button>
+                        <form action="{{ route('order.cancel', $transaction->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-danger" style="width:100px">Confirm</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="completeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content container border border-grey rounded-4 shadow p-4">
+                    <h3 class="text-center mb-4">Are you sure you want to complete this order?</h3>
+                    <div class="d-flex justify-content-around w-50 mx-auto p-2">
+
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width:100px">Close</button>
+
+                        <form action="{{ route('order.complete', $transaction->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-outline-success" style="width:100px">Confirm</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row mt-5">
             <div class="col-md-6">
                 <h5>Address</h5>

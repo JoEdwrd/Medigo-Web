@@ -38,4 +38,22 @@ class OrderDetailController extends Controller
 
         return redirect()->back()->with('error', 'Order not found.');
     }
+
+    public function complete($transaction_id)
+{
+    $transaction = Transaction::where('id', $transaction_id)->first();
+
+    if ($transaction) {
+        $transaction->status = 'Completed';  // Ubah status menjadi 'Completed' atau status yang sesuai
+        $transaction->save();
+
+        TrackingOrder::where('transaction_id', $transaction_id)->update(['Completed' => Carbon::now()]);
+
+        return redirect()->back()->with('success', 'Order has been completed.');
+    }
+
+    return redirect()->back()->with('error', 'Order not found.');
+}
+
+
 }
