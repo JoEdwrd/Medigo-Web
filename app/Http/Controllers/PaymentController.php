@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Midtrans\Config;
 use Midtrans\Snap;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class PaymentController extends Controller
 {
@@ -22,13 +23,15 @@ class PaymentController extends Controller
         Config::$is3ds = true;
 
         $user = Auth::user();
-
         $objData = $request->all();
+
+        // Debugging logs
+        Log::info('Received request data:', $objData);
 
         $params = array(
             'transaction_details' => array(
                 'order_id' => $objData['transaction_id'],
-                'gross_amount' => $objData['total'],
+                'gross_amount' => intval($objData['total']), // Ensure it's an integer
             ),
             'customer_details' => array(
                 'first_name' => $user->name,
@@ -46,19 +49,11 @@ class PaymentController extends Controller
                 "postal_code" => "",
                 "country_code" => ""
             ),
-            'item_details' => array(),
+            'item_details' => $objData['item_details'], // Use the item details from objData
         );
 
-        foreach ($objData['products'] as $product) {
-            $productDetail = array(
-                'id' => $product['id'],
-                'name' => $product['name'],
-                'price' => $product['price'],
-                'quantity' => $product['quantity'],
-                'subtotal' => $product['price'] * $product['quantity'],
-            );
-            array_push($params['item_details'], $productDetail);
-        };
+        // Debugging logs
+        // Log::info('Parameters sent to Midtrans:', $params);
 
         $snapToken = Snap::getSnapToken($params);
         return response()->json(['snap_token' => $snapToken]);

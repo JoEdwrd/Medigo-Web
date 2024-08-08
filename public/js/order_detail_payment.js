@@ -1,43 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var toggleButtons = document.querySelectorAll(".toggleButton");
+    console.log("Script loaded and DOM fully loaded.");
+    var checkoutButton = document.getElementById("checkoutButtonOD");
 
-    toggleButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            var targetId = this.getAttribute("data-bs-target"); // Get the target div ID
-            var targetDiv = document.querySelector(targetId); // Get the target div
-            var icon = this.querySelector(".toggleIcon"); // Get the icon element within the button
-
-            var isCollapsed = targetDiv.style.display === "none"; // Check if the target div is collapsed (hidden)
-
-            if (isCollapsed) {
-                targetDiv.style.display = "block"; // Show the div
-                icon.classList.remove("bi-chevron-down"); // Change icon to up
-                icon.classList.add("bi-chevron-up");
-            } else {
-                targetDiv.style.display = "none"; // Hide the div
-                icon.classList.remove("bi-chevron-up"); // Change icon to down
-                icon.classList.add("bi-chevron-down");
-            }
-        });
-
-        // Initially hide 'completed' and 'canceled' sections
-        var targetId = button.getAttribute("data-bs-target");
-        var targetDiv = document.querySelector(targetId);
-        if (
-            targetDiv &&
-            !["#order-info-completed", "#order-info-canceled"].includes(
-                targetId
-            )
-        ) {
-            targetDiv.style.display = "block";
-        } else if (targetDiv) {
-            targetDiv.style.display = "none";
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    var checkoutButton = document.getElementById("checkoutButton");
+    if (!checkoutButton) {
+        console.error("Checkout button not found.");
+        return;
+    }
 
     checkoutButton.addEventListener("click", function (e) {
         e.preventDefault();
@@ -97,20 +65,24 @@ document.addEventListener("DOMContentLoaded", function () {
             data: objData,
             success: function (response) {
                 console.log("Snap Token Response:", response);
-                snap.pay(response.snap_token, {
-                    onSuccess: function (result) {
-                        console.log("Payment Success:", result);
-                    },
-                    onPending: function (result) {
-                        console.log("Payment Pending:", result);
-                    },
-                    onError: function (result) {
-                        console.log("Payment Error:", result);
-                    },
-                    onClose: function () {
-                        console.log("Payment Popup Closed");
-                    },
-                });
+                if (response.snap_token) {
+                    snap.pay(response.snap_token, {
+                        onSuccess: function (result) {
+                            console.log("Payment Success:", result);
+                        },
+                        onPending: function (result) {
+                            console.log("Payment Pending:", result);
+                        },
+                        onError: function (result) {
+                            console.log("Payment Error:", result);
+                        },
+                        onClose: function () {
+                            console.log("Payment Popup Closed");
+                        },
+                    });
+                } else {
+                    console.error("Snap token not received");
+                }
             },
             error: function (xhr, status, error) {
                 console.error("Error getting snap token:", error);
