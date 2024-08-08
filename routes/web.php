@@ -50,7 +50,7 @@ Route::post('/midtrans-webhook', [MidtransWebhookController::class, 'handleWebho
 
 //=========================================== user =======================================================
 Route::group(['middleware' => ['auth', 'userOnly']], function () {
-    
+
     Route::get('/addTransaction/{cartId}', [TransactionController::class, 'addTransaction']);
     Route::get('/history', [HistoryController::class, 'index'])->name('history-index');
     Route::get('/cart', [CartController::class, 'index'])->middleware('auth');
@@ -69,6 +69,8 @@ Route::group(['middleware' => ['auth', 'userOnly']], function () {
     // Order Details
     Route::get('/orderdetail/{order}', [OrderDetailController::class, 'index']);
     Route::post('/order/cancel/{transaction_id}', [OrderDetailController::class, 'cancel'])->name('order.cancel');
+    Route::post('/order/complete/{id}', [OrderDetailController::class, 'complete'])->name('order.complete');
+
 
     // Routes for managing the cart
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
@@ -101,7 +103,7 @@ Route::group(['middleware' => ['userOnly']], function () {
 Route::group(['middleware' => ['admin']], function () {
     // Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/dashboard', [AdminDashboardController::class,"index"]);
-    
+
     //Product
     Route::resource('/dashboard/products',DashboardProductController::class);
     Route::get('/dashboard/products/{product:slug}',[DashboardProductController::class,"show"]);
